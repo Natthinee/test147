@@ -49,7 +49,7 @@ def movie(event):
         
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
 
-        user.insert({"Question": question, "Answer": answer})
+        user1.insert({"Question": question, "Answer": answer})
 
 
 
