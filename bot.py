@@ -5,6 +5,8 @@ from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import (MessageEvent, TextMessage, TextSendMessage)
 from flask.ext.pymongo import PyMongo
+import pymongo
+from pymongo import MongoClient
 
 
 app = Flask(__name__)
@@ -46,10 +48,9 @@ def movie(event):
     if event.message.text == 'สวัสดี':
         question = event.message.text
         answer = 'สวัสดีจ้า'        
-        
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-
         user1.insert({"Question": question, "Answer": answer})
+        return
 
 
 
