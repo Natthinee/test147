@@ -48,7 +48,9 @@ def movie(event):
     if event.message.text == 'สวัสดี':
         question = event.message.text
         answer = 'สวัสดีจ้า'        
+        
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
         userr.insert({"Question": question, "Answer": answer})
         
 
