@@ -48,10 +48,10 @@ def movie(event):
     if event.message.text == 'สวัสดี':
         question = event.message.text
         answer = 'สวัสดีจ้า'        
-        
+        userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
-        userr.insert({"Question": question, "Answer": answer})
+        
         
 
 
