@@ -42,9 +42,9 @@ def webhook():
 
 @handler.add(MessageEvent, message=TextMessage)
 def movie(event):
-   user = mongo.db.user
+   user1 = client.khim.user
     if event.message.text == 'สวัสดี':
-        question =event.message.text
+        question = event.message.text
         answer = 'สวัสดีจ้า'        
         
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
