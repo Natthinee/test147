@@ -118,7 +118,7 @@ def movie(event):
     userr = mongo.db.user
     if event.message.text in evaluation_form['eval']['greet']:
         question = event.message.text
-        answer = str(random.choice(evaluation_form['eval']['answer'] ))        
+        answer = 'สวัสดี'       
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
