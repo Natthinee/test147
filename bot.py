@@ -50,7 +50,7 @@ def movie(event):
         answer = 'สวัสดีจ้า'        
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         userr.insert({"Question": question, "Answer": answer})
-        return
+        
 
 
 
