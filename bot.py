@@ -44,7 +44,7 @@ def webhook():
 
 @handler.add(MessageEvent, message=TextMessage)
 def movie(event):
-    userr = mongo.khim.users
+    userr = mongo.khim.user
     if event.message.text == 'สวัสดี':
         question = event.message.text
         answer = 'สวัสดีจ้า'        
