@@ -116,7 +116,7 @@ def webhook():
 @handler.add(MessageEvent, message=TextMessage)
 def movie(event):
     userr = mongo.db.user
-    if event.message.text == evaluation_form['eval']['greet']:
+    if event.message.text == 'สวัสดี':
         question = event.message.text
         answer = 'สวัสดี'       
         userr.insert({"Question": question, "Answer": answer})
