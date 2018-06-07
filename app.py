@@ -109,26 +109,8 @@ def bot():
     text = msg_in_json["events"][0]['message']['text'].lower().strip()
 
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
-    
-    if text in evaluation_form['eval']['greet'] :
-         replyQueue.append(random.choice(evaluation_form['eval']['answer'] ))
-         reply2(replyToken, replyQueue[:5])
-         return 'OK',200
-    elif text in evaluation_form['eval']['ques']  :
-         question = random.choice(evaluation_form['eval']['quest9'])
-         face = random.choice(evaluation_form['eval']['wordap'])
-         listanswer.append(question)
-         replyQueue.append(face+question)
-         replyQueue.append(setscoreq9['score']['pprint'])
-         replyQueue.append(please['ple']['ple'])
-         reply(replyToken, replyQueue[:5])
-         return 'OK',200
-    else:
-         with open("tes.txt","a",encoding="utf8") as f:
-             f.write('khim')
-         replyQueue.append('งง')
-         reply3(replyToken, replyQueue[:5])
-         return 'OK', 200
+    reply1(replyToken, replyQueue[:5])
+    return 'OK', 200
 
 
     # ตอบข้อความ "นี่คือรูปแบบข้อความที่รับส่ง" กลับไป
