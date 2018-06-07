@@ -116,6 +116,7 @@ def webhook():
 @handler.add(MessageEvent, message=TextMessage)
 def godaun(event):
     userr = mongo.db.user
+    userid = event.source.user_id
     if event.message.text in evaluation_form['eval']['greet']:
         question = event.message.text
         answer = random.choice(evaluation_form['eval']['answer'] )    
@@ -126,7 +127,7 @@ def godaun(event):
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
-        userr.insert({"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text in number:
         question = event.message.text
