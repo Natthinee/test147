@@ -128,6 +128,7 @@ def movie(event):
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
+        userr.insert({"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text in number:
         question = event.message.text
