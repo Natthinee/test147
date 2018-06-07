@@ -114,7 +114,7 @@ def webhook():
     return 'OK'
 
 @handler.add(MessageEvent, message=TextMessage)
-def movie(event):
+def godaun(event):
     userr = mongo.db.user
     if event.message.text in evaluation_form['eval']['greet']:
         question = event.message.text
