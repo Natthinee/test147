@@ -11,17 +11,7 @@ from linebot.models import (MessageEvent, TextMessage, TextSendMessage)
 from flask.ext.pymongo import PyMongo
 import pymongo
 from pymongo import MongoClient
-
-
-app = Flask(__name__)
-
-line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
-app.config['MONGO_DBNAME'] = 'khim'
-app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
-mongo = PyMongo(app)
 import json
-import requests
 import random
 listanswer = []
 question = ''
@@ -89,6 +79,16 @@ ans8 = {}
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 
+
+app = Flask(__name__)
+
+line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
+app.config['MONGO_DBNAME'] = 'khim'
+app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
+mongo = PyMongo(app)
+
+
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -112,14 +112,12 @@ def webhook():
 
     return 'OK'
 
-
-
 @handler.add(MessageEvent, message=TextMessage)
 def movie(event):
     userr = mongo.db.user
-    if event.message.text == 'สวัสดี':
+    if event.message.text in evaluation_form['eval']['greet']:
         question = event.message.text
-        answer = 'สวัสดีจร้าาาา'       
+        answer = random.choice(evaluation_form['eval']['answer'] )    
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
