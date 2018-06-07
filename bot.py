@@ -119,7 +119,6 @@ def godaun(event):
     if event.message.text in evaluation_form['eval']['greet']:
         question = event.message.text
         answer = random.choice(evaluation_form['eval']['answer'] )    
-        userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text in evaluation_form['eval']['ques']:
         question = event.message.text
@@ -127,7 +126,7 @@ def godaun(event):
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
-        userr.insert({"Question": question, "Answer": question1})
+        userr.insert({"UserId": userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text in number:
         question = event.message.text
