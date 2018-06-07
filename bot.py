@@ -124,7 +124,7 @@ def movie(event):
         question = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         question = event.message.text
-        answer = face+question+setscoreq9['score']['pprint']+please['ple']['ple']
+        answer = face+question
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
