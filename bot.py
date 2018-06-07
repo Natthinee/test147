@@ -14,7 +14,7 @@ from pymongo import MongoClient
 import json
 import random
 listanswer = []
-question = ''
+question1 = ''
 face = ''
 score = 0
 sc = 0
@@ -122,10 +122,10 @@ def movie(event):
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text in evaluation_form['eval']['ques']:
-        question = random.choice(evaluation_form['eval']['quest9'])
-        face = random.choice(evaluation_form['eval']['wordap'])
         question = event.message.text
-        listQ = question
+        question1 = random.choice(evaluation_form['eval']['quest9'])
+        face = random.choice(evaluation_form['eval']['wordap'])
+        listQ = question1
         answer = listQ
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
