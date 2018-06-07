@@ -137,7 +137,7 @@ def godaun(event):
         listanswer.append(question)
         w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=w))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     else:
         question = event.message.text
         answer = listQNo 
