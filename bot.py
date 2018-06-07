@@ -120,6 +120,15 @@ def movie(event):
         answer = random.choice(evaluation_form['eval']['answer'] )    
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif event.message.text in evaluation_form['eval']['ques']:
+        question = random.choice(evaluation_form['eval']['quest9'])
+        face = random.choice(evaluation_form['eval']['wordap'])
+        question = event.message.text
+        answer = face+question+setscoreq9['score']['pprint']+please['ple']['ple']
+        listanswer.append(question)
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
         
         
         
