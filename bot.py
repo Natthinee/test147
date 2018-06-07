@@ -13,6 +13,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
+from app import bot
 listanswer = []
 question1 = ''
 face = ''
@@ -78,7 +79,7 @@ quest8['quest8'] = {'quest01': 'มีความคิดอยากตาย
 ans8 = {}
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
-listQ = ''
+listQNo = 'กอดอุ่น ยังอ่อนด๋อย กอดอุ่นยังไม่รู้ว่ากำลังพิมพ์อะไร ช่วยกอดอุ่นด้วยน้าา'
 
 
 app = Flask(__name__)
@@ -137,14 +138,17 @@ def godaun(event):
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    else:
+        question = event.message.text
+        answer = listQNo 
+        bot()
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
+    
+        
+      
       
         
-        
-        
-        
-        
-
-
-
 if __name__ == "__main__":
     app.run()
