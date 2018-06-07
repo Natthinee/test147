@@ -13,7 +13,6 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from app import bot
 listanswer = []
 question1 = ''
 face = ''
