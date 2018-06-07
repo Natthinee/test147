@@ -125,7 +125,7 @@ def movie(event):
         question = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         question = event.message.text
-        listQ = face+question
+        listQ = question
         answer = listQ
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
