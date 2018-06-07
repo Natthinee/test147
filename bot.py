@@ -141,9 +141,10 @@ def godaun(event):
     else:
         question = event.message.text
         answer = listQNo 
+        db.collection.find(query, projection)
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
+        db.user.find("_id": {"$oid": "5b18aec08087500009635e6c"},khim)
     
         
       
