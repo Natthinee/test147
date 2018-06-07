@@ -78,6 +78,7 @@ quest8['quest8'] = {'quest01': 'มีความคิดอยากตาย
 ans8 = {}
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
+listQ = ''
 
 
 app = Flask(__name__)
@@ -124,7 +125,8 @@ def movie(event):
         question = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         question = event.message.text
-        answer = face+question
+        listQ = face+question
+        answer = listQ
         listanswer.append(question)
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
