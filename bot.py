@@ -134,20 +134,18 @@ def webhook():
 def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
-    if event.message.text in evaluation_form['eval']['greet']:
-        question = event.message.text
+    question = event.message.text
+    if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'] )    
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text in evaluation_form['eval']['ques']:
-        question = event.message.text
+    elif question in evaluation_form['eval']['ques']:
         question1 = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text in number:
-        question = event.message.text
+    elif question in number:
         question1 = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
@@ -155,40 +153,33 @@ def godaun(event):
         w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text == richmanu['rich']['rich01']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
-    elif event.message.text == richmanu['rich']['rich02']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich02']:
         answer = ansrich02
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
-    elif event.message.text == richmanu['rich']['rich03']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich03']:
         answer = ansrich03
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text == richmanu['rich']['rich04']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich04']:
         answer = ansrich04
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text == richmanu['rich']['rich05']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich05']:
         answer = ansrich05
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif event.message.text == richmanu['rich']['rich06']:
-        question = event.message.text
+    elif question == richmanu['rich']['rich06']:
         answer = ansrich06
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     else:
-        question = event.message.text
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
