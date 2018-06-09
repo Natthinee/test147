@@ -13,8 +13,6 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-#from app import bot
-from sort_find import findd
 listanswer = []
 question1 = ''
 face = ''
@@ -184,8 +182,9 @@ def godaun(event):
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-      
         
+def sort_find():
+  return 1
         
       
       
