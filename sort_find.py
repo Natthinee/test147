@@ -5,7 +5,7 @@ from pymongo import MongoClient
 client = MongoClient("mongodb://pretty:shop1234@ds139942.mlab.com:39942/moviebot")
 db = client.moviebot
 
-def findmovie(userid):
+def findd(userid):
     try:
         cursor = db.users.find({'UserId':userid}).sort("Time")  #หาuser id
         array=[]
