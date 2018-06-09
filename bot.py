@@ -13,6 +13,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
+from app import bot
 listanswer = []
 question1 = ''
 face = ''
@@ -142,6 +143,7 @@ def godaun(event):
         question = event.message.text
         answer = listQNo 
         userr.insert({"Question": question, "Answer": answer})
+        bot()
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
         
