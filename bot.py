@@ -80,6 +80,15 @@ ans8 = {}
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 listQNo = 'กอดอุ่น ยังอ่อนด๋อย กอดอุ่นยังไม่รู้ว่ากำลังพิมพ์อะไร ช่วยกอดอุ่นด้วยน้าา'
+richmanu = {}
+richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
+                   'rich02': 'คุยกับเเบบประเมิน',
+                   'rich03': 'ซึมเศร้าน่ารู้',
+                   'rich04': 'จิตเวชใกล้บ้าน',
+                   'rich05': 'เศร้าเล้วเปลี่ยน',
+                   'rich06': 'ข่าวสารซึมเศร้า',}
+ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะเเชทพิมพ์เพื่อระบายก็มาเริ่มกันลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆได้เลยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ' ######
+
 
 
 app = Flask(__name__)
@@ -139,6 +148,23 @@ def godaun(event):
         w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif event.message.text == richmanu['rich']['rich01']:
+        question = event.message.text
+        answer = 
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
+        
+        
+        
+    elif event.message.text == richmanu['rich']['rich02']:
+    elif event.message.text == richmanu['rich']['rich03']:
+    elif event.message.text == richmanu['rich']['rich04']:
+    elif event.message.text == richmanu['rich']['rich05']:
+    elif event.message.text == richmanu['rich']['rich06']:
+    
+       
+       
     else:
         question = event.message.text
         answer = listQNo
