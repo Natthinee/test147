@@ -87,7 +87,14 @@ richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich04': 'จิตเวชใกล้บ้าน',
                    'rich05': 'เศร้าเล้วเปลี่ยน',
                    'rich06': 'ข่าวสารซึมเศร้า',}
-ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะเเชทพิมพ์เพื่อระบายก็มาเริ่มกันลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆได้เลยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ' ######
+ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะพิมพ์เพื่อระบายก็มาเริ่มกันเลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆได้เลยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ｡◕‿◕｡' ######
+ansrich02 = 'ถ้า พร้อมเเล้วมาลุยกันเล้ยยย !!ミ●﹏☉'
+ansrich03 = "นี่ๆ อยากรู้อะไรบ้างเอ่ยเกี่ยวกับโรคซึมเศร้า ถามมาได้เลยน้าา ถ้ากอดอุ่นรู้ได้คำตอบเเน่นอน （´◔౪◔）'
+ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩۩'
+ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
+ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
+
+
 
 
 
@@ -150,21 +157,36 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text == richmanu['rich']['rich01']:
         question = event.message.text
-        answer = 
+        answer = ansrich01
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
-        
-        
-        
+        #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif event.message.text == richmanu['rich']['rich02']:
+        question = event.message.text
+        answer = ansrich02
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+      ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif event.message.text == richmanu['rich']['rich03']:
+        question = event.message.text
+        answer = ansrich03
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text == richmanu['rich']['rich04']:
+        question = event.message.text
+        answer = ansrich04
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text == richmanu['rich']['rich05']:
+        question = event.message.text
+        answer = ansrich05
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif event.message.text == richmanu['rich']['rich06']:
-    
-       
-       
+        question = event.message.text
+        answer = ansrich06
+        userr.insert({"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     else:
         question = event.message.text
         answer = listQNo
