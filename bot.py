@@ -141,9 +141,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     else:
         question = event.message.text
-        answer = listQNo 
+        answer = bot()
         userr.insert({"Question": question, "Answer": answer})
-        bot()
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
         
