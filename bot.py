@@ -181,7 +181,7 @@ def godaun(event):
     else:
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
-        w = userr.find({'Question':  "Dbfusv"}).sort("Answer")
+        w = db.user.find({'Question':  "Dbfusv"}).sort("Answer")
         for i in w:
             testmlab.append(i) 
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=testmlab)
