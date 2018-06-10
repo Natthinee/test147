@@ -191,7 +191,7 @@ def godaun(event):
                     q.append(value)
                 if key =='Answer':
                     t.append(value)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=t))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=q[-1]))
         
 
         
