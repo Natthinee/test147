@@ -182,8 +182,8 @@ def godaun(event):
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
         w = user.find({'UserId':userid}).sort("Time")
-                q = []
-                t=[]
+        q = []
+        t=[]
                 for i in w:
                     a = i
                     for key, value in a.items():
