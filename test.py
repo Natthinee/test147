@@ -9,5 +9,4 @@ def find1(question,answer):
    w = db.find()
    #w = db.find({'Question': 'แบบประเมิน' }).sort(answer)
    for i in w:
-      tt.append(i)
-   return tt
+       return tt.append(i)
