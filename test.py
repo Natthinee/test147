@@ -9,4 +9,5 @@ def find1():
    g = db.insert({'สวัสดี':'ขิมเองจ้า'})
    w = db.find({'Question':  "Dbfusv"}).sort("Answer")
    for i in w:
-   return tt.append(i)
+      tt.append(i)
+   return tt
