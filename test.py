@@ -8,6 +8,5 @@ def find1():
    db  = client.khim.user
    g = db.insert({'สวัสดี':'ขิมเองจ้า'})
    w = db.find({'Question':  "Dbfusv"}).sort("Answer")
-   data = w.json()
-   j = json.loads(data)
-   return tt.append(j['Question'])
+   for i in w:
+   return tt.append(i)
