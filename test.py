@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+import json
 tt = []
 
 def find1():
@@ -8,5 +9,6 @@ def find1():
    g = db.insert({'สวัสดี':'ขิมเองจ้า'})
    w = db.find({'Question':  "Dbfusv"}).sort("Answer")
    for i in w:
+      j = json.loads(i['Answer'])
       tt.append(i)
    return tt
