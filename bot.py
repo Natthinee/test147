@@ -183,8 +183,7 @@ def godaun(event):
         userr.insert({"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
-def sort_find():
-  return 1
+
         
       
       
