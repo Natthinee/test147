@@ -9,7 +9,7 @@ def find1(question,answer):
    #data = db.user.find()
    data = db.user.find("U2cd26d49ace18bd6cfce4e53160808cb").sort("เเบบประเมิน")
    for i in data:
-        tt.append(data) 
+        tt.append(i) 
    return tt
 
   
