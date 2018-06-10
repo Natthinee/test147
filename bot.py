@@ -13,7 +13,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from test from find1
+from test import find1
 listanswer = []
 question1 = ''
 face = ''
