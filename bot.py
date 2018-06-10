@@ -181,7 +181,17 @@ def godaun(event):
     else:
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        w = user.find({'UserId':userid}).sort("Time")
+                q = []
+                t=[]
+                for i in w:
+                    a = i
+                    for key, value in a.items():
+                        if key == 'Question':
+                            q.append(value)
+                        if key =='Cate':
+                            t.append(value)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=t))
         
 
         
