@@ -189,7 +189,7 @@ def godaun(event):
             for key, value in a.items():
                 if key == 'Question':
                     q.append(value)
-                if key =='Cate':
+                if key =='Answer':
                     t.append(value)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=t))
         
