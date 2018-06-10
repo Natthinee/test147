@@ -10,4 +10,4 @@ def find1():
    w = db.find({'Question':  "Dbfusv"}).sort("Answer")
    data = w.json()
    j = json.loads(data)
-   return j['Question']
+   return tt.append(j['Question'])
