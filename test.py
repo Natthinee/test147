@@ -7,7 +7,7 @@ def find1(question,answer):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
    #data = db.user.find()
-   data = db.user.find("U2cd26d49ace18bd6cfce4e53160808cb").sort("เเบบประเมิน")
+   data = db.user.find(Question).sort("เเบบประเมิน")
    for i in data:
         tt.append(i) 
    return tt
