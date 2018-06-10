@@ -8,5 +8,5 @@ def find1(question,answer):
    db  = client.khim.user
    #w = db.user.find_one()
    #w = db.find({'Question': 'แบบประเมิน' }).sort(answer)
-   for item in db.user.find().sort():
+   for item in db.user.find():
    return item
