@@ -92,7 +92,7 @@ ansrich03 = 'นี่ๆ อยากรู้อะไรบ้างเอ่
 ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩۩'
 ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
-
+testmlab = []
 
 
 
@@ -181,9 +181,10 @@ def godaun(event):
     else:
         answer = listQNo
         userr.insert({"Question": question, "Answer": answer})
-        w = db.find({'Question':  "Dbfusv"}).sort("Answer")
+        w = userr.find({'Question':  "Dbfusv"}).sort("Answer")
         for i in w:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=i)
+            testmlab.append(i) 
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=testmlab)
         
 
         
