@@ -8,8 +8,8 @@ def find1():
      g = db.insert({'สวัสดี':'12','จ้า':'n'})
 #g2 = db.user.insert({'สวัสดี':'21'})
 #db.users.remove({z:'abc'});
-     for i in db.find():
-         tt.append(i['จ้า'])
-      return tt
+     #for i in db.find():
+     tt.append('สวัสดีจ้าาา')
+     return tt
 
   
