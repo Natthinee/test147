@@ -9,7 +9,6 @@ def find1():
 #g2 = db.user.insert({'สวัสดี':'21'})
 #db.users.remove({z:'abc'});
      #for i in db.find():
-     tt.append('สวัสดีจ้าาา')
-     return tt
+     return 'สวัสดีจ้าา'
 
   
