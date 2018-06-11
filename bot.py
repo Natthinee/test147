@@ -137,19 +137,17 @@ def godaun(event):
     question = event.message.text
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'] )
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
         question1 = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
-        listanswer.append(question)
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in number:
         question1 = random.choice(evaluation_form['eval']['quest9'])
         face = random.choice(evaluation_form['eval']['wordap'])
-        answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
+        answer = find1(face,question1) +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
         ##w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
