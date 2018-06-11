@@ -12,6 +12,6 @@ def find1(face,question1):
           if question1 not in i['Answer']:
                 return face + question1
           else:
-               return 'ทดสอบใหม่'
+                return 'ทดสอบใหม่'
 
   
