@@ -11,7 +11,7 @@ def find1():
      db  = client.khim.user
      for i in db.find():
           if i['Answer'] in number:
-               tt.append(i['Answer'])
-     return tt
+               score = len(tt.append(i['Answer']))
+     return score
 
   
