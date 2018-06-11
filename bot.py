@@ -36,8 +36,6 @@ answer = open("answer.txt", "r", encoding='utf-8-sig')
 answer = answer.read().split(',')
 ques = open("Ques.txt", "r", encoding='utf-8-sig')
 ques = ques.read().split(',')
-quest9 = open("Quest9.txt", "r", encoding='utf-8-sig')
-quest9 = quest9.read().split(',')
 wordappende = open("wordappende.txt", "r", encoding='utf-8-sig')
 wordappende = wordappende.read().split(',')
 qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
@@ -45,7 +43,6 @@ qq2 = qq2.read().split(',')
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
-                           'quest9': quest9,
                            'wordap': wordappende,
                            'qq2': qq2,
                            'number': number}
@@ -139,15 +136,15 @@ def godaun(event):
         answer = random.choice(evaluation_form['eval']['answer'] )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
-        question1 = random.choice(evaluation_form['eval']['quest9'])
+        question1 = str(ran())
         face = random.choice(evaluation_form['eval']['wordap'])
-        answer =str(find1(face,question1)) +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
+        answer =face+question1+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in number:
-        question1 = random.choice(evaluation_form['eval']['quest9'])
+        question1 = #################
         face = random.choice(evaluation_form['eval']['wordap'])
-        answer = find1(face,question1) +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
+        answer = ############# +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
         ##w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
