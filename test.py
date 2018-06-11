@@ -12,6 +12,6 @@ def find1():
      for i in db.find():
           if i['Answer'] in number:
                tt.append(i['Answer'])
-     return len(tt)
+     return tt
 
   
