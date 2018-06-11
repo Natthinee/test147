@@ -13,25 +13,6 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-QC1 = open("QC1.txt", encoding='utf-8-sig')
-QC1 = QC1.read().split(',')
-QC2 = open("QC1.txt", encoding='utf-8-sig')
-QC2 = QC2.read().split(',')
-QC3 = open("QC1.txt", encoding='utf-8-sig')
-QC3 = QC3.read().split(',')
-QC4 = open("QC1.txt", encoding='utf-8-sig')
-QC4 = QC4.read().split(',')
-QC5 = open("QC1.txt", encoding='utf-8-sig')
-QC5 = QC5.read().split(',')
-QC6 = open("QC1.txt", encoding='utf-8-sig')
-QC6 = QC6.read().split(',')
-QC7 = open("QC1.txt", encoding='utf-8-sig')
-QC7 = QC7.read().split(',')
-QC8 = open("QC1.txt", encoding='utf-8-sig')
-QC8 = QC8.read().split(',')
-QC9 = open("QC1.txt", encoding='utf-8-sig')
-QC9 = QC9.read().split(',')
-QC =[QC1,QC2,QC3,QC4,QC5,QC6,QC7,QC8,QC9]
 listanswer = []
 question1 = ''
 face = ''
@@ -160,13 +141,10 @@ def godaun(event):
         answer =face+question1+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
      elif question in number:
         question1 ='ทดสอบ'
         face = random.choice(evaluation_form['eval']['wordap'])
         answer = face + question1 +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
-        listanswer.append(question)
-        w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question == richmanu['rich']['rich01']:
