@@ -156,34 +156,34 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif question == richmanu['rich']['rich02']:
         answer = ansrich02
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         answer = ansrich03
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question == richmanu['rich']['rich05']:
         answer = ansrich05
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question == richmanu['rich']['rich06']:
         answer = ansrich06
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     else:
-        answer = listQNo 
+        #answer = listQNo 
         answer1 = str(find1())
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
+        userr.insert({"UserID":userid,"Question": question, "Answer": question})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer1))
         
 
