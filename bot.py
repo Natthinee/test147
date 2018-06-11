@@ -142,9 +142,9 @@ def godaun(event):
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in number:
-        question1 = #################
+        question1 = '#################'
         face = random.choice(evaluation_form['eval']['wordap'])
-        answer = ############# +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
+        answer = '#############' +'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple']
         listanswer.append(question)
         ##w = user.find({'UserId':userid}).sort("answer")
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
