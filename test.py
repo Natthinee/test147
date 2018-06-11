@@ -10,6 +10,6 @@ def find1():
 #db.users.remove({z:'abc'});
      for i in db.find():
           tt.append(i['สวัสดีจ้า'])
-     return 'สวัสดีจ้าา'
+     return tt
 
   
