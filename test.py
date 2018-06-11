@@ -9,7 +9,7 @@ def find1(face,question1):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
      for i in db.find():
-          if question1 not in i['Answer']:
+          if question1 != i['Answer']:
                 return face + question1
           else:
                 return 'ทดสอบใหม่'
