@@ -34,8 +34,6 @@ def find1():
      countData = db.count()
      if countData <= 9:
           return QC1[countData-1]
-         
-def find2():
      if countData <= 11:
           return qq2[countData-10]
      elif countData <= 20:
