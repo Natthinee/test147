@@ -79,7 +79,7 @@ def find1(userid,question):
           db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData-8]})
           return answer
      elif countData <= 19:
-          return quest8[countData-10]
+          return quest8[countData-11]
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
           
