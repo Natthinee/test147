@@ -89,13 +89,11 @@ def godaun(event):
         answer = random.choice(evaluation_form['eval']['answer'] )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
-        question1 = str(find1()) ######test#####
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        question1 = str(find1(userid,question)) ######test#####
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
     elif question in number:
-        question1 = str(find1())
-        userr.insert({"UserID":userid,"Question": question, "Answer": question1})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        question1 = str(find1(userid,question))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
