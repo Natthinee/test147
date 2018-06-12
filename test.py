@@ -75,11 +75,15 @@ def find1(userid,question):
           return answer
      if countData <= 10:
           face = random.choice(evaluation_form['eval']['wordap'])
-          answer = face+QC1[countData-8]+'\n'+ ple
-          db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData-8]})
+          answer = face+qq2[countData-8]+'\n'+ ple
+          db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-8]})
           return answer
-     elif countData <= 19:
-          return quest8[countData-11]
+     elif countData <= 13:
+          face = random.choice(evaluation_form['eval']['wordap'])
+          answer = face+quest8[countData-10]+'\n'+ ple
+          db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-10]})
+          return answer
+     
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
           
