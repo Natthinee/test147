@@ -62,6 +62,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'qq2': qq2}
 
 score = 0
+ple = 'ช่วยพิมพ์คำตอบว่า "ใช่" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่ใช่" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถาม'
 #q9Ran = random.choice(QC)
 def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
@@ -73,9 +74,12 @@ def find1(userid,question):
           db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
      if countData <= 10:
-          return qq2[countData-8]
-     elif countData <= 20:
-          return quest8[countData-12]
+          face = random.choice(evaluation_form['eval']['wordap'])
+          answer = face+QC1[countData-8]+'\n'+ ple
+          db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData-8]})
+          return answer
+     elif countData <= 19:
+          return quest8[countData-10]
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
           
