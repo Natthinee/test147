@@ -47,6 +47,7 @@ ansrich03 = 'นี่ๆ อยากรู้อะไรบ้างเอ่
 ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩۩'
 ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
+ans2 = ['มี','ไม่มี']
 
 app = Flask(__name__)
 
@@ -94,6 +95,9 @@ def godaun(event):
     elif question in number:
         question1 = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+    elif question in ans2:
+        question1 = str(find1(userid,question))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
