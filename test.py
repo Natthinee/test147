@@ -32,7 +32,7 @@ def find1():
           if i['Answer'] == '':
                return QC1[0]
           if i['Answer'] != '':
-               return QC1[len(i['Answer'])]
+               return QC1[i]
           
           
 
