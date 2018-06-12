@@ -27,12 +27,10 @@ score = 0
 def find1():
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
-     
      for i in db.find():
-          if i['Answer'] == '':
-               return QC1[0]
-          if i['Answer'] != '':
+          if i['Answer'] == 'เบื่อ':
                return QC1[i]
+          
           
           
 
