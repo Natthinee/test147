@@ -136,7 +136,7 @@ def godaun(event):
         answer = random.choice(evaluation_form['eval']['answer'] )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
-        question1 = str(find1())
+        question1 = str(find1(question))
         face = random.choice(evaluation_form['eval']['wordap'])
         answer =face+question1+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
         userr.insert({"UserID":userid,"Question": question, "Answer": question1})
