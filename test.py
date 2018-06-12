@@ -73,7 +73,7 @@ def find1(userid,question):
           db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
      if countData <= 11:
-          return qq2[countData-9]
+          return qq2[countData-10]
      elif countData <= 20:
           return quest8[countData-12]
      else:
