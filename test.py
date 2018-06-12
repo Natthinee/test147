@@ -26,8 +26,6 @@ qq2 = qq2.read().split(',')
 quest8 = open("QQ8.txt", "r", encoding='utf-8-sig')
 quest8 = quest8.read().split(',')
 
-
-tt = []
 score = 0
 #q9Ran = random.choice(QC)
 def find1():
@@ -35,7 +33,9 @@ def find1():
      db  = client.khim.user
      countData = db.count()
      if countData <= 9:
-          return QC1[countData-1]
+          QQC = QC1[countData-1]
+     return QQC
+     
 def find2():
      if countData <= 11:
           return qq2[countData-10]
