@@ -83,6 +83,10 @@ def find1(userid,question):
           answer = face+quest8[countData-11]+'\n'+ ple
           db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
           return answer
+     elif countData==13:
+          if question=='มี':
+              return 'ในช่วง 1 เดือนที่ผ่านมารวมวันนี้ สามารถควบคุมความอยากฆ่าตัวตายที่ท่านคิดอยู่นั้นได้หรือไม่\nหรือบอกได้ไหมว่าคงจะไม่ทำตามความคิดนั้นในขณะนี้'
+              
      
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
