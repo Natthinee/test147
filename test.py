@@ -36,8 +36,8 @@ def find1(question):
                return 'ทดสอบใหม่'
           
  def ran():
-      QC = random.choice(QC)
-      return QC[1]
+      #QC = random.choice(QC)
+     return QC1[1]
           
           
           
