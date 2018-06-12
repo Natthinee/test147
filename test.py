@@ -67,13 +67,13 @@ def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
      countData = db.count()
-     if countData <= 9:
+     if countData <= 8:
           face = random.choice(evaluation_form['eval']['wordap'])
           answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
           db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
-     if countData <= 11:
-          return qq2[countData-9]
+     if countData <= 10:
+          return qq2[countData]
      elif countData <= 20:
           return quest8[countData-12]
      else:
