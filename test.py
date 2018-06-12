@@ -24,7 +24,7 @@ QC =[QC1,QC2,QC3,QC4,QC5,QC6,QC7,QC8,QC9]
 
 tt = []
 score = 0
-def find1(question):
+def find1():
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
      QC = random.choice(QC)
