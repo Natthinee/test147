@@ -49,6 +49,7 @@ answer0123['answer0123'] = {'answer0': 'ไม่มีเลย',
                             'answer1': 'เป็นบางวัน',
                             'answer2': 'เป็นบ่อย',
                             'answer3': 'เป็นทุกวัน'}
+setscoreq9 = {}
 setscoreq9['score'] = {'pprint': ' 0 = ไม่มีเลย\n 1 = เป็นบางวัน\n 2 = เป็นบ่อย\n 3 = เป็นทุกวัน\n'}
 select2 = {}
 select2['selc'] = {'selc01': 'มี',
