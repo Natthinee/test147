@@ -75,8 +75,8 @@ def find1(userid,question):
           return answer
      if countData <= 10:
           face = random.choice(evaluation_form['eval']['wordap'])
-          answer = face+qq2[countData-8]+'\n'+ ple
-          db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-8]})
+          answer = face+qq2[countData-9]+'\n'+ ple
+          db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-9]})
           return answer
      elif countData <= 13:
           face = random.choice(evaluation_form['eval']['wordap'])
