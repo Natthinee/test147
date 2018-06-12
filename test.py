@@ -27,13 +27,13 @@ score = 0
 def find1(question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
+     QC = random.choice(QC)
      for i in db.find():
           if i['Answer'] == None:
-               return face + question1
-          if question1 != i['Answer']:
-               return face + question1
-          if len(i['Answer']) == 9:
-               return 'ทดสอบใหม่'
+               return QC[1]
+          if question1 != None:
+               return QC[len(i['Answer'])]
+          
           
 
           
