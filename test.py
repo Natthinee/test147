@@ -36,7 +36,7 @@ def find1():
      db  = client.khim.user
      countData = db.count()
      if countData <= 9:
-          return QC1[countData]
+          return QC1[countData-1]
      elif countData <= 11:
           return qq2[countData-9]
      elif countData <= 19:
