@@ -31,7 +31,7 @@ def find1():
      for i in db.find():
           if i['Answer'] == '':
                return QC1[0]
-          if i['Answer'] != None:
+          if i['Answer'] != '':
                return QC1[len(i['Answer'])]
           
           
