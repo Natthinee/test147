@@ -59,8 +59,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
                            'wordap': wordappende,
-                           'qq2': qq2,
-                           'number': number}
+                           'qq2': qq2}
 
 score = 0
 #q9Ran = random.choice(QC)
