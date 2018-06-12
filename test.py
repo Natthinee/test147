@@ -35,10 +35,7 @@ def find1(question):
           if len(i['Answer']) == 9:
                return 'ทดสอบใหม่'
           
- def ran():
-      #QC = random.choice(QC)
-     return QC1[1]
-          
+
           
           
           
