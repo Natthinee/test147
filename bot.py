@@ -159,6 +159,86 @@ def godaun(event):
                             URITemplateAction(
                                 label='uri2',
                                 uri='http://example.com/2'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item3.jpg',
+                        title='this is menu3',
+                        text='description3',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback3',
+                                text='postback text3',
+                                data='action=buy&itemid=3'
+                            ),
+                            MessageTemplateAction(
+                                label='message3',
+                                text='message text3'
+                            ),
+                            URITemplateAction(
+                                label='uri3',
+                                uri='http://example.com/3'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item4.jpg',
+                        title='this is menu4',
+                        text='description4',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback4',
+                                text='postback text4',
+                                data='action=buy&itemid=4'
+                            ),
+                            MessageTemplateAction(
+                                label='message4',
+                                text='message text4'
+                            ),
+                            URITemplateAction(
+                                label='uri4',
+                                uri='http://example.com/4'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='this is menu5',
+                        text='description1',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback5',
+                                text='postback text5',
+                                data='action=buy&itemid=5'
+                            ),
+                            MessageTemplateAction(
+                                label='message5',
+                                text='message text5'
+                            ),
+                            URITemplateAction(
+                                label='uri5',
+                                uri='http://example.com/5'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item6.jpg',
+                        title='this is menu6',
+                        text='description6',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback6',
+                                text='postback text6',
+                                data='action=buy&itemid=6'
+                            ),
+                            MessageTemplateAction(
+                                label='message6',
+                                text='message text6'
+                            ),
+                            URITemplateAction(
+                                label='uri6',
+                                uri='http://example.com/6'
                             )
                          ]
                       )
