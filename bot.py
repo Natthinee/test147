@@ -122,7 +122,7 @@ def godaun(event):
         sticker_message = StickerSendMessage(
         package_id='1',
         sticker_id='1')
-        line_bot_api.push_message(event.reply_token, sticker_message)
+        line_bot_api.reply_message(event.reply_token, sticker_message)
       
         ##answer = ansrich03
         #message = gg(uestion)
