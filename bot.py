@@ -120,12 +120,11 @@ def godaun(event):
     elif question == richmanu['rich']['rich03']:
         #bot()
         location_message = LocationSendMessage(
-        title='location',
-        address='Thailand',
-        latitude=135.65910807942215,
-        longitude=19.70372892916203
-    )
-        line_bot_api.reply_message(event.reply_token, location_message)
+        title='my location',
+        address='Tokyo',
+        latitude=35.65910807942215,
+        longitude=139.70372892916203)
+        line_bot_api.push_message(event.push_message, location_message)
       
         ##answer = ansrich03
         #message = gg(uestion)
