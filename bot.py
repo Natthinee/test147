@@ -111,10 +111,10 @@ def godaun(event):
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         ##answer = ansrich03
-        answer = gg()
+        message= gg()
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, message=answer)
+        line_bot_api.reply_message(event.reply_token, message)
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
