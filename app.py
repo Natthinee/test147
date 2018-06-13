@@ -109,7 +109,8 @@ def bot():
     text = msg_in_json["events"][0]['message']['text'].lower().strip()
     #replyQueue.append("สวัสดีจ้าาาา")
     # ตัวอย่างการทำให้ bot ถาม-ตอบได้ แบบ exact match
-    reply1(replyToken, replyQueue[:5])
+    #reply2(replyToken, replyQueue[:5])
+    reply1(replyToken, replyQueue)
     return 'OK', 200
 
 
