@@ -90,7 +90,8 @@ def webhook():
 
     return 'OK'
 
-@handler.add(MessageEvent, message=TextMessage)
+#@handler.add(MessageEvent, message=TextMessage)
+@handler.default()
 def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
