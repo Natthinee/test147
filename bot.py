@@ -223,7 +223,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item6.jpg',
+                        thumbnail_image_url='https://og.tvpoolonline.com/wp-content/uploads/2017/12/%E0%B8%9B%E0%B8%81-373.jpg',
                         title='this is menu6',
                         text='description6',
                         actions=[
