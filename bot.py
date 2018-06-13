@@ -163,7 +163,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item3.jpg',
+                        thumbnail_image_url='https://scontent-fbkk5-7.us-fbcdn.net/v1/t.1-48/1426l78O9684I4108ZPH0J4S8_842023153_K1DlXQOI5DHP/dskvvc.qpjhg.xmwo/w/data/997/997136-img.s52i93.13p.jpg',
                         title='this is menu3',
                         text='description3',
                         actions=[
