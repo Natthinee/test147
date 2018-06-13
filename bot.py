@@ -111,7 +111,7 @@ def godaun(event):
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         ##answer = ansrich03
-        message= gg()
+        message = gg(uestion)
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.reply_message(event.reply_token, message)
@@ -132,7 +132,7 @@ def godaun(event):
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
-def gg():
+def gg(event):
         message = TemplateSendMessage(
                 alt_text='Carousel template',
                 template=CarouselTemplate(
