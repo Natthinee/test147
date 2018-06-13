@@ -119,10 +119,13 @@ def godaun(event):
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         #bot()
-        sticker_message = StickerSendMessage(
-        package_id='1',
-        sticker_id='1')
-        line_bot_api.reply_message(event.reply_token, sticker_message)
+        location_message = LocationSendMessage(
+        title='location',
+        address='Thailand',
+        latitude=135.65910807942215,
+        longitude=19.70372892916203
+    )
+        line_bot_api.reply_message(event.reply_token, location_message)
       
         ##answer = ansrich03
         #message = gg(uestion)
