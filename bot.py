@@ -124,7 +124,7 @@ def godaun(event):
         address='Tokyo',
         latitude=35.65910807942215,
         longitude=139.70372892916203)
-        line_bot_api.push_message(event.push_message, location_message)
+        line_bot_api.push_message(userid, location_message)
       
         ##answer = ansrich03
         #message = gg(uestion)
