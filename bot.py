@@ -130,8 +130,7 @@ def godaun(event):
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
-        
-    def gg():
+def gg():
         message = TemplateSendMessage(
                 alt_text='Carousel template',
                 template=CarouselTemplate(
