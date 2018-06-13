@@ -183,7 +183,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://www.idskinexpert.com/wp-content/uploads/2017/06/%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B21.jpg',
+                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg',
                         title='this is menu4',
                         text='description4',
                         actions=[
@@ -223,7 +223,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://og.tvpoolonline.com/wp-content/uploads/2017/12/%E0%B8%9B%E0%B8%81-373.jpg',
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
                         title='this is menu6',
                         text='description6',
                         actions=[
