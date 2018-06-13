@@ -179,10 +179,6 @@ def godaun(event):
   }
 }
         )
-        data = json.dumps({
-        "replyToken": replyToken,
-        "messages": msgs
-    })
         #bot()
         #location_message = LocationSendMessage(
         #title='my location',
@@ -195,7 +191,7 @@ def godaun(event):
         #message = gg(uestion)
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, replyToken)
+        line_bot_api.reply_message(event.reply_token, msgs)
         
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
