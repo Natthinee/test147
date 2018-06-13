@@ -183,7 +183,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item4.jpg',
+                        thumbnail_image_url='https://www.idskinexpert.com/wp-content/uploads/2017/06/%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B21.jpg',
                         title='this is menu4',
                         text='description4',
                         actions=[
@@ -203,7 +203,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item1.jpg',
+                        thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
                         title='this is menu5',
                         text='description1',
                         actions=[
