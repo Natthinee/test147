@@ -110,7 +110,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-         j(question)
+         jj(question)
         ##answer = ansrich03
         #message = gg(uestion)
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
