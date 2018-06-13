@@ -7,13 +7,15 @@ Created on Wed Jun  6 21:31:06 2018
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
-from linebot.models import ( TextMessage,
-    ImageMessage,
-    VideoMessage,
-    AudioMessage,
-    LocationMessage,
-    StickerMessage,
-    FileMessage)
+from linebot.models import (
+ MessageEvent, TextMessage, TextSendMessage, ImageSendMessage,
+ SourceUser, SourceGroup, SourceRoom,
+ TemplateSendMessage, ConfirmTemplate, MessageTemplateAction,
+ ButtonsTemplate, URITemplateAction, PostbackTemplateAction,
+ CarouselTemplate, CarouselColumn, PostbackEvent,
+ StickerMessage, StickerSendMessage, LocationMessage, LocationSendMessage,
+ ImageMessage, VideoMessage, AudioMessage,
+ UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent)
 from flask.ext.pymongo import PyMongo
 import pymongo
 from pymongo import MongoClient
