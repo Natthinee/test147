@@ -118,67 +118,54 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        msgs = []
-        msgs.append(
-        {
-  "type": "template",
-  "altText": "this is a carousel template",
-  "template": {
-    "type": "carousel",
-    "actions": [],
-    "columns": [
-      {
-        "thumbnailImageUrl": "http://postfiles9.naver.net/MjAxNzEyMjlfNjQg/MDAxNTE0NTE0MDQ1MzEw.ElJgh8SrwJkzXxENHpSF4b8eC6BIitKmECTPY_pmkJUg.HaDSpCuaYLGvIPceKoQrzO-7M6eet4UkUGWn2ea4qYAg.JPEG.destroyerx/Linecard1.JPG?type=w2",
-        "title": "LINE Brown Card",
-        "text": "A Mart 15% discount",
-        "actions": [
-          {
-            "type": "message",
-            "label": "Choose LINE Brown Card",
-            "text": "Choose LINE Brown Card"
-          }
-        ]
-      },
-      {
-        "thumbnailImageUrl": "http://postfiles2.naver.net/MjAxNzEyMjlfMTEx/MDAxNTE0NTE0MDQ1NTA1.nFSMxrp_u_qI8dlHlsp-Idc1OOPlF3a5VYY3q44yw0Ig.Ek-xlmL7ef9HNF1A39qHVrbhWceAzCBhqDUIOEgQrrUg.JPEG.destroyerx/Linecard4.JPG?type=w2",
-        "title": "LINE Cony Card",
-        "text": "A Mart 10% discount",
-        "actions": [
-          {
-            "type": "message",
-            "label": "Choose LINE Cony Card",
-            "text": "Choose LINE Cony Card"
-          }
-        ]
-      },
-      {
-        "thumbnailImageUrl": "http://postfiles12.naver.net/MjAxNzEyMjlfOTEg/MDAxNTE0NTE0MDQ1NDAz.ey21txaWEjrXMC_VUU9YbBDZRlsKfiEY-OMdGhzodo0g.MlE6j3mP9oxYzfcQluzMtI351-HVqKKd-fTiahhxIfkg.JPEG.destroyerx/Linecard2.JPG?type=w2",
-        "title": "LINE BLACK Card",
-        "text": "A Mart 15% Mileage",
-        "actions": [
-          {
-            "type": "message",
-            "label": "Choose LINE BLACK Card",
-            "text": "Choose LINE BLACK Card"
-          }
-        ]
-      },
-      {
-        "thumbnailImageUrl": "http://postfiles8.naver.net/MjAxNzEyMjlfODgg/MDAxNTE0NTE0MDQ1NDU1.LnfB2VZqO-84t61pbpSNuSbfpI28qWt7RWyhE6iAtTgg.pZrdXfQayqjlm7GYgrN7S0BqT8SsUv9yyex5ER4N8TMg.JPEG.destroyerx/Linecard3.JPG?type=w2",
-        "title": "LINE WHITE Card",
-        "text": "A Mart 10% Mileage",
-        "actions": [
-          {
-            "type": "message",
-            "label": "Choose LINE WHITE Card",
-            "text": "Choose LINE WHITE Card"
-          }
-        ]
-      }
-    ]
-  }
-}
-        )
+        carousel_template_message = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
+                            ),
+                            MessageTemplateAction(
+                                label='message1',
+                                text='message text1'
+                            ),
+                            URITemplateAction(
+                                label='uri1',
+                                uri='http://example.com/1'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://example.com/item2.jpg',
+                        title='this is menu2',
+                        text='description2',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
+                            URITemplateAction(
+                                label='uri2',
+                                uri='http://example.com/2'
+                            )
+                         ]
+                      )
+                  ]
+              )
+          )
+      
         #bot()
         #location_message = LocationSendMessage(
         #title='my location',
@@ -191,7 +178,8 @@ def godaun(event):
         #message = gg(uestion)
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, msgs)
+        #line_bot_api.reply_message(event.reply_token, msgs)
+        line_bot_api.reply_message(event.reply_token, carousel_template_message)
         
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
