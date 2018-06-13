@@ -90,8 +90,7 @@ def webhook():
 
     return 'OK'
 
-#@handler.add(MessageEvent, message=TextMessage)
-@handler.default()
+@handler.add(MessageEvent, message=TextMessage)
 def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
@@ -119,7 +118,12 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        bot()
+        #bot()
+        sticker_message = StickerSendMessage(
+        package_id='1',
+        sticker_id='1')
+        line_bot_api.push_message(event.reply_token, sticker_message)
+      
         ##answer = ansrich03
         #message = gg(uestion)
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
