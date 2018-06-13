@@ -123,7 +123,7 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='whatD.jpg',
+                        thumbnail_image_url='http://cliparting.com/wp-content/uploads/2016/06/Snoopy-happy-new-year-clipart-clipart-free-clipart-microsoft-image.png',
                         title='this is menu1',
                         text='description1',
                         actions=[
