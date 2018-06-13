@@ -143,7 +143,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://f.ptcdn.info/673/057/000/p8zdfiz1kyWOYHMQ96K-o.png',
+                        thumbnail_image_url='http://www.p1.go.th/information/small/16_1.jpg',
                         title='this is menu2',
                         text='description2',
                         actions=[
