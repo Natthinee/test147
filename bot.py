@@ -15,6 +15,7 @@ from pymongo import MongoClient
 import json
 import random
 from test import find1
+from app import bot()
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -110,7 +111,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        jj(question)
+        bot()
         ##answer = ansrich03
         #message = gg(uestion)
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
@@ -133,93 +134,6 @@ def godaun(event):
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
-def jj(question):
-         message = TemplateSendMessage(
-                alt_text='Carousel template',
-                template=CarouselTemplate(
-                    columns=[
-                        CarouselColumn(
-                            title='ตัวอย่างการสนทนาในแต่ละประเภท',
-                            text='ถามเกี่ยวกับ',
-                            actions=[
 
-                                MessageTemplateAction(
-                                    label='นักแสดง',
-                                    text='ใครเป็นนักแสดง wonderwoman'
-                                ),
-                                MessageTemplateAction(
-                                    label='ผู้กำกับ',
-                                    text='ใครเป็นผู้กำกับวันเดอวูแมน'
-                                ),
-                                MessageTemplateAction(
-                                    label='รูปภาพ',
-                                    text='อยากดูรูปภาพwonderwoman'
-                                )
-
-                            ]
-                        ),
-                        CarouselColumn(
-                            title='ตัวอย่างการสนทนาในแต่ละประเภท',
-                            text='ถามเกี่ยวกับ',
-                            actions=[
-
-                                MessageTemplateAction(
-                                    label='รีวิว',
-                                    text='อยากอ่านรีวิวwonderwoman'
-                                ),
-                                MessageTemplateAction(
-                                    label='สปอย',
-                                    text='อยากดูสปอยwonderwoman'
-                                ),
-                                MessageTemplateAction(
-                                    label='เรื่องย่อภาพยนตร์',
-                                    text='อยากอ่านเรื่องย่อwonderwoman'
-                                )
-                            ]
-                        ),
-                        CarouselColumn(
-                            title='ตัวอย่างการสนทนาในแต่ละประเภท',
-                            text='ถามเกี่ยวกับ',
-                            actions=[
-
-                                MessageTemplateAction(
-                                    label='ประเภทหนัง',
-                                    text='wonderwonเป็นหนังประเภทอะไร'
-                                ),
-                                MessageTemplateAction(
-                                    label='วันฉายภาพยนตร์',
-                                    text='wonderwomanฉายวันไหน'
-                                ),
-                                MessageTemplateAction(
-                                    label='ความสนุก',
-                                    text='wonderwomanสนุกไหม'
-                                )
-                            ]
-                        ),
-                        CarouselColumn(
-                            title='ตัวอย่างการสนทนาในแต่ละประเภท',
-                            text='ถามเกี่ยวกับ',
-                            actions=[
-
-                                MessageTemplateAction(
-                                    label='แนะนำภาพยนตร์',
-                                    text='แนะนำหนังหน่อย'
-                                ),
-                                MessageTemplateAction(
-                                    label='การทักทายทั่วไป',
-                                    text='สบายดีไหม'
-                                ),
-                                MessageTemplateAction(
-                                    label='-',
-                                    text='-'
-                                )
-
-                            ]
-                        )
-                    ]
-                )
-            )
-        line_bot_api.reply_message(event.reply_token, message)
 if __name__ == "__main__":
     app.run()
