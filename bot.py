@@ -113,7 +113,8 @@ def godaun(event):
         ##answer = ansrich03
         answer = gg()
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.reply_message(event.reply_token, message=answer)
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
