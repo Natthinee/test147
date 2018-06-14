@@ -141,8 +141,7 @@ def godaun(event):
                                 label='ความรู้เรื่องโรคจิตเวช',
                                 uri='http://www.thaifamilylink.net/web/node/29'
                                 )
-                        ]
-                    ),
+                  
                    
                          ]
                       )
