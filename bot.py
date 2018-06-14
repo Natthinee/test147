@@ -130,6 +130,14 @@ def godaun(event):
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไป',
                                 uri='http://www.thaifamilylink.net/web/node/29'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='http://www.thaifamilylink.net/web/node/29'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='http://www.thaifamilylink.net/web/node/29'
                             )
                          ]
                       )
