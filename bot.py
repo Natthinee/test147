@@ -137,8 +137,8 @@ def godaun(event):
                                 text='message text1'
                             ),
                             URITemplateAction(
-                                label='รู้จักกับ โรคซึมเศร้า',
-                                uri='http://example.com/1'
+                                label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
+                                uri='http://www.thaifamilylink.net/web/node/29'
                             )
                          ]
                       )
