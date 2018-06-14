@@ -118,26 +118,122 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        carousel_template_message = TemplateSendMessage(
+         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
                 columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
+                        title='โรคซึมเศร้า คืออะไร?',
+                        text='ทำความเข้าใจโรคซึมเศร้า',
+                        actions=[     
+                            URITemplateAction(
+                                label='รู้จักกับโรคซึมเศร้า',
+                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='https://www.seedoctornow.com/depression-expression/'
+                            ),
+           
+                            URITemplateAction(
+                                label='ความรู้เรื่องโรคจิตเวช',
+                                uri='http://www.thaifamilylink.net/web/node/29'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
+                        title='จับสังเกต "โรคซึมเศร้า"',
+                        text='มีอาการหลักคือ',
+                        actions=[
+                            URITemplateAction(
+                                label='จับสังเกตโรคซึมเศร้า',
+                                uri='https://www.youtube.com/watch?v=w7QZKCJTw2o',
+                            ),
+                            URITemplateAction(
+                                label='โรคซึมเศร้าบนสื่อออนไลน์',
+                                uri='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
+                            ),
+                            URITemplateAction(
+                                label='9สัญญาณเตือน',
+                                uri='https://www.bangkokhospital.com/index.php/th/diseases-treatment/major-depressive-disorder'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
+                        title='โรคซึมเศร้ากับอารณ์ซึมเศร้า',
+                        text='ความเหมือนที่เเตกต่างกัน',
+                        actions=[
+                            URITemplateAction(
+                                label='ความเครียด ภาวะซึมเศร้าและโรคซึมเศร้า',
+                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/',
+                            ),
+                            URITemplateAction(
+                                label='ความต่างความเครียดเเละซึมเศร้า',
+                                uri='https://nuuneoi.com/blog/blog.php?read_id=716'
+                            ),
+                            URITemplateAction(
+                                label='6 ข้อเเตกต่าง',
+                                uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg',
+                        title='โรคซึมเศร้ารักษาได้',
+                        text='รู้เท่าทันก่อนจะสาย',
+                        actions=[
+                            URITemplateAction(
+                                label='การรักษาโรคซึมเศร้า',
+                                uri='https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2',
+                            ),
+                            URITemplateAction(
+                                label='รักษาอาการโดยธรรมชาติ',
+                                uri='https://th.wikihow.com/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4'
+                            ),
+                            URITemplateAction(
+                                label='ทางเลือกใหม่ในการรักษา',
+                                uri='https://www.bbc.com/thai/40115831'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
+                        title='วิธีกระชับความเศร้า',
+                        text='วิธีกระชับความเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='คนใกล้ตัวกับโรคซึมเศร้า',
+                                uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
+                            ),
+                            URITemplateAction(
+                                label='ก้าวผ่านโรคซึมเศร้าอย่างเข้าใจ',
+                                uri='https://thestandard.co/coverstory3/'
+                            ),
+                            URITemplateAction(
+                                label='เพื่อนเรา(ซึม)เศร้าทำไงดี ?',
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
+                                )
+                        ]
+                    ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
                         title='ประสบการณ์โรคซึมเศร้า',
                         text='รีวิวโรคซึมเศร้า',
                         actions=[
                             URITemplateAction(
-                                label='โลกที่เปลี่ยนไป',
-                                uri='http://www.thaifamilylink.net/web/node/29'
+                                label='ภาวะซึมเศร้าเป็นอย่างไร',
+                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
                             ),
                             URITemplateAction(
-                                label='โลกที่เปลี่ยนไป',
-                                uri='http://www.thaifamilylink.net/web/node/29'
+                                label='รีวิวทรายเจริญปุระ',
+                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
                             ),
                             URITemplateAction(
-                                label='โลกที่เปลี่ยนไป',
-                                uri='http://www.thaifamilylink.net/web/node/29'
+                                label='รีวิวขุนเขาสินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
                       )
@@ -159,6 +255,10 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
+    
+    
+    
+    
         
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
