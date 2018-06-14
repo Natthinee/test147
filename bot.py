@@ -127,15 +127,6 @@ def godaun(event):
                         title='ประสบการณ์โรคซึมเศร้า',
                         text='รีวิวโรคซึมเศร้า',
                         actions=[
-                            PostbackTemplateAction(
-                                label='ทำความเข้าใจโรคซึมเศร้า',
-                                text='https://www.honestdocs.co/most-common-psychiatric-disorders',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='รู้จักกับ โรคซึมเศร้า',
-                                text='https://www.honestdocs.co/most-common-psychiatric-disorders'
-                            ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไป',
                                 uri='http://www.thaifamilylink.net/web/node/29'
