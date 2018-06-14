@@ -123,28 +123,28 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://example.com/item1.jpg',
-                        title='this is menu1',
-                        text='description1',
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
                         actions=[
-                            PostbackAction(
+                            PostbackTemplateAction(
                                 label='postback1',
                                 text='postback text1',
                                 data='action=buy&itemid=1'
                             ),
-                            MessageAction(
+                            MessageTemplateAction(
                                 label='message1',
                                 text='message text1'
                             ),
-                            URIAction(
+                            URITemplateAction(
                                 label='uri1',
                                 uri='http://example.com/1'
                             )
                          ]
-                    )
-                ]
-            )
-        )
+                      )
+                  ]
+              )
+          )
       
         #bot()
         #location_message = LocationSendMessage(
