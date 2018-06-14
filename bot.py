@@ -127,15 +127,7 @@ def godaun(event):
                         title='โรคซึมเศร้า คืออะไร?',
                         text='ทำความเข้าใจโรคซึมเศร้า',
                         actions=[
-                            PostbackTemplateAction(
-                                label='ทดสอบ',
-                                #text='https://www.seedoctornow.com/depression-expression/',
-                                data='action=https://www.seedoctornow.com/depression-expression/'
-                            ),
-                            MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
-                            ),
+           
                             URITemplateAction(
                                 label='uri2',
                                 uri='http://example.com/2'
