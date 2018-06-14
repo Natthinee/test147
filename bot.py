@@ -127,10 +127,15 @@ def godaun(event):
                         title='โรคซึมเศร้า คืออะไร?',
                         text='ทำความเข้าใจโรคซึมเศร้า',
                         actions=[
-                            URITemplateAction(
-                                label='uri1',
-                                uri='http://example.com/1'
-                                ),
+                            PostbackTemplateAction(
+                                label='postback2',
+                                text='postback text2',
+                                data='action=buy&itemid=2'
+                            ),
+                            MessageTemplateAction(
+                                label='message2',
+                                text='message text2'
+                            ),
                             URITemplateAction(
                                 label='uri2',
                                 uri='http://example.com/2'
