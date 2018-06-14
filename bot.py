@@ -128,16 +128,16 @@ def godaun(event):
                         text='รีวิวโรคซึมเศร้า',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback1',
+                                label='ทำความเข้าใจโรคซึมเศร้า',
                                 text='postback text1',
                                 data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
-                                label='message1',
+                                label='รู้จักกับ โรคซึมเศร้า',
                                 text='message text1'
                             ),
                             URITemplateAction(
-                                label='uri1',
+                                label='รู้จักกับ โรคซึมเศร้า',
                                 uri='http://example.com/1'
                             )
                          ]
