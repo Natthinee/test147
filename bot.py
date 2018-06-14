@@ -149,7 +149,7 @@ def godaun(event):
                         actions=[
                             URITemplateAction(
                                 label='จับสังเกตโรคซึมเศร้า',
-                                uri='https://www.youtube.com/watch?v=w7QZKCJTw2o',
+                                uri='https://www.youtube.com/watch?v=w7QZKCJTw2o'
                             ),
                             URITemplateAction(
                                 label='โรคซึมเศร้าบนสื่อออนไลน์',
@@ -168,7 +168,7 @@ def godaun(event):
                         actions=[
                             URITemplateAction(
                                 label='ความเครียด ภาวะซึมเศร้าและโรคซึมเศร้า',
-                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/',
+                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
                                 label='ความต่างความเครียดเเละซึมเศร้า',
@@ -187,7 +187,7 @@ def godaun(event):
                         actions=[
                             URITemplateAction(
                                 label='การรักษาโรคซึมเศร้า',
-                                uri='https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2',
+                                uri='https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             URITemplateAction(
                                 label='รักษาอาการโดยธรรมชาติ',
