@@ -144,8 +144,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='this is menu2',
-                        text='description2',
+                        title='จับสังเกตสัญญาณ "โรคซึมเศร้า"',
+                        text='มีอาการหลักคือ',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback2',
@@ -164,8 +164,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
-                        title='this is menu3',
-                        text='description3',
+                        title='โรคซึมเศร้ากับอารณ์ซึมเศร้า',
+                        text='ความเหมือนที่เเตกต่างกัน',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback3',
@@ -184,8 +184,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg',
-                        title='this is menu4',
-                        text='description4',
+                        title='โรคซึมเศร้ารักษาได้',
+                        text='รู้เท่าทันก่อนจะสาย',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback4',
@@ -204,8 +204,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
-                        title='this is menu5',
-                        text='description1',
+                        title='วิธีกระชับความเศร้า',
+                        text='วิธีกระชับความเศร้า ด้วยผู้คนที่เราคุ้นเคย',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback5',
@@ -224,8 +224,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='this is menu6',
-                        text='description6',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
                         actions=[
                             PostbackTemplateAction(
                                 label='postback6',
