@@ -129,8 +129,8 @@ def godaun(event):
                         actions=[
                             PostbackTemplateAction(
                                 label='ทดสอบ',
-                                text='123456789',
-                                data='action=https://www.youtube.com/watch?v=Hu_h9unS0AM'
+                                text='อ่านบทความ',
+                                data='action=https://www.seedoctornow.com/depression-expression/'
                             ),
                             MessageTemplateAction(
                                 label='message2',
