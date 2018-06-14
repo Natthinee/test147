@@ -138,7 +138,7 @@ def godaun(event):
                             ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
-                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
+                                uri='http://example.com/1'
                             )
                          ]
                       )
