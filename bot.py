@@ -138,7 +138,7 @@ def godaun(event):
                             ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                             )
                          ]
                       )
