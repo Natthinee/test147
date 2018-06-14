@@ -134,12 +134,91 @@ def godaun(event):
                             ),
                             MessageTemplateAction(
                                 label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
-                                text='https://www.seedoctornow.com/depression-expression/'
+                                text='jjhbnlk'
                             ),
            
                             URITemplateAction(
                                 label='ความรู้เรื่องโรคจิตเวช',
                                 uri='http://www.thaifamilylink.net/web/node/29'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
+                        title='จับสังเกต "โรคซึมเศร้า"',
+                        text='มีอาการหลักคือ',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='จับสังเกตโรคซึมเศร้า',
+                                text='https://www.youtube.com/watch?v=w7QZKCJTw2o',
+                                data='action=kjkbjg'
+                            ),
+                            MessageTemplateAction(
+                                label='โรคซึมเศร้าบนสื่อออนไลน์',
+                                text='uiojkhuhkj'
+                            ),
+                            URITemplateAction(
+                                label='9 สัญญาณเตือน',
+                                uri='https://www.bangkokhospital.com/index.php/th/diseases-treatment/major-depressive-disorder'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
+                        title='โรคซึมเศร้ากับอารณ์ซึมเศร้า',
+                        text='ความเหมือนที่เเตกต่างกัน',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='ความเครียด ภาวะซึมเศร้าและโรคซึมเศร้า',
+                                text='jljkokl',
+                                data='action=jjjllokklk'
+                            ),
+                            MessageTemplateAction(
+                                label='ความแตกต่างความเครียดเเละซึมเศร้า',
+                                text='hugkjhjvgc'
+                            ),
+                            URITemplateAction(
+                                label='6 ข้อเเตกต่าง',
+                                uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg',
+                        title='โรคซึมเศร้ารักษาได้',
+                        text='รู้เท่าทันก่อนจะสาย',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='การรักษาโรคซึมเศร้า',
+                                text='ijll;klk',
+                                data='action=jlkgf'
+                            MessageTemplateAction(
+                                label='รักษาอาการซึมเศร้าโดยธรรมชาติ',
+                                text='ukhkhkkk'
+                            ),
+                            URITemplateAction(
+                                label='ทางเลือกใหม่รักษาโรคซึมเศร้า',
+                                uri='https://www.bbc.com/thai/40115831'
+                                )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
+                        title='วิธีกระชับความเศร้า',
+                        text='วิธีกระชับความเศร้า',
+                        actions=[
+                            PostbackTemplateAction(
+                                label='คนใกล้ตัวอยู่ในความมืดของโรคซึมเศร้า',
+                                text='ihhkljkyin',
+                                data='action=hgjvjbjbj'
+                            ),
+                            MessageTemplateAction(
+                                label='ก้าวผ่านโรคซึมเศร้าอย่างเข้าใจ',
+                                text='kljklhkh'
+                            ),
+                            URITemplateAction(
+                                label='เพื่อนเรา(ซึม)เศร้าทำไงดี ?',
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                                 )
                         ]
                     ),
@@ -150,12 +229,12 @@ def godaun(event):
                         actions=[
                             PostbackTemplateAction(
                                 label='ภาวะซึมเศร้าเป็นอย่างไร',
-                                text='https://www.youtube.com/watch?v=H5sUpGv68LE',
-                                data='action=https://www.youtube.com/watch?v=H5sUpGv68LE'
+                                text='pojjihil',
+                                data='action=lklllkll'
                             ),
                             MessageTemplateAction(
                                 label='รีวิวทรายเจริญปุระ',
-                                text='https://www.youtube.com/watch?v=kwElbde56o0'
+                                text='jjjjjj'
                             ),
                             URITemplateAction(
                                 label='รีวิวขุนเขาสินธุเสน',
