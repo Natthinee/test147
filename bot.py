@@ -118,7 +118,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        knownDre(question)
+        line_bot_api.reply_message(event.reply_token, knownDre(question))
         
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
@@ -280,7 +280,7 @@ def knownDre(question):
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
-        line_bot_api.reply_message(event.reply_token, carousel_template_message)
+        
 
 
 if __name__ == "__main__":
