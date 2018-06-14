@@ -134,7 +134,7 @@ def godaun(event):
                             ),
                             MessageTemplateAction(
                                 label='รู้จักกับ โรคซึมเศร้า',
-                                text='message text1'
+                                text='https://www.honestdocs.co/most-common-psychiatric-disorders'
                             ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไป',
