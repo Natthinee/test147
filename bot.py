@@ -118,6 +118,27 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
+        knownDre(question)
+        
+    elif question == richmanu['rich']['rich04']:
+        answer = ansrich04
+        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif question == richmanu['rich']['rich05']:
+        answer = ansrich05
+        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif question == richmanu['rich']['rich06']:
+        answer = ansrich06
+        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    else:
+        answer = listQNo 
+        #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
+        
+def knownDre(question){
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
@@ -260,23 +281,7 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-        
-    elif question == richmanu['rich']['rich04']:
-        answer = ansrich04
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question == richmanu['rich']['rich05']:
-        answer = ansrich05
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question == richmanu['rich']['rich06']:
-        answer = ansrich06
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    else:
-        answer = listQNo 
-        #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+
 
 if __name__ == "__main__":
     app.run()
