@@ -128,9 +128,9 @@ def godaun(event):
                         text='ทำความเข้าใจโรคซึมเศร้า',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
+                                label='ทดสอบ',
+                                text='123456789',
+                                data='action=https://www.youtube.com/watch?v=Hu_h9unS0AM'
                             ),
                             MessageTemplateAction(
                                 label='message2',
