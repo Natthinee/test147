@@ -138,8 +138,8 @@ def godaun(event):
                             ),
            
                             URITemplateAction(
-                                label='uri2',
-                                uri='http://example.com/2'
+                                label='ความรู้เรื่องโรคจิตเวช',
+                                uri='http://www.thaifamilylink.net/web/node/29'
                                 )
                         ]
                     ),
@@ -149,17 +149,17 @@ def godaun(event):
                         text='มีอาการหลักคือ',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback2',
-                                text='postback text2',
-                                data='action=buy&itemid=2'
+                                label='จับสังเกตโรคซึมเศร้า',
+                                text='https://www.youtube.com/watch?v=w7QZKCJTw2o',
+                                data='action=https://www.youtube.com/watch?v=w7QZKCJTw2o'
                             ),
                             MessageTemplateAction(
-                                label='message2',
-                                text='message text2'
+                                label='โรคซึมเศร้าบนสื่อออนไลน์',
+                                text='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
-                                label='uri2',
-                                uri='http://example.com/2'
+                                label='9 สัญญาณเตือน',
+                                uri='https://www.bangkokhospital.com/index.php/th/diseases-treatment/major-depressive-disorder'
                                 )
                         ]
                     ),
@@ -169,17 +169,17 @@ def godaun(event):
                         text='ความเหมือนที่เเตกต่างกัน',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback3',
-                                text='postback text3',
-                                data='action=buy&itemid=3'
+                                label='ความเครียด ภาวะซึมเศร้าและโรคซึมเศร้า',
+                                text='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/',
+                                data='action=http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             MessageTemplateAction(
-                                label='message3',
-                                text='message text3'
+                                label='ความแตกต่างความเครียดเเละซึมเศร้า',
+                                text='https://nuuneoi.com/blog/blog.php?read_id=716'
                             ),
                             URITemplateAction(
-                                label='uri3',
-                                uri='http://example.com/3'
+                                label='6 ข้อเเตกต่าง',
+                                uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
                                 )
                         ]
                     ),
@@ -189,17 +189,17 @@ def godaun(event):
                         text='รู้เท่าทันก่อนจะสาย',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback4',
-                                text='postback text4',
-                                data='action=buy&itemid=4'
+                                label='การรักษาโรคซึมเศร้า',
+                                text='https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2',
+                                data='action=https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             MessageTemplateAction(
-                                label='message4',
-                                text='message text4'
+                                label='รักษาอาการซึมเศร้าโดยธรรมชาติ',
+                                text='https://th.wikihow.com/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4'
                             ),
                             URITemplateAction(
-                                label='uri4',
-                                uri='http://example.com/4'
+                                label='ทางเลือกใหม่รักษาโรคซึมเศร้า',
+                                uri='https://www.bbc.com/thai/40115831'
                                 )
                         ]
                     ),
@@ -209,17 +209,17 @@ def godaun(event):
                         text='วิธีกระชับความเศร้า ด้วยผู้คนที่เราคุ้นเคย',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback5',
-                                text='postback text5',
-                                data='action=buy&itemid=5'
+                                label='คนใกล้ตัวอยู่ในความมืดของโรคซึมเศร้า',
+                                text='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/',
+                                data='action=https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
                             ),
                             MessageTemplateAction(
-                                label='message5',
-                                text='message text5'
+                                label='ก้าวผ่านโรคซึมเศร้าอย่างเข้าใจ',
+                                text='https://thestandard.co/coverstory3/'
                             ),
                             URITemplateAction(
-                                label='uri5',
-                                uri='http://example.com/5'
+                                label='เพื่อนเรา(ซึม)เศร้าทำไงดี ?',
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                                 )
                         ]
                     ),
@@ -229,17 +229,17 @@ def godaun(event):
                         text='รีวิวโรคซึมเศร้า',
                         actions=[
                             PostbackTemplateAction(
-                                label='postback6',
-                                text='postback text6',
-                                data='action=buy&itemid=6'
+                                label='ภาวะซึมเศร้า เป็นอย่างไร',
+                                text='https://www.youtube.com/watch?v=H5sUpGv68LE',
+                                data='action=https://www.youtube.com/watch?v=H5sUpGv68LE'
                             ),
                             MessageTemplateAction(
-                                label='message6',
-                                text='message text6'
+                                label='รีวิว ทราย เจริญปุระ',
+                                text='https://www.youtube.com/watch?v=kwElbde56o0'
                             ),
                             URITemplateAction(
-                                label='uri6',
-                                uri='http://example.com/6'
+                                label='รีวิว ขุนเขา สินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
                       )
