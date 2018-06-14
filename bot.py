@@ -129,7 +129,7 @@ def godaun(event):
                         actions=[
                             PostbackTemplateAction(
                                 label='ทำความเข้าใจโรคซึมเศร้า',
-                                text='postback text1',
+                                text='https://www.honestdocs.co/most-common-psychiatric-disorders',
                                 data='action=buy&itemid=1'
                             ),
                             MessageTemplateAction(
