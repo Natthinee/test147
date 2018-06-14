@@ -129,7 +129,7 @@ def godaun(event):
                         actions=[
                             PostbackTemplateAction(
                                 label='ทดสอบ',
-                                text='อ่านบทความ',
+                                text='https://www.seedoctornow.com/depression-expression/',
                                 data='action=https://www.seedoctornow.com/depression-expression/'
                             ),
                             MessageTemplateAction(
