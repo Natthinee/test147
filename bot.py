@@ -206,7 +206,7 @@ def godaun(event):
                     CarouselColumn(
                         thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
                         title='วิธีกระชับความเศร้า',
-                        text='วิธีกระชับความเศร้า ด้วยผู้คนที่เราคุ้นเคย',
+                        text='วิธีกระชับความเศร้า',
                         actions=[
                             PostbackTemplateAction(
                                 label='คนใกล้ตัวอยู่ในความมืดของโรคซึมเศร้า',
@@ -229,16 +229,16 @@ def godaun(event):
                         text='รีวิวโรคซึมเศร้า',
                         actions=[
                             PostbackTemplateAction(
-                                label='ภาวะซึมเศร้า เป็นอย่างไร',
+                                label='ภาวะซึมเศร้าเป็นอย่างไร',
                                 text='https://www.youtube.com/watch?v=H5sUpGv68LE',
                                 data='action=https://www.youtube.com/watch?v=H5sUpGv68LE'
                             ),
                             MessageTemplateAction(
-                                label='รีวิว ทราย เจริญปุระ',
+                                label='รีวิวทรายเจริญปุระ',
                                 text='https://www.youtube.com/watch?v=kwElbde56o0'
                             ),
                             URITemplateAction(
-                                label='รีวิว ขุนเขา สินธุเสน',
+                                label='รีวิวขุนเขาสินธุเสน',
                                 uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
