@@ -138,7 +138,7 @@ def godaun(event):
                             ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
-                                uri='http://www.thaifamilylink.net/web/node/29'
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
                       )
