@@ -126,7 +126,16 @@ def godaun(event):
                         thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
                         title='โรคซึมเศร้า คืออะไร?',
                         text='ทำความเข้าใจโรคซึมเศร้า',
-                        actions=[
+                        actions=[     
+                            PostbackTemplateAction(
+                                label='รู้จักกับ โรคซึมเศร้า',
+                                text='https://www.honestdocs.co/most-common-psychiatric-disorders',
+                                data='action=https://www.honestdocs.co/most-common-psychiatric-disorders'
+                            ),
+                            MessageTemplateAction(
+                                label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
+                                text='https://www.seedoctornow.com/depression-expression/'
+                            ),
            
                             URITemplateAction(
                                 label='uri2',
