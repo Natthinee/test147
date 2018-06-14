@@ -124,21 +124,16 @@ def godaun(event):
                 columns=[
                     CarouselColumn(
                         thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
-                        title='this is menu1',
-                        text='description1',
+                        title='โรคซึมเศร้า คืออะไร?',
+                        text='ทำความเข้าใจโรคซึมเศร้า',
                         actions=[
-                            PostbackTemplateAction(
-                                label='postback1',
-                                text='postback text1',
-                                data='action=buy&itemid=1'
-                            ),
-                            MessageTemplateAction(
-                                label='message1',
-                                text='message text1'
-                            ),
                             URITemplateAction(
                                 label='uri1',
                                 uri='http://example.com/1'
+                                ),
+                            URITemplateAction(
+                                label='uri2',
+                                uri='http://example.com/2'
                                 )
                         ]
                     ),
