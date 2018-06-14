@@ -144,7 +144,7 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='จับสังเกตสัญญาณ "โรคซึมเศร้า"',
+                        title='จับสังเกต "โรคซึมเศร้า"',
                         text='มีอาการหลักคือ',
                         actions=[
                             PostbackTemplateAction(
