@@ -123,31 +123,28 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
-                        title='โรคซึมเศร้า คืออะไร?',
-                        text='ทำความเข้าใจโรคซึมเศร้า',
-                        actions=[     
-                            PostbackTemplateAction(
-                                label='รู้จักกับ โรคซึมเศร้า',
-                                text='https://www.honestdocs.co/most-common-psychiatric-disorders',
-                                data='action=https://www.honestdocs.co/most-common-psychiatric-disorders'
+                        thumbnail_image_url='https://example.com/item1.jpg',
+                        title='this is menu1',
+                        text='description1',
+                        actions=[
+                            PostbackAction(
+                                label='postback1',
+                                text='postback text1',
+                                data='action=buy&itemid=1'
                             ),
-                            MessageTemplateAction(
-                                label='โลกที่เปลี่ยนไปของผู้ป่วย โรคซึมเศร้า',
-                                text='jjhbnlk'
+                            MessageAction(
+                                label='message1',
+                                text='message text1'
                             ),
-           
-                            URITemplateAction(
-                                label='ความรู้เรื่องโรคจิตเวช',
-                                uri='http://www.thaifamilylink.net/web/node/29'
-                                )
-                  
-                   
+                            URIAction(
+                                label='uri1',
+                                uri='http://example.com/1'
+                            )
                          ]
-                      )
-                  ]
-              )
-          )
+                    )
+                ]
+            )
+        )
       
         #bot()
         #location_message = LocationSendMessage(
