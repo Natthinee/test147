@@ -167,11 +167,11 @@ def godaun(event):
                         text='ความเหมือนที่เเตกต่างกัน',
                         actions=[
                             URITemplateAction(
-                                label='ความเครียด ภาวะซึมเศร้าและโรคซึมเศร้า',
+                                label='เครียด ซึมเศร้าและโรคซึมเศร้า',
                                 uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
-                                label='ความต่างความเครียดเเละซึมเศร้า',
+                                label='ความเครียดเเละซึมเศร้า',
                                 uri='https://nuuneoi.com/blog/blog.php?read_id=716'
                             ),
                             URITemplateAction(
