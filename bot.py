@@ -118,10 +118,30 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-         carousel_template_message = TemplateSendMessage(
+        carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
                 columns=[
+                  CarouselColumn(
+                      thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
+                      title='โรคซึมเศร้า คืออะไร?',
+                      text='ทำความเข้าใจโรคซึมเศร้า',
+                      actions=[     
+                            URITemplateAction(
+                                label='รู้จักกับโรคซึมเศร้า',
+                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='https://www.seedoctornow.com/depression-expression'
+                            ),
+           
+                            URITemplateAction(
+                                label='ความรู้เรื่องโรคจิตเวช',
+                                uri='http://www.thaifamilylink.net/web/node/29'
+                            )
+                        ]
+                    ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
                         title='จับสังเกต "โรคซึมเศร้า"',
