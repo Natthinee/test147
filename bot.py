@@ -151,7 +151,7 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=w7QZKCJTw2o'
                             ),
                             URITemplateAction(
-                                label='จับสัญญาณโรคซึมเศร้า',
+                                label='จับสัญญาณ',
                                 uri='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
@@ -162,15 +162,15 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
-                        title='โรคซึมเศร้ากับอารณ์ซึมเศร้า',
-                        text='ความเหมือนที่เเตกต่างกัน',
+                        title='โรคซึมเศร้าอารณ์ซึมเศร้า',
+                        text='ความเหมือนที่เเตกต่าง',
                         actions=[
                             URITemplateAction(
                                 label='เครียดกับซึมเศร้า',
                                 uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             URITemplateAction(
-                                label='ความต่างความเครียดความเศร้า',
+                                label='ความเครียดความเศร้า',
                                 uri='https://nuuneoi.com/blog/blog.php?read_id=716'
                             ),
                             URITemplateAction(
