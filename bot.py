@@ -136,7 +136,7 @@ def godaun(event):
                             ),
            
                             URITemplateAction(
-                                label='ความรู้เรื่อง',
+                                label='ความรู้เรื่องโรคซึมเศร้า',
                                 uri='http://www.thaifamilylink.net/web/node/29'
                             )
                         ]
@@ -151,7 +151,7 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=w7QZKCJTw2o'
                             ),
                             URITemplateAction(
-                                label='โรคซึมเศร้า',
+                                label='จับสัญญาณโรคซึมเศร้า',
                                 uri='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
@@ -166,11 +166,11 @@ def godaun(event):
                         text='ความเหมือนที่เเตกต่างกัน',
                         actions=[
                             URITemplateAction(
-                                label='เครียดซึมเศร้า',
+                                label='เครียดกับซึมเศร้า',
                                 uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             URITemplateAction(
-                                label='ความเครียด',
+                                label='ความต่างความเครียดความเศร้า',
                                 uri='https://nuuneoi.com/blog/blog.php?read_id=716'
                             ),
                             URITemplateAction(
@@ -193,7 +193,7 @@ def godaun(event):
                                 uri='https://th.wikihow.com/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4'
                             ),
                             URITemplateAction(
-                                label='ทางเลือก',
+                                label='การรักษาทางเลือก',
                                 uri='https://www.bbc.com/thai/40115831'
                             )
                         ]
@@ -204,15 +204,15 @@ def godaun(event):
                         text='วิธีกระชับความเศร้า',
                         actions=[
                             URITemplateAction(
-                                label='คนใกล้',
+                                label='คนใกล้ชิด',
                                 uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
                             ),
                             URITemplateAction(
-                                label='ก้าวผ่าน',
+                                label='วิธีก้าวผ่าน',
                                 uri='https://thestandard.co/coverstory3/'
                             ),
                             URITemplateAction(
-                                label='เพื่อนเรา(ซึม)',
+                                label='เพื่อนเรา(ซึม)เศร้า',
                                 uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                             )
                         ]
@@ -227,11 +227,11 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
                             ),
                             URITemplateAction(
-                                label='รีวิว',
+                                label='รีวิวทราย',
                                 uri='https://www.youtube.com/watch?v=kwElbde56o0'
                             ),
                             URITemplateAction(
-                                label='รีวิว',
+                                label='รีวิวขุนเขา',
                                 uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
