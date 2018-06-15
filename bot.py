@@ -143,15 +143,15 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='จับสังเกต"โรคซึมเศร้า"',
+                        title='จับสังเกต',
                         text='มีอาการหลักคือ',
                         actions=[
                             URITemplateAction(
-                                label='จับสังเกตโรคซึมเศร้า',
+                                label='จับสังเกต',
                                 uri='https://www.youtube.com/watch?v=w7QZKCJTw2o'
                             ),
                             URITemplateAction(
-                                label='โรคซึมเศร้าบนสื่อออนไลน์',
+                                label='โรคซึมเศร้า',
                                 uri='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
                             ),
                             URITemplateAction(
