@@ -133,7 +133,7 @@ def godaun(event):
                             ),
                             URITemplateAction(
                                 label='โลกที่เปลี่ยนไป',
-                                uri='https://www.seedoctornow.com/depression-expression/'
+                                uri='https://www.seedoctornow.com/depression-expression'
                             ),
            
                             URITemplateAction(
@@ -168,7 +168,7 @@ def godaun(event):
                         actions=[
                             URITemplateAction(
                                 label='เครียด ซึมเศร้าและโรคซึมเศร้า',
-                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
+                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             URITemplateAction(
                                 label='ความเครียดเเละซึมเศร้า',
@@ -181,7 +181,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg',
+                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg', 
                         title='โรคซึมเศร้ารักษาได้',
                         text='รู้เท่าทันก่อนจะสาย',
                         actions=[
