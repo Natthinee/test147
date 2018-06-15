@@ -144,7 +144,7 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='จับสังเกต "โรคซึมเศร้า"',
+                        title='จับสังเกต"โรคซึมเศร้า"',
                         text='มีอาการหลักคือ',
                         actions=[
                             URITemplateAction(
@@ -167,7 +167,7 @@ def godaun(event):
                         text='ความเหมือนที่เเตกต่างกัน',
                         actions=[
                             URITemplateAction(
-                                label='เครียด ซึมเศร้าและโรคซึมเศร้า',
+                                label='เครียดซึมเศร้าและโรคซึมเศร้า',
                                 uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
                             ),
                             URITemplateAction(
@@ -175,7 +175,7 @@ def godaun(event):
                                 uri='https://nuuneoi.com/blog/blog.php?read_id=716'
                             ),
                             URITemplateAction(
-                                label='6 ข้อเเตกต่าง',
+                                label='6ข้อเเตกต่าง',
                                 uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
                            )
                         ]
@@ -209,11 +209,11 @@ def godaun(event):
                                 uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
                             ),
                             URITemplateAction(
-                                label='ก้าวผ่านโรคซึมเศร้าอย่างเข้าใจ',
+                                label='ก้าวผ่านโรคซึมเศร้า',
                                 uri='https://thestandard.co/coverstory3/'
                             ),
                             URITemplateAction(
-                                label='เพื่อนเรา(ซึม)เศร้าทำไงดี ?',
+                                label='เพื่อนเรา(ซึม)เศร้าทำไงดี?',
                                 uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                             )
                         ]
