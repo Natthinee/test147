@@ -136,7 +136,7 @@ def godaun(event):
                             ),
            
                             URITemplateAction(
-                                label='ความรู้เรื่อง,
+                                label='ความรู้เรื่อง',
                                 uri='http://www.thaifamilylink.net/web/node/29'
                             )
                         ]
