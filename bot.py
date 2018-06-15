@@ -212,7 +212,7 @@ def godaun(event):
                                 uri='https://thestandard.co/coverstory3/'
                             ),
                             URITemplateAction(
-                                label='เพื่อนเรา(ซึม),
+                                label='เพื่อนเรา(ซึม)',
                                 uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
                             )
                         ]
