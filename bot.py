@@ -162,7 +162,7 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
-                        title='โรคซึมเศร้าอารณ์ซึมเศร้า',
+                        title='โรคซึมเศร้าอารมณ์ซึมเศร้า',
                         text='ความเหมือนที่เเตกต่าง',
                         actions=[
                             URITemplateAction(
@@ -227,11 +227,11 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
                             ),
                             URITemplateAction(
-                                label='รีวิวทราย',
+                                label='รีวิวทราย เจริญปุระ',
                                 uri='https://www.youtube.com/watch?v=kwElbde56o0'
                             ),
                             URITemplateAction(
-                                label='รีวิวขุนเขา',
+                                label='รีวิวขุนเขา สินธุเสน',
                                 uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                          ]
