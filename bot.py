@@ -400,9 +400,49 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
  
     elif question == richmanu['rich']['rich06']:
-        answer = ansrich06
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+       carousel_template_message = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                  CarouselColumn(
+                      thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
+                      title='โรคซึมเศร้าคืออะไร?',
+                      text='ทำความเข้าใจโรคซึมเศร้า',
+                      actions=[     
+                            URITemplateAction(
+                                label='รู้จักกับโรคซึมเศร้า',
+                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='https://www.seedoctornow.com/depression-expression'
+                            ),
+           
+                            URITemplateAction(
+                                label='ความรู้เรื่องโรคซึมเศร้า',
+                                uri='http://www.thaifamilylink.net/web/node/29'
+                            )
+                        ]
+                    )
+                 
+                  ]
+              )
+          )
+      
+        #bot()
+        #location_message = LocationSendMessage(
+        #title='my location',
+        #address='Tokyo',
+        #latitude=35.65910807942215,
+        #longitude=139.70372892916203)
+        #line_bot_api.push_message(userid, location_message)
+      
+        ##answer = ansrich03
+        #message = gg(uestion)
+        ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        #line_bot_api.reply_message(event.reply_token, msgs)
+        line_bot_api.reply_message(event.reply_token,  carousel_template_message)
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
