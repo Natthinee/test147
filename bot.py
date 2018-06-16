@@ -424,8 +424,7 @@ def godaun(event):
                             )
                         ]
                     )
-                 
-                  ]
+                 ]
               )
           )
       
