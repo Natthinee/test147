@@ -117,7 +117,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
-        carousel_template_message = TemplateSendMessage(
+        carousel_template_message1 = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
                 columns=[
@@ -253,7 +253,7 @@ def godaun(event):
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
-        line_bot_api.reply_message(event.reply_token,  carousel_template_message)
+        line_bot_api.reply_message(event.reply_token,  carousel_template_message1)
         
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
