@@ -47,7 +47,7 @@ richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich02': 'คุยกับเเบบประเมิน',
                    'rich03': 'ซึมเศร้าน่ารู้',
                    'rich04': 'จิตเวชใกล้บ้าน',
-                   'rich05': 'เศร้าเล้วเปลี่ยน',
+                   'rich05': 'เศร้าเเล้วเปลี่ยน',
                    'rich06': 'ข่าวสารซึมเศร้า'}
 ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะพิมพ์เพื่อระบายก็มาเริ่มกันเลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆได้เลยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ｡◕‿◕｡' ######
 ansrich02 = 'ถ้า พร้อมเเล้วมาลุยกันเล้ยยย !!ミ●﹏☉'
@@ -260,7 +260,7 @@ def godaun(event):
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
-    elif question == 'เศร้าเเล้วเปลี่ยน':
+    elif question == richmanu['rich']['rich05']:
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
