@@ -423,6 +423,26 @@ def godaun(event):
                                 uri='http://www.thaifamilylink.net/web/node/29'
                             )
                         ]
+                    ),
+                  CarouselColumn(
+                      thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
+                      title='โรคซึมเศร้าคืออะไร?',
+                      text='ทำความเข้าใจโรคซึมเศร้า',
+                      actions=[     
+                            URITemplateAction(
+                                label='รู้จักกับโรคซึมเศร้า',
+                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                            ),
+                            URITemplateAction(
+                                label='โลกที่เปลี่ยนไป',
+                                uri='https://www.seedoctornow.com/depression-expression'
+                            ),
+           
+                            URITemplateAction(
+                                label='ความรู้เรื่องโรคซึมเศร้า',
+                                uri='http://www.thaifamilylink.net/web/node/29'
+                            )
+                        ]
                     )
                  ]
               )
