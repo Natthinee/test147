@@ -400,7 +400,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
  
     elif question == richmanu['rich']['rich06']:
-       carousel_template_message = TemplateSendMessage(
+        carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
                 columns=[
