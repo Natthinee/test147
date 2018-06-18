@@ -267,7 +267,7 @@ def godaun(event):
                 columns=[
                   CarouselColumn(
                       thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
-                      title='โรคซึมเศร้าคืออะไร?',
+                      title='ออกไปหาอะไรใหม่ๆ',
                       text='ทำความเข้าใจโรคซึมเศร้า',
                       actions=[     
                             URITemplateAction(
@@ -287,7 +287,7 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='จับสังเกต',
+                        title='ออกกำลังกายกันเถอะ',
                         text='มีอาการหลักคือ',
                         actions=[
                             URITemplateAction(
@@ -322,65 +322,8 @@ def godaun(event):
                                 uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
                            )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://gedgoodlife.pi.bypronto.com/2/wp-content/uploads/sites/2/2017/08/902-depression-1.jpg', 
-                        title='โรคซึมเศร้ารักษาได้',
-                        text='รู้เท่าทันก่อนจะสาย',
-                        actions=[
-                            URITemplateAction(
-                                label='การรักษา',
-                                uri='https://www.pobpad.com/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
-                            ),
-                            URITemplateAction(
-                                label='รักษาอาการโดยธรรมชาติ',
-                                uri='https://th.wikihow.com/%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4'
-                            ),
-                            URITemplateAction(
-                                label='การรักษาทางเลือก',
-                                uri='https://www.bbc.com/thai/40115831'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
-                        title='วิธีกระชับความเศร้า',
-                        text='วิธีกระชับความเศร้า',
-                        actions=[
-                            URITemplateAction(
-                                label='คนใกล้ชิด',
-                                uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
-                            ),
-                            URITemplateAction(
-                                label='วิธีก้าวผ่าน',
-                                uri='https://thestandard.co/coverstory3/'
-                            ),
-                            URITemplateAction(
-                                label='เพื่อนเรา(ซึม)เศร้า',
-                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='ประสบการณ์โรคซึมเศร้า',
-                        text='รีวิวโรคซึมเศร้า',
-                        actions=[
-                            URITemplateAction(
-                                label='ภาวะซึม',
-                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
-                            ),
-                            URITemplateAction(
-                                label='รีวิวทราย เจริญปุระ',
-                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
-                            ),
-                            URITemplateAction(
-                                label='รีวิวขุนเขา สินธุเสน',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
-                            )
-                         ]
-                      )
-                  ]
+                    )
+                 ]
               )
           )
       
@@ -405,40 +348,48 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
-                      title='โรคซึมเศร้าคืออะไร?',
-                      text='ทำความเข้าใจโรคซึมเศร้า',
+                      thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWvTbqt_U3veriCnZMIa0hnjBs__rIaCOwnDC7lfd9RxMUPH',
+                      title='ติดตามในเว็บไซต์',
+                      text='สามารถติดตามได้ที่เว็บไซต์',
                       actions=[     
                             URITemplateAction(
-                                label='รู้จักกับโรคซึมเศร้า',
-                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                                label='กรมสุขภาพจิต',
+                                uri='http://www.smartteen.net/main/'
                             ),
                             URITemplateAction(
-                                label='โลกที่เปลี่ยนไป',
-                                uri='https://www.seedoctornow.com/depression-expression'
+                                label='โรงพยาบาลศรีธัญญา',
+                                uri='http://www.srithanya.go.th/srithanya/'
                             ),
            
                             URITemplateAction(
-                                label='ความรู้เรื่องโรคซึมเศร้า',
-                                uri='http://www.thaifamilylink.net/web/node/29'
+                                label='กระทรวงสาธารณสุข',
+                                uri='http://www.thaidepression.com/www/'
+                            ),
+                           URITemplateAction(
+                                label='ข่าวสารซึมเศร้าในต่างเเดน',
+                                uri='https://www.webmd.com/depression/default.html'
                             )
                         ]
                     ),
                   CarouselColumn(
-                      thumbnail_image_url='https://www.bangkokhospital.com/assets/content/b09222762aff1689c735642ed30d6d31.jpg',
-                      title='โรคซึมเศร้าคืออะไร?',
-                      text='ทำความเข้าใจโรคซึมเศร้า',
+                      thumbnail_image_url='https://obs.line-scdn.net/0hoxh888FeMFdVQRxh4rRPAG8XMzhmLSNUMXdhVAkvbmModXdSOXd8YnlDbjIrcncJO3R7M3JGK2Z-eCJVaS98/w644',
+                      title='ติดตามในเเฟนเพจ',
+                      text='แฟนเพจ',
                       actions=[     
                             URITemplateAction(
-                                label='รู้จักกับโรคซึมเศร้า',
-                                uri='https://www.honestdocs.co/most-common-psychiatric-disorders'
+                                label='คลินิกสุขภาพจิตนายแพทย์เจษฎา',
+                                uri='https://www.facebook.com/D2JED/'
                             ),
                             URITemplateAction(
-                                label='โลกที่เปลี่ยนไป',
-                                uri='https://www.seedoctornow.com/depression-expression'
+                                label='สายด่วนสุขภาพจิต1323',
+                                uri='https://www.facebook.com/helpline1323/'
                             ),
            
                             URITemplateAction(
+                                label='สมาคมจิตแพทย์แห่งประเทศไทย',
+                                uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
+                            ),
+                          URITemplateAction(
                                 label='ความรู้เรื่องโรคซึมเศร้า',
                                 uri='http://www.thaifamilylink.net/web/node/29'
                             )
@@ -466,11 +417,6 @@ def godaun(event):
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
-        
-        
-
-
         
 
 
