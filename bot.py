@@ -352,10 +352,6 @@ def godaun(event):
                       text='ติดตามข่าวสาร',
                       actions=[     
                             URITemplateAction(
-                                label='กรมสุขภาพจิต',
-                                uri='http://www.childrenhospital.go.th/html/2014/th/service/%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%A7%E0%B8%8A%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B8%E0%B9%88%E0%B8%99'
-                            ),
-                            URITemplateAction(
                                 label='กระทรวงสาธารณสุข',
                                 uri='https://www.moph.go.th/'
                             ),
