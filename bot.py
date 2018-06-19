@@ -272,22 +272,30 @@ def godaun(event):
                 columns=[
                   CarouselColumn(
                       thumbnail_image_url='https://i1.wp.com/lightmeup.me/wp-content/uploads/2016/01/strong.png',
-                      title='ติดตามในเเฟนเพจ',
-                      text='แฟนเพจ',
+                      title='กิจกรรมทำเเล้วคลายเครียด',
+                      text='ทำให้ใจสบายเเละผ่อนคลายกันเถอะ',
                       actions=[     
                             URITemplateAction(
-                                label='คลินิกสุขภาพจิต',
-                                uri='https://www.facebook.com/D2JED/'
+                                label='7กิจกรรมคลายเครียด',
+                                uri='http://sukkaphap-d.com/7-%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%94-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88/'
                             ),
                             URITemplateAction(
-                                label='สายด่วน1323',
-                                uri='https://www.facebook.com/helpline1323/'
+                                label='9กิจกรรมคลายเศร้า',
+                                uri='http://www.jeban.com/topic/239807'
                             ),
            
                             URITemplateAction(
-                                label='จิตแพทย์แห่งประเทศไทย',
-                                uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
+                                label='ออกกำลังกายคลายเศร้า',
+                                uri='http://www.bangkokhealth.com/health/article/%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%81%E0%B8%B3%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%9A%E0%B8%A3%E0%B8%A3%E0%B9%80%E0%B8%97%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%94-868'
                             
+                            ),
+                            URITemplateAction(
+                                label='10วิธีดึงตัวเองจากภาวะเศร้า',
+                                uri='https://nextempire.co/stories/thought-leader/10-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5-%E0%B8%94%E0%B8%B6%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%9B/901#jilsphkl37'
+                            ),
+                            URITemplateAction(
+                                label='4วิธีง่ายๆปรับสภาพจิตใจ',
+                                uri='https://www.hongthongrice.com/life/5986/4feelgood/'
                             )
                         ]
                     )
