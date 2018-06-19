@@ -329,30 +329,6 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWvTbqt_U3veriCnZMIa0hnjBs__rIaCOwnDC7lfd9RxMUPH',
-                      title='ติดตามในเว็บไซต์',
-                      text='ติดตามข่าวสาร',
-                      actions=[     
-                            URITemplateAction(
-                                label='กรมสุขภาพจิต',
-                                uri='http://www.smartteen.net/main/'
-                            ),
-                            URITemplateAction(
-                                label='โรงพยาบาลศรีธัญญา',
-                                uri='http://www.srithanya.go.th/srithanya/'
-                            ),
-           
-                            URITemplateAction(
-                                label='กระทรวงสาธารณสุข',
-                                uri='http://www.thaidepression.com/www/'
-                            ),
-                           URITemplateAction(
-                                label='ซึมเศร้าในต่างเเดน',
-                                uri='https://www.webmd.com/depression/default.html'
-                            )
-                        ]
-                    ),
-                  CarouselColumn(
                       thumbnail_image_url='https://obs.line-scdn.net/0hoxh888FeMFdVQRxh4rRPAG8XMzhmLSNUMXdhVAkvbmModXdSOXd8YnlDbjIrcncJO3R7M3JGK2Z-eCJVaS98/w644',
                       title='ติดตามในเเฟนเพจ',
                       text='แฟนเพจ',
