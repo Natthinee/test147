@@ -309,9 +309,9 @@ def godaun(event):
                          ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='ประสบการณ์โรคซึมเศร้า',
-                        text='รีวิวโรคซึมเศร้า',
+                        thumbnail_image_url='https://f.ptcdn.info/294/053/000/ovci50jjwj3YCmpHQ5O-o.gif',
+                        title='ปรับสติสร้างสมาธิ',
+                        text='มาเริ่มสร้างสมาธิให้จิตใจ',
                         actions=[
                             URITemplateAction(
                                 label='ภาวะซึม',
@@ -329,8 +329,8 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='ประสบการณ์โรคซึมเศร้า',
-                        text='รีวิวโรคซึมเศร้า',
+                        title='ออกกำลังกายสร้างกำลังใจ',
+                        text='ขยับวันละนิดปรับเปลี่ยนชีวิตสดใส',
                         actions=[
                             URITemplateAction(
                                 label='ภาวะซึม',
