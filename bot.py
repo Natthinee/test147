@@ -337,21 +337,25 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='ประสบการณ์โรคซึมเศร้า',
-                        text='รีวิวโรคซึมเศร้า',
+                        thumbnail_image_url='https://s.isanook.com/he/0/ud/1/9229/sad.jpg',
+                        title='ติดตามในเว็บไซต์',
+                        text='ติดตามข่าวสาร',
                         actions=[
                             URITemplateAction(
-                                label='ภาวะซึม',
-                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                                label='กระทรวงสาธารณสุข',
+                                uri='https://www.moph.go.th/'
                             ),
                             URITemplateAction(
-                                label='รีวิวทราย เจริญปุระ',
-                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                                label='ซึมเศร้าในต่างเเดน',
+                                uri='https://www.webmd.com/depression/default.html'
                             ),
                             URITemplateAction(
-                                label='รีวิวขุนเขา สินธุเสน',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                                label='ซึมเศร้าในต่างเเดน',
+                                uri='https://www.webmd.com/depression/default.html'
+                            )
+                            URITemplateAction(
+                                label='สถาบันสุขภาพจิต',
+                                uri='http://www.smartteen.net/main/'
                             )
                          ]
                       )
