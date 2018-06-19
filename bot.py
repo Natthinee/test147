@@ -309,7 +309,7 @@ def godaun(event):
                          ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://f.ptcdn.info/294/053/000/ovci50jjwj3YCmpHQ5O-o.gif',
+                        thumbnail_image_url='https://png.pngtree.com/element_origin_min_pic/16/06/30/2357753a2defa16.jpg',
                         title='ปรับสติสร้างสมาธิ',
                         text='มาเริ่มสร้างสมาธิให้จิตใจ',
                         actions=[
@@ -328,7 +328,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        thumbnail_image_url='https://cdn.pixabay.com/photo/2017/01/31/20/45/cartoon-2027156_960_720.png',
                         title='ออกกำลังกายสร้างกำลังใจ',
                         text='ขยับวันละนิดปรับเปลี่ยนชีวิตสดใส',
                         actions=[
