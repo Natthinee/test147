@@ -352,21 +352,22 @@ def godaun(event):
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             ),
                   CarouselColumn(
-                      thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWvTbqt_U3veriCnZMIa0hnjBs__rIaCOwnDC7lfd9RxMUPH',
-                      title='ติดตามในเว็บไซต์',
-                      text='ติดตามข่าวสาร',
+                      thumbnail_image_url='https://obs.line-scdn.net/0hoxh888FeMFdVQRxh4rRPAG8XMzhmLSNUMXdhVAkvbmModXdSOXd8YnlDbjIrcncJO3R7M3JGK2Z-eCJVaS98/w644',
+                      title='ติดตามในเเฟนเพจ',
+                      text='แฟนเพจ',
                       actions=[     
                             URITemplateAction(
-                                label='กระทรวงสาธารณสุข',
-                                uri='https://www.moph.go.th/'
+                                label='คลินิกสุขภาพจิต',
+                                uri='https://www.facebook.com/D2JED/'
                             ),
                             URITemplateAction(
-                                label='ซึมเศร้าในต่างเเดน',
-                                uri='https://www.webmd.com/depression/default.html'
+                                label='สายด่วน1323',
+                                uri='https://www.facebook.com/helpline1323/'
                             ),
+           
                             URITemplateAction(
-                                label='ซึมเศร้าในต่างเเดน',
-                                uri='https://www.webmd.com/depression/default.html'
+                                label='จิตแพทย์แห่งประเทศไทย',
+                                uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             )
                       ]
                     )
