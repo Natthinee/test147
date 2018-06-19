@@ -287,25 +287,8 @@ def godaun(event):
                                 label='9กิจกรรมคลายเศร้า',
                                 uri='http://www.jeban.com/topic/239807'
                             )
-                     CarouselColumn(
-                         thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
-                         title='วิธีกระชับความเศร้า',
-                         text='วิธีกระชับความเศร้า',
-                         actions=[
-                               URITemplateAction(
-                                   label='คนใกล้ชิด',
-                                   uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
-                               ),
-                               URITemplateAction(
-                                   label='วิธีก้าวผ่าน',
-                                   uri='https://thestandard.co/coverstory3/'
-                               ),
-                               URITemplateAction(
-                                   label='เพื่อนเรา(ซึม)เศร้า',
-                                   uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
-                               )
-                        ]
-                    )
+                         ]
+                     )
                  ]
               )
           )
