@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun  6 21:31:06 2018
+Created on Tue Jun 19 20:11:32 2018
 
+@author: Natthinee
+"""
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
 from flask import Flask, request, abort
@@ -362,7 +368,9 @@ def godaun(event):
                     )
                  ]
               )
+            ]
           )
+        )             
       
         #bot()
         #location_message = LocationSendMessage(
@@ -377,7 +385,7 @@ def godaun(event):
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
-        line_bot_api.reply_message(event.reply_token,  carousel_template_message)
+        line_bot_api.reply_message(event.reply_token,carousel_template_message)
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
