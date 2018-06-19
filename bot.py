@@ -388,10 +388,6 @@ def godaun(event):
                             URITemplateAction(
                                 label='สมาคมจิตแพทย์แห่งประเทศไทย',
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
-                            ),
-                          URITemplateAction(
-                                label='ความรู้เรื่องโรคซึมเศร้า',
-                                uri='http://www.thaifamilylink.net/web/node/29'
                             )
                         ]
                     )
