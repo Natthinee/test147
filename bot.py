@@ -271,7 +271,7 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='https://obs.line-scdn.net/0hoxh888FeMFdVQRxh4rRPAG8XMzhmLSNUMXdhVAkvbmModXdSOXd8YnlDbjIrcncJO3R7M3JGK2Z-eCJVaS98/w644',
+                      thumbnail_image_url='https://i1.wp.com/lightmeup.me/wp-content/uploads/2016/01/strong.png',
                       title='ติดตามในเเฟนเพจ',
                       text='แฟนเพจ',
                       actions=[     
