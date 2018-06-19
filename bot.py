@@ -332,28 +332,11 @@ def godaun(event):
                             URITemplateAction(
                                 label='จิตแพทย์แห่งประเทศไทย',
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
-                            ),
-                 CarouselColumn(
-                      thumbnail_image_url='https://obs.line-scdn.net/0hoxh888FeMFdVQRxh4rRPAG8XMzhmLSNUMXdhVAkvbmModXdSOXd8YnlDbjIrcncJO3R7M3JGK2Z-eCJVaS98/w644',
-                      title='ติดตามในเเฟนเพจ',
-                      text='แฟนเพจ',
-                      actions=[     
-                            URITemplateAction(
-                                label='คลินิกสุขภาพจิต',
-                                uri='https://www.facebook.com/D2JED/'
-                            ),
-                            URITemplateAction(
-                                label='สายด่วน1323',
-                                uri='https://www.facebook.com/helpline1323/'
-                            ),
-           
-                            URITemplateAction(
-                                label='จิตแพทย์แห่งประเทศไทย',
-                                uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
+                            
                             )
                       ]
                     ),
-                   CarouselColumn(
+                    CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
                         title='ประสบการณ์โรคซึมเศร้า',
                         text='รีวิวโรคซึมเศร้า',
