@@ -271,7 +271,7 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='http://image.dek-d.com/22/629014/102193245',
+                      thumbnail_image_url='https://png.pngtree.com/element_origin_min_pic/16/11/17/17582d769dcadce.jpg',
                       title='กิจกรรมทำเเล้วคลายเครียด',
                       text='ไปทำให้ใจสบายเเละผ่อนคลายกันเถอะ',
                       actions=[     
