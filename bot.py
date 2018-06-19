@@ -307,7 +307,26 @@ def godaun(event):
                                 uri='http://www.jeban.com/topic/239807'
                             )
                          ]
-                     )
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='ภาวะซึม',
+                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวทราย เจริญปุระ',
+                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวขุนเขา สินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                            )
+                        ]
+                    )
                  ]
               )
           )
