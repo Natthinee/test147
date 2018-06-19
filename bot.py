@@ -328,7 +328,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://png.pngtree.com/element_origin_min_pic/16/07/13/145785deb531e31.jpg',
+                        thumbnail_image_url='https://png.pngtree.com/element_origin_min_pic/00/09/45/3656a089293a620.jpg',
                         title='ออกกำลังกายสร้างกำลังใจ',
                         text='ขยับวันละนิดปรับเปลี่ยนชีวิตสดใส',
                         actions=[
