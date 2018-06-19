@@ -303,25 +303,6 @@ def godaun(event):
                                 uri='https://www.bangkokhospital.com/index.php/th/diseases-treatment/major-depressive-disorder'
                             )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://pbs.twimg.com/media/DdiKlOYU0AALw5I.jpg',
-                        title='โรคซึมเศร้าอารมณ์ซึมเศร้า',
-                        text='ความเหมือนที่เเตกต่าง',
-                        actions=[
-                            URITemplateAction(
-                                label='เครียดกับซึมเศร้า',
-                                uri='http://haamor.com/th/%E0%B8%A0%E0%B8%B2%E0%B8%A7%E0%B8%B0%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2'
-                            ),
-                            URITemplateAction(
-                                label='ความเครียดความเศร้า',
-                                uri='https://nuuneoi.com/blog/blog.php?read_id=716'
-                            ),
-                            URITemplateAction(
-                                label='6ข้อเเตกต่าง',
-                                uri='https://today.line.me/th/pc/article/6+%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%81%E0%B8%95%E0%B8%81%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2-0946b58ae2a7e66fcba53b041348eed590c786627626de0061a2dd9bca071064'
-                           )
-                        ]
                     )
                  ]
               )
@@ -350,7 +331,7 @@ def godaun(event):
                   CarouselColumn(
                       thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWvTbqt_U3veriCnZMIa0hnjBs__rIaCOwnDC7lfd9RxMUPH',
                       title='ติดตามในเว็บไซต์',
-                      text='สามารถติดตามได้ที่เว็บไซต์',
+                      text='ติดตามข่าวสาร',
                       actions=[     
                             URITemplateAction(
                                 label='กรมสุขภาพจิต',
@@ -366,7 +347,7 @@ def godaun(event):
                                 uri='http://www.thaidepression.com/www/'
                             ),
                            URITemplateAction(
-                                label='ข่าวสารซึมเศร้าในต่างเเดน',
+                                label='ซึมเศร้าในต่างเเดน',
                                 uri='https://www.webmd.com/depression/default.html'
                             )
                         ]
@@ -377,16 +358,16 @@ def godaun(event):
                       text='แฟนเพจ',
                       actions=[     
                             URITemplateAction(
-                                label='คลินิกสุขภาพจิตนายแพทย์เจษฎา',
+                                label='คลินิกสุขภาพจิต',
                                 uri='https://www.facebook.com/D2JED/'
                             ),
                             URITemplateAction(
-                                label='สายด่วนสุขภาพจิต1323',
+                                label='สายด่วน1323',
                                 uri='https://www.facebook.com/helpline1323/'
                             ),
            
                             URITemplateAction(
-                                label='สมาคมจิตแพทย์แห่งประเทศไทย',
+                                label='จิตแพทย์แห่งประเทศไทย',
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             )
                         ]
