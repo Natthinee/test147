@@ -287,9 +287,80 @@ def godaun(event):
                                 label='9กิจกรรมคลายเศร้า',
                                 uri='http://www.jeban.com/topic/239807'
                             )
-           
-                          
-                           
+                        CarouselColumn(
+                        thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
+                        title='วิธีกระชับความเศร้า',
+                        text='วิธีกระชับความเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='คนใกล้ชิด',
+                                uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
+                            ),
+                            URITemplateAction(
+                                label='วิธีก้าวผ่าน',
+                                uri='https://thestandard.co/coverstory3/'
+                            ),
+                            URITemplateAction(
+                                label='เพื่อนเรา(ซึม)เศร้า',
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='ภาวะซึม',
+                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวทราย เจริญปุระ',
+                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวขุนเขา สินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                            )
+                         ]
+                      ),
+                      CarouselColumn(
+                          thumbnail_image_url='https://www.schoolofchangemakers.com/sites/default/files/82caca80957a300e812dbb52876ee5b4.jpg',
+                          title='วิธีกระชับความเศร้า',
+                          text='วิธีกระชับความเศร้า',
+                          actions=[
+                              URITemplateAction(
+                                  label='คนใกล้ชิด',
+                                  uri='https://www.choojaiproject.org/2017/07/helping-a-friend-through-the-darkness-of-depression/'
+                            ),
+                            URITemplateAction(
+                                label='วิธีก้าวผ่าน',
+                                uri='https://thestandard.co/coverstory3/'
+                            ),
+                            URITemplateAction(
+                                label='เพื่อนเรา(ซึม)เศร้า',
+                                uri='http://www.thaiticketmajor.com/variety/lifestyle/9371/'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='ภาวะซึม',
+                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวทราย เจริญปุระ',
+                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวขุนเขา สินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                            )          
                         ]
                     )
                  ]
