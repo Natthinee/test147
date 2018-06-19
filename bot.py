@@ -297,12 +297,12 @@ def godaun(event):
                                 uri='https://www.hongthongrice.com/life/5986/4feelgood/'
                             )
                         
-                        ]
-                    )
+                    ]
+                 )
 
-                 ]
-              )
+             ]
           )
+        )
       
         #bot()
         #location_message = LocationSendMessage(
