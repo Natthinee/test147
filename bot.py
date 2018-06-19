@@ -274,7 +274,11 @@ def godaun(event):
                       thumbnail_image_url='https://i1.wp.com/lightmeup.me/wp-content/uploads/2016/01/strong.png',
                       title='กิจกรรมทำเเล้วคลายเครียด',
                       text='ทำให้ใจสบายเเละผ่อนคลายกันเถอะ',
-                      actions=[     
+                      actions=[      
+                            URITemplateAction(
+                                label='4วิธีง่ายๆปรับสภาพจิตใจ',
+                                uri='https://www.hongthongrice.com/life/5986/4feelgood/'
+                            ), 
                             URITemplateAction(
                                 label='7กิจกรรมคลายเครียด',
                                 uri='http://sukkaphap-d.com/7-%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%94-%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88/'
@@ -282,13 +286,9 @@ def godaun(event):
                             URITemplateAction(
                                 label='9กิจกรรมคลายเศร้า',
                                 uri='http://www.jeban.com/topic/239807'
-                            ),
-           
-                            URITemplateAction(
-                                label='4วิธีง่ายๆปรับสภาพจิตใจ',
-                                uri='https://www.hongthongrice.com/life/5986/4feelgood/'
-                            
                             )
+           
+                          
                            
                         ]
                     )
