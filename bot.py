@@ -360,11 +360,15 @@ def godaun(event):
                                 label='กระทรวงสาธารณสุข',
                                 uri='https://www.moph.go.th/'
                             ),
-                           URITemplateAction(
+                            URITemplateAction(
+                                label='ซึมเศร้าในต่างเเดน',
+                                uri='https://www.webmd.com/depression/default.html'
+                            ),
+                            URITemplateAction(
                                 label='ซึมเศร้าในต่างเเดน',
                                 uri='https://www.webmd.com/depression/default.html'
                             )
-                        ]
+                      ]
                     )
                  ]
               )
