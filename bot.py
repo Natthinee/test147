@@ -334,7 +334,7 @@ def godaun(event):
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             
                             )
-                      ]
+                        ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
@@ -357,9 +357,8 @@ def godaun(event):
                       )
                  ]
               )
-            ]
           )
-        )             
+                    
       
         #bot()
         #location_message = LocationSendMessage(
