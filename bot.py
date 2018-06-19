@@ -341,7 +341,11 @@ def godaun(event):
                         thumbnail_image_url='https://s.isanook.com/he/0/ud/1/9229/sad.jpg',
                         title='ติดตามในเว็บไซต์',
                         text='ติดตามข่าวสาร',
-                        actions=[
+                        actions=[ 
+                            URITemplateAction(
+                                label='สถาบันสุขภาพจิต',
+                                uri='http://www.smartteen.net/main/'
+                            ),
                             URITemplateAction(
                                 label='กระทรวงสาธารณสุข',
                                 uri='https://www.moph.go.th/'
@@ -349,11 +353,8 @@ def godaun(event):
                             URITemplateAction(
                                 label='ซึมเศร้าในต่างเเดน',
                                 uri='https://www.webmd.com/depression/default.html'
-                            ),
-                            URITemplateAction(
-                                label='สถาบันสุขภาพจิต',
-                                uri='http://www.smartteen.net/main/'
                             )
+                           
                          ]
                       )
                  ]
