@@ -346,7 +346,7 @@ def godaun(event):
                                 label='จิตแพทย์แห่งประเทศไทย',
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             ),
-                                         CarouselColumn(
+                  CarouselColumn(
                       thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMgWvTbqt_U3veriCnZMIa0hnjBs__rIaCOwnDC7lfd9RxMUPH',
                       title='ติดตามในเว็บไซต์',
                       text='ติดตามข่าวสาร',
