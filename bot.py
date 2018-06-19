@@ -290,25 +290,7 @@ def godaun(event):
                             )
                         ]
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/w7QZKCJTw2o/maxresdefault.jpg',
-                        title='ออกกำลังกายกันเถอะ',
-                        text='มีอาการหลักคือ',
-                        actions=[
-                            URITemplateAction(
-                                label='จับสังเกต',
-                                uri='https://www.youtube.com/watch?v=w7QZKCJTw2o'
-                            ),
-                            URITemplateAction(
-                                label='จับสัญญาณ',
-                                uri='http://www.healthtodaythailand.net/%E0%B8%88%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B9%82%E0%B8%A3%E0%B8%84%E0%B8%8B%E0%B8%B6%E0%B8%A1%E0%B9%80%E0%B8%A8%E0%B8%A3%E0%B9%89%E0%B8%B2/'
-                            ),
-                            URITemplateAction(
-                                label='9สัญญาณเตือน',
-                                uri='https://www.bangkokhospital.com/index.php/th/diseases-treatment/major-depressive-disorder'
-                            )
-                        ]
-                    )
+
                  ]
               )
           )
@@ -370,7 +352,26 @@ def godaun(event):
                                 uri='https://www.facebook.com/ThaiPsychiatricAssociation/'
                             )
                       ]
-                    )
+                    ),
+                   CarouselColumn(
+                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
+                        title='ประสบการณ์โรคซึมเศร้า',
+                        text='รีวิวโรคซึมเศร้า',
+                        actions=[
+                            URITemplateAction(
+                                label='ภาวะซึม',
+                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวทราย เจริญปุระ',
+                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                            ),
+                            URITemplateAction(
+                                label='รีวิวขุนเขา สินธุเสน',
+                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                            )
+                         ]
+                      )
                  ]
               )
             ]
