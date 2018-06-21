@@ -310,20 +310,20 @@ def godaun(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url='https://fb1-dz.lnwfile.com/wa6rdl.png',
-                        title='ปรับสติสร้างสมาธิ',
-                        text='มาเริ่มสร้างสมาธิให้จิตใจ',
+                        title='ปรับสติให้ผ่อนคลาย',
+                        text='สร้างจิตให้ผ่อนคลายกัน',
                         actions=[
                             URITemplateAction(
-                                label='ภาวะซึม',
-                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                                label='วิธีการผ่อนคลายจิตใจ',
+                                uri='https://th.wikihow.com/%E0%B8%9C%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%88%E0%B8%B4%E0%B8%95%E0%B9%83%E0%B8%88'
                             ),
                             URITemplateAction(
-                                label='รีวิวทราย เจริญปุระ',
-                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                                label='ฝึกผ่อนคลายความเครียด',
+                                uri='https://www.dmh.go.th/news/view.asp?id=1012'
                             ),
                             URITemplateAction(
-                                label='รีวิวขุนเขา สินธุเสน',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                                label='การขจัดทุกข์ด้วยตนเอง',
+                                uri='https://www.dmh.go.th/news/view.asp?id=1006'
                             )
                         ]
                     ),
@@ -333,16 +333,16 @@ def godaun(event):
                         text='ขยับวันละนิดปรับเปลี่ยนชีวิตสดใส',
                         actions=[
                             URITemplateAction(
-                                label='ภาวะซึม',
-                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
+                                label='3ท่าโยคะก่อนนอน',
+                                uri='https://www.pf.co.th/blog/cozy-at-home/fit-at-home/2017/07/07/yoga-at-home/'
                             ),
                             URITemplateAction(
-                                label='รีวิวทราย เจริญปุระ',
-                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
+                                label='วิ่งแล้วดี',
+                                uri='https://blog.thai.run/%E0%B8%A7%E0%B8%B4%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%94%E0%B8%B5%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%99%E0%B8%B5%E0%B9%89%E0%B8%99%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%AD%E0%B8%87-31fbd88fd2ca'
                             ),
                             URITemplateAction(
-                                label='รีวิวขุนเขา สินธุเสน',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
+                                label='9กีฬาทางเลือก',
+                                uri='https://www.honestdocs.co/9-alternative-sports-exercise-not-boring'
                             )
                         ]
                     )
