@@ -286,8 +286,8 @@ def godaun(event):
    
     elif question == 'หนองคาย':
         location_message = LocationSendMessage(
-        title='my location',
-        address='Tokyo',
+        title='โรงพยาบาลหนองคาย',
+        address='โรงพยาบาลหนองคาย',
         latitude=17.8815617,
         longitude=102.74156670000002)
         line_bot_api.push_message(userid, location_message)
