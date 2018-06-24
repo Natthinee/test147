@@ -306,13 +306,13 @@ def godaun(event):
         longitude = 102.82998700000007 )
         line_bot_api.push_message(userid, location_message)
     
-    #elif question in evaluation_form['eval']['province']:
-        #location_message = LocationSendMessage(
-        #title = provincee(question),
-        #address = hospitalName(question),
-        #latitude = Latitudee(question),
-        #longitude = longtitutee(question) )
-        #line_bot_api.push_message(userid, location_message)
+    elif question in evaluation_form['eval']['province']:
+        location_message = LocationSendMessage(
+        title = provincee(question),
+        address = hospitalName(question),
+        latitude = Latitudee(question),
+        longitude = longtitutee(question) )
+        line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
         carousel_template_message = TemplateSendMessage(
