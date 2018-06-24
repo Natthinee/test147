@@ -27,7 +27,6 @@ from pymongo import MongoClient
 import json
 import random
 from test import find1
-from app import bot
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
