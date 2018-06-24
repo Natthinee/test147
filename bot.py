@@ -297,8 +297,13 @@ def godaun(event):
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    
-    
+   elif question in province:
+        location_message = LocationSendMessage(
+        title = hospitalName,
+        address = 'Tokyo',
+        latitude=35.65910807942215,
+        longitude=139.70372892916203)
+        line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
         carousel_template_message = TemplateSendMessage(
