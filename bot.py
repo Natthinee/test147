@@ -299,7 +299,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    elif question in province:
         location_message = LocationSendMessage(
-        title = hospitalName(question),
+        title = list(hospitalName(question)),
         address = 'Tokyo',
         latitude=35.65910807942215,
         longitude=139.70372892916203)
