@@ -300,10 +300,10 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['province']:
         location_message = LocationSendMessage(
-        title = str(province(question)),
-        address = str(hospitalName(question)),
-        latitude = float(Latitude(question)),
-        longitude = float(longtitute(question)))
+        title = province(question),
+        address = hospitalName(question),
+        latitude = Latitude(question),
+        longitude = longtitute(question))
         line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
