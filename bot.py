@@ -27,7 +27,7 @@ from pymongo import MongoClient
 import json
 import random
 from test import find1
-from province1 import Latitude,longtitute,hospitalName,province
+from province1 import (Latitude,longtitute,hospitalName,provincee)
 import decimal 
 d = decimal.Decimal 
 question1 = ''
@@ -300,7 +300,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['province']:
         location_message = LocationSendMessage(
-        title = province(question),
+        title = provincee(question),
         address = hospitalName(question),
         latitude = Latitude(question),
         longitude = longtitute(question))
