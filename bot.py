@@ -299,8 +299,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    elif question in province:
         location_message = LocationSendMessage(
-        title = 'หนองคาย',
-        address = 'Tokyo',
+        title='my location',
+        address='Tokyo',
         latitude=35.65910807942215,
         longitude=139.70372892916203)
         line_bot_api.push_message(userid, location_message)
