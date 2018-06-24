@@ -49,7 +49,9 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'ques': ques,
                            'wordap': wordappende,
                            'qq2': qq2,
-                           'number': number}
+                           'number': number,
+                           'province': province,
+                           'provinceY': provinceY}
 listQNo = 'กอดอุ่น ยังอ่อนด๋อย กอดอุ่นยังไม่รู้ว่ากำลังพิมพ์อะไร ช่วยกอดอุ่นด้วยน้าา'
 richmanu = {}
 richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
