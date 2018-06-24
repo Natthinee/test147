@@ -10,7 +10,7 @@ from pymongo import MongoClient
 
 client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
 db  = client.khim.province_Hospital
-def latitude(question):
+def Latitude(question):
     for i in db.find():
         if(i['province'] == question):
             return float(i['Latitude'])
@@ -19,7 +19,7 @@ def latitude(question):
 def longtitute(question):
      for i in db.find():
         if(i['province'] == question):
-            return float(i['Latitude'])
+            return float(i['longtitute'])
         
 def hospitalName(question):
      for i in db.find():
