@@ -15,12 +15,12 @@ db  = client.khim.province_Hospital
 def Latitudee(question):
     for i in db.find():
         if(i['province'] == question):
-            return d(i['Latitude'])
+            return float(i['Latitude'])
                 
 def longtitutee(question):
     for i in db.find():
         if(i['province'] == question):
-            return d(i['longitude'])
+            return float(i['longitude'])
         
 def hospitalName(question):
     for i in db.find():
