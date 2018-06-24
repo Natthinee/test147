@@ -296,7 +296,7 @@ def godaun(event):
     
     elif question in province :
         location_message = LocationSendMessage(
-        title = hospitalName(question),
+        title = 'lllll',
         address = hospitalName(question),
         latitude = latitude(question),
         longitude = longtitute(question)
