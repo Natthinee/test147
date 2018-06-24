@@ -28,7 +28,7 @@ def hospitalName(question):
 def province(question):
      for i in db.find():
         if(i['province']== question ):
-            return str(i['province'])
+            return (i['province'])
     
     
     
