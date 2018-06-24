@@ -40,6 +40,10 @@ wordappende = open("wordappende.txt", "r", encoding='utf-8-sig')
 wordappende = wordappende.read().split(',')
 qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
 qq2 = qq2.read().split(',')
+province = open("province.txt", "r", encoding='utf-8-sig')
+province = province.read().split('\n')
+provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
+provinceY = provinceY.read().split('\n')
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -290,12 +294,12 @@ def godaun(event):
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    
-    elif question == 'หนองคาย':
+    elif question in province :
         location_message = LocationSendMessage(
-        title='โรงพยาบาลหนองคาย',
-        address='โรงพยาบาลหนองคาย',
-        latitude=17.8815617,
-        longitude=102.74156670000002)
+        title = hospitalName(question),
+        address = hospitalName(question),
+        latitude = latitude(question),
+        longitude = longtitute(question)
         line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
