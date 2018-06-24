@@ -27,7 +27,7 @@ from pymongo import MongoClient
 import json
 import random
 from test import find1
-from province1 import (Latitude,longtitute,hospitalName,provincee)
+from province1 import Latitude,longtitute,hospitalName,provincee
 import decimal 
 d = decimal.Decimal 
 question1 = ''
@@ -303,7 +303,7 @@ def godaun(event):
         title = provincee(question),
         address = hospitalName(question),
         latitude = Latitude(question),
-        longitude = longtitute(question))
+        longitude = longtitute(question) )
         line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
