@@ -18,7 +18,7 @@ def Latitudee(question):
 def longtitutee(question):
     for i in db.find():
         if(i['province'] == question):
-            return float(i['longtitute'])
+            return float(i['longitude'])
         
 def hospitalName(question):
     for i in db.find():
