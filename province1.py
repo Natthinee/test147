@@ -24,7 +24,7 @@ def longtitute(question):
 def hospitalName(question):
      for i in db.find():
         if(i['province']== question ):
-            return str(i['hospital'])
+            return (i['hospital'])
 def province(question):
      for i in db.find():
         if(i['province']== question ):
