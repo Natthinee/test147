@@ -302,8 +302,8 @@ def godaun(event):
         location_message = LocationSendMessage(
         title = province(question),
         address = hospitalName(question),
-        latitude = d(float(Latitude(question))),
-        longitude = d(float(longtitute(question))))
+        latitude = float(Latitude(question)),
+        longitude = float(longtitute(question)))
         line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
