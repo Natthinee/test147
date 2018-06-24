@@ -293,7 +293,7 @@ def godaun(event):
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-   elif question in province:
+   elif question == 'หนองคาย':
         location_message = LocationSendMessage(
         title='my location',
         address='Tokyo',
