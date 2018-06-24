@@ -28,6 +28,8 @@ import json
 import random
 from test import find1
 from province1 import Latitude,longtitute,hospitalName,province
+import decimal 
+d = decimal.Decimal 
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -300,8 +302,8 @@ def godaun(event):
         location_message = LocationSendMessage(
         title = province(question),
         address = hospitalName(question),
-        latitude = float(Latitude(question)),
-        longitude = float(longtitute(question)))
+        latitude = d(Latitude(question)),
+        longitude = d(longtitute(question)))
         line_bot_api.push_message(userid, location_message)
         
     elif question == richmanu['rich']['rich05']:
