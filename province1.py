@@ -10,12 +10,12 @@ from pymongo import MongoClient
 
 client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
 db  = client.khim.province_Hospital
-def Latitude(question):
+def Latitudee(question):
     for i in db.find():
         if(i['province'] == question):
             return float(i['Latitude'])
                 
-def longtitute(question):
+def longtitutee(question):
     for i in db.find():
         if(i['province'] == question):
             return float(i['longtitute'])
