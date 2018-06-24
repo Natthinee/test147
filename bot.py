@@ -298,7 +298,7 @@ def godaun(event):
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question in evaluation_form['eval']['province']:
+    elif question == 'ขอนเเก่น':
         location_message = LocationSendMessage(
         title = provincee(question),
         address = hospitalName(question),
