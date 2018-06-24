@@ -103,6 +103,9 @@ def godaun(event):
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'] )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    if question in evaluation_form['eval']['greet']:
+        answer = random.choice(evaluation_form['eval']['answer'] )
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
         question1 = str(find1(userid,question)) ######test#####
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
