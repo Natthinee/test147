@@ -70,7 +70,7 @@ ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩
 ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
 ans2 = ['มี','ไม่มี']
-tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐≧▽≦/n เอ๊ะ!! หรือจะลองกดใช้งานฟังก์ชันด้านล่าง\n ก็จิ้มที่ปุ่ม > สีเชียวได้เลยน้าา'
+tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งานฟังก์ชันด้านล่าง\n ก็จิ้มที่ปุ่ม > สีเชียวได้เลยน้าา'
 
 app = Flask(__name__)
 
@@ -113,9 +113,9 @@ def godaun(event):
        answer = tess 
        sticker_message = StickerSendMessage(
        package_id='1',
-       sticker_id='40')
+       sticker_id='2')
        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       line_bot_api.reply_message(event.reply_token, sticker_message)
+       line_bot_api.push_message(userid, sticker_message)
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'] )
         location_message = LocationSendMessage(
