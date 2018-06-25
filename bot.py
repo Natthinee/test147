@@ -305,7 +305,7 @@ def godaun(event):
         longitude = longtitutee(question) )
         sticker_message = StickerSendMessage(
         package_id='1',
-        sticker_id='2571')
+        sticker_id='5')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
