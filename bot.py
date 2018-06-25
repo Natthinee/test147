@@ -109,7 +109,7 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    if question == 'สวัสดีจ้าาา':
+    if question in "สวัสดีจ้าาา":
        answer = tess 
        sticker_message = StickerSendMessage(
        package_id='1',
