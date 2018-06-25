@@ -71,6 +71,7 @@ ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้น�
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
 ans2 = ['มี','ไม่มี']
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
+hos = 'ลองไปปรึกษากับกับจิตเเพทย์ใกล้ๆ บ้านดูน้าา'
 
 app = Flask(__name__)
 
@@ -263,26 +264,7 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
                             )
                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.ytimg.com/vi/Gs6ufPBtS0A/maxresdefault.jpg',
-                        title='ประสบการณ์โรคซึมเศร้า',
-                        text='รีวิวโรคซึมเศร้า',
-                        actions=[
-                            URITemplateAction(
-                                label='ภาวะซึม',
-                                uri='https://www.youtube.com/watch?v=H5sUpGv68LE'
-                            ),
-                            URITemplateAction(
-                                label='รีวิวทราย เจริญปุระ',
-                                uri='https://www.youtube.com/watch?v=kwElbde56o0'
-                            ),
-                            URITemplateAction(
-                                label='รีวิวขุนเขา สินธุเสน',
-                                uri='https://www.youtube.com/watch?v=DPFhoK92xuw'
-                            )
-                         ]
-                      )
+                    )
                   ]
               )
           )
@@ -315,12 +297,18 @@ def godaun(event):
         line_bot_api.push_message(userid, location_message)
     
     elif question in evaluation_form['eval']['province']:
+        answer = hos
         location_message = LocationSendMessage(
         title = provincee(question),
         address = hospitalName(question),
         latitude = Latitudee(question),
         longitude = longtitutee(question) )
+        sticker_message = StickerSendMessage(
+        package_id='1',
+        sticker_id='2571')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, location_message)
+        line_bot_api.push_message(userid, sticker_message)
         
     elif question == richmanu['rich']['rich05']:
         carousel_template_message = TemplateSendMessage(
