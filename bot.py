@@ -110,23 +110,23 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    if question in 'สวัสดีจ้าาา':
-       answer = tess 
-       sticker_message = StickerSendMessage(
-       package_id='1',
-       sticker_id='2')
-       line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       line_bot_api.push_message(userid, sticker_message)
+    #if question in 'สวัสดีจ้าาา':
+       #answer = tess 
+       #sticker_message = StickerSendMessage(
+       #package_id='1',
+       #sticker_id='2')
+       #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+       #line_bot_api.push_message(userid, sticker_message)
     if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer'] )
-        location_message = LocationSendMessage(
-        title='my location',
-        address='Tokyo',
-        latitude=35.65910807942215,
-        longitude=139.70372892916203)
-        line_bot_api.push_message(userid, location_message)
+        answer = random.choice(evaluation_form['eval']['answer'])
+        #location_message = LocationSendMessage(
+        #title='my location',
+        #address='Tokyo',
+        #latitude=35.65910807942215,
+        #longitude=139.70372892916203)
+        #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in evaluation_form['eval']['ques']:
         question1 = str(find1(userid,question)) ######test#####
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
