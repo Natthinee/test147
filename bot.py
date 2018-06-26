@@ -26,7 +26,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from test import find1
+from test import find1,countScore
 from province1 import Latitudee,longtitutee,hospitalName,provincee
 import decimal 
 d = decimal.Decimal 
@@ -127,6 +127,9 @@ def godaun(event):
         #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+    if question in 'สรุป':
+        answer = countScore()
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
         question1 = str(find1(userid,question)) ######test#####
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
