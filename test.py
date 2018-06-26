@@ -62,6 +62,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'qq2': qq2}
 
 score = 0
+number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถาม'
 #q9Ran = random.choice(QC)
 def find1(userid,question):
@@ -91,8 +92,14 @@ def find1(userid,question):
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
           
-          
-          
+         
+def countScore():
+     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+     db  = client.khim.user
+     for i in db.find():
+        if i['Question'] == number:
+           score = score + int(i['Question'])
+     return  str(score) 
 
           
           
