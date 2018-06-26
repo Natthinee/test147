@@ -12,6 +12,6 @@ def scoreC():
     for i in db.find():
         if i['Question'] == '1':
             score = i['Question']
-            count = 1+2+4
+            count = int(score)
     return count
         
