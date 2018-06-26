@@ -97,7 +97,7 @@ def countScore():
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
      for i in db.find():
-        if i['Question'] in number:
+        if i['Question'] == '1':
            score = score + int(i['Question'])
      return  str(score) 
 
