@@ -64,6 +64,7 @@ evaluation_form['eval'] = {'greet': sayhi,
 score = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถาม'
+ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า
 #q9Ran = random.choice(QC)
 def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
