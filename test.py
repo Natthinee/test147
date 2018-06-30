@@ -60,10 +60,12 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'ques': ques,
                            'wordap': wordappende,
                            'qq2': qq2}
-
+sayYN = {}
+sayYN['yn'] = {'yes':'ใช่','no':'ไม่ใช่'}
+sayPatt = 'นี่ๆ ช่วยพิมพ์ ว่า "ใช่" ถ้าเกิดว่ามีลักษณะอาการที่ตรงกับสิ่งที่กอดอุ่นถาม เเต่ถ้าไม่มีลักษณะอาการตามที่ถามก็พิมพ์ว่า "ไม่ใช่" หน่อยน้า\n'
 score = 0
 number = ['0','1','2','3']
-ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถาม'
+ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า
 #q9Ran = random.choice(QC)
 def find1(userid,question):
@@ -84,10 +86,22 @@ def find1(userid,question):
           face = random.choice(evaluation_form['eval']['wordap'])
           answer = face+quest8[countData-11]+'\n'+ ple
           db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
-          return answer          
-     
+          return answer
+     elif countData == 14:
+          if question == sayYN['yn']['yes']:
+              answer = face+quest8[countData - 14]+'\n'+ sayPatt
+              db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          else:
+              answer = face + quest8[countData - 15] + sayPatt
+            
+     elif countData > 20:
+          for i in db.find():
+              if i['Question'] in number:
+              
+              g = db.delete_many() 
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
+      
           
          
 
