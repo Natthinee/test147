@@ -93,12 +93,6 @@ def find1(userid,question):
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           else:
               answer = face + quest8[countData - 15] + sayPatt
-            
-     elif countData > 20:
-          for i in db.find():
-              if i['Question'] in number:
-              
-              g = db.delete_many() 
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
       
