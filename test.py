@@ -87,12 +87,7 @@ def find1(userid,question):
           answer = face+quest8[countData-11]+'\n'+ ple
           db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
           return answer
-     elif countData == 14:
-          if question == sayYN['yn']['yes']:
-              answer = face+quest8[countData - 14]+'\n'+ sayPatt
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          else:
-              answer = face + quest8[countData - 15] + sayPatt
+
      else:
           return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
       
