@@ -126,10 +126,11 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in evaluation_form['eval']['ques']:
+        questi = str(find1(userid,question))
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title=str(find1(userid,question)),
+                title=questi,
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
