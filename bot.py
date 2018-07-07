@@ -141,8 +141,7 @@ def godaun(event):
                     )
                ]
             )
-        )
-                        
+        )                
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
         answer = str(scoreC())
