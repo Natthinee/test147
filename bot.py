@@ -117,31 +117,13 @@ def godaun(event):
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)
     if question =='ลอง':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://example.com/image.jpg',
-                title='Menu',
-                text='Please select',
-                actions=[
-                    PostbackAction(
-                        label='postback',
-                        text='postback text',
-                        data='action=buy&itemid=1'
-                    ),
-                    MessageAction(
-                        label='message',
-                        text='message text'
-                    ),
-                    URIAction(
-                        label='uri',
-                        uri='http://example.com/'
-                    )
-                ]
-            )
-        )
-                                   
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        confirm_template = ConfirmTemplate(text='Do it?', actions=[
+            MessageAction(label='Yes', text='Yes!'),
+            MessageAction(label='No', text='No!'),
+        ])
+        template_message = TemplateSendMessage(
+            alt_text='Confirm alt text', template=confirm_template)
+        line_bot_api.reply_message(event.reply_token, template_message)
     
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'])
