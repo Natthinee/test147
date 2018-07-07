@@ -150,7 +150,7 @@ def godaun(event):
             alt_text='Confirm template',
             template=ConfirmTemplate(
                text='Are you sure?',
-                actions=[
+               actions=[
                     PostbackAction(
                         label='postback',
                         text='postback text'
