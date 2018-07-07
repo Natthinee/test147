@@ -125,11 +125,10 @@ def godaun(event):
         #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    elif question == 'test':
+    elif question in evaluation_form['eval']['ques']:
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                thumbnail_image_url='https://example.com/image.jpg',
                 title='Menu',
                 text='Please select',
                 actions=[
@@ -177,9 +176,9 @@ def godaun(event):
     elif question in 'สรุป':
         answer = str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question in evaluation_form['eval']['ques']:
-        question1 = str(find1(userid,question)) ######test#####
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+    #elif question in evaluation_form['eval']['ques']:
+        #question1 = str(find1(userid,question)) ######test#####
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
     elif question in number:
         question1 = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
