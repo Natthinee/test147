@@ -131,7 +131,7 @@ def godaun(event):
             template=ConfirmTemplate(
                text='Are you sure?',
                actions=[
-                    PostbackTemplateAction(
+                    MessageTemplateAction(
                         label='postback',
                         text='postback text'
                     ),
