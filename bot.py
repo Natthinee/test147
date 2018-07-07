@@ -181,8 +181,34 @@ def godaun(event):
         #question1 = str(find1(userid,question)) ######test#####
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
     elif question in number:
-        question1 = str(find1(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title=str(find1(userid,question)),
+                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='0=ไม่มีเลย',
+                        text='0',
+                    ),
+                    MessageTemplateAction(
+                        label='1=เป็นบางวัน',
+                        text='1'
+                    ),
+                    MessageTemplateAction(
+                        label='2=เป็นบ่อย',
+                        text='2'
+                    ),
+                    MessageTemplateAction(
+                        label='3=เป็นทุกวัน',
+                        text='3'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
     elif question in ans2:
         question1 = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
