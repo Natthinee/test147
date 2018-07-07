@@ -130,7 +130,7 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='เคยโทษตัวเอง คิดว่าตัวเองล้มเหลวเเละทำให้คนอื่นผิดหวังบ้างม่ะ?',
+                title='เคยโทษตัวเอง คิดว่าตัวเองล้มเหลวเเละทำให้คนอื่น?',
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
