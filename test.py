@@ -35,6 +35,8 @@ wordappende = open("wordappende.txt", "r", encoding='utf-8-sig')
 wordappende = wordappende.read().split(',')
 qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
 qq2 = qq2.read().split(',')
+t9 = open("TT.txt", "r", encoding='utf-8-sig')
+t9 = t9.read().split('\n')
 ans8 = {}
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
@@ -73,9 +75,11 @@ def find1(userid,question):
      db  = client.khim.user
      countData = db.count()
      if countData <= 8:
-          face = random.choice(evaluation_form['eval']['wordap'])
-          answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
-          db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
+          #face = random.choice(evaluation_form['eval']['wordap'])
+          #answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
+          answer = t9[countData]
+          db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          #db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
      if countData <= 10:
           face = random.choice(evaluation_form['eval']['wordap'])
