@@ -81,6 +81,12 @@ def find1(userid,question):
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           #db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
+        
+        
+def find2(userid,question):
+     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+     db  = client.khim.user
+     countData = db.count()
      if countData <= 10:
           face = random.choice(evaluation_form['eval']['wordap'])
           answer = face+qq2[countData-9]+'\n'+ ple
