@@ -125,6 +125,35 @@ def godaun(event):
         #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+      elif question == 'test':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://example.com/image.jpg',
+                title='Menu',
+                text='Please select',
+                actions=[
+                    MessageTemplateAction(
+                        label='1',
+                        text='postback text',
+                    ),
+                    MessageTemplateAction(
+                        label='2',
+                        text='message text'
+                    ),
+                    MessageTemplateAction(
+                        label='3',
+                        text='message text11'
+                    ),
+                    MessageTemplateAction(
+                        label='4',
+                        text='message text112'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
     elif question in 'ทดสอบ':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
@@ -304,35 +333,6 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
-    elif question == 'test':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://example.com/image.jpg',
-                title='Menu',
-                text='Please select',
-                actions=[
-                    MessageTemplateAction(
-                        label='1',
-                        text='postback text',
-                    ),
-                    MessageTemplateAction(
-                        label='2',
-                        text='message text'
-                    ),
-                    MessageTemplateAction(
-                        label='3',
-                        text='message text11'
-                    ),
-                    MessageTemplateAction(
-                        label='4',
-                        text='message text112'
-                    )
-                ]
-             )
-          )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
