@@ -115,8 +115,18 @@ def godaun(event):
        #package_id='1',
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       #line_bot_api.push_message(userid, sticker_message)
-    if question =='ลอง':
+       #line_bot_api.push_message(userid, sticker_message)   
+    if question in evaluation_form['eval']['greet']:
+        answer = random.choice(evaluation_form['eval']['answer'])
+        #location_message = LocationSendMessage(
+        #title='my location',
+        #address='Tokyo',
+        #latitude=35.65910807942215,
+        #longitude=139.70372892916203)
+        #line_bot_api.push_message(userid, location_message)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+     elif question in 'ลอง':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -136,18 +146,7 @@ def godaun(event):
         )
                         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    
-    if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer'])
-        #location_message = LocationSendMessage(
-        #title='my location',
-        #address='Tokyo',
-        #latitude=35.65910807942215,
-        #longitude=139.70372892916203)
-        #line_bot_api.push_message(userid, location_message)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    if question in 'สรุป':
+    elif question in 'สรุป':
         answer = str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['ques']:
