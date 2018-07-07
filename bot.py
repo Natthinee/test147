@@ -145,7 +145,7 @@ def godaun(event):
         #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    elif question == "ลอง":
+    elif question == 'ลอง':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -153,8 +153,7 @@ def godaun(event):
                 actions=[
                     PostbackAction(
                         label='postback',
-                        text='postback text',
-                        data='action=buy&itemid=1'
+                        text='postback text'
                     ),
                     MessageAction(
                         label='message',
