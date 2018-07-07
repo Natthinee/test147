@@ -116,7 +116,7 @@ def godaun(event):
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)
-    if question in 'ลอง':
+    if question =='ลอง':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -131,7 +131,7 @@ def godaun(event):
                         label='message',
                         text='message text'
                    )
-                ]
+               ]
            )
         )
         line_bot_api.reply_message(event.reply_token,  confirm_template_message)
