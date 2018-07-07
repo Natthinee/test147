@@ -129,24 +129,24 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='Menu',
-                text='Please select',
+                title=str(find1(userid,question)),
+                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
-                        label='1',
-                        text='postback text',
+                        label='0 = ไม่มีเลย',
+                        text='0',
                     ),
                     MessageTemplateAction(
-                        label='2',
-                        text='message text'
+                        label='1 = เป็นบางวัน',
+                        text='1'
                     ),
                     MessageTemplateAction(
-                        label='3',
-                        text='message text11'
+                        label='2 = เป็นบ่อย',
+                        text='2'
                     ),
                     MessageTemplateAction(
-                        label='4',
-                        text='message text112'
+                        label='3 = เป็นทุกวัน',
+                        text='3'
                     )
                 ]
              )
