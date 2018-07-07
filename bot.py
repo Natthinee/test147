@@ -148,7 +148,19 @@ def godaun(event):
     elif question == "ลอง":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
-            template=ConfirmTemplate(yyy
+            template=ConfirmTemplate(
+               text='Are you sure?',
+                actions=[
+                    PostbackAction(
+                        label='postback',
+                        text='postback text',
+                        data='action=buy&itemid=1'
+                    ),
+                    MessageAction(
+                        label='message',
+                        text='message text'
+                    )
+               ]
             )
         )
                         
