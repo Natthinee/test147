@@ -12,6 +12,7 @@ Created on Wed Jun  6 21:31:06 2018
 """
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
+from linebot import LineBotApi
 from linebot.exceptions import (InvalidSignatureError)
 from linebot.models import (MessageEvent, TextMessage, TextSendMessage, ImageSendMessage,
                             SourceUser, SourceGroup, SourceRoom,
