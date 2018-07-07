@@ -125,6 +125,24 @@ def godaun(event):
         #line_bot_api.push_message(userid, location_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+    elif question in 'ทดสอบ':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='Are you sure?',
+               actions=[
+                    PostbackTemplateAction(
+                        label='postback',
+                        text='postback text'
+                    ),
+                    MessageTemplateAction(
+                        label='message',
+                        text='message text'
+                    )
+               ]
+            )
+        )                
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
         answer = str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
