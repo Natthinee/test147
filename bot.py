@@ -20,8 +20,8 @@ from linebot.models import (MessageEvent, TextMessage, TextSendMessage, ImageSen
                             CarouselTemplate, CarouselColumn, PostbackEvent,
                             StickerMessage, StickerSendMessage, LocationMessage, LocationSendMessage,
                             ImageMessage, VideoMessage, AudioMessage,
-                            UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent)
-from flask.ext.pymongo import PyMongo PostbackAction
+                            UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent,PostbackAction,MessageAction)
+from flask.ext.pymongo import PyMongo 
 import pymongo
 from pymongo import MongoClient
 import json
