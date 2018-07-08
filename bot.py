@@ -31,7 +31,6 @@ from province1 import Latitudee,longtitutee,hospitalName,provincee
 from countSco import scoreC
 question1 = ''
 evaluation_form = {}
-count = int(find2(userid,question))
 number = ['0', '1', '2', '3']
 sayhi = open("sayhi.txt", encoding='utf-8-sig')
 sayhi = sayhi.read().split(',')
@@ -47,6 +46,7 @@ province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
 provinceY = provinceY.read().split('\n')
+count = int(find2(userid,question))
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
