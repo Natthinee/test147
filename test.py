@@ -96,7 +96,7 @@ def find3(userid,question):
           if(countData == 9):
                answer = qq2[0]
                db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 9):
+          if(countData == 10):
               answer = qq2[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
