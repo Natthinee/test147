@@ -26,7 +26,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from test import find1,find2,find3
+from test import find1,find2,find3,sCorelevel 
 from province1 import Latitudee,longtitutee,hospitalName,provincee
 from countSco import scoreC
 question1 = ''
@@ -194,7 +194,7 @@ def godaun(event):
         )
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
-        answer = slope + str(scoreC())
+        answer = slope + sCorelevel(userid,question,scoreC()) 
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     #elif question in evaluation_form['eval']['ques']:
         #question1 = str(find1(userid,question)) ######test#####
