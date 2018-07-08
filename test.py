@@ -89,8 +89,8 @@ def find2(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          for i in db.find():
-              if(userid == i['UserID']):
+          #for i in db.find():
+              #if(userid == i['UserID']):
                    #count1 = count1 + 1
           return  countData #count1
         
