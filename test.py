@@ -109,9 +109,9 @@ def find3(userid,question):
           elif(countData == 13):
               answer = quest8[2]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-              if(question == 'มี'):
-                  answer = quest8[3]
-                  db.insert({"UserID":userid,"Question": question, "Answer": answer})     
+          elif(question == 14):
+              answer = quest8[3]
+              db.insert({"UserID":userid,"Question": question, "Answer": answer})     
           elif(countData == 15):
               answer = quest8[4]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
