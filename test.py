@@ -132,7 +132,18 @@ def find3(userid,question):
               answer = quest8[8]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
-  
+        
+   def sCorelevel(userid,question,score): 
+          if(score==0):
+              subtal = 'level 0 ไม่มีแนวโน้มฆ่าตัวตายในปัจจุบัน'
+          elif(score>=1 and score<=8):
+              subtal = 'level 1 มีแนวโน้มที่จะฆ่าตัวตายในปัจจุบัน ระดับน้อย'
+          elif(score>=9 and score<=16):
+              subtal = 'level 2 มีแนวโน้มที่จะฆ่าตัวตายในปัจจุบัน ระดับปานกลาง'
+          elif(score>=17:
+              subtal = 'level 3 แนวโน้มที่จะฆ่าตัวตายในปัจจุบัน ระดับรุนแรง'
+          return subtal
+
         
      
 
