@@ -179,21 +179,19 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='Are you sure?',
+               text=find3(userid,question),
                actions=[
                     MessageTemplateAction(
-                        label='postback',
-                        text='postback text'
+                        label='มี',
+                        text='มี'
                     ),
                     MessageTemplateAction(
-                        label='message',
-                        text='message text'
+                        label='ไม่มี',
+                        text='ไม่มี'
                     )
                ]
             )
         )
-        print("confirm_template_message")        
-        print(confirm_template_message)
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
         answer = str(scoreC())
