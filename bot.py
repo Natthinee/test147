@@ -46,7 +46,6 @@ province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
 provinceY = provinceY.read().split('\n')
-count = int(find2(userid,question))
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -109,6 +108,7 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
+    count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
        #sticker_message = StickerSendMessage(
