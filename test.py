@@ -38,6 +38,8 @@ qq2 = qq2.read().split(',')
 t9 = open("TT.txt", "r", encoding='utf-8-sig')
 t9 = t9.read().split('\n')
 ans8 = {}
+count1 = 0
+count2 = 0
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -87,47 +89,59 @@ def find2(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          return countData
+          for i in db.find():
+              if(userid == i['UserID']):
+                   count1 = count1 + 1
+          return count1
         
 
 def find3(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          if(countData == 9):
+          count2 = find2(userid,question)
+          if(count2 == 9):
               answer = qq2[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 10):
+          if(count2 == 10):
               answer = qq2[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 11):
+          if(count2 == 11):
               answer = quest8[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 12):
+          if(count2 == 12):
               answer = quest8[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 13):
+          if(count2 == 13):
               answer = quest8[2]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 14):
+          if(count2 == 14):
               answer = quest8[3]  
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 15):
+          if(count2 == 15):
               answer = quest8[4]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 16):
+          if(count2 == 16):
               answer = quest8[5]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 17):
+          if(count2 == 17):
               answer = quest8[6]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 18):
+          if(count2 == 18):
               answer = quest8[7]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(countData == 19):
+          if(count2 == 19):
               answer = quest8[8]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
+def find4(question,userid):
+          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+          db  = client.khim.user
+          countData = db.count()
+          count2 = find2(userid,question)
+          if(count2==19):
+          db.delete_many()
+          return "kkk"
         
         
                 
