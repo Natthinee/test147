@@ -78,7 +78,7 @@ handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
 app.config['MONGO_DBNAME'] = 'khim'
 app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
 mongo = PyMongo(app)
-
+slope ='สรุปแบบประเมิน 9 คำถาม'
 
 @app.route("/")
 def hello():
@@ -194,7 +194,7 @@ def godaun(event):
         )
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
-        answer = str(scoreC())
+        answer = slope + str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     #elif question in evaluation_form['eval']['ques']:
         #question1 = str(find1(userid,question)) ######test#####
