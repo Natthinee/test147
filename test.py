@@ -94,40 +94,39 @@ def find3(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          elif(countData == 9):
+          if(countData == 9):
               answer = qq2[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 10):
+          if(countData == 10):
               answer = qq2[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 11):
+          if(countData == 11):
               answer = quest8[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 12):
+          if(countData == 12):
               answer = quest8[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 13):
+          if(countData == 13):
               answer = quest8[2]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(question == 14):
+          if(question == 14):
               answer = quest8[3]  
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 15):
+          if(countData == 15):
               answer = quest8[4]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 16):
+          if(countData == 16):
               answer = quest8[5]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 17):
+          if(countData == 17):
               answer = quest8[6]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 18):
+          if(countData == 18):
               answer = quest8[7]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          elif(countData == 19):
+          if(countData == 19):
               answer = quest8[8]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-  
           return answer
         
         
