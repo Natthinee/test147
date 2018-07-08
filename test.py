@@ -96,25 +96,25 @@ def find3(userid,question):
           countData = db.count()
           if(countData == 9):
               answer = qq2[0]
-          elif(countData == 10):
+          if(countData == 10):
               answer = qq2[1]
-          elif(countData == 11):
+          if(countData == 11):
               answer = quest8[0]
-          elif(countData == 12):
+          if(countData == 12):
               answer = quest8[1]
-          elif(countData == 13):
+          if(countData == 13):
               answer = quest8[2]
-          elif(question == 14):
+          if(question == 14):
               answer = quest8[3]   
-          elif(countData == 15):
+          if(countData == 15):
               answer = quest8[4]
-          elif(countData == 16):
+          if(countData == 16):
               answer = quest8[5]
-          elif(countData == 17):
+          if(countData == 17):
               answer = quest8[6]
-          elif(countData == 18):
+          if(countData == 18):
               answer = quest8[7]
-          elif(countData == 19):
+          if(countData == 19):
               answer = quest8[8]
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
