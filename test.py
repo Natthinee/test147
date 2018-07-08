@@ -89,7 +89,7 @@ def find2(userid,question):
           countData = db.count()
           return countData
         
-    find3(userid,question):
+def find3(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
