@@ -94,27 +94,27 @@ def find3(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          if(countData == 9):
+          elif(countData == 9):
               answer = qq2[0]
-          if(countData == 10):
+          elif(countData == 10):
               answer = qq2[1]
-          if(countData == 11):
+          elif(countData == 11):
               answer = quest8[0]
-          if(countData == 12):
+          elif(countData == 12):
               answer = quest8[1]
-          if(countData == 13):
+          elif(countData == 13):
               answer = quest8[2]
-          if(question == 14):
+          elif(question == 14):
               answer = quest8[3]   
-          if(countData == 15):
+          elif(countData == 15):
               answer = quest8[4]
-          if(countData == 16):
+          elif(countData == 16):
               answer = quest8[5]
-          if(countData == 17):
+          elif(countData == 17):
               answer = quest8[6]
-          if(countData == 18):
+          elif(countData == 18):
               answer = quest8[7]
-          if(countData == 19):
+          elif(countData == 19):
               answer = quest8[8]
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
