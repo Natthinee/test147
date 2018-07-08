@@ -229,9 +229,9 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif question in ans2:
-        question1 = str(find1(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
+    #elif question in ans2:
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
