@@ -100,37 +100,27 @@ def find3(userid,question):
           countData = db.count()
           if(countData == 9):
               answer = qq2[0]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 10):
               answer = qq2[1]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 11):
               answer = quest8[0]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 12):
               answer = quest8[1]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 13):
               answer = quest8[2]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 14):
               answer = quest8[3]  
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 15):
               answer = quest8[4]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 16):
               answer = quest8[5]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 17):
               answer = quest8[6]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 18):
               answer = quest8[7]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 19):
               answer = quest8[8]
-              db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
         
    
