@@ -134,15 +134,7 @@ def find3(userid,question):
               answer = quest8[8]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
-def find4(question,userid):
-          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-          db  = client.khim.user
-          countData = db.count()
-          count2 = find2(userid,question)
-          if(count2==19):
-          db.delete_many()
-          return "kkk"
-        
+
         
                 
         
