@@ -109,7 +109,7 @@ def find3(userid,question):
           if(countData == 13):
               answer = quest8[2]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(question == 14):
+          if(countData == 14):
               answer = quest8[3]  
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           if(countData == 15):
