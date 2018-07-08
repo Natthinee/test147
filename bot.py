@@ -26,11 +26,12 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from test import find1
+from test import find1,find2,find3
 from province1 import Latitudee,longtitutee,hospitalName,provincee
 from countSco import scoreC
 question1 = ''
 evaluation_form = {}
+count = int(find2(userid,question))
 number = ['0', '1', '2', '3']
 sayhi = open("sayhi.txt", encoding='utf-8-sig')
 sayhi = sayhi.read().split(',')
@@ -154,7 +155,7 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif question in 'ทดสอบ':
+    elif count == 9:
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -209,6 +210,7 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
     elif question in ans2:
         question1 = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
