@@ -84,22 +84,39 @@ def find1(userid,question):
         
         
 def find2(userid,question):
-     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-     db  = client.khim.user
-     countData = db.count()
-     if countData <= 10:
-          face = random.choice(evaluation_form['eval']['wordap'])
-          answer = face+qq2[countData-9]+'\n'+ ple
-          db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-9]})
+          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+          db  = client.khim.user
+          countData = db.count()
+          return countData
+        
+    find3(userid,question):
+          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+          db  = client.khim.user
+          countData = db.count()
+          if(countData == 9):
+               answer = qq2[0]
+               db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          if(countData == 9):
+              answer = qq2[1]
+              db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
-     elif countData <= 13:
-          face = random.choice(evaluation_form['eval']['wordap'])
-          answer = face+quest8[countData-11]+'\n'+ ple
-          db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
-          return answer
+                
+        
+      
+     #if countData <= 10:
+          #face = random.choice(evaluation_form['eval']['wordap'])
+          #answer = face+qq2[countData-9]+'\n'+ ple
+          #db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-9]})
+          #return answer
+     #elif countData <= 13:
+          #face = random.choice(evaluation_form['eval']['wordap'])
+          #answer = face+quest8[countData-11]+'\n'+ ple
+          #db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
+          #return answer
 
-     else:
-          return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
+     #else:
+          #return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
+      
       
           
          
