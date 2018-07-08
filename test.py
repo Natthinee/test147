@@ -91,80 +91,49 @@ def find2(userid,question):
           countData = db.count()
           for i in db.find():
               if(userid == i['UserID']):
-                   count1 = count1 + 1
-          return count1
+                   #count1 = count1 + 1
+          return  countData #count1
         
 
 def find3(userid,question):
           client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
           db  = client.khim.user
           countData = db.count()
-          count2 = find2(userid,question)
-          if(count2 == 9):
+          if(countData == 9):
               answer = qq2[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 10):
+          if(countData == 10):
               answer = qq2[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 11):
+          if(countData == 11):
               answer = quest8[0]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 12):
+          if(countData == 12):
               answer = quest8[1]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 13):
+          if(countData == 13):
               answer = quest8[2]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 14):
+          if(countData == 14):
               answer = quest8[3]  
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 15):
+          if(countData == 15):
               answer = quest8[4]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 16):
+          if(countData == 16):
               answer = quest8[5]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 17):
+          if(countData == 17):
               answer = quest8[6]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 18):
+          if(countData == 18):
               answer = quest8[7]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          if(count2 == 19):
+          if(countData == 19):
               answer = quest8[8]
               db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
-
         
-                
-        
-      
-     #if countData <= 10:
-          #face = random.choice(evaluation_form['eval']['wordap'])
-          #answer = face+qq2[countData-9]+'\n'+ ple
-          #db.insert({"UserID":userid,"Question": question, "Answer": qq2[countData-9]})
-          #return answer
-     #elif countData <= 13:
-          #face = random.choice(evaluation_form['eval']['wordap'])
-          #answer = face+quest8[countData-11]+'\n'+ ple
-          #db.insert({"UserID":userid,"Question": question, "Answer": quest8[countData-11]})
-          #return answer
-
-     #else:
-          #return 'ถ้าอยากทราบผลการประเมินเลยให้พิมพ์คำว่า "ผลลัพธ์"\nแต่ถ้าอยากลองฟังก์ชันการใช้งานอื่นดูก่อนก็สามารถกดได้ที่ปุ่มฟังก์ชันต่างๆ\nที่หน้าจอได้เลยน้าา ◑０◐'
-      
-      
-          
-         
-
-
-          
-          
-          
-          
-          
-          
-          
      
 
   
