@@ -72,6 +72,7 @@ ans2 = ['มี','ไม่มี']
 anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไรได้บ้างอ่ะ','กอดอุ่นทำไรได้บ้างอ่ะ','เธอทำไรได้บ้างอ่ะ']
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์ใกล้ๆ บ้านดูน้าา'
+count = 0
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
