@@ -81,6 +81,10 @@ def find1(userid,question):
           #answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
           answer = t9[countData]
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          #db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          for i in db.find():
+              print(i['Question'])
+              print(i['Answer'])
           #db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
         
