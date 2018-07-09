@@ -168,7 +168,44 @@ def find3(userid,question):
         answer = quest8[count2]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
-        return answer  
+        return answer 
+      
+def findx(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.QQ8
+   dd = client.khim.Q8
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
+        print(i['UserID'])
+        q8sub.append(i['UserID'])
+   for i in dd.find():
+        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'มี')
+            count1 = 0
+        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'ไม่มี')
+            count1 = 1     
+   for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   if userid not in q8sub:
+        count2 = count1
+        answer = excusive[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
+   if userid in q8sub:
+        count2 = count1
+        answer = excusive[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer 
+        
+      
       
     
 
