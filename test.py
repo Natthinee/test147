@@ -82,7 +82,7 @@ def find1(userid,question):
     for i in db.find():
           if userid == i['UserID']:
                   count1 = count1 + 1
-    return count1
+    return str(count1)
           
     
     
