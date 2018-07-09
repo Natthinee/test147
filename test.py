@@ -41,7 +41,7 @@ ans8 = {}
 count1 = 0 ####### count1 คือนับรอบการทำ
 count2 = 0
 No = 0
-idsub =''
+idsub =[]
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
