@@ -80,7 +80,7 @@ def find1(userid,question):
               count1  = count1 + 1
               answer = 'test'
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-    return str(count1 )
+    return 'trrrrrr'
 def find2(userid,question):
     #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
     return 'kkkk'
