@@ -69,6 +69,7 @@ ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩
 ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
 ans2 = ['มี','ไม่มี']
+anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไรได้บ้างอ่ะ','กอดอุ่นทำไรได้บ้างอ่ะ','เธอทำไรได้บ้างอ่ะ']
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์ใกล้ๆ บ้านดูน้าา'
 app = Flask(__name__)
@@ -196,6 +197,44 @@ def godaun(event):
         )
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif question in anss:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='นี่คือสิ่งที่กอดอุ่นทำได้ทั้งหมดนะจ๊ะ',
+                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    ),
+                    MessageTemplateAction(
+                        label='ซึมเศร้าน่ารู้',
+                        text='ซึมเศร้าน่ารู้'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='เศร้าเเล้วเปลี่ยน',
+                        text='เศร้าเเล้วเปลี่ยน'
+                    ),
+                    MessageTemplateAction(
+                        label='ข่าวสารซึมเศร้า',
+                        text='ข่าวสารซึมเศร้า'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+        
     elif question in 'สรุป':
         answer = slope + str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
