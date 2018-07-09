@@ -201,7 +201,7 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='นี่คือสิ่งที่กอดอุ่นทำได้ทั้งหมดนะจ๊ะ',
+                title='นี่คือสิ่งที่กอดอุ่นทำได้',
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
