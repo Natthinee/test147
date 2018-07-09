@@ -109,8 +109,8 @@ def godaun(event):
     userr = mongo.db.user
     
     userid = event.source.user_id
-    print("uu1------------------------------------------------")
-    print(userid)
+    #print("uu1------------------------------------------------")
+    #print(userid)
     question = event.message.text
     count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
@@ -129,11 +129,11 @@ def godaun(event):
         #longitude=139.70372892916203)
         #line_bot_api.push_message(userid, location_message)
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        print(question )
-        print(answer)
-        for i in userr.find:
-            print(i['Question'])
-            print(i['nswer'])
+        #print(question )
+        #print(answer)
+        #for i in userr.find:
+            #print(i['Question'])
+            #print(i['nswer'])
         
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
@@ -217,6 +217,14 @@ def godaun(event):
                 title='สิ่งที่กอดอุ่นสามารถทำได้',
                 text='ลองเลือกดูซิ',
                 actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ'
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    )
                     MessageTemplateAction(
                         label='ซึมเศร้าน่ารู้',
                         text='ซึมเศร้าน่ารู้',
