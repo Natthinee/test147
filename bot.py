@@ -107,8 +107,9 @@ def webhook():
 @handler.add(MessageEvent, message=TextMessage)
 def godaun(event):
     userr = mongo.db.user
-    print("uu1------------------------------------------------")
+    
     userid = event.source.user_id
+    print("uu1------------------------------------------------")
     print(userid)
     question = event.message.text
     count = int(find2(userid,question))
