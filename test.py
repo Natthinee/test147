@@ -79,18 +79,40 @@ db  = client.khim.user
 for i in db.find():
     print(i['UserID'])
     idsub.append(i['UserID'])
+    
+def countar(userid,question):
+  client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+  db  = client.khim.user
+  for i in db.find():
+      if(userid==i['UserID']):
+        count1 = count1+1
+  return count1
 
+def countNo(userid,question):
+  client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+  db  = client.khim.user
+  for i in db.find():
+      if(userid==i['UserID']):
+        No = No + 1
+  return No
+    
+    
 def find1(userid,question):
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.user
+    for i in db.find():
+         print(i['UserID'])
+         idsub.append(i['UserID'])
    if userid not in idsub:
-              answer = t9[0]
               count1 = 0
-              No = 1
+              answer = t9[0]
+              No = 0
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
               return answer
    if userid in idsub:
-              count1 = 1
+              count1 = countar(userid,question)
               answer = t9[count1]
-              No = 2
+              No = countNo(userid,question)
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
               return answer
                
