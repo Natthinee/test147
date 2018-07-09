@@ -76,7 +76,7 @@ def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
      for i in db.find(UserID):
-          if userid==i['UserID']
+          if userid==i['UserID']:
               count1  = count1 + 1
               answer = 'test'
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
