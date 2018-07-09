@@ -128,6 +128,10 @@ def find3(userid,question):
           #if(count1 == 2):
             
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
+          for i in db.find():
+              print(i['Question'])
+              print(i['Answer'])
+              
           return answer
         
    
