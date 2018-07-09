@@ -104,17 +104,12 @@ def find1(userid,question):
         print(i['UserID'])
         idsub.append(i['UserID'])
    if userid not in idsub:
-              count1 = 0
-              answer = t9[0]
-              No = 0
-              db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-              return answer
-   if userid in idsub:
               count1 = countar(userid,question)
               answer = t9[count1]
               No = countNo(userid,question)
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
               return answer
+   
                
 
 def find2(userid,question):
