@@ -79,21 +79,22 @@ def find1(userid,question):
     #countData = db.count()
     for i in db.find():
           #print(userid)
-          print(i['UserID'])
-          if userid not in i['UserID']:
-               answer = t9[0]
-               count1 = 0
-               No = 1
-               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-               return answer
-          if userid in i['UserID']:
-               count1 = count1 + 1
-               answer = t9[count1]
-               No = No + 1
-               print(userid)
-               print(i['UserID'])
-               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-               return answer
+        print(i['UserID'])
+          #if userid not in i['UserID']:
+               #answer = t9[0]
+               #count1 = 0
+               #No = 1
+               #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+               #return answer
+          #if userid in i['UserID']:
+               #count1 = count1 + 1
+               #answer = t9[count1]
+               #No = No + 1
+               #print(userid)
+               #print(i['UserID'])
+               #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+               #return answer
+     return 'test'
                 
                
 
