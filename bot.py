@@ -196,8 +196,8 @@ def godaun(event):
             )
         )
         
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question == "ทำไรได้บ้าง":
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)       
+    elif question in 'ทำไรได้บ้าง': 
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
@@ -231,10 +231,7 @@ def godaun(event):
                 ]
              )
           )
-        
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        
-        
     elif question in 'สรุป':
         answer = slope + str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
