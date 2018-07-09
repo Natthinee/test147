@@ -197,41 +197,38 @@ def godaun(event):
         )
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)       
-    elif question in 'ทำไรได้บ้าง': 
+    
+    elif question in 'test':
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='นี่คือสิ่งที่กอดอุ่นทำได้',
+                title=str(find1(userid,question)),
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
+                        label='0=ไม่มีเลย',
+                        text='0',
                     ),
                     MessageTemplateAction(
-                        label='คุยกับเเบบประเมิน',
-                        text='คุยกับเเบบประเมิน'
+                        label='1=เป็นบางวัน',
+                        text='1'
                     ),
                     MessageTemplateAction(
-                        label='ซึมเศร้าน่ารู้',
-                        text='ซึมเศร้าน่ารู้'
+                        label='2=เป็นบ่อย',
+                        text='2'
                     ),
                     MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='เศร้าเเล้วเปลี่ยน',
-                        text='เศร้าเเล้วเปลี่ยน'
-                    ),
-                    MessageTemplateAction(
-                        label='ข่าวสารซึมเศร้า',
-                        text='ข่าวสารซึมเศร้า'
+                        label='3=เป็นทุกวัน',
+                        text='3'
                     )
                 ]
              )
           )
+        
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
     elif question in 'สรุป':
         answer = slope + str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
