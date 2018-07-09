@@ -147,7 +147,7 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='1111111',
+                title = str(find1(userid,question)),
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
@@ -172,11 +172,11 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif question == "มา":
+    elif question == "ทำต่อ":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='222222222',
+               text=str(find2(userid,question)),
                actions=[
                     MessageTemplateAction(
                         label='มี',
@@ -197,7 +197,7 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='33333333333',
+               text=str(find2(userid,question)),
                actions=[
                     MessageTemplateAction(
                         label='มี',
@@ -256,7 +256,7 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='444444444',
+                title=str(find1(userid,question)),
                 text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
