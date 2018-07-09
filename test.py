@@ -41,6 +41,7 @@ ans8 = {}
 count1 = 0 ####### count1 คือนับรอบการทำ
 count2 = 0
 No = 0
+idsub =''
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -85,6 +86,9 @@ def find1(userid,question):
     for i in db.find():
           #print(userid)
         print(i['UserID'])
+        idsub.append(i['UserID'])
+    print("............................................................")
+    print(idsub)
     return 'test'
                
 
