@@ -107,10 +107,7 @@ def webhook():
 @handler.add(MessageEvent, message=TextMessage)
 def godaun(event):
     userr = mongo.db.user
-    
     userid = event.source.user_id
-    #print("uu1------------------------------------------------")
-    #print(userid)
     question = event.message.text
     count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
@@ -121,7 +118,7 @@ def godaun(event):
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)  
     if question in 'ขิม':
-        answer = find1(userid,question)
+        answer = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'])
