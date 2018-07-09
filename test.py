@@ -74,22 +74,25 @@ arr = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
-#client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-#db  = client.khim.user
-#for i in db.find():
-    #print(i['UserID'])
+client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+db  = client.khim.user
+for i in db.find():
+    print(i['UserID'])
+    idsub.append(i['UserID'])
 
 def find1(userid,question):
-    #countData = db.count()
-    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-    db  = client.khim.user
-    for i in db.find():
-          #print(userid)
-        print(i['UserID'])
-        idsub.append(i['UserID'])
-    print("............................................................")
-    print(idsub)
-    return 'test'
+   if userid not in idsub:
+              answer = t9[0]
+              count1 = 0
+              No = 1
+              db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+              return answer
+   if userid in idsub:
+              count1 = count1 + 1
+              answer = t9[count1]
+              No = No + 1
+              db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+              return answer
                
 
 def find2(userid,question):
