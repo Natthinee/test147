@@ -175,7 +175,7 @@ def godaun(event):
         )
         #print("confirm_template_message")        
         #print(confirm_template_message)
-        db.insert({"UserID":userid,"Question": question, "Answer": find3(userid,question))
+        db.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in ans2:
         confirm_template_message = TemplateSendMessage(
@@ -194,7 +194,7 @@ def godaun(event):
                ]
             )
         )
-        db.insert({"UserID":userid,"Question": question, "Answer": find3(userid,question))
+        db.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
         answer = slope + str(scoreC())
@@ -230,6 +230,7 @@ def godaun(event):
                 ]
              )
           )
+        db.insert({"UserID":userid,"Question": question, "Answer": str(find1(userid,question)))
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
     #elif question in ans2:
