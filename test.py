@@ -39,6 +39,7 @@ t9 = open("TT.txt", "r", encoding='utf-8-sig')
 t9 = t9.read().split('\n')
 ans8 = {}
 idsub =[]
+q2sub = []
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -104,13 +105,36 @@ def find1(userid,question):
         answer = t9[count2]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
-        return answer
-   
-               
+        return answer              
 
 def find2(userid,question):
-    #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-    return 'kkkk'
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.Q2
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
+        print(i['UserID'])
+        q2sub.append(i['UserID'])
+   if userid not in q2sub:
+        count2 = count1
+        answer = qq2[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
+   if userid in q2sub:
+        count2 = count1
+        answer = qq2[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer  
 def find3(userid,question):
     return 'llllll'
 
