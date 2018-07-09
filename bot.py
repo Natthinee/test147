@@ -213,14 +213,6 @@ def godaun(event):
                 text='ลองเลือกดูซิ',
                 actions=[
                     MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ'
-                    ),
-                    MessageTemplateAction(
-                        label='คุยกับเเบบประเมิน',
-                        text='คุยกับเเบบประเมิน'
-                    ),
-                    MessageTemplateAction(
                         label='ซึมเศร้าน่ารู้',
                         text='ซึมเศร้าน่ารู้',
                     ),
