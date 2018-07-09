@@ -135,7 +135,6 @@ def find3(userid,question):
             
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           print("u2------------------------------------------------")
-          print(userid)
           for i in db.find():
               print(i['Question'])
               print(i['Answer'])
