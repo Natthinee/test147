@@ -80,14 +80,14 @@ def find1(userid,question):
     if countData == 0:
        count1 = 1
        arr = 1
-       answer = t9[1]
+       answer = t9[0]
     db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer})
     else:
        for i in db.find():
           if userid == i[UserID]
-             count1 = count1 + 0
+             count1 = 1
              arr = arr + 1
-             answer = t9[2]
+             answer = t9[1]
     db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer}) 
     return answer
 def find2(userid,question):
