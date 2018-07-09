@@ -76,17 +76,15 @@ ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุก�
 def find1(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
-    countData = db.count()
+    #countData = db.count()
     for i in db.find():
-          print(userid)
+          #print(userid)
           print(i['UserID'])
           if userid not in i['UserID']:
                answer = t9[0]
                count1 = 0
                No = 1
                db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-               print(userid)
-               print(i['UserID'])
                return answer
           if userid in i['UserID']:
                count1 = count1 + 1
