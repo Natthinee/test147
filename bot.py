@@ -116,9 +116,6 @@ def godaun(event):
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)  
-    if question in 'ขิม':
-        answer = 'ขิม'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'])
         #location_message = LocationSendMessage(
@@ -222,7 +219,7 @@ def godaun(event):
                     MessageTemplateAction(
                         label='คุยกับเเบบประเมิน',
                         text='คุยกับเเบบประเมิน'
-                    )
+                    ),
                     MessageTemplateAction(
                         label='ซึมเศร้าน่ารู้',
                         text='ซึมเศร้าน่ารู้',
