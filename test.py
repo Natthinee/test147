@@ -69,6 +69,7 @@ sayYN = {}
 sayYN['yn'] = {'yes':'ใช่','no':'ไม่ใช่'}
 sayPatt = 'นี่ๆ ช่วยพิมพ์ ว่า "ใช่" ถ้าเกิดว่ามีลักษณะอาการที่ตรงกับสิ่งที่กอดอุ่นถาม เเต่ถ้าไม่มีลักษณะอาการตามที่ถามก็พิมพ์ว่า "ไม่ใช่" หน่อยน้า\n'
 score = 0
+arr = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
@@ -77,8 +78,10 @@ def find1(userid,question):
     db  = client.khim.user
     countData = db.count()
     if countData == 0:
+       count1 = count1 + 1
+       arr = arr + 1
        answer = t9[1]
-    db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+    db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer})
     return answer
 def find2(userid,question):
     #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
