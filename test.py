@@ -80,11 +80,9 @@ def find1(userid,question):
           #face = random.choice(evaluation_form['eval']['wordap'])
           #answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
           answer = t9[countData]
-          print("u1------------------------------------------------')
-          print(userid)
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           #db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u2------------------------------------------------')
+          print("u1------------------------------------------------')
           for i in db.find():
               print(i['Question'])
               print(i['Answer'])
@@ -100,8 +98,6 @@ def find2(userid,question):
           #for i in db.find():
               #if(userid == i['UserID']):
                    #count1 = count1 + 1
-          print("u3------------------------------------------------')
-          print(userid)
           return  countData #count1
 
 def find3(userid,question):
@@ -138,7 +134,7 @@ def find3(userid,question):
           #if(count1 == 2):
             
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u3------------------------------------------------')
+          print("u2------------------------------------------------')
           print(userid)
           for i in db.find():
               print(i['Question'])
