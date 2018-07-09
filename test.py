@@ -82,7 +82,7 @@ def find1(userid,question):
           answer = t9[countData]
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           #db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u1------------------------------------------------')
+          print("u1------------------------------------------------")
           for i in db.find():
               print(i['Question'])
               print(i['Answer'])
@@ -134,7 +134,7 @@ def find3(userid,question):
           #if(count1 == 2):
             
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u2------------------------------------------------')
+          print("u2------------------------------------------------")
           print(userid)
           for i in db.find():
               print(i['Question'])
