@@ -75,13 +75,13 @@ ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุก�
 def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
-     count1 = count + 1
+     count1 = count1 + 1
      return count1
      #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
 def find2(userid,question):
-    return "kkkk"
+    return 'kkkk'
 def find3(userid,question):
-    return "llllll"
+    return 'llllll'
 
     
           
