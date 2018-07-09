@@ -40,6 +40,7 @@ t9 = t9.read().split('\n')
 ans8 = {}
 idsub =[]
 q2sub = []
+q8sub = []
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -135,8 +136,36 @@ def find2(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer  
+      
 def find3(userid,question):
-    return 'llllll'
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.Q8
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
+        print(i['UserID'])
+        q8sub.append(i['UserID'])
+   if userid not in q8sub:
+        count2 = count1
+        answer = quest8[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
+   if userid in q8sub:
+        count2 = count1
+        answer = quest8[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer  
+
 
     
           
