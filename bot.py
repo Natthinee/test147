@@ -198,30 +198,30 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)       
     
-    elif question in 'test':
+    elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title=str(find1(userid,question)),
-                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                title='สิ่งที่กอดอุ่นสามารถทำได้',
+                text='ลองเลือกดูซิ',
                 actions=[
                     MessageTemplateAction(
-                        label='0=ไม่มีเลย',
-                        text='0',
+                        label='ซึมเศร้าน่ารู้',
+                        text='ซึมเศร้าน่ารู้',
                     ),
                     MessageTemplateAction(
-                        label='1=เป็นบางวัน',
-                        text='1'
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
                     ),
                     MessageTemplateAction(
-                        label='2=เป็นบ่อย',
-                        text='2'
+                        label='เศร้าเเล้วเปลี่ยน',
+                        text='เศร้าเเล้วเปลี่ยน'
                     ),
                     MessageTemplateAction(
-                        label='3=เป็นทุกวัน',
-                        text='3'
+                        label='ข่าวสารซึมเศร้า',
+                        text='ข่าวสารซึมเศร้า'
                     )
                 ]
              )
