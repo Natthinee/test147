@@ -185,9 +185,9 @@ def findx(userid,question):
         print(i['UserID'])
         q8sub.append(i['UserID'])
    for i in dd.find():
-        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'มี')
+        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'มี'):
             count1 = 0
-        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'ไม่มี')
+        if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'ไม่มี'):
             count1 = 1     
    for i in db.find():
         if(userid==i['UserID']):
