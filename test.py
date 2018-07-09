@@ -136,6 +136,7 @@ def find3(userid,question):
           for i in db.find():
               print(i['Question'])
               print(i['Answer'])
+              print(i['UserID'])
               
           return answer
         
