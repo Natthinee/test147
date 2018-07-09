@@ -108,8 +108,6 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-    db  = client.khim.user
     count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
@@ -155,7 +153,7 @@ def godaun(event):
                 ]
              )
           )
-        db.insert({"UserID":userid,"Question": question, "Answer": str(find1(userid,question)))
+        userr.insert({"UserID":userid,"Question": question, "Answer": str(find1(userid,question)))
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif count == 9:
@@ -177,7 +175,7 @@ def godaun(event):
         )
         #print("confirm_template_message")        
         #print(confirm_template_message)
-        db.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
+        userr.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in ans2:
         confirm_template_message = TemplateSendMessage(
@@ -196,7 +194,7 @@ def godaun(event):
                ]
             )
         )
-        db.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
+        userr.insert({"UserID":userid,"Question": question, "Answer": str(find3(userid,question)))
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'สรุป':
         answer = slope + str(scoreC())
@@ -232,7 +230,7 @@ def godaun(event):
                 ]
              )
           )
-        db.insert({"UserID":userid,"Question": question, "Answer": str(find1(userid,question)))
+        userr.insert({"UserID":userid,"Question": question, "Answer": str(find1(userid,question)))
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
     #elif question in ans2:
