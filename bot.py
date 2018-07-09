@@ -119,6 +119,7 @@ def godaun(event):
        #line_bot_api.push_message(userid, sticker_message)  
     if question in 'ขิม':
         answer = str(find1(userid,question))
+        print(answer)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
         answer = random.choice(evaluation_form['eval']['answer'])
