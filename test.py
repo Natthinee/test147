@@ -108,6 +108,10 @@ def find3(userid,question):
               answer = quest8[1]
           if(countData == 13):
               answer = quest8[2]
+              if(question == 'มี'):
+                  countData = countData + 0
+              else:
+                  countData = countData + 1       
           if(countData == 14):
               answer = quest8[3]  
           if(countData == 15):
