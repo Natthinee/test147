@@ -85,7 +85,7 @@ def find1(userid,question):
                db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
                return answer
           elif userid in i['UserID']:
-               count2 = count2+1
+               count2 = 2
                answer = t9[count2]
                No = No + 1
                db.insert({"UserID":userid,"Round":count2,"No":No,"Question": question, "Answer": answer})
