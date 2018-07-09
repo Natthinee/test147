@@ -77,16 +77,14 @@ def find1(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     countData = db.count()
-    print(userid)
-    db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer}) 
     for i in db.find():
-          if userid == i['UserID']:
-                  count1 = count1 + 1
-    return str(count1)
-          
-    
-    
-    return answer
+          if userid not in i['UserID']:
+               answer = t9[0]
+               count1 = 0
+               No = 1
+               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
+               return answer           
+
 def find2(userid,question):
     #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
     return 'kkkk'
