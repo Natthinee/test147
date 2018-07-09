@@ -108,6 +108,8 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.user
     count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
