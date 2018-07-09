@@ -108,6 +108,7 @@ def webhook():
 def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
+    print(userid)
     question = event.message.text
     count = int(find2(userid,question))
     #if question in 'สวัสดีจ้าาา':
