@@ -78,6 +78,8 @@ def find1(userid,question):
     db  = client.khim.user
     countData = db.count()
     for i in db.find():
+           print(userid)
+           print(i['UserID'])
           if userid not in i['UserID']:
                answer = t9[0]
                count1 = 0
