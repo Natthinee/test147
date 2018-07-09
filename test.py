@@ -85,7 +85,7 @@ def countar(userid,question):
   db  = client.khim.user
   for i in db.find():
       if(userid==i['UserID']):
-        count1 = count1+1
+          count1 = count1+1
   return count1
 
 def countNo(userid,question):
@@ -93,7 +93,7 @@ def countNo(userid,question):
   db  = client.khim.user
   for i in db.find():
       if(userid==i['UserID']):
-        No = No + 1
+          No = No + 1
   return No
     
     
