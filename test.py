@@ -77,11 +77,11 @@ def find1(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     countData = db.count()
+    print(userid)
     if countData == 0:
        count1 = 1
        arr = 1
        answer = t9[0]
-       print(userid)
     if countData>0:
         for i in db.find():
              if userid == i['UserID']:
