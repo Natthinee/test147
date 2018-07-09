@@ -82,13 +82,9 @@ def find1(userid,question):
        count1 = 1
        arr = 1
        answer = t9[0]
-    if countData == 1:
-        for i in db.find():
-             if userid == i['UserID']:
-                  count1 = 1
-                  arr = 1
-                  answer = t9[1]
     db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer}) 
+    for i in db.find():
+          print(i['UserID'])
     print(userid)
     return answer
 def find2(userid,question):
