@@ -82,7 +82,7 @@ def find1(userid,question):
        count1 = 1
        arr = 1
        answer = t9[0]
-    if countData>0:
+    if countData == 1:
         for i in db.find():
              if userid == i['UserID']:
                   count1 = count1 + 1
