@@ -82,7 +82,7 @@ def find1(userid,question):
        arr = 1
        answer = t9[0]
     db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer})
-    else:
+    if countData!=0:
        for i in db.find():
             if userid == i['UserID']:
                   count1 = 1
