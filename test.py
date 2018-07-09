@@ -85,6 +85,7 @@ def find1(userid,question):
           for i in db.find():
               print(i['Question'])
               print(i['Answer'])
+              print(i['UserID'])
           #db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
           return answer
         
