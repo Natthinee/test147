@@ -38,10 +38,6 @@ qq2 = qq2.read().split(',')
 t9 = open("TT.txt", "r", encoding='utf-8-sig')
 t9 = t9.read().split('\n')
 ans8 = {}
-count1 = 0 ####### count1 คือนับรอบการทำ
-count2 = 0
-No = 0
-No1 = 0
 idsub =[]
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
@@ -84,6 +80,10 @@ ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุก�
 def find1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
    for i in db.find():
         if(userid==i['UserID']):
             count1 = count1+1
