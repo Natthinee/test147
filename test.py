@@ -73,10 +73,15 @@ arr = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
+#client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+#db  = client.khim.user
+#for i in db.find():
+    #print(i['UserID'])
+
 def find1(userid,question):
+    #countData = db.count()
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
-    #countData = db.count()
     for i in db.find():
           #print(userid)
         print(i['UserID'])
