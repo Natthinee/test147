@@ -108,7 +108,6 @@ def webhook():
 def godaun(event):
     userr = mongo.db.user
     print("uu1------------------------------------------------")
-    print(userid)
     userid = event.source.user_id
     print(userid)
     question = event.message.text
