@@ -41,6 +41,7 @@ ans8 = {}
 count1 = 0 ####### count1 คือนับรอบการทำ
 count2 = 0
 No = 0
+No1 = 0
 idsub =[]
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
@@ -79,36 +80,25 @@ ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุก�
 #for i in db.find():
     #print(i['UserID'])
     #idsub.append(i['UserID'])
-    
-def countar(userid,question):
-  client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-  db  = client.khim.user
-  for i in db.find():
-      if(userid==i['UserID']):
-          count1 = count1+1
-  return count1
-
-def countNo(userid,question):
-  client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-  db  = client.khim.user
-  for i in db.find():
-      if(userid==i['UserID']):
-          No = No + 1
-  return No
-    
-    
+   
 def find1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
    for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
         print(i['UserID'])
         idsub.append(i['UserID'])
    if userid not in idsub:
-              count1 = int(countar(userid,question))
-              answer = t9[count1]
-              No = int(countNo(userid,question))
-              db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-              return answer
+        count2 = count1
+        answer = t9[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
    
                
 
