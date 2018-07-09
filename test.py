@@ -37,6 +37,10 @@ qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
 qq2 = qq2.read().split(',')
 t9 = open("TT.txt", "r", encoding='utf-8-sig')
 t9 = t9.read().split('\n')
+excusive = open("Excusive.txt", "r", encoding='utf-8-sig')
+excusive = excusive.read().split(',')
+exq8 = open("Exq8.txt","r", encoding='utf-8-sig')
+exq8 = exq8.read().split(',')
 ans8 = {}
 idsub =[]
 q2sub = []
@@ -165,6 +169,8 @@ def find3(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer  
+      
+    
 
 
     
