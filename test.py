@@ -73,14 +73,14 @@ number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
 def find1(userid,question):
-     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-     db  = client.khim.user
-     for i in db.find():
-          if userid==i['UserID']:
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.user
+    for i in db.find():
+         if userid==i['UserID']:
               count1  = count1 + 1
               answer = 'test'
               db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
-     return count1 
+    return str(count1 )
 def find2(userid,question):
     #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
     return 'kkkk'
