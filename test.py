@@ -109,21 +109,34 @@ def find3(userid,question):
           if(countData == 13):
               answer = quest8[2]
               if(question == 'มี'):
-                  countData = countData + 0
+                  count1 = 3
               else:
-                  countData = countData + 1       
-          if(countData == 14):
-              answer = quest8[3]  
-          if(countData == 15):
-              answer = quest8[4]
-          if(countData == 16):
-              answer = quest8[5]
-          if(countData == 17):
-              answer = quest8[6]
-          if(countData == 18):
-              answer = quest8[7]
-          if(countData == 19):
-              answer = quest8[8]
+                  count1 = 4   
+          if(count1 == 3):
+              if(countData == 14):
+                  answer = quest8[3]  
+              if(countData == 15):
+                  answer = quest8[4]
+              if(countData == 16):
+                  answer = quest8[5]
+              if(countData == 17):
+                  answer = quest8[6]
+              if(countData == 18):
+                  answer = quest8[7]
+              if(countData == 19):
+                  answer = quest8[8]
+          if(count1 == 4):
+              if(countData == 14):
+                  answer = quest8[4]  
+              if(countData == 15):
+                  answer = quest8[5]
+              if(countData == 16):
+                  answer = quest8[6]
+              if(countData == 17):
+                  answer = quest8[7]
+              if(countData == 18):
+                  answer = quest8[8]
+                  
           db.insert({"UserID":userid,"Question": question, "Answer": answer})
           return answer
         
