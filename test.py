@@ -78,8 +78,8 @@ def find1(userid,question):
     db  = client.khim.user
     countData = db.count()
     if countData == 0:
-       count1 = count1 + 1
-       arr = arr + 1
+       count1 = 1
+       arr = 1
        answer = t9[1]
     db.insert({"UserID":userid,"Round":count1,"No":arr,"Question": question, "Answer": answer})
     return answer
