@@ -125,6 +125,13 @@ def godaun(event):
         #latitude=35.65910807942215,
         #longitude=139.70372892916203)
         #line_bot_api.push_message(userid, location_message)
+        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        print(question )
+        print(answer)
+        for i in userr.find:
+            print(i['Question'])
+            print(i['nswer'])
+        
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in evaluation_form['eval']['ques']:
