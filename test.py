@@ -38,8 +38,9 @@ qq2 = qq2.read().split(',')
 t9 = open("TT.txt", "r", encoding='utf-8-sig')
 t9 = t9.read().split('\n')
 ans8 = {}
-count1 = 0
+count1 = 1 ####### count1 คือนับรอบการทำ
 count2 = 0
+No = 0
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -71,78 +72,19 @@ score = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
-#q9Ran = random.choice(QC)
 def find1(userid,question):
      client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
      db  = client.khim.user
-     countData = db.count()
-     if countData <= 8:
-          #face = random.choice(evaluation_form['eval']['wordap'])
-          #answer = face+QC1[countData]+'\n'+ setscoreq9['score']['pprint']+'\n'+ please['ple']['ple'] 
-          answer = t9[countData]
-          db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u2------------------------------------------------")
-          #db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          for i in db.find():
-              print(i['Question'])
-              print(i['Answer'])
-              print(i['UserID'])
-          #db.insert({"UserID":userid,"Question": question, "Answer": QC1[countData]})
-          return answer
-        
-        
+     count1 = count + 1
+     return count1
+     #db.insert({"UserID":userid,"Round":count1,"No":No,"Question": question, "Answer": answer})
 def find2(userid,question):
-          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-          db  = client.khim.user
-          countData = db.count()
-          #for i in db.find():
-              #if(userid == i['UserID']):
-                   #count1 = count1 + 1
-          return  countData #count1
-
+    return "kkkk"
 def find3(userid,question):
-          client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-          db  = client.khim.user
-          countData = db.count()
-          if(countData == 9):
-              answer = qq2[0]
-          if(countData == 10):
-              answer = qq2[1]
-          if(countData == 11):
-              answer = quest8[0]
-          if(countData == 12):
-              answer = quest8[1]
-          if(countData == 13):
-              answer = quest8[2]
-              #if(question == 'มี'):
-                  ##count1 = 1
-              #if(question == 'ไม่มี'):
-                  #count1 = 2
-          #if(count1 == 1):
-          if(countData == 14):
-              answer = quest8[3]  
-          if(countData == 15):
-              answer = quest8[4]
-          if(countData == 16):
-              answer = quest8[5]
-          if(countData == 17):
-              answer = quest8[6]
-          if(countData == 18):
-              answer = quest8[7]
-          if(countData == 19):
-              answer = quest8[8]
-          #if(count1 == 2):
-            
-          db.insert({"UserID":userid,"Question": question, "Answer": answer})
-          print("u2------------------------------------------------")
-          for i in db.find():
-              print(i['Question'])
-              print(i['Answer'])
-              print(i['UserID'])
-              
-          return answer
-        
-   
+    return "llllll"
+
+    
+          
 
         
      
