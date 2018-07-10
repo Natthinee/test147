@@ -640,7 +640,7 @@ def godaun(event):
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         sticker_message = StickerSendMessage(
         package_id='2',
-        sticker_id='34')
+        sticker_id='30')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         
