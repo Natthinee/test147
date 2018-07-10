@@ -28,7 +28,7 @@ import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee
 from countSco import scoreC,scoreQ2
-from test import find1,find2,find3,findx,findy,findxy,findxx,findyy
+from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -686,7 +686,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'เริ่มทำเเบบประเมินใหม่':
-        
+        del = deleteQu(userid,question)
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
