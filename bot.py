@@ -654,8 +654,8 @@ def godaun(event):
                         text='สนใจ'
                     ),
                     MessageTemplateAction(
-                        label='ไปต่อ',
-                        text='ไปต่อ'
+                        label='ทำต่อ',
+                        text='ทำต่อ'
                     )
                ]
             )
