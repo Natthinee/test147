@@ -83,6 +83,7 @@ mongo = PyMongo(app)
 slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
 lo = ['มี.','ไม่มี.']
+clock = ['ซ้าย','ขวา','ข้างซ้าย','ข้างขวา','ฝั่งซ้าย','ฝั่งขวา','ด้านซ้าย','ด้านขวา']
 
 @app.route("/")
 def hello():
@@ -758,11 +759,37 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
     elif question in 'สนใจ':
+        answer = 'นาฬิกาเรือนไหนคือของปลอม ? ซ้ายหรือขวาน้าา?'
         image_message = ImageSendMessage(
-            original_content_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr34a7Vf6ZLhpufSQ3fjyy4dxmnoC3aZgrMXcdYS52F8TzQ6xr',
-            preview_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr34a7Vf6ZLhpufSQ3fjyy4dxmnoC3aZgrMXcdYS52F8TzQ6xr'
+            original_content_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg',
+            preview_image_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg'
         )
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.reply_message(event.reply_token, image_message)
+    elif question in clock:
+        answer = 'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='เอ๊ะๆ จะทำต่อหรือเริ่มใหม่ดีน้าา',
+               actions=[
+                    MessageTemplateAction(
+                        label='ทำต่อ',
+                        text='ทำต่อ'
+                    ),
+                    MessageTemplateAction(
+                        label='เริ่มทำเเบบประเมินใหม่',
+                        text='เริ่มทำเเบบประเมินใหม่'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+    
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
