@@ -27,7 +27,7 @@ from pymongo import MongoClient
 import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee
-from countSco import scoreC
+from countSco import scoreC,countQues
 from test import find1,find2,find3,findx,findy,findxy
 question1 = ''
 evaluation_form = {}
@@ -110,6 +110,7 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
+    count = countQues(userid,question)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
        #sticker_message = StickerSendMessage(
@@ -180,7 +181,28 @@ def godaun(event):
           )
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    elif count == '9':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(find2(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='เล่นเลย',
+                        text='เล่นเลย'
+                    ),
+                    MessageTemplateAction(
+                        label='ทำต่อ',
+                        text='ทำต่อ'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
         
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+      
     elif question == "ทำต่อ":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
