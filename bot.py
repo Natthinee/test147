@@ -152,7 +152,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    elif question in evaluation_form['eval']['ques']:
+    elif question in 'ทำต่อ':
         #questi = str(find1(userid,question))
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
@@ -181,7 +181,7 @@ def godaun(event):
           )
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)    
-    elif question == "ทำต่อ":
+    elif question  in evaluation_form['eval']['ques']:
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
