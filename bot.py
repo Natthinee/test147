@@ -112,6 +112,8 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.Q2
     #print(count)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
@@ -247,7 +249,7 @@ def godaun(event):
                )
         #print("confirm_template_message")        
         #print(confirm_template_message)
-        
+        db.insert({"UserID":userid,"Round":2,"No":2,"Question": question, "Answer": text})
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
