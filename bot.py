@@ -26,7 +26,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
-from province1 import Latitudee,longtitutee,hospitalName,provincee
+from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu
 question1 = ''
@@ -506,7 +506,7 @@ def godaun(event):
         ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['province']:
-        answer = hos
+        answer = hos+'\n'+str(addressPro(question))
         location_message = LocationSendMessage(
         title = provincee(question),
         address = hospitalName(question),
