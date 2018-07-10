@@ -40,7 +40,7 @@ def addressPro(question):
              web = i['website']
              telophone = i['tel']
             
-    return 'ที่อยู่โรงพยาบาล:'+address+'\n'+'เว็บไซต์โรงพยาบาล:'+web+'\n'+'เบอร์โทรศัพท์:'+ telophone
+    return 'ที่อยู่โรงพยาบาล:\n'+address+'\n'+'เว็บไซต์โรงพยาบาล:\n'+web+'\n'+'เบอร์โทรศัพท์:\n'+ telophone
 
     
     
