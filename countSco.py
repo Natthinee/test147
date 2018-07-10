@@ -25,7 +25,7 @@ def scoreC(userid,question):
 def scoreQ2(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.Q2
-    count = 1
+    count = 0
     for i in db.find():
         if(userid == i['UserID']):
             if i['Question'] in me:
