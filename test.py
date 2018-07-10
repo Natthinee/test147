@@ -82,6 +82,7 @@ arr = 0
 number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
+game = 'พักสมองสักเเปบดีกว่าน้าา\nก่อนอุ่นมีเกมส์มาให้ทาย สนใจไหม\n ถ้าสนใจก็พิมพ์คำว่า "สนใจ"\nเเต่ถ้าอยากทำต่อ ก็พิมพ์คำว่า "ไปต่อ" นะจ๊ะ'
 #client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
 #db  = client.khim.user
 #for i in db.find():
@@ -174,6 +175,8 @@ def find3(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer 
+   if count2 == 8:
+        return 'พักสมองสักเเปบดีกว่าน้าา\nก่อนอุ่นมีเกมส์มาให้ทาย สนใจไหม\n ถ้าสนใจก็พิมพ์คำว่า "สนใจ"\nเเต่ถ้าอยากทำต่อ ก็พิมพ์คำว่า "ไปต่อ" นะจ๊ะ'
       
 def findx(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
