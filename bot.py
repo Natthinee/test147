@@ -54,7 +54,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'number': number,
                            'province': province,
                            'provinceY': provinceY}
-listQNo = 'กอดอุ่น ยังอ่อนด๋อย กอดอุ่นยังไม่รู้ว่ากำลังพิมพ์อะไร ช่วยกอดอุ่นด้วยน้าา'
+listQNo = 'กอดอุ่น อ่อนหัด อย่าเเกล้งกลอดอุ่นเลยน้า'
 richmanu = {}
 richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich02': 'คุยกับเเบบประเมิน',
@@ -483,8 +483,8 @@ def godaun(event):
         latitude = Latitudee(question),
         longitude = longtitutee(question) )
         sticker_message = StickerSendMessage(
-        package_id='1',
-        sticker_id='10')
+        package_id='2',
+        sticker_id='176')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
