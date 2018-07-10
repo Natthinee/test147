@@ -668,7 +668,7 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text=game,
+               text=str(find2(userid,question)),
                actions=[
                     MessageTemplateAction(
                         label='สนใจ',
