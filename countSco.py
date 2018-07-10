@@ -20,4 +20,15 @@ def scoreC(userid,question):
                 count = int(score) + count
     print(count)
     return str(count)
+
+def countQues(userid,question):
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.user
+    count = 0
+    score = 0
+    for i in db.find():
+        if(userid == i['UserID']):
+            if i['Question'] in number:
+            count = count+1
+    return str(count)
         
