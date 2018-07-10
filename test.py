@@ -46,6 +46,7 @@ idsub =[]
 q2sub = []
 q8sub = []
 q8subx = []
+q8suby = []
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -199,6 +200,36 @@ def findx(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer 
+
+def findy(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.QQQ8
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
+        print(i['UserID'])
+        q8suby.append(i['UserID'])
+   for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   if userid not in q8suby:
+        count2 = count1
+        answer = exq8[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
+   if userid in q8suby:
+        count2 = count1
+        answer = exq8[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer 
+  
         
       
       
