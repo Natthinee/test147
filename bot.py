@@ -758,8 +758,11 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
     elif question in 'สนใจ':
-        answer = 'http://petmaya.com/wp-content/uploads/2017/09/first-thing-05.jpg'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        image_message = ImageSendMessage(
+            original_content_url='https://example.com/original.jpg',
+            preview_image_url='https://example.com/preview.jpg'
+        )
+        line_bot_api.reply_message(event.reply_token, image_message)
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
