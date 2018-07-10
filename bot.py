@@ -206,26 +206,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in ans2:
-        count = str(scoreQ2(userid,question))
         answer = str(find2(userid,question))
-        if(count == 1):
-            confirm_template_message = TemplateSendMessage(
-                alt_text='Confirm template',
-                template=ConfirmTemplate(
-                    text=game,
-                    actions=[
-                        MessageTemplateAction(
-                            label='สนใจ',
-                            text='สนใจ'
-                        ),
-                        MessageTemplateAction(
-                            label='ทำต่อ',
-                            text='ทำต่อ'
-                        )
-                    ]
-                )
-            ) 
-            line_bot_api.reply_message(event.reply_token, confirm_template_message) 
         if(question in ans2):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
