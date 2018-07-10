@@ -15,9 +15,9 @@ def scoreC(userid,question):
     score = 0
     for i in db.find():
         if(userid == i['UserID']):
-            score = i['Question']
-        if i['Question'] in number:
-            count = int(score) + count
+            if i['Question'] in number:
+                score = i['Question']
+                count = int(score) + count
     print(count)
     return str(count)
         
