@@ -29,6 +29,6 @@ def countQues(userid,question):
     for i in db.find():
         if(userid == i['UserID']):
             if i['Question'] in number:
-            count = count+1
+                count = count+1
     return str(count)
         
