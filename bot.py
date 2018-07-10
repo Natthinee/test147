@@ -82,6 +82,7 @@ app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/kh
 mongo = PyMongo(app)
 slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
+lo = ['มี.','ไม่มี.']
 
 @app.route("/")
 def hello():
@@ -214,11 +215,11 @@ def godaun(event):
                     actions=[
                         MessageTemplateAction(
                             label='มี',
-                            text='มี'
+                            text='มี.'
                         ),
                         MessageTemplateAction(
                             label='ไม่มี',
-                            text='ไม่มี'
+                            text='ไม่มี.'
                         )
                      ]
                   )
@@ -642,6 +643,28 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token,carousel_template_message)
+    elif question in lo:
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=game,
+               actions=[
+                    MessageTemplateAction(
+                        label='สนใจ',
+                        text='สนใจ'
+                    ),
+                    MessageTemplateAction(
+                        label='ไปต่อ',
+                        text='ไปต่อ'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+      
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
