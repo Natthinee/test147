@@ -758,12 +758,17 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
-    elif question in 'สนใจ':
+    if question in 'สนใจ':
         image_message = ImageSendMessage(
             original_content_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg',
-            text = 'skmjfnsbhbhj'
+            preview_image_url ='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
+    if question in 'สนใจ':
+        answer = 'นาฬิกาเรือนไหนเป็นของจริง นาฬิกาเรือนไหนเป็นของเล่นน้าา'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
+        
     elif question in clock:
         answer = 'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'
         confirm_template_message = TemplateSendMessage(
