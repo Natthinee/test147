@@ -111,7 +111,6 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    count = str(scoreQ2(userid,question))
     #print(count)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
@@ -207,8 +206,11 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question  in ans2:
-        
-        if(question  in ans2):
+        count = str(scoreQ2(userid,question))
+        if(count == '1'):
+            answer = game
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        if(question in ans2):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
                 template=ConfirmTemplate(
@@ -228,7 +230,7 @@ def godaun(event):
         #print("confirm_template_message")        
         #print(confirm_template_message)
         
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+              line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
