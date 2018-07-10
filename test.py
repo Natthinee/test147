@@ -226,6 +226,13 @@ def findy(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
+   if userid in q8suby:
+        count2 = count1
+        answer = exq8[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer 
+
       
 def findxy(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
@@ -249,6 +256,12 @@ def findxy(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
+   if userid in q8subxy:
+        count2 = count1
+        answer = mid[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer 
 
 
         
