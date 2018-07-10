@@ -207,6 +207,7 @@ def godaun(event):
     
     elif question in ans2:
        count = str(scoreQ2(userid,question))
+       print(count)
        if(count == '1'):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
@@ -242,7 +243,7 @@ def godaun(event):
                     ]
                 )
             ) 
-            line_bot_api.reply_message(event.reply_token, confirm_template_message)       
+           line_bot_api.reply_message(event.reply_token, confirm_template_message)       
     
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
