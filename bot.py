@@ -207,9 +207,9 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question  in ans2:
-        answer = game
         ss = str(findyy(userid,question))
-        if ss==2:
+        if ss=='2':
+           answer = game
            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         else:
            confirm_template_message = TemplateSendMessage(
