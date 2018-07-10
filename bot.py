@@ -72,6 +72,7 @@ ans2 = ['มี','ไม่มี']
 anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไรได้บ้างอ่ะ','กอดอุ่นทำไรได้บ้างอ่ะ','เธอทำไรได้บ้างอ่ะ']
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์ใกล้ๆ บ้านดูน้าา'
+game = 'พักสมองสักเเปบดีกว่าน้าา\nก่อนอุ่นมีเกมส์มาให้เล่น สนใจไหม\n（´◔౪◔）'
 count = 0
 app = Flask(__name__)
 
@@ -298,15 +299,15 @@ def godaun(event):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
                 template=ConfirmTemplate(
-                    text=str(find2(userid,question)),
+                    text=game,
                     actions=[
                         MessageTemplateAction(
-                            label='มี',
-                            text='มี'
+                            label='สนใจ',
+                            text='สนใจ'
                         ),
                         MessageTemplateAction(
-                            label='ไม่มี',
-                            text='ไม่มี'
+                            label='ทำต่อ',
+                            text='ทำต่อ'
                         )
                     ]
                 )
