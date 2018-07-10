@@ -112,7 +112,7 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    count = 0
+    count = str(scoreQ2(userid,question))
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
        #sticker_message = StickerSendMessage(
@@ -218,6 +218,27 @@ def godaun(event):
                     MessageTemplateAction(
                         label='ไม่มี',
                         text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif count in '1':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=game,
+               actions=[
+                    MessageTemplateAction(
+                        label='สนใจ',
+                        text='สนใจ'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่สนใจ',
+                        text='ไม่สนใจ'
                     )
                ]
             )
