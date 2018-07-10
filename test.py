@@ -163,16 +163,18 @@ def find2(userid,question):
         q2sub.append(i['UserID'])
    if userid not in q2sub:
         count2 = count1
-        answer = 'ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ “มีความรู้สึก หดหู่ เศร้า หรือท้อแท้สิ้นหวัง” ไหมจ๊ะ'
+        answer = qq2[count1]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q2sub:
         count2 = count1
-        answer = 'ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ “มีความรู้สึก เบื่อ ทำอะไรก็ไม่เพลิดเพลิน” ไหมนะ?'
+        answer = qq2[count1]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
+ 
+   
       
       
 def find3(userid,question):
