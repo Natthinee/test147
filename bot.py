@@ -284,7 +284,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif question in 'สรุป':
+    elif question in 'สรุปแบบประเมิน':
         answer = slope + str(scoreC())
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     #elif question in evaluation_form['eval']['ques']:
