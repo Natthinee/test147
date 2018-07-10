@@ -113,7 +113,8 @@ def godaun(event):
     userid = event.source.user_id
     question = event.message.text
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-    db  = client.khim.Q2
+    db  = client.khim.user
+    dd  = client.khim.Q2
     #print(count)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
@@ -687,6 +688,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'เริ่มทำเเบบประเมินใหม่':
         #del = deleteQu(userid,question)
+        db.delete_many({'UserID':userid})
+        dd.delete_many({'UserID':userid})
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
