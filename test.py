@@ -223,16 +223,7 @@ def findy(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
-   for i in db.find():
-        if(i['Question'] == 'มี' and userid in q8suby):
-               count2 = count1
-               answer = exq8[count2]
-               No1 = No
-               db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
-               return answer
-        if(i['Question'] == 'ไม่มี' and userid in q8suby)
-               return 'ตอนนี้มีความรู้สึกอยากเล่นอะไรสนุกๆ ก่อนม่ะ'
-              
+
         
         
    
