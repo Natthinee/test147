@@ -207,31 +207,26 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question  in ans2:
-        ss = str(findyy(userid,question))
-        answer = game
-        if ss in '2':
-           
-           line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        else:
-           confirm_template_message = TemplateSendMessage(
-               alt_text='Confirm template',
-               template=ConfirmTemplate(
-                   text=str(find2(userid,question)),
-                   actions=[
-                       MessageTemplateAction(
-                           label='มี',
-                           text='มี'
-                       ),
-                       MessageTemplateAction(
-                           label='ไม่มี',
-                           text='ไม่มี'
-                       )
-                    ]
-                )
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(find2(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
             )
+        )
         #print("confirm_template_message")        
         #print(confirm_template_message)
-            line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
