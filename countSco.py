@@ -15,13 +15,23 @@ def scoreC(userid,question):
     db  = client.khim.user
     count = 0
     score = 0
+    total = 0
     for i in db.find():
         if(userid == i['UserID']):
             if i['Question'] in number:
                 score = i['Question']
                 count = int(score) + count
+    if(count < 7):
+        answer = '◎◎◎ ประเมินโอกาสเสี่ยงจากเเบบประเมิน 9Q\n◈◈◈ ผลการประเมิน\n►ไม่มีอาการของโรคซึมเศร้าหรือมีอาการของโรคซึมเศร้าระดับน้อยมาก' 
+    elif(count >= 7 and count <= 12):
+        answer = '◎◎◎ ประเมินโอกาสเสี่ยงจากเเบบประเมิน 9Q\n◈◈◈ ผลการประเมิน\n►มีอาการของโรคซึมเศร้า "ระดับน้อย"' 
+    elif(count >= 13 and count <=18):
+        answer = '◎◎◎ ประเมินโอกาสเสี่ยงจากเเบบประเมิน 9Q\n◈◈◈ ผลการประเมิน\n►มีอาการของโรคซึมเศร้า "ระดับปานกลาง"'
+    elif(count >= 19):
+        answer = '◎◎◎ ประเมินโอกาสเสี่ยงจากเเบบประเมิน 9Q\n◈◈◈ ผลการประเมิน\n►มีอาการของโรคซึมเศร้า "ระดับรุนแรง"' 
+    total = (count*100)/27    
     print(count)
-    return str(count)
+    return 'มีโอกาสเสี่ยงจะเกิดโรคซึมเศร้า\n'+str(total)+answer
 def scoreQ2(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.Q2
@@ -31,7 +41,12 @@ def scoreQ2(userid,question):
             if i['Question'] in me1:
                 count = count + 1
     print(count)
-    return count
+    if(count>=1):
+        answer  = '★★★ประเมินโอกาสเสี่ยงจากเเบบประเมิน 2Q \n▩▩ ผลการประเมิน\n►มีโอกาสเสียงที่จะเป็นโรคซึมเศร้า'
+    else:
+        answer  = '★★★ประเมินโอกาสเสี่ยงจากเเบบประเมิน 2Q \n✖✖ ผลการประเมิน\n►ไม่มีโอกาสเสียงที่จะเป็นโรคซึมเศร้า'     
+    return str(count)+answer
+
     
 
         
