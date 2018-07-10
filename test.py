@@ -116,7 +116,10 @@ def find1(userid,question):
         answer = t9[count2]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
-        return answer              
+        return answer
+   if No == 9:
+        return '9'
+   
 
 def find2(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
