@@ -54,7 +54,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'number': number,
                            'province': province,
                            'provinceY': provinceY}
-listQNo = 'กอดอุ่นยังอ่อนหัด \nเด่วกอดอุ่นจะค่อยๆ เรียนรู้นะ'
+listQNo = 'กอดอุ่นยังอ่อนหัด\nเด่วกอดอุ่นจะค่อยๆ กลับเรียนรู้นะ'
 richmanu = {}
 richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich02': 'คุยกับเเบบประเมิน',
