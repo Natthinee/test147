@@ -206,8 +206,8 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question  in ans2:
-        count = str(scoreQ2(userid,question))
-        if(count == '1'):
+        count = str(findyy(userid,question))
+        if(count == '2'):
             answer = game
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         if(question in ans2):
