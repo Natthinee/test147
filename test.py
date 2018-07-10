@@ -292,6 +292,15 @@ def findxy(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer 
+      
+def deleteQu(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.user
+   dd  = client.khim.find2
+   db.delete_many({'UserID':userid})
+   dd.delete_many({'UserID':userid})
+   return 'มาทำเเบบประเมินกันเถอะ'
+  
 
 
         
