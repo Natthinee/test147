@@ -12,6 +12,7 @@ def scoreC(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     count = 0
+    score = 0
     for i in db.find():
         if(userid == i['UserID']):
             score = i['Question']
