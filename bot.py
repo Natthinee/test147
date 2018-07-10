@@ -27,7 +27,7 @@ from pymongo import MongoClient
 import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee
-from countSco import scoreC,countQues
+from countSco import scoreC
 from test import find1,find2,find3,findx,findy,findxy
 question1 = ''
 evaluation_form = {}
