@@ -73,7 +73,6 @@ anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไ�
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์ใกล้ๆ บ้านดูน้าา'
 game = 'พักสมองสักเเปบดีกว่าน้าา\nก่อนอุ่นมีเกมส์มาให้เล่น สนใจไหม\n（´◔౪◔）'
-count = 0
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
@@ -121,6 +120,28 @@ def godaun(event):
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)  
+    if count == '1':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='test',
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
     if question in 'ขิม':
         answer = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
