@@ -29,6 +29,8 @@ def scoreQ2(userid,question):
         if(userid == i['UserID']):
             if i['Question'] in me:
                 count = count + 1
+            else:
+                count = count + 2
     print(count)
     return count
     
