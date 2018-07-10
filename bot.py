@@ -110,7 +110,7 @@ def godaun(event):
     userr = mongo.db.user
     userid = event.source.user_id
     question = event.message.text
-    count = countQues(userid,question)
+    count = str(countQues(userid,question))
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
        #sticker_message = StickerSendMessage(
