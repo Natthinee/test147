@@ -28,7 +28,7 @@ def scoreQ2(userid,question):
     count = 0
     for i in db.find():
         if(userid == i['UserID']):
-            if i['Question'] in me:
+            if i['Question'] in me1:
                 count = count + 1
     print(count)
     return count
