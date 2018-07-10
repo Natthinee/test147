@@ -761,7 +761,7 @@ def godaun(event):
     elif question in 'สนใจ':
         image_message = ImageSendMessage(
             original_content_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg',
-            preview_image_url= 'skmjfnsbhbhj'
+            text = 'skmjfnsbhbhj'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif question in clock:
