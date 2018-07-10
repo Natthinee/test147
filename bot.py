@@ -113,6 +113,7 @@ def godaun(event):
     userid = event.source.user_id
     question = event.message.text
     count = str(scoreQ2(userid,question))
+    print(count)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
        #sticker_message = StickerSendMessage(
