@@ -117,6 +117,9 @@ def find1(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
+   if No1==9:
+        return '9'
+       
    
 
 def find2(userid,question):
