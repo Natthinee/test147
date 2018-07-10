@@ -124,15 +124,15 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='test',
+               text=game,
                actions=[
                     MessageTemplateAction(
-                        label='มี',
-                        text='มี'
+                        label='สนใจ',
+                        text='สนใจ'
                     ),
                     MessageTemplateAction(
-                        label='ไม่มี',
-                        text='ไม่มี'
+                        label='ทำต่อ',
+                        text='ทำต่อ'
                     )
                ]
             )
