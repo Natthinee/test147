@@ -189,6 +189,27 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
+               text='มาทำเเบบประเมินกันดีกว่า',
+               actions=[
+                    MessageTemplateAction(
+                        label='เริ่มทำ',
+                        text='เริ่มทำ'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif question  in 'เริ่มทำ':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
                text=str(find2(userid,question)),
                actions=[
                     MessageTemplateAction(
