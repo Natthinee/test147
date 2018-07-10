@@ -7,7 +7,7 @@ Created on Wed Jun 27 04:41:51 2018
 import pymongo
 from pymongo import MongoClient
 number = ['0','1','2','3']
-me = ['มี','ไม่มี']
+me = ['มี','ไม่มี','มี.','ไม่มี.']
 
 def scoreC(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
