@@ -30,5 +30,6 @@ def countQues(userid,question):
         if(userid == i['UserID']):
             if i['Question'] in number:
                 count = count+1
+    print(count)            
     return str(count)
         
