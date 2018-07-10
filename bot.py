@@ -259,24 +259,24 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='สิ่งที่กอดอุ่นสามารถทำได้',
-                text='ลองเลือกดูซิ',
+                title='กอดอุ่นทำได้ๆ',
+                text='ลองเลือกใช้ดูหน่อยนะจ๊ะ',
                 actions=[
                     MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
+                        label='ซึมเศร้าน่ารู้',
+                        text='ซึมเศร้าน่ารู้',
                     ),
                     MessageTemplateAction(
-                        label='คุยกับเเบบประเมิน',
-                        text='คุยกับเเบบประเมิน'
+                        label='เศร้าเเล้วเปลี่ยน',
+                        text='เศร้าเเล้วเปลี่ยน'
                     ),
                     MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
+                        label='ข่าวสารซึมเศร้า',
+                        text='ข่าวสารซึมเศร้า'
                     ),
                     MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
+                        label='สรุปเเบบประเมิน',
+                        text='สรุปเเบบประเมิน'
                     )
                 ]
              )
