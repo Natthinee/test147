@@ -759,12 +759,10 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
     elif question in 'สนใจ':
-        answer = 'นาฬิกาเรือนไหนคือของปลอม ? ซ้ายหรือขวาน้าา?'
         image_message = ImageSendMessage(
             original_content_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg',
-            preview_image_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-07.jpg'
+            preview_image_url= 'skmjfnsbhbhj'
         )
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.reply_message(event.reply_token, image_message)
     elif question in clock:
         answer = 'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'
