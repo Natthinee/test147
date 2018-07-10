@@ -128,6 +128,18 @@ def findxx(userid,question):
             No = No + 1
    print(No)
    return No  
+  
+def findyy(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.Q2
+   count1 = 0 
+   No = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1
+   print(No)
+   return No  
+  
     
       
       
