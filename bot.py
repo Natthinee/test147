@@ -473,7 +473,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
     elif question == richmanu['rich']['rich04']:
         answer = ansrich04
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in evaluation_form['eval']['province']:
         answer = hos
