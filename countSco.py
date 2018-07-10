@@ -17,5 +17,5 @@ def scoreC(userid,question):
             score = i['Question']
         if i['Question'] in number:
             count = int(score) + count
-    return count
+    return str(count)
         
