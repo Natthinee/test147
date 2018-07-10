@@ -54,7 +54,7 @@ evaluation_form['eval'] = {'greet': sayhi,
                            'number': number,
                            'province': province,
                            'provinceY': provinceY}
-listQNo = 'กอดอุ่น อ่อนหัด อย่าเเกล้งกลอดอุ่นเลยน้า'
+listQNo = 'กอดอุ่นยังอ่อนหัด อย่าเเกล้งกอดอุ่นเลยจิ'
 richmanu = {}
 richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich02': 'คุยกับเเบบประเมิน',
@@ -638,7 +638,11 @@ def godaun(event):
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='34')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
         
 
 if __name__ == "__main__":
