@@ -45,6 +45,7 @@ ans8 = {}
 idsub =[]
 q2sub = []
 q8sub = []
+q8subx = []
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -183,7 +184,7 @@ def findx(userid,question):
             No = No + 1       
    for i in db.find():
         print(i['UserID'])
-        q8sub.append(i['UserID'])
+        q8subx.append(i['UserID'])
    for i in dd.find():
         if(i['Question']==''ช่วงสองเดือนนี้ มีความคิดเกี่ยวกับการฆ่าตัวตาย บ้างไหมเอ่ย?'' and i['Answer'] == 'มี'):
             count1 = 0
@@ -192,13 +193,13 @@ def findx(userid,question):
    for i in db.find():
         if(userid==i['UserID']):
             count1 = count1+1
-   if userid not in q8sub:
+   if userid not in q8subx:
         count2 = count1
         answer = excusive[count2]
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
-   if userid in q8sub:
+   if userid in q8subx:
         count2 = count1
         answer = excusive[count2]
         No1 = No
