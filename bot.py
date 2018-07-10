@@ -686,7 +686,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'เริ่มทำเเบบประเมินใหม่':
-        del = deleteQu(userid,question)
+        #del = deleteQu(userid,question)
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
