@@ -226,7 +226,7 @@ def godaun(event):
                 )
             ) 
             line_bot_api.reply_message(event.reply_token, confirm_template_message) 
-        else:
+        if(question in ans2):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
                 template=ConfirmTemplate(
