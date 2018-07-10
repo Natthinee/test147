@@ -163,16 +163,17 @@ def find2(userid,question):
         q2sub.append(i['UserID'])
    if userid not in q2sub:
         count2 = count1
-        answer = qq2[count2]
+        answer = 'ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ “มีความรู้สึก หดหู่ เศร้า หรือท้อแท้สิ้นหวัง” ไหมจ๊ะ'
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q2sub:
         count2 = count1
-        answer = qq2[count2]
+        answer = 'ใน 2 สัปดาห์ที่ผ่านมารวมวันนี้ “มีความรู้สึก เบื่อ ทำอะไรก็ไม่เพลิดเพลิน” ไหมนะ?'
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
-        return answer  
+        return answer
+      
       
 def find3(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
