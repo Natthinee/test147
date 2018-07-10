@@ -294,7 +294,7 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         answer = str(find1(userid,question))
         aa = str(findxx(userid,question))
-        if(a == '10'):
+        if(aa == '10'):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
                 template=ConfirmTemplate(
