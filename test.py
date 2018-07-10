@@ -119,14 +119,15 @@ def find1(userid,question):
         return answer
 
 def findxx(userid,question):
-       client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-       db  = client.khim.user
-       count1 = 0 
-       for i in db.find():
-            if(userid==i['UserID']):
-                No = No + 1
-                print(No)
-       return No  
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.user
+   count1 = 0 
+   No = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1
+   print(No)
+   return No  
     
       
       
