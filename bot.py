@@ -759,8 +759,8 @@ def godaun(event):
       
     elif question in 'สนใจ':
         image_message = ImageSendMessage(
-            original_content_url='http://petmaya.com/wp-content/uploads/2017/09/first-thing-05.jpg',
-            preview_image_url='http://petmaya.com/wp-content/uploads/2017/09/first-thing-05.jpg'
+            original_content_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr34a7Vf6ZLhpufSQ3fjyy4dxmnoC3aZgrMXcdYS52F8TzQ6xr',
+            preview_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr34a7Vf6ZLhpufSQ3fjyy4dxmnoC3aZgrMXcdYS52F8TzQ6xr'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     else:
