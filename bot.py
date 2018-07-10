@@ -180,29 +180,7 @@ def godaun(event):
              )
           )
         
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    elif count == '9':
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text=str(find2(userid,question)),
-               actions=[
-                    MessageTemplateAction(
-                        label='เล่นเลย',
-                        text='เล่นเลย'
-                    ),
-                    MessageTemplateAction(
-                        label='ทำต่อ',
-                        text='ทำต่อ'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
-      
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)    
     elif question == "ทำต่อ":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
@@ -315,33 +293,54 @@ def godaun(event):
     elif question in number:
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title=str(find1(userid,question)),
-                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
-                actions=[
-                    MessageTemplateAction(
-                        label='0=ไม่มีเลย',
-                        text='0',
-                    ),
-                    MessageTemplateAction(
-                        label='1=เป็นบางวัน',
-                        text='1'
-                    ),
-                    MessageTemplateAction(
-                        label='2=เป็นบ่อย',
-                        text='2'
-                    ),
-                    MessageTemplateAction(
-                        label='3=เป็นทุกวัน',
-                        text='3'
-                    )
-                ]
-             )
-          )
+        answer = str(find1(userid,question))
+        if(answer == '9'):
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                    text=str(find2(userid,question)),
+                    actions=[
+                        MessageTemplateAction(
+                            label='มี',
+                            text='มี'
+                        ),
+                        MessageTemplateAction(
+                            label='ไม่มี',
+                            text='ไม่มี'
+                        )
+                    ]
+                )
+            ) 
         
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+            line_bot_api.reply_message(event.reply_token, confirm_template_message)  
+        else:              
+            buttons_template_message = TemplateSendMessage(
+                alt_text='Buttons template',
+                template=ButtonsTemplate(
+                    title=answer,
+                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                    actions=[
+                        MessageTemplateAction(
+                            label='0=ไม่มีเลย',
+                            text='0',
+                        ),
+                        MessageTemplateAction(
+                            label='1=เป็นบางวัน',
+                            text='1'
+                        ),
+                        MessageTemplateAction(
+                            label='2=เป็นบ่อย',
+                            text='2'
+                        ),
+                        MessageTemplateAction(
+                            label='3=เป็นทุกวัน',
+                            text='3'
+                        )
+                    ]
+                )
+            )
+        
+            line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
     #elif question in ans2:
         #question1 = str(find1(userid,question))
