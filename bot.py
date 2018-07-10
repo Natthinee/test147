@@ -28,7 +28,7 @@ import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee
 from countSco import scoreC
-from test import find1,find2,find3,findx,findy,findxy
+from test import find1,find2,find3,findx,findy,findxy,findxx
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -293,7 +293,8 @@ def godaun(event):
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         answer = str(find1(userid,question))
-        if(answer == '9'):
+        aa = str(findxx(userid,question))
+        if(a == '10'):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
                 template=ConfirmTemplate(
