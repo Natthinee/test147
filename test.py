@@ -31,6 +31,8 @@ answer = open("answer.txt", "r", encoding='utf-8-sig')
 answer = answer.read().split(',')
 ques = open("Ques.txt", "r", encoding='utf-8-sig')
 ques = ques.read().split(',')
+mid = open("mid.txt", "r", encoding='utf-8-sig')
+mid = mid.read().split(',')
 wordappende = open("wordappende.txt", "r", encoding='utf-8-sig')
 wordappende = wordappende.read().split(',')
 qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
@@ -47,6 +49,7 @@ q2sub = []
 q8sub = []
 q8subx = []
 q8suby = []
+q8subxy = []
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -223,6 +226,30 @@ def findy(userid,question):
         No1 = No
         db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
         return answer
+      
+def findxy(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.QQQQ8
+   count1 = 0 
+   count2 = 0
+   No = 0
+   No1 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+            No = No + 1       
+   for i in db.find():
+        print(i['UserID'])
+        q8subxy.append(i['UserID'])
+   for i in db.find():
+        if(userid==i['UserID']):
+            count1 = count1+1
+   if userid not in q8subxy:
+        count2 = count1
+        answer = mid[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        return answer
+
 
         
         
