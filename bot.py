@@ -322,6 +322,26 @@ def godaun(event):
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         answer = str(find1(userid,question))
+        score = str(findxx(userid,question))
+        if(score == '10'):
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                    text= 'ทำไรต่อดีน้าา',
+                    actions=[
+                        MessageTemplateAction(
+                            label='ฟังก์ชันเพิ่มเติม',
+                            text='ฟังก์ชันเพิ่มเติม'
+                        ),
+                        MessageTemplateAction(
+                            label='สรุปแบบประเมิน',
+                            text='สรุปแบบประเมิน'
+                        )
+                    ]
+                )
+            )
+            line_bot_api.reply_message(event.reply_token, confirm_template_message)
+          
         if(question in number):              
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
