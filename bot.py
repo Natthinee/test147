@@ -206,10 +206,6 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question  in ans2:
-        count = str(findyy(userid,question))
-        if(count == '2'):
-            answer = game
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         if(question in ans2):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
@@ -230,7 +226,7 @@ def godaun(event):
         #print("confirm_template_message")        
         #print(confirm_template_message)
         
-              line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
