@@ -121,6 +121,7 @@ def godaun(event):
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)  
     if count == '1':
+        count = '2'
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
