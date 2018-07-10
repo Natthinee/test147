@@ -232,20 +232,51 @@ def godaun(event):
                 text='ลองเลือกดูซิ',
                 actions=[
                     MessageTemplateAction(
-                        label='ซึมเศร้าน่ารู้',
-                        text='ซึมเศร้าน่ารู้',
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
                     ),
                     MessageTemplateAction(
                         label='จิตเวชใกล้บ้าน',
                         text='จิตเวชใกล้บ้าน'
                     ),
                     MessageTemplateAction(
-                        label='เศร้าเเล้วเปลี่ยน',
-                        text='เศร้าเเล้วเปลี่ยน'
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    elif question in 'ฟังก์ชันเพิ่มเติม':
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='สิ่งที่กอดอุ่นสามารถทำได้',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
                     ),
                     MessageTemplateAction(
-                        label='ข่าวสารซึมเศร้า',
-                        text='ข่าวสารซึมเศร้า'
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
                     )
                 ]
              )
