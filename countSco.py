@@ -7,6 +7,7 @@ Created on Wed Jun 27 04:41:51 2018
 import pymongo
 from pymongo import MongoClient
 number = ['0','1','2','3']
+me = ['มี','ไม่มี']
 
 def scoreC(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
@@ -26,7 +27,7 @@ def scoreQ2(userid,question):
     count = 0
     for i in db.find():
         if(userid == i['UserID']):
-            if i['Question'] in number:
+            if i['Question'] in me:
                 count = count + 1
     print(count)
     return count
