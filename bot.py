@@ -221,28 +221,6 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
-          
-    elif question unsayhappy :
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-                text='มาทำเเบบประเมินกันดีกว่า',
-                actions=[
-                    MessageTemplateAction(
-                        label='เริ่มทำ',
-                        text='เริ่มทำ'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำต่อ':
         #questi = str(find1(userid,question))
         buttons_template_message = TemplateSendMessage(
