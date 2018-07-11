@@ -156,67 +156,6 @@ def godaun(event):
     elif question in happy:
         answer = 'ฟังดูไม่น่าเป็นห่วงเท่าไหร่เนอะ กอดอุ่นมีเพลงกับนิยายมาเเนะนำลองฟังดูป่ะ'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question in sayhappy:
-        carousel_template_message = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                  CarouselColumn(
-                      thumbnail_image_url='https://www.iphonemod.net/wp-content/uploads/2009/09/album-cover-01.png',
-                      title='มาฟังเพลงผ่อนคลายกันดีกว่า',
-                      text='มาฟังเพลงกัน',
-                      actions=[      
-                            URITemplateAction(
-                                label='Not Spring',
-                                uri='https://www.youtube.com/watch?v=ouR4nn1G9r4&start_radio=1&list=RDouR4nn1G9r4'
-                            ), 
-                            URITemplateAction(
-                                label='ความต่าง',
-                                uri='https://www.youtube.com/watch?v=my7XIjUslLw'
-                            ),
-                            URITemplateAction(
-                                label='มะงึกๆอุ๋งๆ',
-                                uri='https://www.youtube.com/watch?v=HI4voGt6LLM'
-                            )
-                         ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://s.isanook.com/pn/0/rp/rc/w200h267/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3BuLzAvdWQvMTQvNzA1NTAvNzA1NTAtdGh1bWJuYWlsLTIwMTgwNjI1MjMwMDAyLnBuZw==.png',
-                        title='มารักการอ่านกัน',
-                        text='อ่านกันถอะ',
-                        actions=[
-                            URITemplateAction(
-                                label='การ์ตูนคลายเครียด',
-                                uri='https://today.line.me/th/pc/article/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B9%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%99+%E0%B8%82%E0%B8%99%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AE%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%A1%E0%B8%B5%E0%B8%82%E0%B8%B3+%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%99%E0%B9%88%E0%B8%99%E0%B8%AD%E0%B8%99-lZjQpW'
-                            ),
-                            URITemplateAction(
-                                label='เว็บตูน',
-                                uri='https://www.webtoons.com/th/'
-                            ),
-                            URITemplateAction(
-                                label='comico',
-                                uri='http://www.comico.in.th/'
-                            )
-                        ]
-                    )
-                 ]
-              )
-          )
-      
-        #bot()
-        #location_message = LocationSendMessage(
-        #title='my location',
-        #address='Tokyo',
-        #latitude=35.65910807942215,
-        #longitude=139.70372892916203)
-        #line_bot_api.push_message(userid, location_message)
-      
-        ##answer = ansrich03
-        #message = gg(uestion)
-        ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        #line_bot_api.reply_message(event.reply_token, msgs)
-        line_bot_api.reply_message(event.reply_token,  carousel_template_message)
           
     elif question in unhappy:
         confirm_template_message = TemplateSendMessage(
