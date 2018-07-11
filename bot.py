@@ -84,7 +84,9 @@ slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
 lo = ['มี.','ไม่มี.']
 clock = ['ซ้าย','ขวา','ข้างซ้าย','ข้างขวา','ฝั่งซ้าย','ฝั่งขวา','ด้านซ้าย','ด้านขวา']
-
+happy = ['ก็ดี','ก็เรื่อยๆ','ดี','ดีนะ','มีความสุขดี','มีความสุข','ธรรมดา','ไม่ทุกข์อ่ะ','ก็ดีนะ','ไม่ได้พิเศษอะไร','เหมือนทุกวันอ่ะ','ฉันสวย','สวย','น่ารัก','เหมือนทุกวัน','มีความสุขดีจ้า','เราน่ารักม่ะ','น่ารักม่ะ','รู้สึกสวยจัง']
+unhappy = ['มีเเรื่องทุกข์ใจ','ทุกข์ใจ','เบื่อ','หงุดหงิด','ไม่อยากมีชีวิตอยู่เเล้ว','ไม่อยากมีชีวิต','ไม่อยากออกไปไหน','น้ำหนักฉันลด','น้ำหนักลด','น้ำหนักขึ้น','ไม่มีความสุข','เก็บกด','อึดอัดใจ','อึดอัด','น่าเบื่อ','น่ารำคาญจัง','น่าหงุดหงิด','ไม่สดใส','ไม่ร่าเริง']
+sayhappy = ['เคร','ลองดู','ได้ๆ','เอามาดิ','ลองดูก็ได้','ได้','ได้นะ','ok','Ok','โอเค','ตกลง','ไ้ด้จ้า','เครนะ']
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -144,48 +146,99 @@ def godaun(event):
         answer = str(findxy(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer']) + 'กอดอุ่นยินดีรับฟังจ้า ลองเลือกใช้ Menu ดูนะจ๊ะ'
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='สิ่งที่กอดอุ่นสามารถทำได้',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
+        answer = random.choice(evaluation_form['eval']['answer']) + 'วันนี้รู้สึกยังไงบ้างเอ่ย?'
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='22)
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+    elif question in happy:
+        answer = 'ฟังดูไม่น่าเป็นห่วงเท่าไหร่เนอะ กอดอุ่นมีเพลงกับนิยายมาเเนะนำลองฟังดูป่ะ'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif question in sayhappy:
+        carousel_template_message = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                  CarouselColumn(
+                      thumbnail_image_url='https://www.iphonemod.net/wp-content/uploads/2009/09/album-cover-01.png',
+                      title='มาฟังเพลงผ่อนคลายกันดีกว่า',
+                      text='มาฟังเพลงกัน',
+                      actions=[      
+                            URITemplateAction(
+                                label='Not Spring',
+                                uri='https://www.youtube.com/watch?v=ouR4nn1G9r4&start_radio=1&list=RDouR4nn1G9r4'
+                            ), 
+                            URITemplateAction(
+                                label='ความต่าง',
+                                uri='https://www.youtube.com/watch?v=my7XIjUslLw'
+                            ),
+                            URITemplateAction(
+                                label='มะงึกๆอุ๋งๆ',
+                                uri='https://www.youtube.com/watch?v=HI4voGt6LLM'
+                            )
+                         ]
                     ),
-                    MessageTemplateAction(
-                        label='คุยกับเเบบประเมิน',
-                        text='คุยกับเเบบประเมิน'
-                    ),
-                    MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
+                    CarouselColumn(
+                        thumbnail_image_url='https://s.isanook.com/pn/0/rp/rc/w200h267/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3BuLzAvdWQvMTQvNzA1NTAvNzA1NTAtdGh1bWJuYWlsLTIwMTgwNjI1MjMwMDAyLnBuZw==.png',
+                        title='มารักการอ่านกัน',
+                        text='อ่านกันถอะ',
+                        actions=[
+                            URITemplateAction(
+                                label='การ์ตูนคลายเครียด',
+                                uri='https://today.line.me/th/pc/article/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B9%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%94%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%99+%E0%B8%82%E0%B8%99%E0%B8%82%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AE%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%96%E0%B8%B6%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%A1%E0%B8%B5%E0%B8%82%E0%B8%B3+%E0%B8%A5%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%99%E0%B9%88%E0%B8%99%E0%B8%AD%E0%B8%99-lZjQpW'
+                            ),
+                            URITemplateAction(
+                                label='เว็บตูน',
+                                uri='https://www.webtoons.com/th/'
+                            ),
+                            URITemplateAction(
+                                label='comico',
+                                uri='http://www.comico.in.th/'
+                            )
+                        ]
                     )
-                ]
-             )
+                 ]
+              )
           )
-        
+      
+        #bot()
         #location_message = LocationSendMessage(
         #title='my location',
         #address='Tokyo',
         #latitude=35.65910807942215,
         #longitude=139.70372892916203)
         #line_bot_api.push_message(userid, location_message)
-        #print(question )
-        #print(answer)
-        #for i in userr.find:
-            #print(i['Question'])
-            #print(i['nswer'])
+      
+        ##answer = ansrich03
+        #message = gg(uestion)
+        ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        #line_bot_api.reply_message(event.reply_token, msgs)
+        line_bot_api.reply_message(event.reply_token,  carousel_template_message)
+          
+    elif question in unhappy:
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='มาทำเเบบประเมินกันดีกว่า',
+               actions=[
+                    MessageTemplateAction(
+                        label='เริ่มทำ',
+                        text='เริ่มทำ'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
         
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำต่อ':
         #questi = str(find1(userid,question))
         buttons_template_message = TemplateSendMessage(
