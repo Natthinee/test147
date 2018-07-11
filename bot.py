@@ -160,7 +160,6 @@ def godaun(event):
         sticker_id='125')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in sayhappy:
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
