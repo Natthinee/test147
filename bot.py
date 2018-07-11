@@ -86,7 +86,7 @@ lo = ['มี.','ไม่มี.']
 clock = ['ซ้าย','ขวา','ข้างซ้าย','ข้างขวา','ฝั่งซ้าย','ฝั่งขวา','ด้านซ้าย','ด้านขวา']
 happy = ['ก็ดี','ก็เรื่อยๆ','ดี','ดีนะ','มีความสุขดี','มีความสุข','ธรรมดา','ไม่ทุกข์อ่ะ','ก็ดีนะ','ไม่ได้พิเศษอะไร','เหมือนทุกวันอ่ะ','ฉันสวย','สวย','น่ารัก','เหมือนทุกวัน','มีความสุขดีจ้า','เราน่ารักม่ะ','น่ารักม่ะ','รู้สึกสวยจัง']
 unhappy = ['มีเเรื่องทุกข์ใจ','ทุกข์ใจ','เบื่อ','หงุดหงิด','ไม่อยากมีชีวิตอยู่เเล้ว','ไม่อยากมีชีวิต','ไม่อยากออกไปไหน','น้ำหนักฉันลด','น้ำหนักลด','น้ำหนักขึ้น','ไม่มีความสุข','เก็บกด','อึดอัดใจ','อึดอัด','น่าเบื่อ','น่ารำคาญจัง','น่าหงุดหงิด','ไม่สดใส','ไม่ร่าเริง']
-sayhappy = ['เคร','ลองดู','ได้ๆ','เอามาดิ','ลองดูก็ได้','ได้','ได้นะ','ok','Ok','โอเค','ตกลง','ไ้ด้จ้า','เครนะ']
+sayhappy = ['เคร','ลองดู','ได้ๆ','เอามาดิ','ลองดูก็ได้','ได้','ได้นะ','ok','Ok','โอเค','ตกลง','ไ้ด้จ้า','เครนะ','ตกลง','โอเครร','โอเคร']
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -155,6 +155,11 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in happy:
         answer = 'ฟังดูไม่น่าเป็นห่วงเท่าไหร่เนอะ กอดอุ่นมีเพลงกับนิยายมาเเนะนำลองฟังดูป่ะ'
+        sticker_message = StickerSendMessage(
+        package_id='1',
+        sticker_id='125')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in sayhappy:
         carousel_template_message = TemplateSendMessage(
