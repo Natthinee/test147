@@ -144,7 +144,33 @@ def godaun(event):
         answer = str(findxy(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer'])
+        answer = random.choice(evaluation_form['eval']['answer']) + 'กอดอุ่นยินดีรับฟังจ้า ลองเลือกใช้ Menu ดูนะจ๊ะ'
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='สิ่งที่กอดอุ่นสามารถทำได้',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+                ]
+             )
+          )
+        
         #location_message = LocationSendMessage(
         #title='my location',
         #address='Tokyo',
@@ -158,6 +184,7 @@ def godaun(event):
             #print(i['nswer'])
         
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in 'ทำต่อ':
         #questi = str(find1(userid,question))
