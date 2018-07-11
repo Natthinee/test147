@@ -263,7 +263,7 @@ def godaun(event):
                     ),
                     MessageTemplateAction(
                         label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
+                        text='ทำไรได้บ้าง'
                     )
                ]
             )
@@ -420,7 +420,7 @@ def godaun(event):
                     actions=[
                         MessageTemplateAction(
                             label='ฟังก์ชันเพิ่มเติม',
-                            text='ฟังก์ชันเพิ่มเติม'
+                            text='ทำไรได้บ้าง'
                         ),
                         MessageTemplateAction(
                             label='สรุปแบบประเมิน',
@@ -810,7 +810,7 @@ def godaun(event):
                     ),
                     MessageTemplateAction(
                         label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
+                        text='ทำไรได้บ้าง'
                     )
                ]
             )
