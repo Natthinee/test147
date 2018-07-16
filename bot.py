@@ -153,248 +153,6 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    elif question  in 'เริ่มทำ':
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text=str(find2(userid,question)),
-               actions=[
-                    MessageTemplateAction(
-                        label='มี',
-                        text='มี'
-                    ),
-                    MessageTemplateAction(
-                        label='ไม่มี',
-                        text='ไม่มี'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question  in ans2:
-        if(question in ans2):
-            confirm_template_message = TemplateSendMessage(
-                alt_text='Confirm template',
-                template=ConfirmTemplate(
-                    text=str(find2(userid,question)),
-                    actions=[
-                        MessageTemplateAction(
-                            label='มี',
-                            text='มี.'
-                        ),
-                        MessageTemplateAction(
-                            label='ไม่มี',
-                            text='ไม่มี.'
-                        )
-                     ]
-                  )
-               )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question in 'ทำต่อ':
-        #questi = str(find1(userid,question))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title = str(find1(userid,question)),
-                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
-                actions=[
-                    MessageTemplateAction(
-                        label='0=ไม่มีเลย',
-                        text='0',
-                    ),
-                    MessageTemplateAction(
-                        label='1=เป็นบางวัน',
-                        text='1'
-                    ),
-                    MessageTemplateAction(
-                        label='2=เป็นบ่อย',
-                        text='2'
-                    ),
-                    MessageTemplateAction(
-                        label='3=เป็นทุกวัน',
-                        text='3'
-                    )
-                ]
-             )
-          )
-        
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    
-    elif question  in evaluation_form['eval']['ques']:
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text='มาทำเเบบประเมินกันดีกว่า',
-               actions=[
-                    MessageTemplateAction(
-                        label='เริ่มทำ',
-                        text='เริ่มทำ'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ทำไรได้บ้าง'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question in 'ทำไรได้บ้าง':
-        #question1 = str(find1(userid,question))
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='สิ่งที่กอดอุ่นสามารถทำได้',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
-                    ),
-                    MessageTemplateAction(
-                        label='คุยกับเเบบประเมิน',
-                        text='คุยกับเเบบประเมิน'
-                    ),
-                    MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
-                    )
-                ]
-             )
-          )
-        
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    
-    elif question in 'ฟังก์ชันเพิ่มเติม':
-        #question1 = str(find1(userid,question))
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='กอดอุ่นทำได้ๆ',
-                text='ลองเลือกใช้ดูหน่อยนะจ๊ะ',
-                actions=[
-                    MessageTemplateAction(
-                        label='ซึมเศร้าน่ารู้',
-                        text='ซึมเศร้าน่ารู้',
-                    ),
-                    MessageTemplateAction(
-                        label='เศร้าเเล้วเปลี่ยน',
-                        text='เศร้าเเล้วเปลี่ยน'
-                    ),
-                    MessageTemplateAction(
-                        label='ข่าวสารซึมเศร้า',
-                        text='ข่าวสารซึมเศร้า'
-                    ),
-                    MessageTemplateAction(
-                        label='สรุปเเบบประเมิน',
-                        text='สรุปเเบบประเมิน'
-                    )
-                ]
-             )
-          )
-        
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    
-    elif question in 'สรุปแบบประเมิน':
-        answer = str(scoreC(userid,question))+'\n' + '\n'+str(scoreQ2(userid,question))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='ลองใช้ฟังก์ชันอื่นดูได้น้าา',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
-                    ),
-                    MessageTemplateAction(
-                        label='เริ่มทำเเบบประเมินใหม่',
-                        text='เริ่มทำเเบบประเมินใหม่'
-                    ),
-                    MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
-                    )
-                ]
-             )
-          )
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    #elif question in evaluation_form['eval']['ques']:
-        #question1 = str(find1(userid,question)) ######test#####
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
-    elif question in number:
-        #question1 = str(find1(userid,question))
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
-        answer = str(find1(userid,question))
-        score = str(findxx(userid,question))
-        if(score == '10'):
-            confirm_template_message = TemplateSendMessage(
-                alt_text='Confirm template',
-                template=ConfirmTemplate(
-                    text= 'ทำไรต่อดีน้าา',
-                    actions=[
-                        MessageTemplateAction(
-                            label='ฟังก์ชันเพิ่มเติม',
-                            text='ทำไรได้บ้าง'
-                        ),
-                        MessageTemplateAction(
-                            label='สรุปแบบประเมิน',
-                            text='สรุปแบบประเมิน'
-                        )
-                    ]
-                )
-            )
-            line_bot_api.reply_message(event.reply_token, confirm_template_message)
-          
-        if(question in number):              
-            buttons_template_message = TemplateSendMessage(
-                alt_text='Buttons template',
-                template=ButtonsTemplate(
-                    title=answer,
-                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
-                    actions=[
-                        MessageTemplateAction(
-                            label='0=ไม่มีเลย',
-                            text='0',
-                        ),
-                        MessageTemplateAction(
-                            label='1=เป็นบางวัน',
-                            text='1'
-                        ),
-                        MessageTemplateAction(
-                            label='2=เป็นบ่อย',
-                            text='2'
-                        ),
-                        MessageTemplateAction(
-                            label='3=เป็นทุกวัน',
-                            text='3'
-                        )
-                    ]
-                )
-            )
-        
-            line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    
-    #elif question in ans2:
-        #question1 = str(find1(userid,question))
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
@@ -706,6 +464,248 @@ def godaun(event):
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #line_bot_api.reply_message(event.reply_token, msgs)
         line_bot_api.reply_message(event.reply_token,carousel_template_message)
+    elif question  in 'เริ่มทำ':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(find2(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif question  in ans2:
+        if(question in ans2):
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                    text=str(find2(userid,question)),
+                    actions=[
+                        MessageTemplateAction(
+                            label='มี',
+                            text='มี.'
+                        ),
+                        MessageTemplateAction(
+                            label='ไม่มี',
+                            text='ไม่มี.'
+                        )
+                     ]
+                  )
+               )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif question in 'ทำต่อ':
+        #questi = str(find1(userid,question))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = str(find1(userid,question)),
+                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='0=ไม่มีเลย',
+                        text='0',
+                    ),
+                    MessageTemplateAction(
+                        label='1=เป็นบางวัน',
+                        text='1'
+                    ),
+                    MessageTemplateAction(
+                        label='2=เป็นบ่อย',
+                        text='2'
+                    ),
+                    MessageTemplateAction(
+                        label='3=เป็นทุกวัน',
+                        text='3'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    elif question  in evaluation_form['eval']['ques']:
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='มาทำเเบบประเมินกันดีกว่า',
+               actions=[
+                    MessageTemplateAction(
+                        label='เริ่มทำ',
+                        text='เริ่มทำ'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ทำไรได้บ้าง'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    elif question in 'ทำไรได้บ้าง':
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='สิ่งที่กอดอุ่นสามารถทำได้',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    elif question in 'ฟังก์ชันเพิ่มเติม':
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='กอดอุ่นทำได้ๆ',
+                text='ลองเลือกใช้ดูหน่อยนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='ซึมเศร้าน่ารู้',
+                        text='ซึมเศร้าน่ารู้',
+                    ),
+                    MessageTemplateAction(
+                        label='เศร้าเเล้วเปลี่ยน',
+                        text='เศร้าเเล้วเปลี่ยน'
+                    ),
+                    MessageTemplateAction(
+                        label='ข่าวสารซึมเศร้า',
+                        text='ข่าวสารซึมเศร้า'
+                    ),
+                    MessageTemplateAction(
+                        label='สรุปเเบบประเมิน',
+                        text='สรุปเเบบประเมิน'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    elif question in 'สรุปแบบประเมิน':
+        answer = str(scoreC(userid,question))+'\n' + '\n'+str(scoreQ2(userid,question))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='ลองใช้ฟังก์ชันอื่นดูได้น้าา',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='เริ่มทำเเบบประเมินใหม่',
+                        text='เริ่มทำเเบบประเมินใหม่'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    #elif question in evaluation_form['eval']['ques']:
+        #question1 = str(find1(userid,question)) ######test#####
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+    elif question in number:
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        answer = str(find1(userid,question))
+        score = str(findxx(userid,question))
+        if(score == '10'):
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                    text= 'ทำไรต่อดีน้าา',
+                    actions=[
+                        MessageTemplateAction(
+                            label='ฟังก์ชันเพิ่มเติม',
+                            text='ทำไรได้บ้าง'
+                        ),
+                        MessageTemplateAction(
+                            label='สรุปแบบประเมิน',
+                            text='สรุปแบบประเมิน'
+                        )
+                    ]
+                )
+            )
+            line_bot_api.reply_message(event.reply_token, confirm_template_message)
+          
+        if(question in number):              
+            buttons_template_message = TemplateSendMessage(
+                alt_text='Buttons template',
+                template=ButtonsTemplate(
+                    title=answer,
+                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                    actions=[
+                        MessageTemplateAction(
+                            label='0=ไม่มีเลย',
+                            text='0',
+                        ),
+                        MessageTemplateAction(
+                            label='1=เป็นบางวัน',
+                            text='1'
+                        ),
+                        MessageTemplateAction(
+                            label='2=เป็นบ่อย',
+                            text='2'
+                        ),
+                        MessageTemplateAction(
+                            label='3=เป็นทุกวัน',
+                            text='3'
+                        )
+                    ]
+                )
+            )
+        
+            line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    #elif question in ans2:
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question in lo:
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
