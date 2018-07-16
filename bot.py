@@ -773,6 +773,71 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
+    elif question in 'a':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(findx(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+    elif question in 'b':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(findy(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+    elif question in 'c':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text=str(findxy(userid,question)),
+               actions=[
+                    MessageTemplateAction(
+                        label='มี',
+                        text='มี'
+                    ),
+                    MessageTemplateAction(
+                        label='ไม่มี',
+                        text='ไม่มี'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
     elif question in 'สนใจ':
         image_message = ImageSendMessage(
