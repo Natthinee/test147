@@ -154,14 +154,14 @@ def godaun(event):
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in 'ไม่สบายใจ':
-        answer = 'มีความรู้สึกเเบบมานานถึงสองสัปดาห์ยังน้าา ?'
+        answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='149')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))   
-    elif question in 'สบายใจ':
+    elif question in 'มีความสุข':
         answer = 'ฟังดูไม่มีอะไรน่าเป็นห่วงเนอะ อยากลองใช้ฟังก์ชันอย่างอื่นไหม ?'
         sticker_message = StickerSendMessage(
         package_id='2',
