@@ -168,20 +168,20 @@ def godaun(event):
         sticker_id='172')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))       
-    elif question in evaluation_form['eval']['ques']:
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message)) 
+    elif question in 'ถึงสองสัปดาห์เเล้ว':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='มาทำเเบบประเมินกันดีกว่า',
+               text='งั้นมาทำเเบบประเมินกันดีกว่า',
                actions=[
                     MessageTemplateAction(
                         label='เริ่มทำ',
                         text='เริ่มทำ'
                     ),
                     MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ทำไรได้บ้าง'
+                        label='เพิ่มเติม',
+                        text='เพิ่มเติม'
                     )
                ]
             )
@@ -190,6 +190,15 @@ def godaun(event):
         #print(confirm_template_message)
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+    elif question in 'เป็นเเค่ไม่กี่วันเอง': 
+        answer = 'งั้นมาลองหาอะไรทำเพื่อนผ่อนคลายกันเถอะเนอะ พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ'
+        sticker_message = StickerSendMessage(
+        package_id='3',
+        sticker_id='218')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
+        
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
