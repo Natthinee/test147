@@ -146,13 +146,50 @@ def godaun(event):
         answer = str(findxy(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer']) + ' วันนี้รู้สึกยังไงบ้างเอ่ย?'
+        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='22')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+    elif question in 'ไม่สบายใจ':
+        answer = 'มีความรู้สึกเเบบมานานถึงสองสัปดาห์ยังน้าา ?'
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='149')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))   
+    elif question in 'สบายใจ':
+        answer = 'ฟังดูไม่มีอะไรน่าเป็นห่วงเนอะ อยากลองใช้ฟังก์ชันอย่างอื่นไหม ?'
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='172')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))       
+    elif question in evaluation_form['eval']['ques']:
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='มาทำเเบบประเมินกันดีกว่า',
+               actions=[
+                    MessageTemplateAction(
+                        label='เริ่มทำ',
+                        text='เริ่มทำ'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ทำไรได้บ้าง'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         userr.insert({"UserID":userid,"Question": question, "Answer": answer})
@@ -535,27 +572,6 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif question  in evaluation_form['eval']['ques']:
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text='มาทำเเบบประเมินกันดีกว่า',
-               actions=[
-                    MessageTemplateAction(
-                        label='เริ่มทำ',
-                        text='เริ่มทำ'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ทำไรได้บ้าง'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
     elif question in 'ทำไรได้บ้าง':
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
