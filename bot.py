@@ -162,7 +162,7 @@ def godaun(event):
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))   
     elif question in 'มีความสุข':
-        answer = 'ฟังดูไม่มีอะไรน่าเป็นห่วงเนอะ อยากลองใช้ฟังก์ชันอย่างอื่นไหม ?'
+        answer = 'ฟังดูไม่มีอะไรน่าเป็นห่วงเนอะ อยากลองใช้ฟังก์ชันอย่างอื่นไหม พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ?'
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='172')
@@ -192,21 +192,48 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
         
     elif question in 'เป็นเเค่ไม่กี่วันเอง': 
-        answer = 'งั้นมาลองหาอะไรทำเพื่อนผ่อนคลายกันเถอะเนอะ พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ'
+        answer = 'งั้นมาลองหาอะไรทำเพื่อผ่อนคลายกันเถอะเนอะ พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ'
         sticker_message = StickerSendMessage(
         package_id='3',
         sticker_id='218')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
+    elif question in 'ลอง':
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='ทำไรดีน้า ระหว่างฟังเพลงหรืออ่านิยายเพื่อผ่อนคลายดี?',
+               actions=[
+                    MessageTemplateAction(
+                        label='ฟังเพลง',
+                        text='ฟังเพลง'
+                    ),
+                    MessageTemplateAction(
+                        label='อ่านนิยาย',
+                        text='อ่านนิยาย'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
+    elif question in 'ไม่ลอง':
+        answer = 'งั้นวันนี้กอดอุ่นต้องขอตัวไปก่อนนะ เเล้วไว้เจอกันใหม่ เมื่อคิดถึงกอดอุ่นเด้อออ'
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='158')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message) 
         
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif question == richmanu['rich']['rich02']:
         answer = ansrich02
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
