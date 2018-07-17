@@ -228,6 +228,10 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
         
+    elif question in 'อื่นๆ':
+        answer = 'test'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
