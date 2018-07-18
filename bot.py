@@ -227,6 +227,33 @@ def godaun(event):
         sticker_id='158')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
+    elif question in 'เอ๊ะ':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='ลองใช้ฟังก์ชันอื่นดูได้น้าา',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='เริ่มทำเเบบประเมินใหม่',
+                        text='เริ่มทำเเบบประเมินใหม่'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้บ้าน',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question in 'อื่นๆ':
         answer = 'test'
@@ -676,33 +703,8 @@ def godaun(event):
     
     elif question in 'สรุปแบบประเมิน':
         answer = str(scoreC(userid,question))+'\n' + '\n'+str(scoreQ2(userid,question))
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='ลองใช้ฟังก์ชันอื่นดูได้น้าา',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
-                    ),
-                    MessageTemplateAction(
-                        label='เริ่มทำเเบบประเมินใหม่',
-                        text='เริ่มทำเเบบประเมินใหม่'
-                    ),
-                    MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
-                    )
-                ]
-             )
-          )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+   
     #elif question in evaluation_form['eval']['ques']:
         #question1 = str(find1(userid,question)) ######test#####
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
