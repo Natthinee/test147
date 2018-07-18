@@ -231,24 +231,20 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title='ลองใช้ฟังก์ชันอื่นดูได้น้าา',
+                title='มาทำเเบบประเมินกัน',
                 text='ลองเลือกดูซิ',
                 actions=[
                     MessageTemplateAction(
-                        label='เล่าหน่อยนะ',
-                        text='เล่าหน่อยนะ',
+                        label='ทำต่อจากเดิม',
+                        text='ทำต่อจากเดิม',
                     ),
                     MessageTemplateAction(
-                        label='เริ่มทำเเบบประเมินใหม่',
-                        text='เริ่มทำเเบบประเมินใหม่'
+                        label='ทำต่อ',
+                        text='ทำต่อ'
                     ),
                     MessageTemplateAction(
-                        label='จิตเวชใกล้บ้าน',
-                        text='จิตเวชใกล้บ้าน'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ฟังก์ชันเพิ่มเติม'
+                        label='เริ่มทำใหม่',
+                        text='เริ่มทำใหม่'
                     )
                 ]
              )
