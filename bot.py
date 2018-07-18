@@ -299,7 +299,7 @@ def godaun(event):
                         text='ฟังเเล้วมีความมั่นใจ',
                         actions=[
                             URITemplateAction(
-                                label='All About That Bass',
+                                label='All About',
                                 uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
                             ),
                             URITemplateAction(
