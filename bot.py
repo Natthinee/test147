@@ -332,11 +332,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token,  carousel_template_message)
        
     elif question in 'นิยาย':
-       answer = 'https://www.youtube.com/watch?v=fBqXr7C1hQM'
-       line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-      
-       
-      
+        answer = 'https://www.youtube.com/watch?v=fBqXr7C1hQM'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
     elif question in 'อื่นๆ':
         answer = 'test'
