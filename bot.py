@@ -305,7 +305,26 @@ def godaun(event):
                                 uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
                             )
                         ]
-                    )
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://ugc.reveliststatic.com/gen/constrain/640/640/80/2016/10/04/13/3o/kz/phdc7itzc42qbwe.jpg,
+                        title='ฟังเเล้วมีความมั่นใจ',
+                        text='ฟังเเล้วมีความมั่นใจ',
+                        actions=[
+                            URITemplateAction(
+                                label='All About',
+                                uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
+                            ),
+                            URITemplateAction(
+                                label='Beautiful Girls',
+                                uri='https://www.youtube.com/watch?v=MrTz5xjmso4'
+                            ),
+                            URITemplateAction(
+                                label='คนมีเสน่ห์',
+                                uri='https://www.youtube.com/watch?v=R10mrTJpqPw'
+                            )
+                        ]
+                    )            
                  ]
               )
           )
