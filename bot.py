@@ -312,11 +312,11 @@ def godaun(event):
                         text='ฟังเเล้วมีความมั่นใจ',
                         actions=[
                             URITemplateAction(
-                                label='All About',
+                                label='AllAbout',
                                 uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
                             ),
                             URITemplateAction(
-                                label='Beautiful Girls',
+                                label='BeautifulGirls',
                                 uri='https://www.youtube.com/watch?v=MrTz5xjmso4'
                             ),
                             URITemplateAction(
