@@ -286,6 +286,25 @@ def godaun(event):
                               uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
                            )
                         ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://kruata.files.wordpress.com/2016/10/e0b8a3e0b8b9e0b89be0b881e0b8b2e0b8a3e0b98ce0b895e0b8b9e0b899e0b982e0b894e0b980e0b8a3e0b8a1e0b988e0b8ade0b899-31.jpg',
+                        title='ฟังเเล้วสดชื่น',
+                        text='มาฟังกันเถอะ',
+                        actions=[
+                            URITemplateAction(
+                                label='วิธีใช้',
+                                uri='https://www.youtube.com/watch?v=_ovBySUe4xM'
+                            ),
+                            URITemplateAction(
+                                label='ไม่ต้องให้คนทั้งโลกมารักเรา',
+                                uri='https://www.youtube.com/watch?v=NUZqlh7XLvg'
+                            ),
+                            URITemplateAction(
+                                label='สุดเขต(เธอ Get ก็ OK)',
+                                uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
+                            )
+                        ]
                     )
                  ]
               )
