@@ -309,7 +309,7 @@ def godaun(event):
                     CarouselColumn(
                         thumbnail_image_url='https://ugc.reveliststatic.com/gen/constrain/640/640/80/2016/10/04/13/3o/kz/phdc7itzc42qbwe.jpg,
                         title='ฟังเเล้วมีความมั่นใจ',
-                        text='ฟังเเล้วมีความมั่นใจ',
+                        text='ดีดี',
                         actions=[
                             URITemplateAction(
                                 label='AllAbout',
