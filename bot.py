@@ -330,6 +330,74 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
         
+    elif question in 'นิยาย':
+        carousel_template_message = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                  CarouselColumn(
+                      thumbnail_image_url='https://stickershop.line-scdn.net//stickershop/v1/product/1198016/iphone/main@2x.png',
+                      title='เพลงผ่อนคลาย',
+                      text='มาฟังเพลงกัน',
+                      actions=[      
+                          URITemplateAction(
+                              label='ดนตรีสร้างสมาธิ',
+                              uri='https://www.youtube.com/watch?v=KjkdT84wekA'
+                          ), 
+                          URITemplateAction(
+                              label='สมองเเละความจำ',
+                              uri='https://www.youtube.com/watch?v=H1l9EW8M1y4'
+                          ),
+                          URITemplateAction(
+                              label='ดนตรีบำบัดความเครียด',
+                              uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
+                           )
+                        ]
+                    ),
+                    CarouselColumn(
+                      thumbnail_image_url='https://i.pinimg.com/736x/90/de/ff/90deff63f4905e35d48d864f10982a04--line-sticker-the-smile.jpg',
+                      title='ฟังเเล้วสดชื่น',
+                      text='มาฟังกันเถอะ',
+                      actions=[      
+                          URITemplateAction(
+                              label='วิธีใช้',
+                              uri='https://www.youtube.com/watch?v=_ovBySUe4xM'
+                          ), 
+                          URITemplateAction(
+                              label='ไม่ต้องให้คนทั้งโลก..',
+                              uri='https://www.youtube.com/watch?v=NUZqlh7XLvg'
+                          ),
+                          URITemplateAction(
+                              label='(เธอ Get ก็ OK)',
+                              uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
+                           )
+                        ]
+                    ),
+                    CarouselColumn(
+                      thumbnail_image_url='https://image.dek-d.com/contentimg/2015/na/Nugirl/Beauty/76/Layer-1341.png',
+                      title='ฟังเเล้วมั่น',
+                      text='ฟังเเล้วมั่นใจในตัวเอง',
+                      actions=[      
+                          URITemplateAction(
+                              label='All About..',
+                              uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
+                          ), 
+                          URITemplateAction(
+                              label='Beautiful..',
+                              uri='https://www.youtube.com/watch?v=MrTz5xjmso4'
+                          ),
+                          URITemplateAction(
+                              label='คนมีเสน่ห์',
+                              uri='https://www.youtube.com/watch?v=R10mrTJpqPw'
+                           )
+                        ]
+                    )    
+                 ]
+              )
+          )
+        line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
+      
+        
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
