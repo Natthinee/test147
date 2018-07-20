@@ -235,10 +235,6 @@ def godaun(event):
                 text='ลองเลือกดูซิ',
                 actions=[
                     MessageTemplateAction(
-                        label='ทำต่อจากเดิม',
-                        text='ทำต่อจากเดิม',
-                    ),
-                    MessageTemplateAction(
                         label='ทำต่อ',
                         text='ทำต่อ'
                     ),
@@ -269,10 +265,6 @@ def godaun(event):
                     MessageTemplateAction(
                         label='ทำต่อจากเดิม',
                         text='ทำต่อจากเดิม',
-                    ),
-                    MessageTemplateAction(
-                        label='ทำต่อ',
-                        text='ทำต่อ'
                     ),
                     MessageTemplateAction(
                         label='เริ่มทำใหม่',
