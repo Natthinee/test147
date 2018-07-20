@@ -420,7 +420,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif question == richmanu['rich']['rich02']:
-        answer = ansrich02
+        #answer = ansrich02
+        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
