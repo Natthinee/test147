@@ -297,11 +297,11 @@ def godaun(event):
                               uri='https://www.youtube.com/watch?v=_ovBySUe4xM'
                           ), 
                           URITemplateAction(
-                              label='ไม่ต้องให้คนทั้งโลกมารักเรา',
+                              label='ไม่ต้องให้คนทั้งโลก..',
                               uri='https://www.youtube.com/watch?v=NUZqlh7XLvg'
                           ),
                           URITemplateAction(
-                              label='สุดเขต(เธอ Get ก็ OK)',
+                              label='(เธอ Get ก็ OK)',
                               uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
                            )
                         ]
