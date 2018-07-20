@@ -308,20 +308,20 @@ def godaun(event):
                     ),
                     CarouselColumn(
                       thumbnail_image_url='https://image.dek-d.com/contentimg/2015/na/Nugirl/Beauty/76/Layer-1341.png',
-                      title='เพลงผ่อนคลาย',
-                      text='มาฟังเพลงกัน',
+                      title='ฟังเเล้วมั่น',
+                      text='ฟังเเล้วมั่นใจในตัวเอง',
                       actions=[      
                           URITemplateAction(
-                              label='ดนตรีสร้างสมาธิ',
-                              uri='https://www.youtube.com/watch?v=KjkdT84wekA'
+                              label='All About..',
+                              uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
                           ), 
                           URITemplateAction(
-                              label='สมองเเละความจำ',
-                              uri='https://www.youtube.com/watch?v=H1l9EW8M1y4'
+                              label='Beautiful..',
+                              uri='https://www.youtube.com/watch?v=MrTz5xjmso4'
                           ),
                           URITemplateAction(
-                              label='ดนตรีบำบัดความเครียด',
-                              uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
+                              label='คนมีเสน่ห์',
+                              uri='https://www.youtube.com/watch?v=R10mrTJpqPw'
                            )
                         ]
                     )    
