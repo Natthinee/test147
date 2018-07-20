@@ -96,6 +96,7 @@ def find1(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 1
    for i in db.find():
         if(userid==i['UserID']):
             count1 = count1+1
@@ -109,13 +110,13 @@ def find1(userid,question):
         count2 = count1
         answer = t9[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in idsub:
         count2 = count1
         answer = t9[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
 
 def findxx(userid,question):
@@ -152,6 +153,7 @@ def find2(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 2
    for i in db.find():
         if(userid==i['UserID']):
             count1 = count1+1
@@ -165,13 +167,13 @@ def find2(userid,question):
         count2 = count1
         answer = qq2[count1]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q2sub:
         count2 = count1
         answer = qq2[count1]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
  
    
@@ -184,6 +186,7 @@ def find3(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 3
    for i in db.find():
         if(userid==i['UserID']):
             count1 = count1+1
@@ -197,13 +200,13 @@ def find3(userid,question):
         count2 = count1
         answer = quest8[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q8sub:
         count2 = count1
         answer = quest8[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer 
       
 def findx(userid,question):
@@ -213,6 +216,7 @@ def findx(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 4
    for i in db.find():
         if(userid==i['UserID']):
             No = No + 1       
@@ -226,13 +230,13 @@ def findx(userid,question):
         count2 = count1
         answer = excusive[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q8subx:
         count2 = count1
         answer = excusive[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer 
 
 def findy(userid,question):
@@ -242,6 +246,7 @@ def findy(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 5
    for i in db.find():
         if(userid==i['UserID']):
             No = No + 1       
@@ -255,13 +260,13 @@ def findy(userid,question):
         count2 = count1
         answer = exq8[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q8suby:
         count2 = count1
         answer = exq8[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer 
 
       
@@ -272,6 +277,7 @@ def findxy(userid,question):
    count2 = 0
    No = 0
    No1 = 0
+   round = 6
    for i in db.find():
         if(userid==i['UserID']):
             No = No + 1       
@@ -285,13 +291,13 @@ def findxy(userid,question):
         count2 = count1
         answer = mid[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in q8subxy:
         count2 = count1
         answer = mid[count2]
         No1 = No
-        db.insert({"UserID":userid,"Round":count2,"No":No1,"Question": question, "Answer": answer})
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer 
       
 def deleteQu(userid,question):
