@@ -293,16 +293,16 @@ def godaun(event):
                       text='มาฟังกันเถอะ',
                       actions=[      
                           URITemplateAction(
-                              label='ดนตรีสร้างสมาธิ',
-                              uri='https://www.youtube.com/watch?v=KjkdT84wekA'
+                              label='วิธีใช้',
+                              uri='https://www.youtube.com/watch?v=_ovBySUe4xM'
                           ), 
                           URITemplateAction(
-                              label='สมองเเละความจำ',
-                              uri='https://www.youtube.com/watch?v=H1l9EW8M1y4'
+                              label='ไม่ต้องให้คนทั้งโลกมารักเรา',
+                              uri='https://www.youtube.com/watch?v=NUZqlh7XLvg'
                           ),
                           URITemplateAction(
-                              label='ดนตรีบำบัดความเครียด',
-                              uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
+                              label='สุดเขต(เธอ Get ก็ OK)',
+                              uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
                            )
                         ]
                     ),
