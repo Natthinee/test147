@@ -379,16 +379,16 @@ def godaun(event):
                       text='มาอ่านกันเถอะ',
                       actions=[      
                           URITemplateAction(
-                              label='นักปราบผีแห่ง..',
-                              uri='https://fictionlog.co/b/592e7a13b0dad878b4ce0fe7'
+                              label='ต้องลดให้ได้ 5..',
+                              uri='https://www.webtoons.com/th/drama/demi-5kg/list?title_no=1157'
                           ), 
                           URITemplateAction(
-                              label='ระบบเปลี่ยนชีวิต',
-                              uri='https://fictionlog.co/b/5aefd40e9e33a33c0d88c893'
+                              label='สาวน้อยร้อยช่าง',
+                              uri='https://www.webtoons.com/th/tiptoon/the-diy-girl/list?title_no=737&page=4'
                           ),
                           URITemplateAction(
-                              label='อสูรพิทักษ์ข้ามภพ',
-                              uri='https://fictionlog.co/b/5a8c3b5d7497096a599d61e6'
+                              label='ครัวง่ายๆสไตล์..',
+                              uri='https://www.webtoons.com/th/tiptoon/lazy-cooking/list?title_no=646'
                            )
                         ]
                     )
