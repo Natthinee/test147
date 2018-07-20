@@ -275,7 +275,7 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif question in 'เริ่มทำใหม่':
+    elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
         db.delete_many({'UserID':userid})
         dd.delete_many({'UserID':userid})
