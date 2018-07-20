@@ -288,9 +288,9 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                      thumbnail_image_url='https://f.ptcdn.info/566/003/000/1364380037-img0072edi-o.jpg',
-                      title='เพลงผ่อนคลาย',
-                      text='มาฟังเพลงกัน',
+                      thumbnail_image_url='https://i.pinimg.com/736x/90/de/ff/90deff63f4905e35d48d864f10982a04--line-sticker-the-smile.jpg',
+                      title='ฟังเเล้วสดชื่น',
+                      text='มาฟังกันเถอะ',
                       actions=[      
                           URITemplateAction(
                               label='ดนตรีสร้างสมาธิ',
