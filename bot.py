@@ -336,21 +336,21 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='https://stickershop.line-scdn.net//stickershop/v1/product/1198016/iphone/main@2x.png',
-                      title='เพลงผ่อนคลาย',
-                      text='มาฟังเพลงกัน',
+                      thumbnail_image_url='https://image.dek-d.com/contentimg/2014/nong/BG%26Icon/read05.png',
+                      title='นิยายรักสดใส',
+                      text='มาอ่านกันเถอะ',
                       actions=[      
                           URITemplateAction(
-                              label='ดนตรีสร้างสมาธิ',
-                              uri='https://www.youtube.com/watch?v=KjkdT84wekA'
+                              label='เสน่ห์ดลใจรัก',
+                              uri='https://writer.dek-d.com/sea-bing/story/view.php?id=1802727'
                           ), 
                           URITemplateAction(
-                              label='สมองเเละความจำ',
-                              uri='https://www.youtube.com/watch?v=H1l9EW8M1y4'
+                              label='ฤดูสดใสให้หัวใจมีรัก',
+                              uri='https://writer.dek-d.com/jee12/story/view.php?id=788257'
                           ),
                           URITemplateAction(
-                              label='ดนตรีบำบัดความเครียด',
-                              uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
+                              label='ฉลามอย่าโกรธ',
+                              uri='https://writer.dek-d.com/gamsang2/story/view.php?id=1826327'
                            )
                         ]
                     ),
