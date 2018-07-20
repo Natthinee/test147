@@ -712,7 +712,8 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://s.isanook.com/he/0/ud/1/9229/sad.jpg',
+                        #thumbnail_image_url='https://s.isanook.com/he/0/ud/1/9229/sad.jpg',
+                        thumbnail_image_url = 'https://i.imgur.com/j6c4KEp.jpg',
                         title='ติดตามในเว็บไซต์',
                         text='ติดตามข่าวสาร',
                         actions=[ 
