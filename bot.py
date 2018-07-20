@@ -305,7 +305,26 @@ def godaun(event):
                               uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
                            )
                         ]
-                    )   
+                    ),
+                    CarouselColumn(
+                      thumbnail_image_url='https://f.ptcdn.info/566/003/000/1364380037-img0072edi-o.jpg',
+                      title='เพลงผ่อนคลาย',
+                      text='มาฟังเพลงกัน',
+                      actions=[      
+                          URITemplateAction(
+                              label='ดนตรีสร้างสมาธิ',
+                              uri='https://www.youtube.com/watch?v=KjkdT84wekA'
+                          ), 
+                          URITemplateAction(
+                              label='สมองเเละความจำ',
+                              uri='https://www.youtube.com/watch?v=H1l9EW8M1y4'
+                          ),
+                          URITemplateAction(
+                              label='ดนตรีบำบัดความเครียด',
+                              uri='https://www.youtube.com/watch?v=fBqXr7C1hQM&t=10s'
+                           )
+                        ]
+                    )    
                  ]
               )
           )
