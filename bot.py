@@ -307,7 +307,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                      thumbnail_image_url='https://f.ptcdn.info/566/003/000/1364380037-img0072edi-o.jpg',
+                      thumbnail_image_url='https://image.dek-d.com/contentimg/2015/na/Nugirl/Beauty/76/Layer-1341.png',
                       title='เพลงผ่อนคลาย',
                       text='มาฟังเพลงกัน',
                       actions=[      
