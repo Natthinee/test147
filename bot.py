@@ -259,6 +259,31 @@ def godaun(event):
         #answer = 'https://www.youtube.com/watch?v=fBqXr7C1hQM'
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
+    elif question in 'เเงะ':
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='มาทำเเบบประเมินกัน',
+                text='ลองเลือกดูซิ',
+                actions=[
+                    MessageTemplateAction(
+                        label='ทำต่อจากเดิม',
+                        text='ทำต่อจากเดิม',
+                    ),
+                    MessageTemplateAction(
+                        label='ทำต่อ',
+                        text='ทำต่อ'
+                    ),
+                    MessageTemplateAction(
+                        label='เริ่มทำใหม่',
+                        text='เริ่มทำใหม่'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+       
+        
     elif question in 'อื่นๆ':
         answer = 'test'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
