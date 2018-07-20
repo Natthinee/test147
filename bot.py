@@ -374,8 +374,8 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                      thumbnail_image_url='https://supatra89.files.wordpress.com/2011/09/106368-attachment.jpg',
-                      title='นิยายเเฟนตาซี',
+                      thumbnail_image_url='https://areatablet.files.wordpress.com/2011/03/imagesca5kb6mc.jpg',
+                      title='อ่านเเล้วอ่านอีก',
                       text='มาอ่านกันเถอะ',
                       actions=[      
                           URITemplateAction(
