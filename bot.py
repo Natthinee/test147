@@ -345,7 +345,7 @@ def godaun(event):
                               uri='https://writer.dek-d.com/sea-bing/story/view.php?id=1802727'
                           ), 
                           URITemplateAction(
-                              label='ฤดูสดใสให้หั..',
+                              label='ฤดูสดใสให้หัวใจมีรัก',
                               uri='https://writer.dek-d.com/jee12/story/view.php?id=788257'
                           ),
                           URITemplateAction(
@@ -372,26 +372,7 @@ def godaun(event):
                               uri='https://fictionlog.co/b/5a8c3b5d7497096a599d61e6'
                            )
                         ]
-                    ),
-                    CarouselColumn(
-                      thumbnail_image_url='https://www.manager.bg/sites/default/files/mainimages/3_559.jpg',
-                      title='อ่านเเล้วอ่านอีก,
-                      text='เลือกเลย',
-                      actions=[      
-                          URITemplateAction(
-                              label='ต้องลดให้ได้ 5..',
-                              uri='https://www.webtoons.com/th/drama/demi-5kg/list?title_no=1157'
-                          ), 
-                          URITemplateAction(
-                              label='สาวน้อยร้อยช่าง',
-                              uri='https://www.webtoons.com/th/tiptoon/the-diy-girl/list?title_no=737&page=4'
-                          ),
-                          URITemplateAction(
-                              label='ครัวง่ายๆสไตล์..',
-                              uri='https://www.webtoons.com/th/tiptoon/lazy-cooking/list?title_no=646'
-                           )
-                        ]
-                    )    
+                    )
                  ]
               )
           )
