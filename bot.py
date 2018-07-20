@@ -345,7 +345,7 @@ def godaun(event):
                               uri='https://writer.dek-d.com/sea-bing/story/view.php?id=1802727'
                           ), 
                           URITemplateAction(
-                              label='ฤดูสดใสให้หัวใจมีรัก',
+                              label='ฤดูสดใสให้หั..',
                               uri='https://writer.dek-d.com/jee12/story/view.php?id=788257'
                           ),
                           URITemplateAction(
@@ -357,10 +357,10 @@ def godaun(event):
                     CarouselColumn(
                       thumbnail_image_url='https://supatra89.files.wordpress.com/2011/09/106368-attachment.jpg',
                       title='นิยายเเฟนตาซี',
-                      text='มาอ่านเเฟนตาซีกันเถอะ',
+                      text='มาอ่านกันเถอะ',
                       actions=[      
                           URITemplateAction(
-                              label='นักปราบผีแห่งเหมาซาน',
+                              label='นักปราบผีแห่ง..',
                               uri='https://fictionlog.co/b/592e7a13b0dad878b4ce0fe7'
                           ), 
                           URITemplateAction(
@@ -387,7 +387,7 @@ def godaun(event):
                               uri='https://www.webtoons.com/th/tiptoon/the-diy-girl/list?title_no=737&page=4'
                           ),
                           URITemplateAction(
-                              label='ครัวง่ายๆสไตล์เด็กหอ',
+                              label='ครัวง่ายๆสไตล์..',
                               uri='https://www.webtoons.com/th/tiptoon/lazy-cooking/list?title_no=646'
                            )
                         ]
