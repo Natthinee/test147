@@ -372,6 +372,25 @@ def godaun(event):
                               uri='https://fictionlog.co/b/5a8c3b5d7497096a599d61e6'
                            )
                         ]
+                    ),
+                    CarouselColumn(
+                      thumbnail_image_url='https://supatra89.files.wordpress.com/2011/09/106368-attachment.jpg',
+                      title='นิยายเเฟนตาซี',
+                      text='มาอ่านกันเถอะ',
+                      actions=[      
+                          URITemplateAction(
+                              label='นักปราบผีแห่ง..',
+                              uri='https://fictionlog.co/b/592e7a13b0dad878b4ce0fe7'
+                          ), 
+                          URITemplateAction(
+                              label='ระบบเปลี่ยนชีวิต',
+                              uri='https://fictionlog.co/b/5aefd40e9e33a33c0d88c893'
+                          ),
+                          URITemplateAction(
+                              label='อสูรพิทักษ์ข้ามภพ',
+                              uri='https://fictionlog.co/b/5a8c3b5d7497096a599d61e6'
+                           )
+                        ]
                     )
                  ]
               )
