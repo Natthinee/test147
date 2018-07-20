@@ -269,7 +269,7 @@ def godaun(event):
             template=CarouselTemplate(
                 columns=[
                   CarouselColumn(
-                      thumbnail_image_url='https://f.ptcdn.info/566/003/000/1364380037-img0072edi-o.jpg',
+                      thumbnail_image_url='https://stickershop.line-scdn.net//stickershop/v1/product/1198016/iphone/main@2x.png',
                       title='เพลงผ่อนคลาย',
                       text='มาฟังเพลงกัน',
                       actions=[      
