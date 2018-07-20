@@ -374,7 +374,7 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                      thumbnail_image_url='https://image.dek-d.com/contentimg/2015/na/Nugirl/Beauty/76/Layer-1341.png',
+                      thumbnail_image_url='https://image.slidesharecdn.com/workshop9-10-150711084957-lva1-app6892/95/workshop-9-10-3-638.jpg?cb=1436604623',
                       title='อ่านเเล้วอ่านอีก,
                       text='เลือกเลย',
                       actions=[      
