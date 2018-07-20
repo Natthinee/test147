@@ -274,6 +274,31 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+    elif question in 'เริ่มทำใหม่':
+        #del = deleteQu(userid,question)
+        db.delete_many({'UserID':userid})
+        dd.delete_many({'UserID':userid})
+        confirm_template_message = TemplateSendMessage(
+            alt_text='Confirm template',
+            template=ConfirmTemplate(
+               text='มาทำเเบบประเมินกันดีกว่า',
+               actions=[
+                    MessageTemplateAction(
+                        label='เริ่มทำ',
+                        text='เริ่มทำ'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
+                    )
+               ]
+            )
+        )
+        #print("confirm_template_message")        
+        #print(confirm_template_message)
+        
+        line_bot_api.reply_message(event.reply_token, confirm_template_message)
        
         
     elif question in 'อื่นๆ':
@@ -942,30 +967,7 @@ def godaun(event):
         #print(confirm_template_message)
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question in 'เริ่มทำเเบบประเมินใหม่':
-        #del = deleteQu(userid,question)
-        db.delete_many({'UserID':userid})
-        dd.delete_many({'UserID':userid})
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text='มาทำเเบบประเมินกันดีกว่า',
-               actions=[
-                    MessageTemplateAction(
-                        label='เริ่มทำ',
-                        text='เริ่มทำ'
-                    ),
-                    MessageTemplateAction(
-                        label='ฟังก์ชันเพิ่มเติม',
-                        text='ทำไรได้บ้าง'
-                    )
-               ]
-            )
-        )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+  
     elif question in 't':
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
