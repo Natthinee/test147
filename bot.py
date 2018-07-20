@@ -355,40 +355,40 @@ def godaun(event):
                         ]
                     ),
                     CarouselColumn(
-                      thumbnail_image_url='https://i.pinimg.com/736x/90/de/ff/90deff63f4905e35d48d864f10982a04--line-sticker-the-smile.jpg',
-                      title='ฟังเเล้วสดชื่น',
-                      text='มาฟังกันเถอะ',
+                      thumbnail_image_url='https://supatra89.files.wordpress.com/2011/09/106368-attachment.jpg',
+                      title='นิยายเเฟนตาซี',
+                      text='มาอ่านเเฟนตาซีกันเถอะ',
                       actions=[      
                           URITemplateAction(
-                              label='วิธีใช้',
-                              uri='https://www.youtube.com/watch?v=_ovBySUe4xM'
+                              label='นักปราบผีแห่งเหมาซาน',
+                              uri='https://fictionlog.co/b/592e7a13b0dad878b4ce0fe7'
                           ), 
                           URITemplateAction(
-                              label='ไม่ต้องให้คนทั้งโลก..',
-                              uri='https://www.youtube.com/watch?v=NUZqlh7XLvg'
+                              label='ระบบเปลี่ยนชีวิต',
+                              uri='https://fictionlog.co/b/5aefd40e9e33a33c0d88c893'
                           ),
                           URITemplateAction(
-                              label='(เธอ Get ก็ OK)',
-                              uri='https://www.youtube.com/watch?v=Sq-nfNrUoI8'
+                              label='อสูรพิทักษ์ข้ามภพ',
+                              uri='https://fictionlog.co/b/5a8c3b5d7497096a599d61e6'
                            )
                         ]
                     ),
                     CarouselColumn(
                       thumbnail_image_url='https://image.dek-d.com/contentimg/2015/na/Nugirl/Beauty/76/Layer-1341.png',
-                      title='ฟังเเล้วมั่น',
-                      text='ฟังเเล้วมั่นใจในตัวเอง',
+                      title='อ่านเเล้วอ่านอีก,
+                      text='เลือกเลย',
                       actions=[      
                           URITemplateAction(
-                              label='All About..',
-                              uri='https://www.youtube.com/watch?v=7PCkvCPvDXk'
+                              label='ต้องลดให้ได้ 5..',
+                              uri='https://www.webtoons.com/th/drama/demi-5kg/list?title_no=1157'
                           ), 
                           URITemplateAction(
-                              label='Beautiful..',
-                              uri='https://www.youtube.com/watch?v=MrTz5xjmso4'
+                              label='สาวน้อยร้อยช่าง',
+                              uri='https://www.webtoons.com/th/tiptoon/the-diy-girl/list?title_no=737&page=4'
                           ),
                           URITemplateAction(
-                              label='คนมีเสน่ห์',
-                              uri='https://www.youtube.com/watch?v=R10mrTJpqPw'
+                              label='ครัวง่ายๆสไตล์เด็กหอ',
+                              uri='https://www.webtoons.com/th/tiptoon/lazy-cooking/list?title_no=646'
                            )
                         ]
                     )    
