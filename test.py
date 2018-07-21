@@ -50,6 +50,7 @@ q8sub = []
 q8subx = []
 q8suby = []
 q8subxy = []
+number = ['0','1','2','3']
 ans8['ans'] = {'an': 'ไม่ได้',
                'ay': 'ได้'}
 please = {}
@@ -311,7 +312,8 @@ def countContinuse1(userid,question):
    count1 = 0 
    for i in db.find():
         if(userid==i['UserID']):
-               count1 = count1 + 1
+               if question in number:
+                    count1 = count1 + 1
    return str(count1)
 
 def countContinuse2(userid,question):
