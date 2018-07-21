@@ -279,40 +279,11 @@ def godaun(event):
         co1 = int(countContinuse1(userid,question))
         print(co1)
         co2 = int(countContinuse2(userid,question))
-        print(co2)
-        if co1 < 10:
-            buttons_template_message = TemplateSendMessage(
-                alt_text='Buttons template',
-                template=ButtonsTemplate(
-                    title = str(continues1(userid,question)),
-                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
-                    actions=[
-                        MessageTemplateAction(
-                            label='0=ไม่มีเลย',
-                            text='0',
-                        ),
-                        MessageTemplateAction(
-                            label='1=เป็นบางวัน',
-                            text='1'
-                        ),
-                        MessageTemplateAction(
-                            label='2=เป็นบ่อย',
-                            text='2'
-                        ),
-                        MessageTemplateAction(
-                            label='3=เป็นทุกวัน',
-                            text='3'
-                       )
-                   ]
-               )
-          )
-        
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        print(co2)  
+        answer = 'tttttt'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
             
-          
-       
-        
-          
+                
     elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
         db.delete_many({'UserID':userid})
