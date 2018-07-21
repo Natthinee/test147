@@ -308,12 +308,14 @@ def deleteQu(userid,question):
 def countContinuse1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user 
-   anss = ['A','B','C','D']
+   anss = ['0.','1.','2.','3.']
    count1 = 0 
    for i in db.find():
         if(userid==i['UserID']):
                if i['Question'] in anss:
                     count1 = count1 + 1
+               else:
+                    count1 = count1 - 1
    return str(count1)
 
 def countContinuse2(userid,question):
