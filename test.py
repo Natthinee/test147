@@ -329,14 +329,14 @@ def continues(userid,question):
                     if count2 == 3:
                            return 'จากการทำครั้งก่อน ทำครบทุกข้อเเล้วน้าา อยากเริ่มทำใหม่ หรือ สรุปผลการประเมิน ลองเลือกข้างล่างซิ'
                     if count2 < 3:
-                           answer = qq2[count2]
+                           answer = qq2[count2-1]
                            No1 = No
                            db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
                            return answer
    if count1 < 10:
         for i in db.find():
             if(userid==i['UserID']):
-                    answer = qq2[count1]
+                    answer = qq2[count1-1]
                     No1 = No
                     db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
                     return answer
