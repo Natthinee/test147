@@ -299,6 +299,7 @@ def godaun(event):
             )
             #print("confirm_template_message")        
             #print(confirm_template_message)
+            print(text)
             line_bot_api.reply_message(event.reply_token, confirm_template_message)
         if co1 < 10:
             buttons_template_message = TemplateSendMessage(
