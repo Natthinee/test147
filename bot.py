@@ -161,7 +161,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))   
-    elif question in 'มีความสุข':
+    elif question in 'ความสุข':
         answer = 'ฟังดูไม่มีอะไรน่าเป็นห่วงเนอะ อยากลองใช้ฟังก์ชันอย่างอื่นไหม พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ?'
         sticker_message = StickerSendMessage(
         package_id='2',
