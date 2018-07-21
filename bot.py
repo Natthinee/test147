@@ -280,7 +280,7 @@ def godaun(event):
         print(co1)
         co2 = int(countContinuse2(userid,question))
         print(co2)  
-        answer = 'tttttt'
+        answer = continues1(userid,question)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
             
                 
