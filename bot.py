@@ -28,7 +28,7 @@ import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
-from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues,countContinuse1,countContinuse2
+from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues1,countContinuse1,countContinuse2
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -276,36 +276,11 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
-        co1 = int(countContinuse1(userid,question))
-        print(co1)
-        co2 = int(countContinuse2(userid,question))
-        print(co2)
-        if co2 < 3:
-            confirm_template_message = TemplateSendMessage(
-                alt_text = 'Confirm template',
-                template = ConfirmTemplate(
-                   text = str(continues(userid,question)),
-                   actions = [
-                       MessageTemplateAction(
-                           label ='มี',
-                           text ='มี'
-                       ),
-                       MessageTemplateAction(
-                           label ='ไม่มี',
-                           text ='ไม่มี'
-                      )
-                   ]
-                )
-            )
-            #print("confirm_template_message")        
-            #print(confirm_template_message)
-            print(text)
-            line_bot_api.reply_message(event.reply_token, confirm_template_message)
         if co1 < 10:
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
                 template=ButtonsTemplate(
-                    title = str(continues(userid,question)),
+                    title = str(continues1(userid,question)),
                     text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                     actions=[
                         MessageTemplateAction(
