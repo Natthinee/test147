@@ -333,10 +333,10 @@ def continues(userid,question):
                            No1 = No
                            db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
                            return answer
-   if count < 10:
+   if count1 < 10:
         for i in db.find():
             if(userid==i['UserID']):
-                    answer = qq2[count2]
+                    answer = qq2[count1]
                     No1 = No
                     db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
                     return answer
@@ -358,7 +358,7 @@ def countContinuse2(userid,question):
    for i in dd.find():
         if(userid==i['UserID']):
                 count2 = count2 + 1
-   return str(count2-1)
+   return str(count2)
       
             
                       
