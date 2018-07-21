@@ -275,7 +275,7 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif  question == "ทำต่อจากเดิม":
+    elif question == "ทำต่อจากเดิม":
         co1 = int(countContinuse1(userid,question))
         co2 = int(countContinuse2(userid,question))
         if co2 < 3:
@@ -284,14 +284,14 @@ def godaun(event):
                 template = ConfirmTemplate(
                    text = str(continues(userid,question)),
                    actions = [
-                        MessageTemplateAction(
-                            label ='มี',
-                            text ='มี'
-                        ),
-                        MessageTemplateAction(
-                            label ='ไม่มี',
-                            text ='ไม่มี'
-                        )
+                       MessageTemplateAction(
+                           label ='มี',
+                           text ='มี'
+                       ),
+                       MessageTemplateAction(
+                           label ='ไม่มี',
+                           text ='ไม่มี'
+                       )
                    ]
                 )
             )
