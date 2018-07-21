@@ -340,6 +340,26 @@ def continues(userid,question):
                     No1 = No
                     db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
                     return answer
+                  
+                  
+def countContinuse1(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.user
+   count1 = 0 
+   for i in db.find():
+        if(userid==i['UserID']):
+               count1 = count1 + 1
+   return str(count1)
+
+def countContinuse2(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
+   dd  = client.khim.Q2
+   count2 = 0 
+   for i in dd.find():
+        if(userid==i['UserID']):
+                count2 = count2 + 1
+   return str(count2)
+      
             
                       
              
