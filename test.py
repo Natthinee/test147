@@ -358,7 +358,7 @@ def countContinuse2(userid,question):
    for i in dd.find():
         if(userid==i['UserID']):
                 count2 = count2 + 1
-   return str(count2)
+   return str(count2-1)
       
             
                       
