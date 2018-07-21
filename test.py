@@ -307,41 +307,7 @@ def deleteQu(userid,question):
    db.delete_many({'UserID':userid})
    dd.delete_many({'UserID':userid})
    return 'มาทำเเบบประเมินกันเถอะ'
-
-def continues(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-   db  = client.khim.user
-   dd  = client.khim.Q2
-   count1 = 0 
-   count2 = 0
-   round1 = 1
-   round2 = 2
-   No = 0
-   No1 = 0
-   for i in db.find():
-        if(userid==i['UserID']):
-            count1 = count1+1
-   if count1 == 10:
-        for i in dd.find():
-             if(userid==i['UserID']):
-                    count2 = count2 + 1
-                    No = No+1
-                    if count2 == 3:
-                           return 'จากการทำครั้งก่อน ทำครบทุกข้อเเล้วน้าา อยากเริ่มทำใหม่ หรือ สรุปผลการประเมิน ลองเลือกข้างล่างซิ'
-                    if count2 < 3:
-                           answer = qq2[count2-1]
-                           No1 = No
-                           db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-                           return answer
-   if count1 < 10:
-        for i in db.find():
-            if(userid==i['UserID']):
-                    answer = qq2[count1-1]
-                    No1 = No
-                    db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-                    return answer
-                  
-                  
+                 
 def countContinuse1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
@@ -359,6 +325,30 @@ def countContinuse2(userid,question):
         if(userid==i['UserID']):
                 count2 = count2 + 1
    return str(count2)
+
+def continues1(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
+   db  = client.khim.user
+   cou = int(countContinuse1(userid,question))-1
+   count1 = 0
+   count2 = 0
+   for i in db.find():
+        if(userid==i['UserID']):
+               count1 = cou
+               No = cou
+        if userid in idsub:
+               count2 = count1
+        answer = qq2[count1]
+        No1 = No
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
+        return answer
+                
+                
+   
+   
+   
+  
+#def continues2(userid,question):
       
             
                       
