@@ -277,7 +277,9 @@ def godaun(event):
         
     elif question == "ทำต่อจากเดิม":
         co1 = int(countContinuse1(userid,question))
+        print(co1)
         co2 = int(countContinuse2(userid,question))
+        print(co2)
         if co1 < 10:
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
