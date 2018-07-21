@@ -326,13 +326,9 @@ def countContinuse2(userid,question):
 def continues1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
    db  = client.khim.user
-   round = 1
    cou = int(countContinuse1(userid,question))-1
-   if userid in idsub:
-        answer = t9[cou]
-        No1 = cou
-        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-        return answer
+   answer = t9[cou]
+   return answer
                 
                 
    
