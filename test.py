@@ -80,7 +80,6 @@ sayYN['yn'] = {'yes':'ใช่','no':'ไม่ใช่'}
 sayPatt = 'นี่ๆ ช่วยพิมพ์ ว่า "ใช่" ถ้าเกิดว่ามีลักษณะอาการที่ตรงกับสิ่งที่กอดอุ่นถาม เเต่ถ้าไม่มีลักษณะอาการตามที่ถามก็พิมพ์ว่า "ไม่ใช่" หน่อยน้า\n'
 score = 0
 arr = 0
-number = ['0','1','2','3']
 ple = 'ช่วยพิมพ์คำตอบว่า "มี" ถ้าเกิดมีอาการที่สอดคล้องกับคำถาม\nพิมพ์คำว่า "ไม่มี" ถ้าเกิดไม่มีอาการที่สอดคล้องกับคำถามหน่อยนะจ๊ะ (◕‿◕✿)'
 ple8 = 'ตอบว่า "ใช่" หากเคยมีเหตุการณ์ังกล่า'
 game = 'พักสมองสักเเปบดีกว่าน้าา\nก่อนอุ่นมีเกมส์มาให้ทาย สนใจไหม\n ถ้าสนใจก็พิมพ์คำว่า "สนใจ"\nเเต่ถ้าอยากทำต่อ ก็พิมพ์คำว่า "ไปต่อ" นะจ๊ะ'
@@ -308,11 +307,12 @@ def deleteQu(userid,question):
                  
 def countContinuse1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
-   db  = client.khim.user
+   db  = client.khim.user 
+   number = ['0','1','2','3']
    count1 = 0 
    for i in db.find():
         if(userid==i['UserID']):
-               if question in number:
+               if i['Question'] in number:
                     count1 = count1 + 1
    return str(count1)
 
