@@ -174,10 +174,7 @@ def find2(userid,question):
         answer = qq2[count1]
         No1 = No
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-        return answer
- 
-   
-      
+        return answer  
       
 def find3(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
@@ -329,19 +326,11 @@ def countContinuse2(userid,question):
 def continues1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
    db  = client.khim.user
+   round = 1
    cou = int(countContinuse1(userid,question))-1
-   count1 = 0
-   count2 = 0
-   No = 0
-   No1 = 0
-   for i in db.find():
-        if(userid==i['UserID']):
-               count1 = cou
-               No = cou
-        if userid in idsub:
-               count2 = count1
-        answer = qq2[count1]
-        No1 = No
+   if userid in idsub:
+        answer = qq2[cou]
+        No1 = cou
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
                 
