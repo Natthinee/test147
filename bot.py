@@ -302,7 +302,7 @@ def godaun(event):
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
                 template=ButtonsTemplate(
-                    title = str(str(continues(userid,question)),
+                    title = str(continues(userid,question)),
                     text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                     actions=[
                         MessageTemplateAction(
