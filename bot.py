@@ -280,17 +280,17 @@ def godaun(event):
         co2 = int(countContinuse2(userid,question))
         if co2 < 3:
             confirm_template_message = TemplateSendMessage(
-                alt_text='Confirm template',
-                template=ConfirmTemplate(
-                   text=str(find2(userid,question)),
-                   actions=[
+                alt_text = 'Confirm template',
+                template = ConfirmTemplate(
+                   text = str(continues(userid,question)),
+                   actions = [
                         MessageTemplateAction(
-                            label='มี',
-                            text='มี'
+                            label ='มี',
+                            text ='มี'
                         ),
                         MessageTemplateAction(
-                            label='ไม่มี',
-                            text='ไม่มี'
+                            label ='ไม่มี',
+                            text ='ไม่มี'
                         )
                    ]
                 )
@@ -302,7 +302,7 @@ def godaun(event):
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
                 template=ButtonsTemplate(
-                    title = str(find1(userid,question)),
+                    title = str(str(continues(userid,question)),
                     text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
                     actions=[
                         MessageTemplateAction(
