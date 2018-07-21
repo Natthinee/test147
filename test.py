@@ -334,7 +334,7 @@ def continues1(userid,question):
    round = 1
    for i in db.find():
         if(userid==i['UserID']):
-            count1 = cou + 1
+            count1 = cou + count1
    for i in db.find():
         if(userid==i['UserID']):
             No = count1      
