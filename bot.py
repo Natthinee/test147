@@ -28,7 +28,7 @@ import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
-from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu
+from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues,countContinuse1,countContinuse2
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -275,6 +275,62 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
+    elif  question == "ทำต่อจากเดิม":
+        co1 = countContinuse1(userid,question)
+        co2 = countContinuse2(userid,question)
+        if co2 < 3:
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                   text=str(find2(userid,question)),
+                   actions=[
+                        MessageTemplateAction(
+                            label='มี',
+                            text='มี'
+                        ),
+                        MessageTemplateAction(
+                            label='ไม่มี',
+                            text='ไม่มี'
+                        )
+                   ]
+                )
+            )
+            #print("confirm_template_message")        
+            #print(confirm_template_message)
+            line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        if co1 < 10:
+            buttons_template_message = TemplateSendMessage(
+                alt_text='Buttons template',
+                template=ButtonsTemplate(
+                    title = str(find1(userid,question)),
+                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                    actions=[
+                        MessageTemplateAction(
+                            label='0=ไม่มีเลย',
+                            text='0',
+                        ),
+                        MessageTemplateAction(
+                            label='1=เป็นบางวัน',
+                            text='1'
+                        ),
+                        MessageTemplateAction(
+                            label='2=เป็นบ่อย',
+                            text='2'
+                        ),
+                        MessageTemplateAction(
+                            label='3=เป็นทุกวัน',
+                            text='3'
+                       )
+                   ]
+               )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+            
+          
+       
+        
+          
     elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
         db.delete_many({'UserID':userid})
@@ -372,7 +428,7 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
         
-    elif question in 'นิยาย':
+    elif question in 'อ่านนิยาย':
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
