@@ -73,6 +73,7 @@ anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไ�
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์\nใกล้ๆบ้านดูน้าา'
 game = 'พักสมองสักเเปบดีกว่าน้าา กอดอุ่นมีเกมส์มาให้เล่น สนใจไหม（´◔౪◔）'
+anss01 = ['0.','1.','2.','3.']
 app = Flask(__name__)
 
 line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
@@ -276,6 +277,13 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
+        co1 = int(countContinuse1(userid,question))
+        print(co1)
+        co2 = int(countContinuse2(userid,question))
+        print(co2)  
+        answer = str(continues1(userid,question))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    elif question in anss01:
         co1 = int(countContinuse1(userid,question))
         print(co1)
         co2 = int(countContinuse2(userid,question))
