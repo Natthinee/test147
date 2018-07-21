@@ -332,6 +332,8 @@ def continues1(userid,question):
    cou = int(countContinuse1(userid,question))-1
    count1 = 0
    count2 = 0
+   No = 0
+   No1 = 0
    for i in db.find():
         if(userid==i['UserID']):
                count1 = cou
