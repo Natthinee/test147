@@ -329,7 +329,7 @@ def continues1(userid,question):
    round = 1
    cou = int(countContinuse1(userid,question))-1
    if userid in idsub:
-        answer = qq2[cou]
+        answer = t9[cou]
         No1 = cou
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
