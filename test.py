@@ -327,7 +327,7 @@ def continues1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
    db  = client.khim.user
    cou = int(countContinuse1(userid,question))
-   count1 = cou 
+   count1 = cou-1 
    count2 = 0
    No = 0
    No1 = 0
