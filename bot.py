@@ -277,6 +277,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
+        db.delete_many({'No':findxx(userid,question)})
         answer = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
                 
