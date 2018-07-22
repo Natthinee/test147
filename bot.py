@@ -282,11 +282,76 @@ def godaun(event):
         Q2 = findyy(userid,question)
         print(Q2)
         if Q2 < 3:
-            dd.delete_many({'No': Q2-1})
-            answer = str(find2(userid,question))
-        if Q9 < 10:
+            if Q2 ==1:
+                dd.delete_many({'No': Q2-1})
+                answer = str(find2(userid,question))
+                confirm_template_message = TemplateSendMessage(
+                    alt_text='Confirm template',
+                    template=ConfirmTemplate(
+                        text=answer,
+                        actions=[
+                            MessageTemplateAction(
+                                label='มี',
+                                text='มี'
+                            ),
+                            MessageTemplateAction(
+                                label='ไม่มี',
+                                text='ไม่มี'
+                            )
+                        ]
+                     )
+                 )
+                 line_bot_api.reply_message(event.reply_token, confirm_template_message)
+            if Q2 ==2:
+                dd.delete_many({'No': Q2-1})
+                answer = str(find2(userid,question))
+                confirm_template_message = TemplateSendMessage(
+                    alt_text='Confirm template',
+                    template=ConfirmTemplate(
+                        text=answer,
+                        actions=[
+                            MessageTemplateAction(
+                                label='มี',
+                                text='มี.'
+                            ),
+                            MessageTemplateAction(
+                                label='ไม่มี',
+                                text='ไม่มี.'
+                            )
+                        ]
+                     )
+                 )
+                 line_bot_api.reply_message(event.reply_token, confirm_template_message)
+              
+         if Q9 < 10:
             db.delete_many({'No':findxx(userid,question)-1})
             answer = str(find1(userid,question))
+            buttons_template_message = TemplateSendMessage(
+                alt_text='Buttons template',
+                template=ButtonsTemplate(
+                    title = answer,
+                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                    actions=[
+                        MessageTemplateAction(
+                            label='0=ไม่มีเลย',
+                            text='0',
+                        ),
+                        MessageTemplateAction(
+                            label='1=เป็นบางวัน',
+                            text='1'
+                        ),
+                        MessageTemplateAction(
+                            label='2=เป็นบ่อย',
+                            text='2'
+                        ),
+                        MessageTemplateAction(
+                            label='3=เป็นทุกวัน',
+                            text='3'
+                        )
+                    ]
+                  )
+              )
+              line_bot_api.reply_message(event.reply_token, buttons_template_message)
        
                 
     elif question == "เริ่มทำใหม่":
