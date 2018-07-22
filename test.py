@@ -313,7 +313,8 @@ def continues(userid,question):
    round = 1
    No1 = cou
    answer = t9[No1]
-   db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
+   db.insert({"UserID":userid,"Round":round,"No":No1-1,"Question": question, "Answer": answer})
+   
    return answer
   
 
