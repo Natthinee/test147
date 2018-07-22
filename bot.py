@@ -282,26 +282,25 @@ def godaun(event):
         Q2 = findyy(userid,question)
         print(Q2)
         if Q2 < 3:
-            if Q2 == 1:
-                dd.delete_many({'No': Q2-1})
-                answer = str(find2(userid,question))
-                confirm_template_message = TemplateSendMessage(
-                    alt_text='Confirm template',
-                    template=ConfirmTemplate(
-                        text=answer,
-                        actions=[
-                            MessageTemplateAction(
-                                label='มี',
-                                text='มี'
-                            ),
-                            MessageTemplateAction(
-                                label='ไม่มี',
-                                text='ไม่มี'
-                            )
-                        ]
-                     )
+            dd.delete_many({'No': Q2-1})
+            answer = str(find2(userid,question))
+            confirm_template_message = TemplateSendMessage(
+                alt_text='Confirm template',
+                template=ConfirmTemplate(
+                    text=answer,
+                    actions=[
+                        MessageTemplateAction(
+                            label='มี',
+                            text='มี'
+                        ),
+                        MessageTemplateAction(
+                            label='ไม่มี',
+                            text='ไม่มี'
+                        )
+                    ]
                  )
-                 line_bot_api.reply_message(event.reply_token, confirm_template_message)
+             )
+             line_bot_api.reply_message(event.reply_token, confirm_template_message)
            
        
                 
