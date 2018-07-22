@@ -314,6 +314,8 @@ def countContinuse1(userid,question):
         if(userid==i['UserID']):
                if i['Question'] in anss:
                     count1 = count1 + 1
+                    print("count1....countcontinu")
+                    print(count1)
    return str(count1)
 
 def countContinuse2(userid,question):
@@ -329,9 +331,9 @@ def continues1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
    db  = client.khim.user
    cou = int(countContinuse1(userid,question))
+   print("cou มาจากข้างบน")
+   print(cou)
    count1 = 0
-   print("count1")
-   print(count1)
    count2 = 0
    No = 0
    No1 = 0
@@ -339,7 +341,7 @@ def continues1(userid,question):
    for i in db.find():
         if(userid==i['UserID']):
             count1 = cou
-            print("เข้าวงเล็บ count1")
+            print("count1 = cou")
             print(count1)
    for i in db.find():
         if(userid==i['UserID']):
@@ -353,12 +355,15 @@ def continues1(userid,question):
         count2 = count1
         print("count2")
         print(count2)
-        answer = t9[No+1]
-        print("NO+1")
-        print(No+1)
+        answer = t9[No]
+        print("NO")
+        print(No)
         No1 = No
+        print("NO")
+        print(No1)
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-        return answer
+        print(answer)
+    
    return answer
                 
                 
