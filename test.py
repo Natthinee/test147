@@ -310,7 +310,7 @@ def continues(userid,question):
    del = 0
    del = findxx(userid,question)
    No1 = 0
-   db.delete_many({'UserID':userid,'No1':del})
+   #db.delete_many({'UserID':userid,'No1':del})
    round = 1
    No1 = del
    answer = t9[No1]
