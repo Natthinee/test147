@@ -340,7 +340,7 @@ def continues1(userid,question):
    round = 1
    for i in db.find():
         if(userid==i['UserID']):
-            count1 = count+1
+            count1 = count1+1
             print("เข้าวงเล็บ count1")
             print(count1)
    for i in db.find():
