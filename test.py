@@ -314,8 +314,6 @@ def countContinuse1(userid,question):
         if(userid==i['UserID']):
                if i['Question'] in anss:
                     count1 = count1 + 1
-               else:
-                    count1 = count1
    return str(count1)
 
 def countContinuse2(userid,question):
