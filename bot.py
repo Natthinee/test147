@@ -132,7 +132,9 @@ def godaun(event):
        #line_bot_api.push_message(userid, sticker_message)     
     if question in evaluation_form['eval']['greet']:
         Qx = findxx(userid,question)
+        print(Qx)
         Qy = findyy(userid,question)
+        print(Qy)
         if Qy==0:
              answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
              sticker_message = StickerSendMessage(
