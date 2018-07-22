@@ -303,10 +303,7 @@ def deleteQu(userid,question):
    db.delete_many({'UserID':userid})
    dd.delete_many({'UserID':userid})
    return 'มาทำเเบบประเมินกันเถอะ'
-                 
-def continues1(userid,question):
-    answer = find1(userid,question)
-    return answer
+
                 
                 
    
