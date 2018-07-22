@@ -100,17 +100,11 @@ def find1(userid,question):
    round = 1
    for i in db.find():
         if(userid==i['UserID']):
-            if i['Question'] in numb:
                   count1 = count1+1
                   No =  No+1
                   print("up1")
                   print(count1)
                   print(No)
-            if i['Question'] == "ทำต่อจากเดิม":
-                  count1 = count1-1
-                  No =  No-1
-                  print("up2")
-                  print(count1)
    for i in db.find():
         #print(i['UserID'])
         idsub.append(i['UserID'])
@@ -309,6 +303,13 @@ def deleteQu(userid,question):
    db.delete_many({'UserID':userid})
    dd.delete_many({'UserID':userid})
    return 'มาทำเเบบประเมินกันเถอะ'
+
+def continues(userid,question):
+   count = int(findxx(userid,question))-1
+   answer = t9[count]
+   db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
+   return answer
+  
 
                 
                 
