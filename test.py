@@ -307,7 +307,7 @@ def deleteQu(userid,question):
 def continues(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
-   del = str(findxx(userid,question)):
+   del = str(findxx(userid,question))
    db.delete_many({'No1':del})
    round = 1
    No1 = del
