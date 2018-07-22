@@ -286,7 +286,7 @@ def godaun(event):
         Q2 = findyy(userid,question)
         print(Q2)
         if Q9 < 10:
-            db.delete_many({'No':Q9-1})
+            db.delete_many({'No':findxx(userid,question)-1})
             answer = str(find1(userid,question))
             buttons_template_message = TemplateSendMessage(
                 alt_text='Buttons template',
@@ -311,9 +311,9 @@ def godaun(event):
                             text='3'
                         )
                     ]
-                  )
-              )
-              line_bot_api.reply_message(event.reply_token, buttons_template_message)
+                 )
+             )
+             line_bot_api.reply_message(event.reply_token, buttons_template_message)
            
        
                 
