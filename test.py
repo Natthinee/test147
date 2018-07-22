@@ -102,9 +102,12 @@ def find1(userid,question):
         if(userid==i['UserID']):
             if i['Question'] in numb:
                 count1 = count1+1
-                No = No + 1      
+                No =  count1 
+                print(count1)
+                print(No)
+                
    for i in db.find():
-        print(i['UserID'])
+        #print(i['UserID'])
         idsub.append(i['UserID'])
    if userid not in idsub:
         count2 = count1
