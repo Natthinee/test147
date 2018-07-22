@@ -117,16 +117,15 @@ def find1(userid,question):
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
    if userid in idsub:
-        if question == "ทำต่อจากเดิม":
-             count2 = count1-1
-             answer = t9[count2]
-             No1 = No-1
-             db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
-        else:
-             count2 = count1
-             answer = t9[count2]
-             No1 = No
-             db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
+        #if question == "ทำต่อจากเดิม":
+             #count2 = count1-1
+             #answer = t9[count2]
+             #No1 = No-1
+             #db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
+        count2 = count1
+        answer = t9[count2]
+        No1 = No
+        db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         
         return answer
 
