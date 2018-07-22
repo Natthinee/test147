@@ -282,9 +282,9 @@ def godaun(event):
         Q2 = findyy(userid,question)
         print(Q2)
         if Q2 < 3:
-            db.delete_many({'No': Q2-1})
+            dd.delete_many({'No': Q2-1})
             answer = str(find2(userid,question))
-        if Q9 < 10    
+        if Q9 < 10:
             db.delete_many({'No':findxx(userid,question)-1})
             answer = str(find1(userid,question))
        
