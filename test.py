@@ -353,7 +353,7 @@ def continues1(userid,question):
         count2 = count1
         print("count2")
         print(count2)
-        answer = t9[count2]
+        answer = t9[No]
         No1 = No
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
