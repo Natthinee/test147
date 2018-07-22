@@ -129,9 +129,7 @@ def godaun(event):
        #package_id='1',
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       #line_bot_api.push_message(userid, sticker_message)  
-    Q2 = 0
-    Q9 = 0     
+       #line_bot_api.push_message(userid, sticker_message)     
     if question in 'ขิม':
         answer = str(find1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
@@ -281,6 +279,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
+        Q2 = 0
+        Q9 = 0  
         Q9 = findxx(userid,question)
         print(Q9)
         Q2 = findyy(userid,question)
