@@ -307,12 +307,12 @@ def deleteQu(userid,question):
 def continues(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
-   del = 0
-   del = findxx(userid,question)
+   kk = 0
+   kk = findxx(userid,question)
    No1 = 0
    #db.delete_many({'UserID':userid,'No1':del})
    round = 1
-   No1 = del
+   No1 = kk
    answer = t9[No1]
    db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
    return answer
