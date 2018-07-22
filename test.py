@@ -105,7 +105,8 @@ def find1(userid,question):
             No =  No+1
             print(count1)
             print(No)
-                
+            if i['Question'] == "ทำต่อจากเดิม":
+                   count1 = count1-1              
    for i in db.find():
         #print(i['UserID'])
         idsub.append(i['UserID'])
