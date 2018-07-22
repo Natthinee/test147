@@ -92,7 +92,7 @@ game = 'พักสมองสักเเปบดีกว่าน้าา
 def find1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
-   numb = ['0','1','2','3']
+   #numb = ['0','1','2','3']
    count1 = 0 
    count2 = 0
    No = 0
@@ -100,11 +100,11 @@ def find1(userid,question):
    round = 1
    for i in db.find():
         if(userid==i['UserID']):
-            if i['Question'] in numb:
-                count1 = count1+1
-                No =  count1 
-                print(count1)
-                print(No)
+            #if i['Question'] in numb:
+            count1 = count1+1
+            No =  No+1
+            print(count1)
+            print(No)
                 
    for i in db.find():
         #print(i['UserID'])
