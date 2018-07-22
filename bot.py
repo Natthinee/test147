@@ -28,7 +28,7 @@ import json
 import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
-from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues1,countContinuse1,countContinuse2
+from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues1
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -277,17 +277,9 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
-        co1 = int(countContinuse1(userid,question))
-        print(co1)
-        co2 = int(countContinuse2(userid,question))
-        print(co2)  
         answer = str(continues1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     elif question in anss01:
-        co1 = int(countContinuse1(userid,question))
-        print(co1)
-        co2 = int(countContinuse2(userid,question))
-        print(co2)  
         answer = str(continues1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
             
