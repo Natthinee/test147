@@ -305,6 +305,8 @@ def deleteQu(userid,question):
    return 'มาทำเเบบประเมินกันเถอะ'
 
 def continues(userid,question):
+   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   db  = client.khim.user
    count = int(findxx(userid,question))-1
    answer = t9[count]
    db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
