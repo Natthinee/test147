@@ -331,7 +331,7 @@ def continues1(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')   
    db  = client.khim.user
    cou = int(countContinuse1(userid,question))
-   count1 = cou
+   count1 = 0
    print("count1")
    print(count1)
    count2 = 0
@@ -340,7 +340,7 @@ def continues1(userid,question):
    round = 1
    for i in db.find():
         if(userid==i['UserID']):
-            count1 = count1+1
+            count1 = cou
             print("เข้าวงเล็บ count1")
             print(count1)
    for i in db.find():
