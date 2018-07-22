@@ -130,31 +130,23 @@ def godaun(event):
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)     
-    if question in 'ขิม':
-        answer = str(find1(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    if question in 'วิม':
-        answer = str(find2(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    if question in 'ภีม':
-        answer = str(find3(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    if question in 'ลี':
-        answer = str(findx(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    if question in 'วี':
-        answer = str(findy(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    if question in 'ไข่มุก':
-        answer = str(findxy(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
-        sticker_message = StickerSendMessage(
-        package_id='2',
-        sticker_id='22')
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.push_message(userid, sticker_message)
+        Qx = findxx(userid,question)
+        Qy = findyy(userid,question)
+        if Qx==0 and Qy==0: 
+             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+             sticker_message = StickerSendMessage(
+             package_id='2',
+             sticker_id='22')
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             line_bot_api.push_message(userid, sticker_message)
+        else:
+             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ ดูเหมือนยังทำเเบบประเมินไม่เสร็จเลย ถ้าอยากทำต่ออันเดิม พิมพ์คำว่า "ทำต่ออันเดิม" เเต่ถ้าอยากเริ่มใหม่ ให้พิมพ์คำว่า "เริ่มใหม่"?'
+             sticker_message = StickerSendMessage(
+             package_id='2',
+             sticker_id='24')
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in 'ไม่สบายใจ':
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
