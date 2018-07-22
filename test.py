@@ -354,6 +354,8 @@ def continues1(userid,question):
         print("count2")
         print(count2)
         answer = t9[No+1]
+        print("NO+1")
+        print(No+1)
         No1 = No
         db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
         return answer
