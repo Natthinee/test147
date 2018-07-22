@@ -278,42 +278,39 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif question == "ทำต่อจากเดิม":
-        Q2 = 0
-        Q9 = 0  
+    elif question == "ทำต่อจากเดิม": 
         Q9 = findxx(userid,question)
         print(Q9)
         Q2 = findyy(userid,question)
         print(Q2)
-        if Q9 < 10:
-            db.delete_many({'No':findxx(userid,question)-1})
-            answer = str(find1(userid,question))
-            buttons_template_message = TemplateSendMessage(
-                alt_text='Buttons template',
-                template=ButtonsTemplate(
-                    title = answer,
-                    text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
-                    actions=[
-                        MessageTemplateAction(
-                            label='0=ไม่มีเลย',
-                            text='0',
-                        ),
-                        MessageTemplateAction(
-                            label='1=เป็นบางวัน',
-                            text='1'
-                        ),
-                        MessageTemplateAction(
-                            label='2=เป็นบ่อย',
-                            text='2'
-                        ),
-                        MessageTemplateAction(
-                            label='3=เป็นทุกวัน',
-                            text='3'
-                        )
-                    ]
-                 )
+        db.delete_many({'No':findxx(userid,question)-1})
+        answer = str(find1(userid,question))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = answer,
+                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='0=ไม่มีเลย',
+                        text='0',
+                    ),
+                    MessageTemplateAction(
+                        label='1=เป็นบางวัน',
+                        text='1'
+                    ),
+                    MessageTemplateAction(
+                        label='2=เป็นบ่อย',
+                        text='2'
+                    ),
+                    MessageTemplateAction(
+                        label='3=เป็นทุกวัน',
+                        text='3'
+                    )
+                ]
              )
-             line_bot_api.reply_message(event.reply_token, buttons_template_message)
+          )
+          line_bot_api.reply_message(event.reply_token, buttons_template_message)
            
        
                 
