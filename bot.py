@@ -277,9 +277,17 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม":
-        db.delete_many({'No':findxx(userid,question)-1})
-        answer = str(find1(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        Q9 = findxx(userid,question)
+        print(Q9)
+        Q2 = findyy(userid,question)
+        print(Q2)
+        if Q2 < 3:
+            db.delete_many({'No': Q2-1})
+            answer = str(find2(userid,question))
+        if Q9 < 10    
+            db.delete_many({'No':findxx(userid,question)-1})
+            answer = str(find1(userid,question))
+       
                 
     elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
