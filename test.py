@@ -308,10 +308,10 @@ def continues(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
    cou = 0
-   cou = findxx(userid,question)-1
+   cou = findxx(userid,question)
+   db.delete_many({"No":cou})
    No1 = 0
    round = 1
-   db.delete_many({"No":cou})
    No1 = cou
    answer = t9[No1]
    db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
