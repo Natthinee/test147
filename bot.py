@@ -279,10 +279,6 @@ def godaun(event):
     elif question == "ทำต่อจากเดิม":
         answer = str(continues1(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-    elif question in anss01:
-        answer = str(continues1(userid,question))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-            
                 
     elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
