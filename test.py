@@ -307,7 +307,7 @@ def deleteQu(userid,question):
 def continues(userid,question):
    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
    db  = client.khim.user
-   count = int(findxx(userid,question))-1
+   count = int(findxx(userid,question))
    round = 1
    No1 = count
    answer = t9[count]
