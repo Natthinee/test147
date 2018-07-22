@@ -279,6 +279,8 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
     elif question == "ทำต่อจากเดิม": 
+        Q9 = 0
+        Q2 = 0
         Q9 = findxx(userid,question)
         print(Q9)
         Q2 = findyy(userid,question)
