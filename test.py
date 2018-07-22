@@ -311,7 +311,7 @@ def continues(userid,question):
    cou = findxx(userid,question)
    No1 = 0
    round = 1
-   db.delete_many({'No':del})
+   db.delete_many({"No":cou})
    No1 = cou
    answer = t9[No1]
    db.insert({"UserID":userid,"Round":round,"No":No1,"Question": question, "Answer": answer})
