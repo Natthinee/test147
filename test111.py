@@ -48,11 +48,11 @@ def regular2(userid,question):
   pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
   if re.search(pattern1,question):
       return "k"
-  if re.search(pattern2,question):
+  elif re.search(pattern2,question):
       return "h"
-  if re.search(pattern3,question):
+  elif re.search(pattern3,question):
       return "i"
-  if re.search(pattern4,question):
+  elif re.search(pattern4,question):
       return "m"
     
         
