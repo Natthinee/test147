@@ -47,13 +47,13 @@ def regular2(userid,question):
   pattern3 = r'[a-zA-Zก-๙เ]+('+evaluation_form['eval']['ques']+')$'
   pattern4 = r'('+evaluation_form['eval']['ques']+')$'
   if re.search(pattern1,question):
-      return "1"
+      return "k"
   if re.search(pattern2,question):
-      return "2"
+      return "h"
   if re.search(pattern3,question):
-      return "3"
+      return "i"
   if re.search(pattern4,question):
-      return "4"
+      return "m"
     
         
         
