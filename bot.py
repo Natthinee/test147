@@ -26,6 +26,7 @@ import pymongo
 from pymongo import MongoClient
 import json
 import random
+import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
