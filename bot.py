@@ -1108,9 +1108,9 @@ def godaun(event):
                         text='ฝั่งซ้าย'
                     )
                 ]
-            )
-        )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+             )
+          )
+          line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
         
     elif question in clock:
