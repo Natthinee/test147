@@ -42,18 +42,20 @@ def regular1(userid,question):
         return sayhay
     
 def regular2(userid,question):
-  pattern1 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'
-  pattern2 = r'('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'    
-  pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')$'
-  pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
-  if re.search(pattern1,question):
-      return "k"
-  elif re.search(pattern2,question):
-      return "h"
-  elif re.search(pattern3,question):
-      return "i"
-  elif re.search(pattern4,question):
-      return "m"
+  i = 0
+  while(i<len(ques)):
+        pattern1 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'
+        pattern2 = r'('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'    
+        pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')$'
+        pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
+        if re.search(pattern1,question):
+            return "k"
+        elif re.search(pattern2,question):
+            return "h"
+        elif re.search(pattern3,question):
+            return "i"
+        elif re.search(pattern4,question):
+            return "m"
     
         
         
