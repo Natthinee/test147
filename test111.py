@@ -57,6 +57,7 @@ def regular2(userid,question):
             count = 1
         elif re.search(pattern4,question):
             count = 1
+        i = i+1
     if count == 1:
         return "reg1"
     
