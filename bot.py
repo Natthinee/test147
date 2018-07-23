@@ -486,8 +486,8 @@ def godaun(event):
              sticker_id='24')
              line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
              line_bot_api.push_message(userid, sticker_message)
-             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
-             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             #answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+             #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         carousel_template_message = TemplateSendMessage(
