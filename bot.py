@@ -29,6 +29,7 @@ import random
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
+from test111 import regular2
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -122,6 +123,7 @@ def godaun(event):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     dd  = client.khim.Q2
+    regu = regular2(userid,question)
     Qx = str(findxx(userid,question))
     print(Qx)
     Qy = str(findyy(userid,question))
@@ -134,7 +136,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
  
-    if question in 'ไม่สบายใจ':
+    if question in regu:
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
         sticker_message = StickerSendMessage(
         package_id='2',
