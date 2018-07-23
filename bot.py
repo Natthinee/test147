@@ -122,6 +122,10 @@ def godaun(event):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     dd  = client.khim.Q2
+    Qx = str(findxx(userid,question))
+    print(Qx)
+    Qy = str(findyy(userid,question))
+    print(Qy)
     #print(count)
     #if question in 'สวัสดีจ้าาา':
        #answer = tess 
@@ -130,11 +134,11 @@ def godaun(event):
        #sticker_id='2')
        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        #line_bot_api.push_message(userid, sticker_message)     
-    if question in evaluation_form['eval']['greet']:
-       Qx = str(findxx(userid,question))
-       print(Qx)
-       Qy = str(findyy(userid,question))
-       print(Qy)
+    #if question in evaluation_form['eval']['greet']:
+       #Qx = str(findxx(userid,question))
+       #print(Qx)
+       #Qy = str(findyy(userid,question))
+       #print(Qy)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
     elif question in 'ไม่สบายใจ':
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
