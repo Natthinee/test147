@@ -43,19 +43,22 @@ def regular1(userid,question):
     
 def regular2(userid,question):
   i = 0
+  count = 0
   while(i<len(ques)):
-        pattern1 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'
-        pattern2 = r'('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'    
-        pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')$'
-        pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
+        pattern1 = r'[a-zA-Zก-๙เ]+('+ques[i]+')[a-zA-Zก-๙เ]+$'
+        pattern2 = r'('+ques[i]+')[a-zA-Zก-๙เ]+$'    
+        pattern3 = r'[a-zA-Zก-๙เ]+('+ques[i]+')$'
+        pattern4 = r'('+ques[i]+')$'
         if re.search(pattern1,question):
-            return "k"
+            count = 1
         elif re.search(pattern2,question):
-            return "h"
+            count = 1
         elif re.search(pattern3,question):
-            return "i"
+            count = 1
         elif re.search(pattern4,question):
-            return "m"
+            count = 1
+   if count == 1:
+       return "reg1"
     
         
         
