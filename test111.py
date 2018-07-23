@@ -42,10 +42,10 @@ def regular1(userid,question):
         return sayhay
     
 def regular2(userid,question):
-  pattern1 = r'[a-zA-Zก-๙เ]+('+evaluation_form['eval']['ques']+')[a-zA-Zก-๙เ]+$'
-  pattern2 = r'('+evaluation_form['eval']['ques']+')[a-zA-Zก-๙เ]+$'    
-  pattern3 = r'[a-zA-Zก-๙เ]+('+evaluation_form['eval']['ques']+')$'
-  pattern4 = r'('+evaluation_form['eval']['ques']+')$'
+  pattern1 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'
+  pattern2 = r'('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'    
+  pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')+')$'
+  pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
   if re.search(pattern1,question):
       return "k"
   if re.search(pattern2,question):
