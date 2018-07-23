@@ -126,20 +126,14 @@ def godaun(event):
     print(Qx)
     Qy = str(findyy(userid,question))
     print(Qy)
-    #print(count)
-    #if question in 'สวัสดีจ้าาา':
-       #answer = tess 
-       #sticker_message = StickerSendMessage(
-       #package_id='1',
-       #sticker_id='2')
-       #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       #line_bot_api.push_message(userid, sticker_message)     
-    #if question in evaluation_form['eval']['greet']:
-       #Qx = str(findxx(userid,question))
-       #print(Qx)
-       #Qy = str(findyy(userid,question))
-       #print(Qy)
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
+    if question in evaluation_form['eval']['greet']:
+        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='22')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, sticker_message)
+ 
     if question in 'ไม่สบายใจ':
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
         sticker_message = StickerSendMessage(
