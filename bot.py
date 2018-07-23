@@ -1091,13 +1091,13 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
       
-    elif question in 'สนใจ':
+    elif question == "สนใจ":
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 thumbnail_image_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-06.jpg',
                 title=answer,
-                text='เลือกข้อมูลตามระดับอาการนะจ๊ะ',
+                text='เลือกสิๆ',
                 actions=[
                     MessageTemplateAction(
                         label='ฝั่งซ้าย',
@@ -1109,8 +1109,8 @@ def godaun(event):
                     )
                 ]
              )
-          )
-          line_bot_api.reply_message(event.reply_token, buttons_template_message)
+         )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
         
     elif question in clock:
