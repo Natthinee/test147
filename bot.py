@@ -136,6 +136,7 @@ def godaun(event):
        Qy = str(findyy(userid,question))
        print(Qy)
        if Qy=="0":
+             print(Qy)
              answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
              sticker_message = StickerSendMessage(
              package_id='2',
