@@ -909,8 +909,38 @@ def godaun(event):
                         text='ข่าวสารซึมเศร้า'
                     ),
                     MessageTemplateAction(
-                        label='สรุปเเบบประเมิน',
-                        text='สรุปเเบบประเมิน'
+                        label='เมนูหลัก',
+                        text='เมนูหลัก'
+                    )
+                ]
+             )
+          )
+        
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    elif question == "เมนูหลัก":
+        #question1 = str(find1(userid,question))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title='กอดอุ่นทำได้ๆ',
+                text='ลองเลือกใช้ดูหน่อยนะจ๊ะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='เล่าหน่อยนะ',
+                        text='เล่าหน่อยนะ',
+                    ),
+                    MessageTemplateAction(
+                        label='คุยกับเเบบประเมิน',
+                        text='คุยกับเเบบประเมิน'
+                    ),
+                    MessageTemplateAction(
+                        label='จิตเวชใกล้',
+                        text='จิตเวชใกล้บ้าน'
+                    ),
+                    MessageTemplateAction(
+                        label='ฟังก์ชันเพิ่มเติม',
+                        text='ฟังก์ชันเพิ่มเติม'
                     )
                 ]
              )
