@@ -42,11 +42,18 @@ def regular1(userid,question):
         return sayhay
     
 def regular2(userid,question):
-    pattern1 = '[ก-ฮ]('+evaluation_form['eval']['ques']+')[ก-ฮ]'
-    pattern2 = '('+evaluation_form['eval']['ques']+')[ก-ฮ]'    
-    pattern3 = '[ก-ฮ]('+evaluation_form['eval']['ques']+')'
-    if question in pattern1 or pattern2 or pattern3:
-        return questionja
+  pattern1 = r'[a-zA-Zก-๙เ]+('+evaluation_form['eval']['ques']+')[a-zA-Zก-๙เ]+$'
+  pattern2 = r'('+evaluation_form['eval']['ques']+')[a-zA-Zก-๙เ]+$'    
+  pattern3 = r'[a-zA-Zก-๙เ]+('+evaluation_form['eval']['ques']+')$'
+  pattern4 = r'('+evaluation_form['eval']['ques']+')$'
+  if re.search(pattern1,question):
+      return "1"
+  if re.search(pattern2,question):
+      return "2"
+  if re.search(pattern3,question):
+      return "3"
+  if re.search(pattern4,question):
+      return "4"
     
         
         
