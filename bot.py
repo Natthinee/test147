@@ -1096,7 +1096,7 @@ def godaun(event):
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 thumbnail_image_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-06.jpg',
-                title=answer,
+                title='เลือกอันไหนดีน้า',
                 text='เลือกสิๆ',
                 actions=[
                     MessageTemplateAction(
