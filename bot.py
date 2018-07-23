@@ -1113,8 +1113,12 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-    elif question in clock:
-        answer = 'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'+'\n'+'ถ้าจะทำต่อพิมพ์คำว่า "ทำต่อ"'+'\n'+'ถ้าอยากใช้ฟังก์ชันก์ใหม่ ให้พิมพ์ "ฟังก์ชันเพิ่มเติม" นะจ๊ะ'
+    elif question == "A":
+        answer = 'ถูกต้องจ้าาาาาา ⊙０⊙'+'\n'+'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'+'\n'+'ถ้าจะทำต่อพิมพ์คำว่า "ทำต่อ"'+'\n'+'ถ้าอยากใช้ฟังก์ชันก์ใหม่ ให้พิมพ์ "ฟังก์ชันเพิ่มเติม" นะจ๊ะ'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    
+    elif question == "B":
+        answer = 'ผิดจ้าาาาาา ⊙﹏⊙'+'\n'+'เฉลย เรือนซ้ายจ้า เพราะถ้าเกิดนาฬิกาเดินเข็มวินาทีจะชนจ้าาา'+'\n'+'ถ้าจะทำต่อพิมพ์คำว่า "ทำต่อ"'+'\n'+'ถ้าอยากใช้ฟังก์ชันก์ใหม่ ให้พิมพ์ "ฟังก์ชันเพิ่มเติม" นะจ๊ะ'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
     
     elif question in happy:
