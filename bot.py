@@ -1095,17 +1095,17 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                thumbnail_image_url='https://www.meekhao.com/wp-content/uploads/2018/02/puzzles-06.jpg',
-                title='เลือกอันไหนดีน้า',
+                thumbnail_image_url='https://i.imgur.com/gaHNN7o.jpg',
+                title='นาฬิกาเรือนไหนของจริง',
                 text='เลือกสิๆ',
                 actions=[
                     MessageTemplateAction(
-                        label='ฝั่งซ้าย',
-                        text='ฝั่งซ้าย',
+                        label='A',
+                        text='A',
                     ),
                     MessageTemplateAction(
-                        label='ฝั่งขวา',
-                        text='ฝั่งซ้าย'
+                        label='B',
+                        text='B'
                     )
                 ]
              )
