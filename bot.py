@@ -1095,7 +1095,7 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                thumbnail_image_url='https://i.imgur.com/gaHNN7o.jpg',
+                thumbnail_image_url='https://i.imgur.com/AXPAHUU.jpg',
                 title='นาฬิกาเรือนไหนของจริง',
                 text='เลือกสิๆ',
                 actions=[
