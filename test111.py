@@ -44,7 +44,7 @@ def regular1(userid,question):
 def regular2(userid,question):
   pattern1 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'
   pattern2 = r'('+str(evaluation_form['eval']['ques'])+')[a-zA-Zก-๙เ]+$'    
-  pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')+')$'
+  pattern3 = r'[a-zA-Zก-๙เ]+('+str(evaluation_form['eval']['ques'])+')$'
   pattern4 = r'('+str(evaluation_form['eval']['ques'])+')$'
   if re.search(pattern1,question):
       return "k"
