@@ -140,7 +140,7 @@ def godaun(event):
        #Qy = str(findyy(userid,question))
        #print(Qy)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message))
-    elif question in 'ไม่สบายใจ':
+    if question in 'ไม่สบายใจ':
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
         sticker_message = StickerSendMessage(
         package_id='2',
