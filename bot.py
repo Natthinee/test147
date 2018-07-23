@@ -471,8 +471,23 @@ def godaun(event):
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif question == richmanu['rich']['rich02']:
         #answer = ansrich02
-        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        if Qy=="0":
+             print(Qy)
+             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+             sticker_message = StickerSendMessage(
+             package_id='2',
+             sticker_id='22')
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             line_bot_api.push_message(userid, sticker_message)
+       else:
+             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ ดูเหมือนยังทำเเบบประเมินไม่เสร็จเลย ถ้าอยากทำต่ออันเดิม พิมพ์คำว่า "ทำต่ออันเดิม" เเต่ถ้าอยากเริ่มใหม่ ให้พิมพ์คำว่า "เริ่มใหม่"?'
+             sticker_message = StickerSendMessage(
+             package_id='2',
+             sticker_id='24')
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             line_bot_api.push_message(userid, sticker_message)
+             answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
       ##################################อยู่ในส่วนเดียวกับข้างบนเเละเเต่เผื่อฟังก์ชันก์เพิ่ม################################
     elif question == richmanu['rich']['rich03']:
         carousel_template_message = TemplateSendMessage(
