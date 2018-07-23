@@ -124,8 +124,8 @@ def godaun(event):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     dd  = client.khim.Q2
-    #regu1 = str(regular2(userid,question))
-    regu1 = "111"
+    regu1 = str(regular2(userid,question))
+    #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
     Qy = str(findyy(userid,question))
