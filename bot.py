@@ -30,7 +30,7 @@ import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
-from test111 import regular2
+from test111 import regular1,regular2
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -92,6 +92,7 @@ unhappy = ['มีเเรื่องทุกข์ใจ','ทุกข์�
 sayhappy = ['เคร','ลองดู','ได้ๆ','เอามาดิ','ลองดูก็ได้','ได้','ได้นะ','ok','Ok','โอเค','ตกลง','ได้จ้า','เครนะ','ตกลง','โอเครร','โอเคร']
 Querich =' เอ๊ะๆ ดูเหมือนยังทำเเบบประเมิน\nไม่เสร็จเลย\nถ้าอยากทำต่ออันเดิม พิมพ์คำว่า\n"ทำต่อจากเดิม"\nเเต่ถ้าอยากเริ่มใหม่\nให้พิมพ์คำว่า "เริ่มทำใหม่"?'
 re1 = "reg1"
+re2 = "reg2"
 
 @app.route("/")
 def hello():
@@ -124,22 +125,23 @@ def godaun(event):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
     db  = client.khim.user
     dd  = client.khim.Q2
-    regu1 = str(regular2(userid,question))
+    regu1 = str(regular1(userid,question))
+    regu2 = str(regular2(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
     Qy = str(findyy(userid,question))
     print(Qy)
     
-    if question in evaluation_form['eval']['greet']:
-        answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
-        sticker_message = StickerSendMessage(
-        package_id='2',
-        sticker_id='22')
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.push_message(userid, sticker_message)
- 
     if regu1 == re1:
+      answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+      sticker_message = StickerSendMessage(
+      package_id='2',
+      sticker_id='22')
+      line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+      line_bot_api.push_message(userid, sticker_message)
+ 
+    elif regu2 == re2:
         answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
         sticker_message = StickerSendMessage(
         package_id='2',
