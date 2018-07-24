@@ -35,11 +35,24 @@ questionja = 'อยากจะเริ่มทำเเบบประเม
 
 
 def regular1(userid,question):
-    pattern1 = '[ก-ฮ]('+evaluation_form['eval']['greet']+')[ก-ฮ]'
-    pattern2 = '('+evaluation_form['eval']['greet']+')[ก-ฮ]'    
-    pattern3 = '[ก-ฮ]('+evaluation_form['eval']['greet']+')'
-    if question in pattern1 or pattern2 or pattern3:
-        return sayhay
+    i = 0
+    count = 0
+    while(i<len(sayhi)):
+        pattern1 = r'[a-zA-Zก-๙เ]+('+sayhi[i]+')[a-zA-Zก-๙เ]+$'
+        pattern2 = r'('+sayhi[i]+')[a-zA-Zก-๙เ]+$'    
+        pattern3 = r'[a-zA-Zก-๙เ]+('+sayhi[i]+')$'
+        pattern4 = r'('+sayhi[i]+')$'
+        if re.search(pattern1,question):
+            count = 1
+        elif re.search(pattern2,question):
+            count = 1
+        elif re.search(pattern3,question):
+            count = 1
+        elif re.search(pattern4,question):
+            count = 1
+        i = i+1
+    if count == 1:
+        return "reg1"
     
 def regular2(userid,question):
     i = 0
@@ -59,7 +72,7 @@ def regular2(userid,question):
             count = 1
         i = i+1
     if count == 1:
-        return "reg1"
+        return "reg2"
     
         
         
