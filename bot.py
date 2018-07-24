@@ -30,7 +30,7 @@ import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
-from test111 import regular1,regular2,regular3
+from test111 import regular1,regular2,regular3,regular4
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -94,7 +94,7 @@ Querich =' เอ๊ะๆ ดูเหมือนยังทำเเบบ�
 re1 = "reg1"
 re2 = "reg2"
 re3 = "reg3"
-
+re4 = "reg4"
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -129,6 +129,7 @@ def godaun(event):
     regu1 = str(regular1(userid,question))
     regu2 = str(regular2(userid,question))
     regu3 = str(regular3(userid,question))
+    regu4 = str(regular4(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
@@ -159,7 +160,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message)) 
-    elif question in 'ถึงสองสัปดาห์เเล้ว':
+    elif regu4 == re4:
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
