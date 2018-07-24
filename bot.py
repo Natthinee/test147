@@ -130,8 +130,8 @@ def godaun(event):
     regu1 = str(regular1(userid,question))
     regu2 = str(regular2(userid,question))
     regu3 = str(regular3(userid,question))
-    regu4 = str(regular4(userid,question))
-    regu5 = str(regular5(userid,question))
+    #regu4 = str(regular4(userid,question))
+    #regu5 = str(regular5(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
@@ -147,7 +147,7 @@ def godaun(event):
       line_bot_api.push_message(userid, sticker_message)
  
     elif regu2 == re2:
-        answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา ?'
+        answer = 'มีความรู้สึกเเบบนี้มานานถึงสองสัปดาห์ยังน้าา?\nพิมพ์คำว่า "ถึง" ถ้าเป็นมานานถึงสองสัปดาห์เเล้ว\nพิมพ์คำว่า "ยัง" ถ้ายังเป็นไม่ถึงสองสัปห์ดาห์' 
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='149')
@@ -162,7 +162,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=location_message)) 
-    elif regu4 == re4:
+    elif question== "ถึง":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -184,14 +184,14 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
         
-    elif regu5 == re5: 
+    elif question == "ยัง": 
         answer = 'งั้นมาลองหาอะไรทำเพื่อผ่อนคลายกันเถอะเนอะ พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ'
         sticker_message = StickerSendMessage(
         package_id='3',
         sticker_id='218')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
-    elif question in 'ลอง':
+    elif question == "ลอง":
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -213,7 +213,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
         
-    elif question in 'ไม่ลอง':
+    elif question == "ไม่ลอง":
         answer = 'งั้นวันนี้กอดอุ่นต้องขอตัวไปก่อนนะ เเล้วไว้เจอกันใหม่ เมื่อคิดถึงกอดอุ่นเด้อออ'
         sticker_message = StickerSendMessage(
         package_id='2',
