@@ -20,6 +20,8 @@ qq2 = open("qq2.txt", "r", encoding='utf-8-sig')
 qq2 = qq2.read().split(',')
 happy = open("happy.txt", "r", encoding='utf-8-sig')
 happy = happy.read().split(',')
+tung = open("tung.txt", "r", encoding='utf-8-sig')
+tung = tung.read().split(',')
 province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
@@ -99,11 +101,11 @@ def regular3(userid,question):
 def regular4(userid,question):
     i = 0
     count = 0
-    while(i<len(happy)):
-        pattern1 = r'[a-zA-Zก-๙เ' ']+('+happy[i]+')[a-zA-Zก-๙เ' ']+$'
-        pattern2 = r'('+happy[i]+')[a-zA-Zก-๙เ' ']+$'    
-        pattern3 = r'[a-zA-Zก-๙เ' ']+('+happy[i]+')$'
-        pattern4 = r'('+happy[i]+')$'
+    while(i<len(tung)):
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+tung[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+tung[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+tung[i]+')$'
+        pattern4 = r'('+tung[i]+')$'
         if re.search(pattern1,question):
             count = 1
         elif re.search(pattern2,question):
