@@ -30,7 +30,7 @@ import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
 from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
-from test111 import regular1,regular2,regular3,regular4
+from test111 import regular1,regular2,regular3,regular4,regular5
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -95,6 +95,7 @@ re1 = "reg1"
 re2 = "reg2"
 re3 = "reg3"
 re4 = "reg4"
+re5 = "reg5"
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -130,6 +131,7 @@ def godaun(event):
     regu2 = str(regular2(userid,question))
     regu3 = str(regular3(userid,question))
     regu4 = str(regular4(userid,question))
+    regu5 = str(regular5(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
@@ -182,7 +184,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
         
-    elif question in 'เป็นเเค่ไม่กี่วันเอง': 
+    elif regu5 == re5: 
         answer = 'งั้นมาลองหาอะไรทำเพื่อผ่อนคลายกันเถอะเนอะ พิมพ์คำว่า "ลอง" ถ้าอยากลอง พิมพ์คำว่า "ไม่ลอง" ถ้าไม่อยากลองทำ'
         sticker_message = StickerSendMessage(
         package_id='3',
