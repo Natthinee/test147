@@ -38,9 +38,9 @@ def regular1(userid,question):
     i = 0
     count = 0
     while(i<len(sayhi)):
-        pattern1 = r'[a-zA-Zก-๙เ' ']+('+sayhi[i]+')[a-zA-Zก-๙เ' ']+'
-        pattern2 = r'('+sayhi[i]+')[a-zA-Zก-๙เ' ']+'    
-        pattern3 = r'[a-zA-Zก-๙เ' ']+('+sayhi[i]+')'
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+sayhi[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+sayhi[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+sayhi[i]+')$'
         pattern4 = r'('+sayhi[i]+')$'
         if re.search(pattern1,question):
             count = 1
