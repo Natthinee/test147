@@ -22,6 +22,8 @@ happy = open("happy.txt", "r", encoding='utf-8-sig')
 happy = happy.read().split(',')
 tung = open("tung.txt", "r", encoding='utf-8-sig')
 tung = tung.read().split(',')
+No = open("No.txt", "r", encoding='utf-8-sig')
+No = No.read().split(',')
 province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
@@ -117,6 +119,27 @@ def regular4(userid,question):
         i = i+1
     if count == 1:
         return "reg4"
+      
+      
+def regular5(userid,question):
+    i = 0
+    count = 0
+    while(i<len(No)):
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+No[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+No[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+No[i]+')$'
+        pattern4 = r'('+No[i]+')$'
+        if re.search(pattern1,question):
+            count = 1
+        elif re.search(pattern2,question):
+            count = 1
+        elif re.search(pattern3,question):
+            count = 1
+        elif re.search(pattern4,question):
+            count = 1
+        i = i+1
+    if count == 1:
+        return "reg5"
       
       
     
