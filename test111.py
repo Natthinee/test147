@@ -58,9 +58,9 @@ def regular2(userid,question):
     i = 0
     count = 0
     while(i<len(ques)):
-        pattern1 = r'[a-zA-Zก-๙เ]+('+ques[i]+')[a-zA-Zก-๙เ]+$'
-        pattern2 = r'('+ques[i]+')[a-zA-Zก-๙เ]+$'    
-        pattern3 = r'[a-zA-Zก-๙เ]+('+ques[i]+')$'
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+ques[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+ques[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+ques[i]+')$'
         pattern4 = r'('+ques[i]+')$'
         if re.search(pattern1,question):
             count = 1
