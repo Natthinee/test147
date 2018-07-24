@@ -95,6 +95,28 @@ def regular3(userid,question):
         i = i+1
     if count == 1:
         return "reg3"
+      
+def regular4(userid,question):
+    i = 0
+    count = 0
+    while(i<len(happy)):
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+happy[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+happy[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+happy[i]+')$'
+        pattern4 = r'('+happy[i]+')$'
+        if re.search(pattern1,question):
+            count = 1
+        elif re.search(pattern2,question):
+            count = 1
+        elif re.search(pattern3,question):
+            count = 1
+        elif re.search(pattern4,question):
+            count = 1
+        i = i+1
+    if count == 1:
+        return "reg4"
+      
+      
     
         
         
