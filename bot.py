@@ -242,6 +242,10 @@ def godaun(event):
                           MessageTemplateAction(
                               label='message2',
                               text='message text2'
+                          ),
+                          MessageTemplateAction(
+                              label='message3',
+                              text='message text3'
                           )
                        ]
                     )   
