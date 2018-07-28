@@ -148,14 +148,14 @@ def regular6(userid,question):
     pattern2 = r'(กรุงเทพ)[a-zA-Zก-๙เ' ']+$'    
     pattern3 = r'[a-zA-Zก-๙เ' ']+(กรุงเทพ)$'
     pattern4 = r'(กรุงเทพ)$'
-       if re.search(pattern1,question):
-            count = 1
-       elif re.search(pattern2,question):
-            count = 1
-       elif re.search(pattern3,question):
-            count = 1
-       elif re.search(pattern4,question):
-            count = 1
+    if re.search(pattern1,question):
+        count = 1
+    elif re.search(pattern2,question):
+        count = 1
+    elif re.search(pattern3,question):
+        count = 1
+    elif re.search(pattern4,question):
+        count = 1
     if count == 1:
         return "reg6"
       
