@@ -48,6 +48,8 @@ province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
 provinceY = provinceY.read().split('\n')
+nameHospital = open("NameHospital.txt", "r", encoding='utf-8-sig')
+nameHospital = nameHospital.read().split('\n')
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -1183,15 +1185,15 @@ def godaun(event):
                 actions=[
                     MessageTemplateAction(
                         label='รพ.จุฬาลงกรณ์',
-                        text='รพ.จุฬาลงกรณ์',
+                        text='โรงพยาบาลจุฬาลงกรณ์',
                     ),
                     MessageTemplateAction(
                         label='รพ.ศิริราช',
-                        text='รพ.ศิริราช'
+                        text='โรงพยาบาลศิริราช'
                     ),
                     MessageTemplateAction(
                         label='รพ.รามาธิบดี',
-                        text='รพ.รามาธิบดี'
+                        text='โรงพยาบาลรามาธิบดี'
                     ),
                     MessageTemplateAction(
                         label='ดูโรงพยาบาลต่อ',
@@ -1211,11 +1213,11 @@ def godaun(event):
                 actions=[
                     MessageTemplateAction(
                         label='รพ.ภูมิพลอดุลยเดช',
-                        text='รพ.ภูมิพลอดุลยเดช',
+                        text='โรงพยาบาลภูมิพลอดุลยเดช',
                     ),
                     MessageTemplateAction(
                         label='รพ.วชิรพยาบาล',
-                        text='รพ.วชิรพยาบาล'
+                        text='โรงพยาบาลวชิรพยาบาล'
                     ),
                     MessageTemplateAction(
                         label='ก่อนหน้า',
@@ -1238,15 +1240,15 @@ def godaun(event):
                 actions=[
                     MessageTemplateAction(
                         label='รพ.จุฬาลงกรณ์',
-                        text='รพ.จุฬาลงกรณ์',
+                        text='โรงพยาบาลจุฬาลงกรณ์',
                     ),
                     MessageTemplateAction(
                         label='รพ.ศิริราช',
-                        text='รพ.ศิริราช'
+                        text='โรงพยาบาลศิริราช'
                     ),
                     MessageTemplateAction(
                         label='รพ.รามาธิบดี',
-                        text='รพ.รามาธิบดี'
+                        text='โรงพยาบาลรามาธิบดี'
                     ),
                     MessageTemplateAction(
                         label='ดูโรงพยาบาลต่อ',
@@ -1294,11 +1296,11 @@ def godaun(event):
                 actions=[
                     MessageTemplateAction(
                         label='รพ.ภูมิพลอดุลยเดช',
-                        text='รพ.ภูมิพลอดุลยเดช',
+                        text='โรงพยาบาลภูมิพลอดุลยเดช',
                     ),
                     MessageTemplateAction(
                         label='รพ.วชิรพยาบาล',
-                        text='รพ.วชิรพยาบาล'
+                        text='โรงพยาบาลวชิรพยาบาล'
                     ),
                     MessageTemplateAction(
                         label='ก่อนหน้า',
@@ -1420,7 +1422,21 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)   
-        
+    
+    elif question in nameHospital:
+        answer = hos+'\n'+str(addressPro(question))
+        location_message = LocationSendMessage(
+        title = provincee(question),
+        address = hospitalName(question),
+        latitude = Latitudee(question),
+        longitude = longtitutee(question) )
+        sticker_message = StickerSendMessage(
+        package_id='2',
+        sticker_id='176')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, location_message)
+        line_bot_api.push_message(userid, sticker_message)
+    
         
         
    
