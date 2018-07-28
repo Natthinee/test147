@@ -1202,8 +1202,8 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
         
-     elif question == "ดูโรงพยาบาลต่อ":
-         buttons_template_message = TemplateSendMessage(
+    elif question == "ดูโรงพยาบาลต่อ":
+        buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
