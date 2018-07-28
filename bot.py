@@ -29,8 +29,8 @@ import random
 import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
 from countSco import scoreC,scoreQ2
-from test import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
-from test111 import regular1,regular2,regular3,regular4,regular5
+from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
+from regularCheck import regular1,regular2,regular3,regular4,regular5
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
