@@ -223,7 +223,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
     elif regu6 == re6:
-        answer = "1478"
+        answer = '1478'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         
     elif question in 'เอ๊ะ':
