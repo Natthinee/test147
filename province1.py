@@ -42,6 +42,17 @@ def addressPro(question):
             
     return 'ที่อยู่โรงพยาบาล:\n'+address+'\n'+'เว็บไซต์โรงพยาบาล:\n'+web+'\n'+'เบอร์โทรศัพท์:\n'+ telophone
 
+def namehosLati(question):
+    for i in db.find():
+        if(i['hospital'] == question):
+            return float(i['Latitude']
+                         
+    
+def namehoslongti(question):
+    
+    
+    
+
     
     
     
