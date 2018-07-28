@@ -223,8 +223,35 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
     elif regu6 == re6:
-        answer = '1478'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        carousel_template_message = TemplateSendMessage(
+            alt_text='Carousel template',
+            template=CarouselTemplate(
+                columns=[
+                  CarouselColumn(
+                      title='เพลงผ่อนคลาย',
+                      text='มาฟังเพลงกัน',
+                      actions=[      
+                          MessageAction(
+                              label='message2',
+                              text='message text2'
+                          ), 
+                          MessageAction(
+                              label='message2',
+                              text='message text2'
+                          ), 
+                          MessageAction(
+                              label='message2',
+                              text='message text2'
+                          )
+                       ]
+                    )   
+                 ]
+              )
+          )
+        line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
+        
+
+        
         
     elif question in 'เอ๊ะ':
         buttons_template_message = TemplateSendMessage(
