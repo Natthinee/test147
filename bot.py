@@ -222,40 +222,6 @@ def godaun(event):
         sticker_id='158')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
-    elif regu6 == re6:
-        carousel_template_message = TemplateSendMessage(
-            alt_text='Carousel template',
-            template=CarouselTemplate(
-                columns=[
-                  CarouselColumn(
-                      title='เพลงผ่อนคลาย',
-                      text='มาฟังเพลงกัน',
-                      actions=[      
-                          MessageTemplateAction(
-                              label='message2',
-                              text='message text2'
-                          ), 
-                          MessageTemplateAction(
-                              label='message2',
-                              text='message text2'
-                          ), 
-                          MessageTemplateAction(
-                              label='message2',
-                              text='message text2'
-                          ),
-                          MessageTemplateAction(
-                              label='message3',
-                              text='message text3'
-                          )
-                       ]
-                    )   
-                 ]
-              )
-          )
-        line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
-        
-
-        
         
     elif question in 'เอ๊ะ':
         buttons_template_message = TemplateSendMessage(
@@ -1207,6 +1173,202 @@ def godaun(event):
         sticker_id='125')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
+        
+    elif regu6 == re6:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.จุฬาลงกรณ์',
+                        text='รพ.จุฬาลงกรณ์',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ศิริราช',
+                        text='รพ.ศิริราช'
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.รามาธิบดี',
+                        text='รพ.รามาธิบดี'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูโรงพยาบาลต่อ',
+                        text='ดูโรงพยาบาลต่อ'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+     elif question == "ดูโรงพยาบาลต่อ":
+         buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.ภูมิพลอดุลยเดช',
+                        text='รพ.ภูมิพลอดุลยเดช',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.วชิรพยาบาล',
+                        text='รพ.วชิรพยาบาล'
+                    ),
+                    MessageTemplateAction(
+                        label='ก่อนหน้า',
+                        text='ก่อนหน้า'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูถัดไป',
+                        text='ดูถัดไป'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    elif question == "ก่อนหน้า":
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.จุฬาลงกรณ์',
+                        text='รพ.จุฬาลงกรณ์',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ศิริราช',
+                        text='รพ.ศิริราช'
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.รามาธิบดี',
+                        text='รพ.รามาธิบดี'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูโรงพยาบาลต่อ',
+                        text='ดูโรงพยาบาลต่อ'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+     elif question == "ดูถัดไป":
+         buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='สถาบันราชานุกูล',
+                        text='สถาบันราชานุกูล',
+                    ),
+                    MessageTemplateAction(
+                        label='สถาบันสุขภาพจิตเด็ก',
+                        text='สถาบันสุขภาพจิตเด็กและวัยรุ่นราชนครินทร์'
+                    ),
+                    MessageTemplateAction(
+                        label='ก่อนหน้า',
+                        text='ก่อนหน้า.'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูถัดไป',
+                        text='ดูถัดไป.'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+    elif question == "ก่อนหน้า.":
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.ภูมิพลอดุลยเดช',
+                        text='รพ.ภูมิพลอดุลยเดช',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.วชิรพยาบาล',
+                        text='รพ.วชิรพยาบาล'
+                    ),
+                    MessageTemplateAction(
+                        label='ก่อนหน้า',
+                        text='ก่อนหน้า'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูถัดไป',
+                        text='ดูถัดไป'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+    
+    elif question == "ดูถัดไป.":
+         buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='สถาบันสุขภาพเด็ก',
+                        text='สถาบันสุขภาพเด็กแห่งชาติมหาราชินี (โรงพยาบาลเด็ก)',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ตำรวจ',
+                        text='โรงพยาบาลตำรวจ'
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ทหารผ่านศึก',
+                        text='โรงพยาบาลทหารผ่านศึก'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูก่อนหน้า',
+                        text='ดูก่อนหน้า.'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)   
+        
+    elif question == "ดูก่อนหน้า.":
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='สถาบันราชานุกูล',
+                        text='สถาบันราชานุกูล',
+                    ),
+                    MessageTemplateAction(
+                        label='สถาบันสุขภาพจิตเด็ก',
+                        text='สถาบันสุขภาพจิตเด็กและวัยรุ่นราชนครินทร์'
+                    ),
+                    MessageTemplateAction(
+                        label='ก่อนหน้า',
+                        text='ก่อนหน้า.'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูถัดไป',
+                        text='ดูถัดไป.'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
    
       
     else:
