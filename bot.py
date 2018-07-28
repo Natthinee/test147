@@ -231,15 +231,15 @@ def godaun(event):
                       title='เพลงผ่อนคลาย',
                       text='มาฟังเพลงกัน',
                       actions=[      
-                          MessageAction(
+                          MessageTemplateAction(
                               label='message2',
                               text='message text2'
                           ), 
-                          MessageAction(
+                          MessageTemplateAction(
                               label='message2',
                               text='message text2'
                           ), 
-                          MessageAction(
+                          MessageTemplateAction(
                               label='message2',
                               text='message text2'
                           )
