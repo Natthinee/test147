@@ -48,8 +48,8 @@ province = open("province.txt", "r", encoding='utf-8-sig')
 province = province.read().split('\n')
 provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
 provinceY = provinceY.read().split('\n')
-nameHospital = open("NameHospital.txt", "r", encoding='utf-8-sig')
-nameHospital = nameHospital.read().split('\n')
+NameHospital = open("NameHospital.txt", "r", encoding='utf-8-sig')
+NameHospital = NameHospital.read().split('\n')
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -1423,7 +1423,7 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)   
     
-    elif question in nameHospital:
+    elif question in NameHospital:
         answer = hos+'\n'+str(addressProhos(question))
         location_message = LocationSendMessage(
         title = provinceehos(question),
@@ -1437,10 +1437,6 @@ def godaun(event):
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
     
-        
-        
-   
-      
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
