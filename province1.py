@@ -13,6 +13,7 @@ d = decimal.Decimal
 client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
 db  = client.khim.province_Hospital
 dd  = client.khim.hospital_address 
+hospro = []
 def Latitudee(question):
     for i in db.find():
         if(i['province'] == question):
@@ -72,6 +73,23 @@ def hospiName(question):
     for i in db.find():
         if(i['hospital']== question ):
             return i['hospital']
+        
+def prohospital2(question):
+    for i in db.find():
+        if(i['province']== question):
+            hospro.append(i['hospital'])
+    return hospro
+
+def hospro1(question):
+    kublisthos = prohospital2(question)
+    return kublisthos[0]
+
+def hospro2(question):
+    kublisthos = prohospital2(question)
+    return kublisthos[1]
+
+    
+            
                          
                          
 
