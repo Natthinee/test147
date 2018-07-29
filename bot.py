@@ -27,7 +27,7 @@ import pymongo
 import json
 import random
 import re
-from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro
+from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehoslongti,provinceehos,addressProhos,hospiName
 from countSco import scoreC,scoreQ2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
@@ -1424,12 +1424,12 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)   
     
     elif question in nameHospital:
-        answer = hos+'\n'+str(addressPro(question))
+        answer = hos+'\n'+str(addressProhos(question))
         location_message = LocationSendMessage(
-        title = provincee(question),
-        address = hospitalName(question),
-        latitude = Latitudee(question),
-        longitude = longtitutee(question) )
+        title = provinceehos(question),
+        address = hospiName(question),
+        latitude = namehosLati(question),
+        longitude = namehoslongti(question) )
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='176')
