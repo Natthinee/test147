@@ -49,6 +49,34 @@ def namehosLati(question):
                          
     
 def namehoslongti(question):
+    for i in db.find():
+        if(i['hospital'] == question):
+            return float(i['longitude'])
+                         
+                         
+def provinceehos(question):
+    for i in db.find():
+        if(i['hospital']== question ):
+            return i['province']
+                         
+def addressProhos(question):
+    for i in dd.find():
+        if(i['hospital']== question ):
+             address = i['address']
+             web = i['website']
+             telophone = i['tel']
+            
+    return 'ที่อยู่โรงพยาบาล:\n'+address+'\n'+'เว็บไซต์โรงพยาบาล:\n'+web+'\n'+'เบอร์โทรศัพท์:\n'+ telophone
+                         
+                         
+def hospiName(question):
+    for i in db.find():
+        if(i['hospital']== question ):
+            return i['hospital']
+                         
+                         
+
+                         
     
     
     
