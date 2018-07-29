@@ -1422,6 +1422,31 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)   
+        
+        
+    elif question == "ขอนเเก่น":
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.ศรีนครินทร์',
+                        text='โรงพยาบาลศรีนครินทร์ คณะแพทยศาสตร์ มหาวิทยาลัยขอนแก่น',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ศูนย์ขอนแก่น',
+                        text='โรงพยาบาลศูนย์ขอนแก่น'
+                    ),
+                    MessageTemplateAction(
+                        label='สถาบันพัฒนาการเด็ก',
+                        text='สถาบันพัฒนาการเด็กภาคตะวันออกเฉียงเหนือ'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)     
     
     elif question in NameHospital:
         answer = hos+'\n'+str(addressProhos(question))
