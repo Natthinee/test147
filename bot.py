@@ -27,7 +27,7 @@ import pymongo
 import json
 import random
 import re
-from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName
+from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2
 from countSco import scoreC,scoreQ2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
@@ -50,6 +50,9 @@ provinceY = open("provinceY.txt", "r", encoding='utf-8-sig')
 provinceY = provinceY.read().split('\n')
 NameHospital = open("NameHospital.txt", "r", encoding='utf-8-sig')
 NameHospital = NameHospital.read().split('\n')
+prohos2pro = open("prohos2pro.txt", "r", encoding='utf-8-sig')
+prohos2pro = prohos2pro.read().split('\n')
+
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -1448,6 +1451,26 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)     
     
+    elif question in prohos2pro:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='รพ.ศรีนครินทร์',
+                        text= str(hospro1(question))
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ศูนย์ขอนแก่น',
+                        text= str(hospro2(question))
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
     elif question in NameHospital:
         answer = hos+'\n'+str(addressProhos(question))
         location_message = LocationSendMessage(
@@ -1461,7 +1484,7 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
-    
+             
     else:
         answer = listQNo 
         #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
