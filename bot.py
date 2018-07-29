@@ -1429,7 +1429,7 @@ def godaun(event):
         title = provinceehos(question),
         address = hospiName(question),
         latitude = namehosLati(question),
-        longitude = namehoslongti(question) )
+        longitude = namehoslong(question) )
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='176')
