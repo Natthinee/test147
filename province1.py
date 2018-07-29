@@ -47,8 +47,7 @@ def namehosLati(question):
         if(i['hospital'] == question):
             return float(i['Latitude']
                          
-    
-def namehoslongti(question):
+def namehoslong(question):
     for i in db.find():
         if(i['hospital'] == question):
             return float(i['longitude'])
