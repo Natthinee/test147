@@ -27,7 +27,7 @@ import pymongo
 import json
 import random
 import re
-from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehoslong,provinceehos,addressProhos,hospiName
+from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName
 from countSco import scoreC,scoreQ2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
@@ -1429,7 +1429,7 @@ def godaun(event):
         title = provinceehos(question),
         address = hospiName(question),
         latitude = namehosLati(question),
-        longitude = namehoslong(question) )
+        longitude = namehosLong(question) )
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='176')
