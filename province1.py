@@ -55,12 +55,12 @@ def namehosLong(question):
                          
 def provinceehos(question):
     for i in db.find():
-        if(i['hospital']== question ):
+        if(i['hospital'] == question):
             return i['province']
                          
 def addressProhos(question):
     for i in dd.find():
-        if(i['hospital']== question ):
+        if(i['hospital'] == question):
              address = i['address']
              web = i['website']
              telophone = i['tel']
