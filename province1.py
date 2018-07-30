@@ -92,13 +92,20 @@ def tud2prov(question):
     nametud = []
     for i in db.find():
         if i['province']==question:
-             test1 = i['hospital'].split("โรงพยาบาล")
-             test = test1[1].split("(")
-             test2 = test[0]
-             nametud.append(test2)
-              #print(test1)
-              #print(test)
-              #print(test2)
+             if question == "นครปฐม":
+                nametud.append("นครปฐม")
+                nametud.append("สถาบันแห่งชาติเพื่อ..")
+             elif question == "ชลบุรี":
+                nametud.append("ชลบุรี")
+                nametud.append("สมเด็จพระนางเจ้าสิ..")
+             elif question == "นครราชสีมา":
+                nametud.append("มหาราชนครราชสีมา")
+                nametud.append("จิตเวชนครราชสีมา..")
+             else:  
+                test1 = i['hospital'].split("โรงพยาบาล")
+                test = test1[1].split("(")
+                test2 = test[0]
+                nametud.append(test2)
     return nametud
 
 def tud21(question):
