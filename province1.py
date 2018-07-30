@@ -107,7 +107,7 @@ def tud21(question):
     
 def tud22(question):
     tu = tud2prov(question)
-    return tu[0]
+    return tu[1]
     
             
     
