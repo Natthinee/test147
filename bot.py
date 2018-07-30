@@ -1459,11 +1459,11 @@ def godaun(event):
                 text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
                 actions=[
                     MessageTemplateAction(
-                        label = tud21(question),
+                        label = "รพ."+str(tud21(question)),
                         text = str(hospro1(question))
                     ),
                     MessageTemplateAction(
-                        label = tud22(question),
+                        label = "รพ."+str(tud22(question)),
                         text = str(hospro2(question))
                     )
                 ]
