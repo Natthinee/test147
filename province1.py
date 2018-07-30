@@ -86,8 +86,31 @@ def hospro1(question):
 
 def hospro2(question):
     kublisthos = prohospital2(question)
-    
     return kublisthos[1]
+
+def tud2prov(question):
+    nametud = []
+    for i in db.find():
+        if i['province']==question:
+             test1 = i['hospital'].split("โรงพยาบาล")
+             test = test1[1].split("(")
+             test2 = test[0]
+             nametud.append(test2)
+              #print(test1)
+              #print(test)
+              #print(test2)
+    return nametud
+
+def tud21(question):
+    tu = tud2prov(question)
+    return tu[0]
+    
+def tud22(question):
+    tu = tud2prov(question)
+    return tu[0]
+    
+            
+    
 
     
             
