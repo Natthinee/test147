@@ -173,7 +173,7 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='งั้นมาทำเเบบประเมินกันดีกว่า',
+               text='งั้นมาทำเเบบประเมินกันดีกว่า+\n**✖**',
                actions=[
                     MessageTemplateAction(
                         label='เริ่มทำ',
@@ -228,54 +228,6 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message) 
         
-    elif question in 'เอ๊ะ':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='มาทำเเบบประเมินกัน',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='ทำต่อ',
-                        text='ทำต่อ'
-                    ),
-                    MessageTemplateAction(
-                        label='เริ่มทำใหม่',
-                        text='เริ่มทำใหม่'
-                    )
-                ]
-             )
-          )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-    
-    #elif question == 'ทำต่อจากเดิม':
-    #elif question == 'ทำต่อ':
-    #elif question == 'เริ่มทำใหม่':
-       
-    #elif question in 'นิยาย':
-        #answer = 'https://www.youtube.com/watch?v=fBqXr7C1hQM'
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        
-    elif question in 'เเงะ':
-        buttons_template_message = TemplateSendMessage(
-            alt_text='Buttons template',
-            template=ButtonsTemplate(
-                title='มาทำเเบบประเมินกัน',
-                text='ลองเลือกดูซิ',
-                actions=[
-                    MessageTemplateAction(
-                        label='ทำต่อจากเดิม',
-                        text='ทำต่อจากเดิม',
-                    ),
-                    MessageTemplateAction(
-                        label='เริ่มทำใหม่',
-                        text='เริ่มทำใหม่'
-                    )
-                ]
-             )
-          )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)
-        
     elif question == "ทำต่อจากเดิม": 
         Q9 = 0
         Q2 = 0
@@ -311,8 +263,7 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
-           
-       
+    
                 
     elif question == "เริ่มทำใหม่":
         #del = deleteQu(userid,question)
