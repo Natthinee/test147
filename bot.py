@@ -173,8 +173,8 @@ def godaun(event):
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
-               text='งั้นมาทำเเบบประเมินกันดีกว่า+\n**✖**',
-               actions=[
+                text='งั้นมาทำเเบบประเมินกันดีกว่า\n✖✖ เอ๊ะ!!หยุดอ่านแป๊บนึงก่อนนะ\n▣เมื่อกดปุ่ม "เริ่มต้น"\n≡ ตอบเเบบประเมิน 2 ข้อติดกันให้เสร็จ\nก่อนที่จะทำอย่างอื่นนะจ๊ะ◡‿◡✿',
+                actions=[
                     MessageTemplateAction(
                         label='เริ่มทำ',
                         text='เริ่มทำ'
