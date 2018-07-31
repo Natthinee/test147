@@ -968,7 +968,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif question in 'สรุปแบบประเมิน':
+    elif question == "สรุปแบบประเมิน":
         answer = str(scoreC(userid,question))+'\n' + '\n'+str(scoreQ2(userid,question))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    
