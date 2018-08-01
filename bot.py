@@ -54,7 +54,9 @@ NameHospital = NameHospital.read().split('\n')
 prohos2pro = open("prohos2pro.txt", "r", encoding='utf-8-sig')
 prohos2pro = prohos2pro.read().split('\n')
 province4 = ['ชัยนาท','พิจิตร','มหาสารคาม','ร้อยเอ็ด','สกลนคร','สระเเก้ว']
-
+province3 = ['ชุมพร','ตาก','ปราจีนบุรี','พัทลุง','หนองบัวลำภู','อำนาจเจริญ']
+province2 = ['บึงกาฬ','สตูล','สมุทรปราการ','สมุทรสงคราม','เพชรบุรี']
+province1 = ['ตราด','นราธิวาส','ยะลา']
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
                            'ques': ques,
@@ -1442,8 +1444,8 @@ def godaun(event):
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
-                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
-                text='เลือกจังหวัดที่ใกล้บ้าน',
+                title = 'ไม่มีสถานบริการด้านจิตเวช',
+                text='เลือกจังหวัดอื่นที่ใกล้บ้าน',
                 actions=[
                     MessageTemplateAction(
                         label= provincenot4(question,0),
@@ -1465,6 +1467,66 @@ def godaun(event):
              )
           )
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+    elif question in province3:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'ไม่มีสถานบริการด้านจิตเวช',
+                text='เลือกจังหวัดอื่นที่ใกล้บ้าน',
+                actions=[
+                    MessageTemplateAction(
+                        label= provincenot3(question,0),
+                        text= provincenot3(question,0)
+                    ),
+                    MessageTemplateAction(
+                        label= provincenot3(question,1),
+                        text= provincenot3(question,1)
+                    ),
+                    MessageTemplateAction(
+                        label= provincenot3(question,2),
+                        text = provincenot3(question,2)
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
+    elif question in province2:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'ไม่มีสถานบริการด้านจิตเวช',
+                text='เลือกจังหวัดอื่นที่ใกล้บ้าน',
+                actions=[
+                    MessageTemplateAction(
+                        label= provincenot2(question,0),
+                        text= provincenot2(question,0)
+                    ),
+                    MessageTemplateAction(
+                        label= provincenot2(question,1),
+                        text= provincenot2(question,1)
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)    
+        
+    elif question in province1:
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'ไม่มีสถานบริการด้านจิตเวช',
+                text='เลือกจังหวัดอื่นที่ใกล้บ้าน',
+                actions=[
+                    MessageTemplateAction(
+                        label= provincenot1(question,0),
+                        text= provincenot1(question,0)
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)     
         
              
     else:
