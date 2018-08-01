@@ -1400,7 +1400,7 @@ def godaun(event):
                 ]
              )
           )
-        line_bot_api.reply_message(event.reply_token, buttons_template_message)     
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)   
     
     elif question in prohos2pro:
         buttons_template_message = TemplateSendMessage(
@@ -1435,6 +1435,35 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
+    #################### แผนที่ที่เหลือ ####################################################    
+    elif question == "กลับไปหน้าก่อนหน้า":
+        buttons_template_message = TemplateSendMessage(
+            alt_text='Buttons template',
+            template=ButtonsTemplate(
+                title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
+                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                actions=[
+                    MessageTemplateAction(
+                        label='สถาบันสุขภาพเด็ก',
+                        text='สถาบันสุขภาพเด็กแห่งชาติมหาราชินี (โรงพยาบาลเด็ก)',
+                    ),
+                    MessageTemplateAction(
+                        label='รพ.ตำรวจ',
+                        text='โรงพยาบาลตำรวจ'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูก่อนหน้า',
+                        text='ดูก่อนหน้า.'
+                    ),
+                    MessageTemplateAction(
+                        label='ดูโรงพยาบาลต่อ',
+                        text='ดูโรงพยาบาลต่อ.'
+                    )
+                ]
+             )
+          )
+        line_bot_api.reply_message(event.reply_token, buttons_template_message)
+        
              
     else:
         answer = listQNo 
