@@ -27,8 +27,7 @@ import pymongo
 import json
 import random
 import re
-from province1 import(Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong
-                      ,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22)
+from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
