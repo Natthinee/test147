@@ -27,10 +27,12 @@ import pymongo
 import json
 import random
 import re
-from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
+from province1 import(Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong
+                      ,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22)
 from countSco import scoreC,scoreQ2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
+from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -52,6 +54,7 @@ NameHospital = open("NameHospital.txt", "r", encoding='utf-8-sig')
 NameHospital = NameHospital.read().split('\n')
 prohos2pro = open("prohos2pro.txt", "r", encoding='utf-8-sig')
 prohos2pro = prohos2pro.read().split('\n')
+province4 = ['ชัยนาท','พิจิตร','มหาสารคาม','ร้อยเอ็ด','สกลนคร','สระเเก้ว']
 
 evaluation_form['eval'] = {'greet': sayhi,
                            'answer': answer,
@@ -1436,28 +1439,28 @@ def godaun(event):
         line_bot_api.push_message(userid, location_message)
         line_bot_api.push_message(userid, sticker_message)
     #################### แผนที่ที่เหลือ ####################################################    
-    elif question == "กลับไปหน้าก่อนหน้า":
+    elif question in province4:
         buttons_template_message = TemplateSendMessage(
             alt_text='Buttons template',
             template=ButtonsTemplate(
                 title = 'สะดวกไหนเลือกเลยนะจ๊ะ',
-                text='พบผู้เชี่ยวชาญใกล้บ้านกันเถอะ',
+                text='เลือกจังหวัดที่ใกล้บ้าน',
                 actions=[
                     MessageTemplateAction(
-                        label='สถาบันสุขภาพเด็ก',
-                        text='สถาบันสุขภาพเด็กแห่งชาติมหาราชินี (โรงพยาบาลเด็ก)',
+                        label= provincenot4(question,0),
+                        text= provincenot4(question,0)
                     ),
                     MessageTemplateAction(
-                        label='รพ.ตำรวจ',
-                        text='โรงพยาบาลตำรวจ'
+                        label= provincenot4(question,1),
+                        text= provincenot4(question,1)
                     ),
                     MessageTemplateAction(
-                        label='ดูก่อนหน้า',
-                        text='ดูก่อนหน้า.'
+                        label= provincenot4(question,2),
+                        text = provincenot4(question,2)
                     ),
                     MessageTemplateAction(
-                        label='ดูโรงพยาบาลต่อ',
-                        text='ดูโรงพยาบาลต่อ.'
+                        label= provincenot4(question,3),
+                        text= provincenot4(question,3)
                     )
                 ]
              )
