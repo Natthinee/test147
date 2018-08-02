@@ -1529,11 +1529,13 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)   
         
     elif question =="ขิมเหนื่อย":
+        answer = "test"
         image_message = ImageSendMessage(
         original_content_url='https://i.imgur.com/vqDthwA.jpg',
         preview_image_url='https://i.imgur.com/vqDthwA.jpg'
         )
-        line_bot_api.reply_message(event.reply_token, image_message)  
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, image_message)  
         
         
              
