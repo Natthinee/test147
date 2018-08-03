@@ -28,7 +28,7 @@ import json
 import random
 import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
-from countSco import scoreC,scoreQ2
+from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
 from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
@@ -1531,8 +1531,8 @@ def godaun(event):
     elif question =="ขิมเหนื่อย":
         answer = "test"
         image_message = ImageSendMessage(
-        original_content_url='https://i.imgur.com/vqDthwA.jpg',
-        preview_image_url='https://i.imgur.com/vqDthwA.jpg'
+        original_content_url=scorephoto(userid,question),
+        preview_image_url=scorephoto(userid,question)
         )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, image_message)  
