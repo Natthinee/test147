@@ -27,6 +27,10 @@ import pymongo
 import json
 import random
 import re
+from __future__ import unicode_literals
+import errno
+import os
+import sys
 import tempfile
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
@@ -108,6 +112,7 @@ re3 = "reg3"
 re4 = "reg4"
 re5 = "reg5"
 re6 = "reg6"
+
 @app.route("/")
 def hello():
     return "Hello World!"
