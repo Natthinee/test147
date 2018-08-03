@@ -1554,7 +1554,7 @@ def godaun(event):
     userid = event.source.user_id
     #question = event.message.text
     answer = "llll"
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+    line_bot_api.reply_push(event.reply_token, TextSendMessage(text=answer))
 
         
 
