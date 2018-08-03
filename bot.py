@@ -112,14 +112,7 @@ re6 = "reg6"
 def hello():
     return "Hello World!"
 
-def make_static_tmp_dir():
-    try:
-        os.makedirs(static_tmp_path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(static_tmp_path):
-            pass
-        else:
-            raise
+
             
 @app.route("/webhook", methods=['POST'])
 def webhook():
