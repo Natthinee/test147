@@ -10,6 +10,12 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
+from __future__ import unicode_literals
+import errno
+import os
+import sys
+import tempfile
+from argparse import ArgumentParser
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
 from linebot.exceptions import (InvalidSignatureError)
@@ -27,7 +33,6 @@ import pymongo
 import json
 import random
 import re
-import tempfile
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
