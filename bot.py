@@ -1538,6 +1538,7 @@ def godaun(event):
         line_bot_api.push_message(userid, image_message)  
         
         
+        
              
     else:
         answer = listQNo 
@@ -1547,6 +1548,14 @@ def godaun(event):
         sticker_id='30')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
+ 
+
+@handler.add(MessageEvent, message=AudioMessage)
+    userid = event.source.user_id
+    #question = event.message.text
+    answer = "llll"
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+
         
 
 if __name__ == "__main__":
