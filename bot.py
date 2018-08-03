@@ -27,10 +27,6 @@ import pymongo
 import json
 import random
 import re
-from __future__ import unicode_literals
-import errno
-import os
-import sys
 import tempfile
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
@@ -94,7 +90,6 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
-static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 app.config['MONGO_DBNAME'] = 'khim'
 app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
 mongo = PyMongo(app)
