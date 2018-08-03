@@ -27,6 +27,7 @@ import pymongo
 import json
 import random
 import re
+import tempfile
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
@@ -1562,7 +1563,11 @@ def handle_content_message(event):
         return
 
     message_content = line_bot_api.get_message_content(event.message.id)
+    print("-------------------------")
     print(message_content)
+    print("-------------------------")
+    print(event.message.id)
+    print("-------------------------")
     with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         for chunk in message_content.iter_content():
             tf.write(chunk)
