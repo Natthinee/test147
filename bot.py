@@ -1550,14 +1550,6 @@ def godaun(event):
         line_bot_api.push_message(userid, sticker_message)
  
 
-@handler.add(MessageEvent, message=AudioMessage)
-    userid = event.source.user_id
-    #question = event.message.text
-    answer = "llll"
-    message_content = line_bot_api.get_message_content(message_id)
-    with open(file_path, 'wb') as fd:
-    for chunk in message_content.iter_content():
-        fd.write(chunk)
 
 
         
