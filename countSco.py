@@ -9,6 +9,8 @@ from pymongo import MongoClient
 number = ['0','1','2','3']
 me = ['มี','ไม่มี','มี.','ไม่มี.']
 me1 = ['มี','มี.']
+filephoto = open("ไฟล์รูป.txt", "r", encoding='utf-8-sig')
+filephoto = filephoto.read().split('\n')
 
 def scoreC(userid,question):
     client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
@@ -46,6 +48,52 @@ def scoreQ2(userid,question):
     else:
         answer  = '★★★ประเมินโอกาสเสี่ยงจากเเบบประเมิน 2Q \n✖✖ ผลการประเมิน\n►ไม่มีโอกาสเสียงที่จะเป็นโรคซึมเศร้า'     
     return answer
+
+def scorephoto(userid,question):
+    client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+    db  = client.khim.user
+    count = 0
+    score = 0
+    total = 0
+    for i in db.find():
+        if(userid == i['UserID']):
+            if i['Question'] in number:
+                score = i['Question']
+                count = int(score) + count
+    return filephoto[count]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
