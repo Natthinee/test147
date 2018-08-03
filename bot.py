@@ -1554,7 +1554,11 @@ def godaun(event):
     userid = event.source.user_id
     #question = event.message.text
     answer = "llll"
-    line_bot_api.reply_push(event.reply_token, TextSendMessage(text=answer))
+    message_content = line_bot_api.get_message_content(message_id)
+    with open(file_path, 'wb') as fd:
+    for chunk in message_content.iter_content():
+        fd.write(chunk)
+
 
         
 
