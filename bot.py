@@ -10,7 +10,7 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
-from __future__ import unicode_literals
+
 import errno
 import os
 import sys
