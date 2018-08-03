@@ -1562,7 +1562,7 @@ def handle_content_message(event):
         return
 
     message_content = line_bot_api.get_message_content(event.message.id)
-    print(mmessage_content)
+    print(message_content)
     with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         for chunk in message_content.iter_content():
             tf.write(chunk)
