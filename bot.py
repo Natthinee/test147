@@ -1602,7 +1602,7 @@ def handle_content_message(event):
             #TextSendMessage(text='Save content.'),
             #TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
         #])
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message_content))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="test"))
     
  
 
