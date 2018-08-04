@@ -853,7 +853,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif regu2 == re2:
+    elif regu7 == re7:
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         buttons_template_message = TemplateSendMessage(
