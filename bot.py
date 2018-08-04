@@ -36,7 +36,7 @@ import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
-from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6
+from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6,regular7
 from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
 question1 = ''
 evaluation_form = {}
@@ -123,6 +123,8 @@ re3 = "reg3"
 re4 = "reg4"
 re5 = "reg5"
 re6 = "reg6"
+re7 = "reg7"
+
 
 @app.route("/")
 def hello():
@@ -162,6 +164,7 @@ def godaun(event):
     #regu4 = str(regular4(userid,question))
     #regu5 = str(regular5(userid,question))
     regu6 = str(regular6(userid,question))
+    regu7 = str(regular7(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
@@ -850,7 +853,7 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
-    elif question in 'ทำไรได้บ้าง':
+    elif regu2 == re2:
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))
         buttons_template_message = TemplateSendMessage(
