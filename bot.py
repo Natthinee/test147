@@ -1593,7 +1593,7 @@ def handle_content_message(event):
     print("-------------------------")
     print(static_tmp_path)
     print("---------------------------")
-    print(tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False))
+    print(ext)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     #with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         #for chunk in message_content.iter_content():
