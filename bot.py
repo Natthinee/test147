@@ -1603,12 +1603,10 @@ def handle_content_message(event):
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
 
-    line_bot_api.reply_message(
-        event.reply_token, [
-            TextSendMessage(text='Save content.'),
-            TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
-        ])
-    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="test"))
+    #line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),
+            #TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
+        #])
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="test"))
     
  
 
