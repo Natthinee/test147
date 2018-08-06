@@ -1589,9 +1589,11 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    #for chunk in message_content.iter_content():
-    f = io.BytesIO(b"+message_content+")
-    filename = f + "." + ext 
+    with open("myfile.m4a", "r", encoding="utf-8") as tf:
+        for chunk in message_content.iter_content():
+              tf.write(chunk)
+              f = io.BytesIO(b"+message_content+")
+    filename = f + '.' + ext 
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
