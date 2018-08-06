@@ -1586,10 +1586,6 @@ def handle_content_message(event):
     print("-------------------------")
     print(event.message.id)
     print("-------------------------")
-    print(tempfile)
-    print("-------------------------")
-    print(static_tmp_path)
-    print("---------------------------")
     print(ext)
     filename = message_content.iter_content()+'.'+ext
     s3.upload_file(filename, BUCKET_NAME, filename)
