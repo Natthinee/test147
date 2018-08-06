@@ -34,7 +34,6 @@ from flask_pymongo import PyMongo
 import pymongo
 import json
 import random
-from bitstream import BitStream
 import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
