@@ -10,7 +10,7 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
-import errno
+
 import os
 import sys
 import tempfile
@@ -1607,8 +1607,8 @@ def handle_content_message(event):
             tf.write(chunk)
         tempfile_path = tf.name
 
-    filename = tempfile_path + '.' + ext
-    s3.upload_file(filename, BUCKET_NAME, filename)
+    #filename = tempfile_path + '.' + ext
+    #s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
