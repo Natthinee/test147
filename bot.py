@@ -10,6 +10,7 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
+import io
 import boto3
 from boto3.session import Session
 from argparse import ArgumentParser
@@ -1589,12 +1590,9 @@ def handle_content_message(event):
     print("-------------------------")
     print(ext)
     #for chunk in message_content.iter_content():
-    s3 = boto3.resource('s3')
-    s3 = boto3.resource('s3')
-    object = s3.Object('khim', 'my/key/including/filename.m4a')
-    object.put(Body=message_content)
-    #filename = message_content + '.' + ext 
-    #s3.upload_file(filename, BUCKET_NAME, filename)
+    f = io.BytesIO(b"+message_content+")
+    filename = f + "." + ext 
+    s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     
