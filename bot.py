@@ -1588,10 +1588,8 @@ def handle_content_message(event):
     print("-------------------------")
     print(ext)
     #for chunk in message_content.iter_content():
-    with open('test.m4a', 'rb') as fd:
-        for chunk in message_content.iter_content():
-            fd.write(chunk) 
-        filename = filename + '.' + ext
+  
+    filename = message_content + '.' + ext
       
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
