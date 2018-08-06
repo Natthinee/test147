@@ -1594,7 +1594,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    for chunk in message_content..iter_content():
+    for chunk in message_content.iter_content():
         print(chunk)
     
     filename = tempfile_path + '.' + ext
