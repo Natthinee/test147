@@ -1588,7 +1588,7 @@ def handle_content_message(event):
     print("-------------------------")
     print(ext)
     #for chunk in message_content.iter_content():
-    with open('test.jpg', 'rb') as fd
+    with open('test.m4a', 'rb') as fd:
         for chunk in message_content.iter_content():
             fd.write(chunk) 
         filename = filename + '.' + ext
