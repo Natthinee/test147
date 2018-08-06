@@ -10,11 +10,7 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
-
-import errno
-import os
-import sys
-import tempfile
+from boto3.session import Session
 from argparse import ArgumentParser
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
@@ -95,20 +91,21 @@ app = Flask(__name__)
 
 line_bot_api = LineBotApi('IzXs2WdxBaxjM/BTdVQ43pEYgt1O8BRRrEAOztjHPMfRUmM0BYtD4VRZg7MLMSyi1mWqI3vdPl08HfmsCUiBM1QJKc0OF89EfbEPIHEG+pKHO85//3Zvo+Qcf9MDZoFwe2m+cjasnyvwYZ3xPQNWPgdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
-static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
-# function for create tmp dir for download content
-def make_static_tmp_dir():
-    try:
-        os.makedirs(static_tmp_path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(static_tmp_path):
-            pass
-        else:
-            raise
+# function for create tmp dir for download content###
+
             
 app.config['MONGO_DBNAME'] = 'khim'
 app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
 mongo = PyMongo(app)
+ACCESS_KEY_ID = 'AKIAJ5RMPPGNTNGPJSUA'
+SECRET_ACCESS_KEY = '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'
+REGION_NAME = 'us-east-2'
+session = Session(
+    aws_access_key_id=ACCESS_KEY_ID,
+    aws_secret_access_key=SECRET_ACCESS_KEY
+)
+BUCKET_NAME = 'khim'
+s3 = session.client("s3")
 slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
 lo = ['มี.','ไม่มี.']
@@ -1594,7 +1591,11 @@ def handle_content_message(event):
     print(static_tmp_path)
     print("---------------------------")
     print(ext)
+    filename = message_content.iter_content()+'.'+ext
+    s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
+    
+    
     #with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         #for chunk in message_content.iter_content():
             #tf.write(chunk)
