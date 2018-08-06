@@ -1601,7 +1601,7 @@ def handle_content_message(event):
     #filename = f + '.' + ext 
     #s3.upload_file(filename, BUCKET_NAME, filename)
     #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
-    with tempfile.NamedTemporaryFile(dir=BUCKET_NAME, prefix=ext + '-', delete=False) as tf:
+    with s3.NamedTemporaryFile(dir=BUCKET_NAME, prefix=ext + '-', delete=False) as tf:
         for chunk in message_content.iter_content():
             print("---------------")
             tf.write(chunk)
