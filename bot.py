@@ -10,7 +10,11 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
-import io
+import errno
+import os
+import sys
+import tempfile
+from argparse import ArgumentParser
 import boto3
 from boto3.session import Session
 from argparse import ArgumentParser
@@ -30,6 +34,7 @@ from flask_pymongo import PyMongo
 import pymongo
 import json
 import random
+from bitstream import BitStream
 import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
@@ -123,6 +128,7 @@ re4 = "reg4"
 re5 = "reg5"
 re6 = "reg6"
 re7 = "reg7"
+static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 
 
 @app.route("/")
@@ -1589,21 +1595,22 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with open("myfile.m4a", "rb", buffering=0) as tf:
+    #with open("myfile.m4a", "rb", buffering=0) as tf:
+        #for chunk in message_content.iter_content():
+              #tf.write(chunk)
+              #f = io.BytesIO(b"+message_content+")
+    #filename = f + '.' + ext 
+    #s3.upload_file(filename, BUCKET_NAME, filename)
+    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
+    with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         for chunk in message_content.iter_content():
-              tf.write(chunk)
-              f = io.BytesIO(b"+message_content+")
-    filename = f + '.' + ext 
+            tf.write(chunk)
+        tempfile_path = tf.name
+
+    filename = tempfile_path + '.' + ext
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
-    
-    #with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
-        #for chunk in message_content.iter_content():
-            #tf.write(chunk)
-        #tempfile_path = tf.name
-
-    #dist_path = tempfile_path + '.' + ext
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
 
