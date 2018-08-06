@@ -1594,14 +1594,9 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-  
-    with s3.create_bucket(Bucket='khim', ACL='public-read', CreateBucketConfiguration={'LocationConstraint': REGION_NAME}) as tf:
-
-        for chunk in message_content.iter_content():
-            print("---------------")
-            tf.write(chunk)
-        tempfile_path = tf.name
-
+    for chunk in message_content..iter_content():
+        print(chunk)
+    
     filename = tempfile_path + '.' + ext
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
