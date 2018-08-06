@@ -1589,7 +1589,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with open("myfile.m4a", "r", encoding="utf-8") as tf:
+    with open("myfile.m4a", "rb", buffering=0) as tf:
         for chunk in message_content.iter_content():
               tf.write(chunk)
               f = io.BytesIO(b"+message_content+")
