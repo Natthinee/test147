@@ -1594,7 +1594,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with open("filename.m4a","wb") as tt:
+    with open("filename","wb") as tt:
         for chunk in message_content.iter_content():
             print(chunk)
             tt.write(chunk)
@@ -1602,7 +1602,7 @@ def handle_content_message(event):
         file_path = file  + '.' + ext
     dist_name = os.path.basename(file_path)
     os.rename(file, file_path)
-    s3.upload_file( os.rename(file, file_path), BUCKET_NAME,  os.rename(file, file_path))
+    s3.upload_file(  file_path, BUCKET_NAME, ile_path)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
