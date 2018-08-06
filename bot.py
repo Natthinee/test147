@@ -1600,8 +1600,8 @@ def handle_content_message(event):
             tt.write(chunk)
             file = tt.name
         file_path = file  + '.' + ext
-        dist_name = os.path.basename(dist_path)
-        os.rename(file, file_path)
+    dist_name = os.path.basename(file_path)
+    os.rename(file, file_path)
     filename = tempfile_path + '.' + ext
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
