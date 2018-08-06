@@ -1587,7 +1587,8 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    filename = message_content.iter_content()+'.'+ext
+    #for chunk in message_content.iter_content():
+    filename =message_content+"."+ext
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
