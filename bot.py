@@ -10,6 +10,7 @@ Created on Tue Jun 19 20:11:32 2018
 Created on Wed Jun  6 21:31:06 2018
 @author: Natthinee
 """
+import tempfile
 from boto3.session import Session
 from argparse import ArgumentParser
 from flask import Flask, request, abort
@@ -1588,10 +1589,10 @@ def handle_content_message(event):
     print("-------------------------")
     print(ext)
     #for chunk in message_content.iter_content():
-    with open(file_path, 'wb') as fd:
+    with tempfile.NamedTemporaryFile(dir=static_tmp_path, prefix=ext + '-', delete=False) as tf:
         for chunk in message_content.iter_content():
-           fd.write(chunk)
-        filename =fd.name
+           tf.write(chunk)
+        filename =tf.name
     filename = filename + '.' + ext
     s3.upload_file(filename, BUCKET_NAME, filename)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
