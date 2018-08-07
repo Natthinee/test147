@@ -1576,12 +1576,11 @@ def handle_content_message(event):
    SECRET_ACCESS_KEY = 'ByA+MNgSDo2RRbd2k4MxGqT/tFT2lOR3BHdXQLHT'
    REGION_NAME = 'us-east-2'
    BUCKET_NAME = 'khim'
-   s3 = session.client("s3")
    session = Session(
        aws_access_key_id=ACCESS_KEY_ID,
        aws_secret_access_key=SECRET_ACCESS_KEY
     )
-    
+   s3 = session.client("s3")
    if isinstance(event.message, ImageMessage):
        ext = 'jpg'
    elif isinstance(event.message, VideoMessage):
