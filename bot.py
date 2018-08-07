@@ -1575,8 +1575,6 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   
-   qq = []
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
    SECRET_ACCESS_KEY = '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'
    REGION_NAME = 'us-east-1'
@@ -1604,15 +1602,12 @@ def handle_content_message(event):
    print(ext)
    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
        for chunk in message_content.iter_content():
-           #qq.append(chunk)
            #print(chunk)
            tt.write(chunk)
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   a = open(file_path, 'rb')
-   c = a.read()
-   b = bin(int(binascii.hexlify(c), 16))
+   b = bin(int(binascii.hexlify(file_path), 16))
    sample_stream = []
    high_note = (b'\xFF'*100 + b'\0'*100) * 50
    low_note = (b'\xFF'*50 + b'\0'*50) * 100
