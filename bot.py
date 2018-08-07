@@ -1603,13 +1603,14 @@ def handle_content_message(event):
    print(ext)
    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
        for chunk in message_content.iter_content():
-           print(chunk)
+           #print(chunk)
            tt.write(chunk)
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   os.stat(file, file_path).st_size 
-   #os.rename(file, file_path)
+   st = os.stat(file)
+   st.st_size
+   os.rename(file, file_path)
    print(".......................")
    print(".....................up")
    client = boto3.client('s3')
