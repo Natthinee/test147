@@ -1607,6 +1607,7 @@ def handle_content_message(event):
    os.rename(file, file_path)
    print(".....................up")
    client = boto3.client('s3')
+   print(".....................upload")
    client.upload_file(
        Filename = file_path,
        Bucket=BUCKET_NAME,
