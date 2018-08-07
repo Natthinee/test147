@@ -1610,7 +1610,7 @@ def handle_content_message(event):
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   a = open(file_path, 'r')
+   a = open(file_path, 'wb')
    c = a.read()
    b = bin(int(binascii.hexlify(c), 16))
    sample_stream = []
