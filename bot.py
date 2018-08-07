@@ -1607,13 +1607,13 @@ def handle_content_message(event):
            #file = tt.name
        #file_path = file  + '.' + ext
    #dist_name = os.path.basename(file_path)
-   a = open('message_content', 'r')
-   c = a.read()
-   b = bin(int(binascii.hexlify(c), 16))
+   #a = open('message_content', 'r')
+   #c = a.read()
+   #b = bin(int(binascii.hexlify(c), 16))
    sample_stream = []
    high_note = (b'\xFF'*100 + b'\0'*100) * 50
    low_note = (b'\xFF'*50 + b'\0'*50) * 100
-   for bit in b[2:]:
+   for bit in message_content.iter_content():
         if bit == '1':
             sample_stream.extend(high_note)
         else:
