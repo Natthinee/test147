@@ -1574,6 +1574,7 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
+   qq = []
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
    SECRET_ACCESS_KEY = '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'
    REGION_NAME = 'us-east-1'
@@ -1601,7 +1602,8 @@ def handle_content_message(event):
    print(ext)
    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
        for chunk in message_content.iter_content():
-           print(chunk)
+           qq.append(chunk)
+           #print(chunk)
            tt.write(chunk)
            file = tt.name
        file_path = file  + '.' + ext
@@ -1609,6 +1611,7 @@ def handle_content_message(event):
    #os.stat(file_path).st_size
    os.rename(file, file_path)
    #print(tt)
+   print(qq)
    print(".......................")
    print(".....................up")
    client = boto3.client('s3')
