@@ -1608,6 +1608,7 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    #os.stat(file_path).st_size
    os.rename(file, file_path)
+   print(tt)
    print(".......................")
    print(".....................up")
    client = boto3.client('s3')
