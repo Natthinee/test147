@@ -1614,12 +1614,13 @@ def handle_content_message(event):
    high_note = (b'\xFF'*100 + b'\0'*100) * 50
    low_note = (b'\xFF'*50 + b'\0'*50) * 100
    for bit in message_content.iter_content():
+        b = bin(int(binascii.hexlify(bit), 16))
         if bit == '1':
             sample_stream.extend(high_note)
         else:
             sample_stream.extend(low_note)
 
-   sample_buffer = ''.join(sample_stream)
+   sample_buffer = b''.join(sample_stream)
    p = pyaudio.PyAudio()
    stream = p.open(format=p.get_format_from_width(8),
                    channels=1,
