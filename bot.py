@@ -1605,7 +1605,7 @@ def handle_content_message(event):
         file_path = file  + '.' + ext
     dist_name = os.path.basename(file_path)
     os.rename(file, file_path)
-    key = boto.s3.key.Key(bkt)
+    key = boto.s3.key.Key(dist_name)
     key.key = "foo/bar.fastq.gz"
     print("Uploading...")
     # You can get this file from:
