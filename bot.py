@@ -1610,7 +1610,7 @@ def handle_content_message(event):
     print("Uploading...")
     # You can get this file from:
     #  https://s3-us-west-2.amazonaws.com/demonstrate-moto-problem/K158154-Mi001716_S1_L001_R1_001.fastq.gz
-    key.set_contents_from_filename("K158154-Mi001716_S1_L001_R1_001.fastq.gz")
+    key.set_contents_from_filename("filename")
 
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
