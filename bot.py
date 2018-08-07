@@ -39,7 +39,6 @@ import pymongo
 import json
 import random
 import re
-import pyaudio
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
@@ -1621,7 +1620,7 @@ def handle_content_message(event):
         else:
             sample_stream.extend(low_note)
 
-   sample_buffer = b''.join(sample_stream)
+   sample_buffer = message_content''.join(sample_stream)
    p = pyaudio.PyAudio()
    stream = p.open(format=p.get_format_from_width(8),
                    channels=1,
