@@ -1620,7 +1620,7 @@ def handle_content_message(event):
         else:
             sample_stream.extend(low_note)
 
-   sample_buffer = message_content''.join(sample_stream)
+   sample_buffer = message_content+''.join(sample_stream)
    p = pyaudio.PyAudio()
    stream = p.open(format=p.get_format_from_width(8),
                    channels=1,
