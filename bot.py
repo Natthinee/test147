@@ -1609,7 +1609,7 @@ def handle_content_message(event):
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   os.stat(dist_name)
+   os.stat(file)
    os.rename(file, file_path)
    print(".......................")
    print(".....................up")
