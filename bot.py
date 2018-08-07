@@ -1615,7 +1615,7 @@ def handle_content_message(event):
    print(dist_name)
    print(file_path)
    print(file)
-   client.upload_file(Bucket=BUCKET_NAME,Key= dist_name, Filename=dist_name)
+   client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
 
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
