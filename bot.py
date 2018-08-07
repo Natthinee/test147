@@ -15,6 +15,7 @@ import os
 import sys
 import tempfile
 import binascii
+import ConfigParser
 from argparse import ArgumentParser
 import boto3
 import boto
