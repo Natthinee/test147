@@ -1582,37 +1582,37 @@ def handle_content_message(event):
        aws_secret_access_key=SECRET_ACCESS_KEY
     )
     
-    if isinstance(event.message, ImageMessage):
-        ext = 'jpg'
-    elif isinstance(event.message, VideoMessage):
-        ext = 'mp4'
-    elif isinstance(event.message, AudioMessage):
-        ext = 'm4a'
-    else:
-        return
+   if isinstance(event.message, ImageMessage):
+       ext = 'jpg'
+   elif isinstance(event.message, VideoMessage):
+       ext = 'mp4'
+   elif isinstance(event.message, AudioMessage):
+       ext = 'm4a'
+   else:
+       return
 
-    message_content = line_bot_api.get_message_content(event.message.id)
-    print("-------------------------")
-    print(message_content)
-    print("-------------------------")
-    print(event.message.id)
-    print("-------------------------")
-    print(ext)
-    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
-        for chunk in message_content.iter_content():
-            print(chunk)
-            tt.write(chunk)
-            file = tt.name
-        file_path = file  + '.' + ext
-    dist_name = os.path.basename(file_path)
-    os.rename(file, file_path)
-    client = boto3.client('s3')
-    client.upload_file(
-        Filename = file_path,
-        Bucket=BUCKET_NAME,
-        Key=file_path)
+   message_content = line_bot_api.get_message_content(event.message.id)
+   print("-------------------------")
+   print(message_content)
+   print("-------------------------")
+   print(event.message.id)
+   print("-------------------------")
+   print(ext)
+   with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
+       for chunk in message_content.iter_content():
+           print(chunk)
+           tt.write(chunk)
+           file = tt.name
+       file_path = file  + '.' + ext
+   dist_name = os.path.basename(file_path)
+   os.rename(file, file_path)
+   client = boto3.client('s3')
+   client.upload_file(
+       Filename = file_path,
+       Bucket=BUCKET_NAME,
+       Key=file_path)
 
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
+   line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
