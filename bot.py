@@ -1609,8 +1609,7 @@ def handle_content_message(event):
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   st = os.stat(file)
-   st.st_size
+   os.path.getsize(dist_name)
    os.rename(file, file_path)
    print(".......................")
    print(".....................up")
@@ -1621,7 +1620,7 @@ def handle_content_message(event):
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
     #client = boto3.client("s3")
-   client.upload_file(Bucket=BUCKET_NAME, Key='/test.wav', Filename=dist_name, Config=TransferConfig(use_threads=False))
+   client.upload_file(Bucket=BUCKET_NAME, Key='/test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
