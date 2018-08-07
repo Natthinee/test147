@@ -1600,14 +1600,16 @@ def handle_content_message(event):
    print(event.message.id)
    print("-------------------------")
    print(ext)
-   with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
-       for chunk in message_content.iter_content():
+   #with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
+       #for chunk in message_content.iter_content():
            #print(chunk)
-           tt.write(chunk)
-           file = tt.name
-       file_path = file  + '.' + ext
-   dist_name = os.path.basename(file_path)
-   b = bin(int(binascii.hexlify(file), 16))
+           #tt.write(chunk)
+           #file = tt.name
+       #file_path = file  + '.' + ext
+   #dist_name = os.path.basename(file_path)
+   a = open('message_content', 'r')
+   c = a.read()
+   b = bin(int(binascii.hexlify(c), 16))
    sample_stream = []
    high_note = (b'\xFF'*100 + b'\0'*100) * 50
    low_note = (b'\xFF'*50 + b'\0'*50) * 100
