@@ -1573,6 +1573,7 @@ def godaun(event):
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
    path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
+   os.listdir(path)
    ACCESS_KEY_ID = 'AKIAJ5RMPPGNTNGPJSUA'
    SECRET_ACCESS_KEY = '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'
    REGION_NAME = 'us-east-2'
