@@ -945,8 +945,13 @@ def godaun(event):
         line_bot_api.reply_message(event.reply_token, buttons_template_message)
     
     elif question == "สรุปแบบประเมิน":
-        answer = str(scoreC(userid,question))+'\n' + '\n'+str(scoreQ2(userid,question))
+        answer = str(scoreC(userid,question))
+        image_message = ImageSendMessage(
+        original_content_url=scorephoto(userid,question),
+        preview_image_url=scorephoto(userid,question)
+        )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+        line_bot_api.push_message(userid, image_message)  
    
     #elif question in evaluation_form['eval']['ques']:
         #question1 = str(find1(userid,question)) ######test#####
@@ -964,7 +969,7 @@ def godaun(event):
                     actions=[
                         MessageTemplateAction(
                             label='ฟังก์ชันเพิ่มเติม',
-                            text='ทำไรได้บ้าง'
+                            text='ฟังก์ชันเพิ่มเติม'
                         ),
                         MessageTemplateAction(
                             label='สรุปแบบประเมิน',
