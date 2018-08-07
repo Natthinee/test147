@@ -105,15 +105,6 @@ handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
 app.config['MONGO_DBNAME'] = 'khim'
 app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
 mongo = PyMongo(app)
-ACCESS_KEY_ID = 'AKIAJ5RMPPGNTNGPJSUA'
-SECRET_ACCESS_KEY = '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'
-REGION_NAME = 'us-east-2'
-session = Session(
-    aws_access_key_id=ACCESS_KEY_ID,
-    aws_secret_access_key=SECRET_ACCESS_KEY
-)
-BUCKET_NAME = 'khim'
-s3 = session.client("s3")
 slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
 lo = ['มี.','ไม่มี.']
@@ -1581,6 +1572,15 @@ def godaun(event):
 @moto.mock_s3
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
+   ACCESS_KEY_ID = 'AKIAJ5RMPPGNTNGPJSUA'
+   SECRET_ACCESS_KEY = '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'
+   REGION_NAME = 'us-east-2'
+   session = Session(
+       aws_access_key_id=ACCESS_KEY_ID,
+       aws_secret_access_key=SECRET_ACCESS_KEY
+    )
+    BUCKET_NAME = 'khim'
+    s3 = session.client("s3")
     if isinstance(event.message, ImageMessage):
         ext = 'jpg'
     elif isinstance(event.message, VideoMessage):
