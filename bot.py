@@ -1572,6 +1572,7 @@ def godaun(event):
         line_bot_api.push_message(userid, sticker_message)
  
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
+@moto.mock_s3
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
