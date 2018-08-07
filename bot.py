@@ -1575,15 +1575,15 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
-   SECRET_ACCESS_KEY = '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'
-   REGION_NAME = 'us-east-1'
-   BUCKET_NAME = 'godaun'
-   session = Session(
-       aws_access_key_id=ACCESS_KEY_ID,
-       aws_secret_access_key=SECRET_ACCESS_KEY
-    )
-   s3 = session.client("s3")
+   #ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
+   #SECRET_ACCESS_KEY = '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'
+   #REGION_NAME = 'us-east-1'
+   #BUCKET_NAME = 'godaun'
+   #session = Session(
+       #aws_access_key_id=ACCESS_KEY_ID,
+       #aws_secret_access_key=SECRET_ACCESS_KEY
+    #)
+   #s3 = session.client("s3")
    if isinstance(event.message, ImageMessage):
        ext = 'jpg'
    elif isinstance(event.message, VideoMessage):
