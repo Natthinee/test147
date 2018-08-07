@@ -1594,7 +1594,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with open("filename", "wb) as tt:
+    with open("filename", "wb") as tt:
         for chunk in message_content.iter_content():
             print(chunk)
             tt.write(chunk)
