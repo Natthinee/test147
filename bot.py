@@ -1575,11 +1575,11 @@ def handle_content_message(event):
    ACCESS_KEY_ID = 'AKIAJ5RMPPGNTNGPJSUA'
    SECRET_ACCESS_KEY = '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'
    REGION_NAME = 'us-east-2'
+   BUCKET_NAME = 'khim'
    session = Session(
        aws_access_key_id=ACCESS_KEY_ID,
        aws_secret_access_key=SECRET_ACCESS_KEY
     )
-    BUCKET_NAME = 'khim'
     s3 = session.client("s3")
     if isinstance(event.message, ImageMessage):
         ext = 'jpg'
@@ -1608,7 +1608,7 @@ def handle_content_message(event):
     client = boto3.client('s3')
     client.upload_file(
         Filename = file_path,
-        Bucket="khim",
+        Bucket=BUCKET_NAME,
         Key=file_path)
 
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
