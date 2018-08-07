@@ -16,6 +16,7 @@ import sys
 import tempfile
 from argparse import ArgumentParser
 import boto3
+import boto
 from boto3.session import Session
 from argparse import ArgumentParser
 from flask import Flask, request, abort
