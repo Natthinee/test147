@@ -1574,6 +1574,7 @@ def godaun(event):
 
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
+   userid = event.source.user_id
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
@@ -1601,7 +1602,7 @@ def handle_content_message(event):
    print(event.message.id)
    print("-------------------------")
    print(ext)
-   with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
+   with tempfile.NamedTemporaryFile(prefix=userid + '-', delete=False) as tt:
        for chunk in message_content.iter_content():
            #print(chunk)
            tt.write(chunk)
