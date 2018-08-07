@@ -1628,17 +1628,17 @@ def handle_content_message(event):
    stream.write(sample_buffer)
    print(sample_buffer)
    #os.stat(file_path).st_size
-   os.rename(file, file_path)
+   #os.rename(file, file_path)
    #print(tt)
-   print(qq)
+   #print(qq)
    print(".......................")
    print(".....................up")
    client = boto3.client('s3')
    print(".....................upload")
-   print(dist_name)
-   print(file_path)
-   print(file)
-   client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
+   #print(dist_name)
+   #print(file_path)
+   #print(file)
+   #client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
 
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
