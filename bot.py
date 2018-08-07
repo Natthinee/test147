@@ -1608,6 +1608,9 @@ def handle_content_message(event):
    print(".....................up")
    client = boto3.client('s3')
    print(".....................upload")
+   print(dist_name)
+   print(file_path)
+   print(file)
    client.upload_file(Bucket=BUCKET_NAME,Key= dist_name, Filename=dist_name)
 
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
