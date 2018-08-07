@@ -15,7 +15,6 @@ import os
 import sys
 import tempfile
 import binascii
-import pyaudio
 from argparse import ArgumentParser
 import boto3
 import boto
@@ -39,6 +38,7 @@ import pymongo
 import json
 import random
 import re
+import pyaudio
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
