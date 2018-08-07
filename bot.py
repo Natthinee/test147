@@ -1597,7 +1597,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with open(BUCKET_NAME = 'khim',s3 = session.client("s3"), "wb") as tt:
+    with open(BUCKET_NAME = 'khim',s3 = session.client("s3") ,'rb') as tt:
         for chunk in message_content.iter_content():
             print(chunk)
             tt.write(chunk)
