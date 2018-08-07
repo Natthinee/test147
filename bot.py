@@ -1597,7 +1597,7 @@ def handle_content_message(event):
     print(event.message.id)
     print("-------------------------")
     print(ext)
-    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
+    with tempfile.NamedTemporaryFile(Bucket="khim",prefix=ext + '-', delete=False) as tt:
         for chunk in message_content.iter_content():
             print(chunk)
             tt.write(chunk)
