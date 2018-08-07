@@ -1605,6 +1605,9 @@ def handle_content_message(event):
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
    os.rename(file, file_path)
+   size2 = os.path.getsize( dist_name )
+   print(".......................")
+   print(size2)
    print(".....................up")
    client = boto3.client('s3')
    print(".....................upload")
