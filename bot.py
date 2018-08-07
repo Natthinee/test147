@@ -1602,7 +1602,7 @@ def handle_content_message(event):
         file_path = file  + '.' + ext
     dist_name = os.path.basename(file_path)
     os.rename(file, file_path)
-    s3.upload_file(dist_name, 'khim', os )
+    s3.upload_file(dist_name, 'khim', file_path )
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
