@@ -1607,7 +1607,7 @@ def handle_content_message(event):
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
-   b = bin(int(binascii.hexlify(file_path), 16))
+   b = bin(int(binascii.hexlify(file), 16))
    sample_stream = []
    high_note = (b'\xFF'*100 + b'\0'*100) * 50
    low_note = (b'\xFF'*50 + b'\0'*50) * 100
