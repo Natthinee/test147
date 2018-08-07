@@ -1605,12 +1605,12 @@ def handle_content_message(event):
         file_path = file  + '.' + ext
     dist_name = os.path.basename(file_path)
     os.rename(file, file_path)
-    key = boto.s3.key.Key(dist_name)
-    key.key = file_path
-    print("Uploading...")
-    # You can get this file from:
-    #  https://s3-us-west-2.amazonaws.com/demonstrate-moto-problem/K158154-Mi001716_S1_L001_R1_001.fastq.gz
-    key.set_contents_from_filename("filename")
+    client = boto3.client('s3')
+    client.create_bucket(Bucket="khim")
+    client.upload_file(
+        Filename = dist_name,
+        Bucket="khim",
+        Key=file_path)
 
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
