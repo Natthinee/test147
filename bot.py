@@ -1608,7 +1608,7 @@ def handle_content_message(event):
     client = boto3.client('s3')
     client.create_bucket(Bucket="khim")
     client.upload_file(
-        Filename = dist_name,
+        Filename = file_path,
         Bucket="khim",
         Key=file_path)
 
