@@ -1574,8 +1574,8 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   ACCESS_KEY_ID = 'AKIAIM5AHVVJLHFXOJVQ'
-   SECRET_ACCESS_KEY = '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'
+   ACCESS_KEY_ID = 'AKIAIGJYXLGQXLY2I6FA'
+   SECRET_ACCESS_KEY = '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'
    REGION_NAME = 'ap-southeast-1'
    BUCKET_NAME = 'khim'
    session = Session(
