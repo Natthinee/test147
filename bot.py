@@ -12,10 +12,10 @@ Created on Wed Jun  6 21:31:06 2018
 """
 
 import os
-import binascii
-import pyaudio
 import sys
 import tempfile
+import binascii
+import pyaudio
 from argparse import ArgumentParser
 import boto3
 import boto
