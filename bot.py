@@ -1574,15 +1574,15 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   #ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
-   #SECRET_ACCESS_KEY = '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'
-   #REGION_NAME = 'us-east-1'
-   #BUCKET_NAME = 'godaun'
-   #session = Session(
-       #aws_access_key_id=ACCESS_KEY_ID,
-       #aws_secret_access_key=SECRET_ACCESS_KEY
-    #)
-   #s3 = session.client("s3")
+   ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
+   SECRET_ACCESS_KEY = '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'
+   REGION_NAME = 'us-east-1'
+   BUCKET_NAME = 'godaun'
+   session = Session(
+       aws_access_key_id=ACCESS_KEY_ID,
+       aws_secret_access_key=SECRET_ACCESS_KEY
+   )
+   s3 = session.client("s3")
    if isinstance(event.message, ImageMessage):
        ext = 'jpg'
    elif isinstance(event.message, VideoMessage):
@@ -1599,46 +1599,22 @@ def handle_content_message(event):
    print(event.message.id)
    print("-------------------------")
    print(ext)
-   #with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
-       #for chunk in message_content.iter_content():
-           #print(chunk)
-           #tt.write(chunk)
-           #file = tt.name
-       #file_path = file  + '.' + ext
-   #dist_name = os.path.basename(file_path)
-   #a = open('message_content', 'r')
-   #c = a.read()
-   #b = bin(int(binascii.hexlify(c), 16))
-   sample_stream = []
-   high_note = (b'\xFF'*100 + b'\0'*100) * 50
-   low_note = (b'\xFF'*50 + b'\0'*50) * 100
-   for bit in message_content.iter_content():
-        if bit == '1':
-            sample_stream.extend(high_note)
-        else:
-            sample_stream.extend(low_note)
-
-   sample_buffer = message_content+''+'.'+join(sample_stream)
-   p = pyaudio.PyAudio()
-   stream = p.open(format=p.get_format_from_width(8),
-                   channels=1,
-                   rate=44100,
-                   output=True)
-   stream.write(sample_buffer)
-   print(sample_buffer)
-   #os.stat(file_path).st_size
-   #os.rename(file, file_path)
-   #print(tt)
-   #print(qq)
+   with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
+       for chunk in message_content.iter_content():
+           print(chunk)
+           tt.write(chunk)
+           file = tt.name
+       file_path = file  + '.' + 'wav'
+   dist_name = os.path.basename(file_path)
+   os.rename(file, file_path)
    print(".......................")
    print(".....................up")
-   #client = boto3.client('s3')
+   client = boto3.client('s3')
    print(".....................upload")
-   #print(dist_name)
-   #print(file_path)
-   #print(file)
-   #client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
-
+   print(dist_name)
+   print(file_path)
+   print(file)
+   client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
