@@ -12,6 +12,7 @@ Created on Wed Jun  6 21:31:06 2018
 """
 
 import os
+import binascii
 import sys
 import tempfile
 from argparse import ArgumentParser
@@ -1574,6 +1575,7 @@ def godaun(event):
 def handle_content_message(event):
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
+   
    qq = []
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
    SECRET_ACCESS_KEY = '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'
@@ -1602,12 +1604,32 @@ def handle_content_message(event):
    print(ext)
    with tempfile.NamedTemporaryFile(prefix=ext + '-', delete=False) as tt:
        for chunk in message_content.iter_content():
-           qq.append(chunk)
+           #qq.append(chunk)
            #print(chunk)
            tt.write(chunk)
            file = tt.name
        file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
+   a = open(file_path, 'r')
+   c = a.read()
+   b = bin(int(binascii.hexlify(c), 16))
+   sample_stream = []
+   high_note = (b'\xFF'*100 + b'\0'*100) * 50
+   low_note = (b'\xFF'*50 + b'\0'*50) * 100
+   for bit in b[2:]:
+        if bit == '1':
+            sample_stream.extend(high_note)
+        else:
+            sample_stream.extend(low_note)
+
+   sample_buffer = b''.join(sample_stream)
+   p = pyaudio.PyAudio()
+   stream = p.open(format=p.get_format_from_width(8),
+                   channels=1,
+                   rate=44100,
+                   output=True)
+   stream.write(sample_buffer)
+   print(sample_buffer)
    #os.stat(file_path).st_size
    os.rename(file, file_path)
    #print(tt)
