@@ -1634,7 +1634,7 @@ def handle_content_message(event):
    #print(qq)
    print(".......................")
    print(".....................up")
-   client = boto3.client('s3')
+   #client = boto3.client('s3')
    print(".....................upload")
    #print(dist_name)
    #print(file_path)
