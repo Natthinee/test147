@@ -1579,7 +1579,7 @@ def handle_content_message(event):
    #os.listdir(path)
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
    SECRET_ACCESS_KEY ='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'
-   REGION_NAME = 'us-east-1'
+   REGION_NAME = 'ap-southeast-1'
    BUCKET_NAME = 'godaun'
    session = Session(
        aws_access_key_id=ACCESS_KEY_ID,
@@ -1620,7 +1620,7 @@ def handle_content_message(event):
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
     #client = boto3.client("s3")
-   client.upload_file(Bucket=BUCKET_NAME, Key='/test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
+   client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
