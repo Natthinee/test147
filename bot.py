@@ -1614,7 +1614,8 @@ def handle_content_message(event):
    print(dist_name)
    print(file_path)
    print(file)
-   client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
+   #client.upload_file(Bucket=BUCKET_NAME,Key= file_path, Filename=file_path)
+   s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
