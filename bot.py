@@ -1608,7 +1608,7 @@ def handle_content_message(event):
    print(".....................up")
    client = boto3.client('s3')
    print(".....................upload")
-   client.upload_fil(Bucket=BUCKET_NAME,Key= dist_name, Filename="test.m4a")
+   client.upload_file(Bucket=BUCKET_NAME,Key= dist_name, Filename="test.m4a")
 
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
