@@ -71,8 +71,10 @@ def scoreme2(userid,question):
         if(userid == i['UserID']):
             if i['Question'] in me2:
                 count = count + 1
-    if(count == 0):
+    if(count == 2):
         return "ปกติจ้า"
+    else:
+        return "ไม่ปกติ"
     
 
 
