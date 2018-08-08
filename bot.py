@@ -18,7 +18,7 @@ import binascii
 from argparse import ArgumentParser
 import boto3
 import boto
-import moto import mock_s3
+from moto import mock_s3
 from boto3.s3.transfer import TransferConfig
 from boto3.session import Session
 from argparse import ArgumentParser
