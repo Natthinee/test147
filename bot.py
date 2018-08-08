@@ -40,7 +40,7 @@ import json
 import random
 import re
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
-from countSco import scoreC,scoreQ2,scorephoto
+from countSco import scoreC,scoreQ2,scorephoto,scoreme2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6,regular7
 from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
@@ -1013,22 +1013,41 @@ def godaun(event):
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question in lo:
-        confirm_template_message = TemplateSendMessage(
-            alt_text='Confirm template',
-            template=ConfirmTemplate(
-               text=str(find2(userid,question)),
-               actions=[
-                    MessageTemplateAction(
-                        label='สนใจ',
-                        text='สนใจ'
-                    ),
-                    MessageTemplateAction(
-                        label='ทำต่อ',
-                        text='ทำต่อ'
-                    )
-               ]
-            )
-        )
+       kk = str(scoreme2)
+       if kk=="ไม่ปกติ"
+          confirm_template_message = TemplateSendMessage(
+              alt_text='Confirm template',
+              template=ConfirmTemplate(
+                  text=str(find2(userid,question)),
+                  actions=[
+                      MessageTemplateAction(
+                          label='สนใจ',
+                           text='สนใจ'
+                      ),
+                      MessageTemplateAction(
+                          label='ทำต่อ',
+                          text='ทำต่อ'
+                      )
+                  ]
+              )
+           )
+        else:
+          confirm_template_message = TemplateSendMessage(
+              alt_text='Confirm template',
+              template=ConfirmTemplate(
+                  text="อาการดูไม่มีอะไรผิดปกติเนอะ เเต่เอ๊ะ! เมื่อกี้ตั้งใจตอบหรือเปล่าน้าาา ถ้าไม่ได้ตั้งใจลองกลับไปเริ่มใหม่สิ เเต่ถ้าตั้งใจเเล้ว ฟังเพลง คลายเครียดกัน",
+                  actions=[
+                      MessageTemplateAction(
+                          label='เริ่มทำใหม่',
+                           text='เริ่มทำใหม่'
+                      ),
+                      MessageTemplateAction(
+                          label='ฟังเพลง',
+                          text='ฟังเพลง'
+                      )
+                  ]
+              )
+           )
         #print("confirm_template_message")        
         #print(confirm_template_message)
         
