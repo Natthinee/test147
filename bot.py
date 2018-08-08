@@ -1624,8 +1624,8 @@ def handle_content_message(event):
    print(file_path)
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
-   client.upload_file(file_path, '/'.join([BUCKET_NAME,'test.wav']),Key= dist_name)
-   
+   client.upload_file(file_path, '/'.join([BUCKET_NAME,'test.wav']),Key= file)
+   file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
