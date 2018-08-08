@@ -1614,7 +1614,7 @@ def handle_content_message(event):
    s3 = session.resource("s3")
    s3.create_bucket(Bucket='khim', ACL='public-read', CreateBucketConfiguration={
     'LocationConstraint': REGION_NAME})
-   BUCKET_NAME = 'godaun'
+   BUCKET_NAME = 'khim'
    s3 = session.client("s3")
    filename = 'NameHospital.txt'
    s3.upload_file(filename, BUCKET_NAME, "เหงา.wav")
