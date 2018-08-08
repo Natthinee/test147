@@ -1031,7 +1031,7 @@ def godaun(event):
                   ]
               )
            )
-        else:
+       if kk=="ปกติจ้า":
           confirm_template_message = TemplateSendMessage(
               alt_text='Confirm template',
               template=ConfirmTemplate(
