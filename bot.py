@@ -1599,6 +1599,7 @@ def godaun(event):
  
 
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
+@mock_s3
 def handle_content_message(event):
    userid = event.source.user_id
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
