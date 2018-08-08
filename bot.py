@@ -1585,7 +1585,7 @@ def handle_content_message(event):
    ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
    SECRET_ACCESS_KEY ='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'
    REGION_NAME = 'us-east-1'
-   BUCKET_NAME = 'godaun'
+   BUCKET_NAME = 'khim'
    session = Session(
        aws_access_key_id=ACCESS_KEY_ID,
        aws_secret_access_key=SECRET_ACCESS_KEY
@@ -1624,7 +1624,7 @@ def handle_content_message(event):
    print(file_path)
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
-   client.upload_file(BUCKET_NAME, '/'.join([BUCKET_NAME,'k.wav']), Key= dist_name)
+   client.upload_file(dist_name, '/'.join([BUCKET_NAME,'k.wav']), Key= dist_name)
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
