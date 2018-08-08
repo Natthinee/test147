@@ -1616,7 +1616,9 @@ def handle_content_message(event):
     'LocationConstraint': REGION_NAME})
    BUCKET_NAME = 'khim'
    s3 = session.client("s3")
-    
+   filename = 'NameHospital.txt'
+   s3.upload_file(filename, BUCKET_NAME, "เหงา.wav")
+
 
    if isinstance(event.message, ImageMessage):
        ext = 'jpg'
@@ -1654,7 +1656,7 @@ def handle_content_message(event):
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    #file
    #client = boto3.client("s3")
-   client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
+   #client.upload_file(Bucket=BUCKET_NAME, Key='test.txt', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
