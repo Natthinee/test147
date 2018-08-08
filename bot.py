@@ -1030,7 +1030,8 @@ def godaun(event):
                       )
                   ]
               )
-           )
+          )
+          line_bot_api.reply_message(event.reply_token, confirm_template_message)
        if kk=="ปกติจ้า":
           confirm_template_message = TemplateSendMessage(
               alt_text='Confirm template',
@@ -1047,11 +1048,12 @@ def godaun(event):
                       )
                   ]
               )
-           )
+          )
+          line_bot_api.reply_message(event.reply_token, confirm_template_message)
         #print("confirm_template_message")        
         #print(confirm_template_message)
         
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+        
   
     elif question in 't':
         confirm_template_message = TemplateSendMessage(
