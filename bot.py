@@ -320,7 +320,7 @@ def godaun(event):
         answer = 'test'
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
        
-    elif question in 'ฟังเพลง':
+    elif question=='ฟังเพลง':
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
             template=CarouselTemplate(
