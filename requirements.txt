@@ -16,6 +16,7 @@ moto==1.3.3
 awscli==1.15.71
 tmp==0.0.2
 aws-visualizer==0.1.0
+django-storages==1.5.2
 
 
 
