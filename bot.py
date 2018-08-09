@@ -1632,7 +1632,7 @@ def handle_content_message(event):
    print(event.message.id)
    print("-------------------------")
    print(ext)
-   with tempfile.NamedTemporaryFile(prefix=userid + '-', delete=False) as tt:
+   with tempfile.NamedTemporaryFile(prefix=userid, delete=False) as tt:
        for chunk in message_content.iter_content():
            #print(chunk)
            tt.write(chunk)
@@ -1640,7 +1640,7 @@ def handle_content_message(event):
        file_path = file  + '.' + 'wav'
    dist_name = os.path.basename(file_path)
    os.stat(file)
-   os.rename(file, file_path)
+   #os.rename(file, file_path)
    #sign_s3()
    print(".......................")
    print(".....................up")
