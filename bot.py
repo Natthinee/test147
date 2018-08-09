@@ -19,6 +19,7 @@ from argparse import ArgumentParser
 from boto.s3.key import Key
 import boto3
 import boto
+import codecs
 from moto import mock_s3
 from boto3.s3.transfer import TransferConfig
 from boto3.session import Session
@@ -1598,6 +1599,7 @@ def godaun(event):
         sticker_id='30')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         line_bot_api.push_message(userid, sticker_message)
+        
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
    userid = event.source.user_id
@@ -1655,31 +1657,21 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    s3.upload_file(file_path, BUCKET_NAME,dist_name )
-   conn = boto.connect_s3('us-east-1')
-   bucket = conn.get_bucket('khim')
-   k = Key(bucket)
-   k.key = 'U2cd26d49ace18bd6cfce4e53160808cbat66w0a3.wav'
-   tt = k.open()
    t = speechword(tt)
-  
+   url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
+   r = requests.get(url)
+   print(r)
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
-   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=t),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
-    
+   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text="test"),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
+   
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
     
-
-
-
- 
-
-
-
-        
+       
 
 if __name__ == "__main__":
     app.run()
