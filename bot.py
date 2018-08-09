@@ -1601,8 +1601,8 @@ def handle_content_message(event):
    userid = event.source.user_id
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
-   SECRET_ACCESS_KEY ='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'
+   ACCESS_KEY_ID = 'AKIAJICSVDHHMLN6LC4A'
+   SECRET_ACCESS_KEY ='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'
    REGION_NAME = 'us-east-1'
    
    session = Session(
