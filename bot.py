@@ -1651,7 +1651,7 @@ def handle_content_message(event):
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
-   s3.upload_file(dist_name, BUCKET_NAME, file_path)
+   s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
