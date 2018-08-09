@@ -16,6 +16,7 @@ import sys
 import tempfile
 import binascii
 from argparse import ArgumentParser
+from boto.s3.key import Key
 import boto3
 import boto
 from moto import mock_s3
@@ -1654,7 +1655,6 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    s3.upload_file(file_path, BUCKET_NAME,dist_name )
-   from boto.s3.key import Key
    conn = boto.connect_s3('us-east-1')
    bucket = conn.get_bucket('khim')
    k = Key(bucket)
