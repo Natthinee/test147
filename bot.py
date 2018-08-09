@@ -1601,19 +1601,19 @@ def handle_content_message(event):
    userid = event.source.user_id
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   #ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
-   #SECRET_ACCESS_KEY ='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'
-   #REGION_NAME = 'us-east-1'
+   ACCESS_KEY_ID = 'AKIAID3EAOJCS2LXRQ2A'
+   SECRET_ACCESS_KEY ='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'
+   REGION_NAME = 'us-east-1'
    
-   #session = Session(
-       #aws_access_key_id=ACCESS_KEY_ID,
-       #aws_secret_access_key=SECRET_ACCESS_KEY
-   #)
-   #s3 = session.resource("s3")
-   #s3.create_bucket(Bucket='khim', ACL='public-read', CreateBucketConfiguration={
-    #'LocationConstraint': REGION_NAME})
-   #BUCKET_NAME = 'khim'
-   #s3 = session.client("s3")
+   session = Session(
+       aws_access_key_id=ACCESS_KEY_ID,
+       aws_secret_access_key=SECRET_ACCESS_KEY
+   )
+   s3 = session.resource("s3")
+   s3.create_bucket(Bucket='khim', ACL='public-read', CreateBucketConfiguration={
+    'LocationConstraint': REGION_NAME})
+   BUCKET_NAME = 'khim'
+   s3 = session.client("s3")
    #filename = 'NameHospital.txt'
    #s3.upload_file(filename, BUCKET_NAME, "เหงา.wav")
 
@@ -1652,44 +1652,23 @@ def handle_content_message(event):
    print(file_path)
    print(file)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
-   #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
+   client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
-   line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
+   #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
     
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
 
-    #line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),
-            #TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
-        #])
+    line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),
+            TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
+        ])
     
 
-@app.route("/sign-s3/")
-def sign_s3():
-    AWS_ACCESS_KEY = app.config["AKIAID3EAOJCS2LXRQ2A"]
-    AWS_SECRET_KEY = app.config["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"]
-    S3_BUCKET = app.config["khim"]
 
-    object_name = quote(request.args.get("s3_object_name").encode('ascii', 'ignore'))  # ignoring unicode for now (hmac issue)
-    mime_type = request.args.get("s3_object_type")
 
-    expires = int(time.time()) + 60  # 60 sec for starting request should be enough 
-    amz_headers = "x-amz-acl:public-read"  
-
-    put_request = "PUT\n\n%s\n%d\n%s\n/%s/%s" % (mime_type, expires, amz_headers, S3_BUCKET, object_name)
-    signature = base64.encodestring(hmac.new(AWS_SECRET_KEY, put_request, sha1).digest())
-    signature = quote(signature.strip()).replace("/", "%2F")
-
-    app.logger.info("signing for %s with signature %s", put_request, signature)
-    url = "https://%s.s3.amazonaws.com/%s" % (S3_BUCKET, object_name)
-
-    return jsonify({
-        "signed_request": "%s?AWSAccessKeyId=%s&Expires=%d&Signature=%s" % (url, AWS_ACCESS_KEY, expires, signature),
-         "url": url
-      })  
  
 
 
