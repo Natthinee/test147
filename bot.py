@@ -1640,7 +1640,7 @@ def handle_content_message(event):
        file_path = file  + '.' + 'wav'
    dist_name = os.path.basename(file_path)
    os.stat(file)
-   #os.rename(file, file_path)
+   os.rename(file, file_path)
    #sign_s3()
    print(".......................")
    print(".....................up")
