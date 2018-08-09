@@ -1642,7 +1642,7 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
-   sign_s3()
+   #sign_s3()
    print(".......................")
    print(".....................up")
    #client = boto3.client('s3')
@@ -1660,7 +1660,6 @@ def handle_content_message(event):
     
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
-
     line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),
             TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))
         ])
