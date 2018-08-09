@@ -17,6 +17,7 @@ import tempfile
 import binascii
 from argparse import ArgumentParser
 from boto.s3.key import Key
+import requests
 import boto3
 import boto
 import codecs
