@@ -1654,9 +1654,14 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    s3.upload_file(file_path, BUCKET_NAME,dist_name )
-   with open(dist_name, 'rb') as tt:
-        obj = pickle.load(tt)
-   t = speechcheck(obj)
+   from boto.s3.key import Key
+   conn = boto.connect_s3('us-east-1')
+   bucket = conn.get_bucket('khim')
+   k = Key(bucket)
+   k.key = 'U2cd26d49ace18bd6cfce4e53160808cbat66w0a3.wav'
+   tt = k.open()
+   t = speechword(tt)
+  
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
