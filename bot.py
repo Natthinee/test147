@@ -1657,10 +1657,10 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
+   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
     
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
-    line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
     
 
 
