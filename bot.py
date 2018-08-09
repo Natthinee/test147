@@ -44,6 +44,7 @@ from countSco import scoreC,scoreQ2,scorephoto,scoreme2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6,regular7
 from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
+from speech_to_re import speechcheck,speechword
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
@@ -1658,7 +1659,7 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text="ooooo"))
-   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text='Save content.'),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
+   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=str(speechcheck(filename))),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
     
     #dist_name = os.path.basename(dist_path)
     #os.rename(tempfile_path, dist_path)
