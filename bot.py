@@ -1658,8 +1658,7 @@ def handle_content_message(event):
    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    r = requests.get(url)
-   #t = speechword(r)
-   print(r)
+   t = speechword(requests.get(url))
    
    #file
    #client = boto3.client("s3")
