@@ -95,7 +95,7 @@ ansrich03 = 'นี่ๆ อยากรู้อะไรบ้างเอ่
 ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩۩'
 ansrich05 = 'กอดอุ่นมีวิธีเบื้องต้นในการจัดการกับอารมณ์ เมื่อเกิดอาการซึมเศร้าลองทำตามดูน้าาา อาจการซึมเศร้าอาจจะน้อยลงก็ได้ ☺☻ '
 ansrich06 = 'สามารถติดตามข่าวสารของโรคซึมเศร้าต่างๆ ได้ตามช่องทางข้างล่างนี้เลยน้าา ☜♥☞'
-ans2 = ['มี']
+ans2 = ['มี','ไม่มี']
 anss = ['ทำไรได้บ้าง','ทำไรได้','ทำไรได้บ้างอ่ะ','กอดอุ่นทำไรได้บ้างอ่ะ','เธอทำไรได้บ้างอ่ะ']
 tess = 'สวัสดีจ้าา วันนี้มีอะไรอยากจะเม้าส์กับกอดอุ่นไหมเอ่ย?◑０◐\n เอ๊ะ!! หรือจะลองกดใช้งาน\nฟังก์ชันด้านล่างก็จิ้มที่ปุ่ม ">" สีเขียวได้เลยน้าา'
 hos = 'ลองไปปรึกษากับกับจิตเเพทย์\nใกล้ๆบ้านดูน้าา'
@@ -963,27 +963,7 @@ def godaun(event):
         #print("confirm_template_message")        
         #print(confirm_template_message)
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question == "ไม่มี":
-        if(question in ans2):
-            confirm_template_message = TemplateSendMessage(
-                alt_text='Confirm template',
-                template=ConfirmTemplate(
-                    text=str(find2(userid,question)),
-                    actions=[
-                        MessageTemplateAction(
-                            label='มี',
-                            text='มี.'
-                        ),
-                        MessageTemplateAction(
-                            label='ไม่มี',
-                            text='ไม่มี.'
-                        )
-                     ]
-                  )
-               )
-        #print("confirm_template_message")        
-        #print(confirm_template_message)
-        line_bot_api.reply_message(event.reply_token, confirm_template_message)
+    
     elif question in 'ทำต่อ':
         #questi = str(find1(userid,question))
         buttons_template_message = TemplateSendMessage(
