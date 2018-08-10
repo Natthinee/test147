@@ -39,6 +39,7 @@ evaluation_form['eval'] = {'greet': sayhi,
 sayhay  = 'สวัสดีจ้าาา มาม่ะ มาคุยกับกอดอุ่นก่อน'
 questionja = 'อยากจะเริ่มทำเเบบประเมินเลยหรืออยากจะคุยกับกอดอุ่น ก่อนนะ ถ้าอยากจะเริ่มทำเลยให้บอกว่า "เริ่มเลย" ถ้าอยากคุยต่อให้พิมพ์ว่า "คุยต่อ"'
 what =['ทำไรได้บ้าง','ทำไรได้','ใช้งาน','สามารถ','มีความสามารถ','เมนูไรบ้าง','เมนู','ทำงาน','มีระบบ','ระบบ']
+sadwhat =['คืออะไร','ที่มา','อาการ','พฤติกรรม','ความเป็นมา','อะไร','ยังไง','อย่างไร','เป็นไง'] 
 
 
 def regular1(userid,question):
@@ -179,6 +180,27 @@ def regular7(userid,question):
         i = i+1
     if count == 1:
         return "reg7"
+      
+      
+def regular8(userid,question):
+    i = 0
+    count = 0
+    while(i<len(sadwhat)):
+        pattern1 = r'[a-zA-Zก-๙เ' ']+('+sadwhat[i]+')[a-zA-Zก-๙เ' ']+$'
+        pattern2 = r'('+sadwhat[i]+')[a-zA-Zก-๙เ' ']+$'    
+        pattern3 = r'[a-zA-Zก-๙เ' ']+('+sadwhat[i]+')$'
+        pattern4 = r'('+sadwhat[i]+')$'
+        if re.search(pattern1,question):
+            count = 1
+        elif re.search(pattern2,question):
+            count = 1
+        elif re.search(pattern3,question):
+            count = 1
+        elif re.search(pattern4,question):
+            count = 1
+        i = i+1
+    if count == 1:
+        return "reg8"
       
 
       
