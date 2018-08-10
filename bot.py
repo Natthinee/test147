@@ -906,22 +906,10 @@ def godaun(event):
               )
           )
                     
-      
-        #bot()
-        #location_message = LocationSendMessage(
-        #title='my location',
-        #address='Tokyo',
-        #latitude=35.65910807942215,
-        #longitude=139.70372892916203)
-        #line_bot_api.push_message(userid, location_message)
-      
-        ##answer = ansrich03
-        #message = gg(uestion)
-        ##userr.insert({"UserID":userid,"Question": question, "Answer": answer})
-        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        #line_bot_api.reply_message(event.reply_token, msgs)
+ 
         line_bot_api.reply_message(event.reply_token,carousel_template_message)
     elif question  in 'เริ่มทำ':
+
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
