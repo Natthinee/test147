@@ -319,11 +319,6 @@ def godaun(event):
         
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
        
-        
-    elif question in 'อื่นๆ':
-        answer = 'test'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-       
     elif question=="ฟังเพลง":
         carousel_template_message = TemplateSendMessage(
             alt_text='Carousel template',
@@ -1586,13 +1581,11 @@ def godaun(event):
         preview_image_url=scorephoto(userid,question)
         )
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-        line_bot_api.push_message(userid, image_message)  
-        
-     
+        line_bot_api.push_message(userid, image_message)      
              
     else:
         answer = listQNo 
-        #userr.insert({"UserID":userid,"Question": question, "Answer": answer})
+        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='30')
@@ -1652,7 +1645,7 @@ def handle_content_message(event):
    print(file_path)
    #tt = speechword(event.message)
    print(event.message)
-   print(tt)
+   #print(tt)
    print(file_path)
    print(file)
    print(userid)
