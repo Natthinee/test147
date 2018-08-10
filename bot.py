@@ -1649,7 +1649,9 @@ def handle_content_message(event):
    print(".....................up")
    client = boto3.client('s3')
    print(".....................upload")
-   print(dist_name)
+   print(file_path)
+   tt = speechword(file_path)
+   print(tt)
    print(file_path)
    print(file)
    print(userid)
@@ -1657,10 +1659,8 @@ def handle_content_message(event):
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
-   s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
-   tt = speechword(s3)
-  
-   
+   #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
+ 
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
