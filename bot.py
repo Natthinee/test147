@@ -926,7 +926,6 @@ def godaun(event):
             alt_text='Confirm template',
             template=ConfirmTemplate(
                text=str(find2(userid,question)),
-               print(text)
                actions=[
                     MessageTemplateAction(
                         label='มี',
