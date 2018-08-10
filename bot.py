@@ -963,7 +963,7 @@ def godaun(event):
         #print("confirm_template_message")        
         #print(confirm_template_message)
         line_bot_api.reply_message(event.reply_token, confirm_template_message)
-    elif question == ไม่มี:
+    elif question == "ไม่มี":
         if(question in ans2):
             confirm_template_message = TemplateSendMessage(
                 alt_text='Confirm template',
