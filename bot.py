@@ -909,7 +909,6 @@ def godaun(event):
  
         line_bot_api.reply_message(event.reply_token,carousel_template_message)
     elif question  in 'เริ่มทำ':
-
         confirm_template_message = TemplateSendMessage(
             alt_text='Confirm template',
             template=ConfirmTemplate(
@@ -1141,7 +1140,7 @@ def godaun(event):
         #question1 = str(find1(userid,question))
         #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=question1))  
     elif question in lo:
-       kk = str(scoreme2)
+       kk = str(scoreme2(userid,question))
        if kk=="ไม่ปกติ":
           confirm_template_message = TemplateSendMessage(
               alt_text='Confirm template',
