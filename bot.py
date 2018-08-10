@@ -1650,7 +1650,7 @@ def handle_content_message(event):
    client = boto3.client('s3')
    print(".....................upload")
    print(file_path)
-   tt = speechword(os.rename(file, file_path))
+   tt = speechword(file)
    print(tt)
    print(file_path)
    print(file)
