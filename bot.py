@@ -169,7 +169,7 @@ def godaun(event):
     #regu5 = str(regular5(userid,question))
     regu6 = str(regular6(userid,question))
     regu7 = str(regular7(userid,question))
-    regu8 = str(regular7(userid,question))
+    regu8 = str(regular8(userid,question))
     #regu1 = "111"
     Qx = str(findxx(userid,question))
     print(Qx)
