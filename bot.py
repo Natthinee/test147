@@ -1714,7 +1714,6 @@ def godaun(event):
              
     else:
         answer = listQNo 
-        userr.insert({"UserID":userid,"Question": question, "Answer": answer})
         sticker_message = StickerSendMessage(
         package_id='2',
         sticker_id='30')
