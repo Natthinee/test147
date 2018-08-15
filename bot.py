@@ -1675,9 +1675,9 @@ def handle_content_message(event):
    print(file_path)
    print(file)
    print(userid)
-   #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
+   client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
-   s3.upload_file(file_path, BUCKET_NAME,dist_name )
+   #s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
    answer = "ช่วงนี้มีความรู้สึกยังไงบ้างเอ่ย ??"
