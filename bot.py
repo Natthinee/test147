@@ -1667,6 +1667,7 @@ def handle_content_message(event):
    os.stat(file)
    os.rename(file, file_path)
    session.storbinary(dist_name, file) 
+   session.quit()
    #sign_s3()
    print(".......................")
    print(".....................up")
