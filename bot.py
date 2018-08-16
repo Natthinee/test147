@@ -1666,8 +1666,11 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
-   session.storbinary(dist_name, file) 
+   file = open(dist_name,'rb') # file to send
+   session.storbinary(file, file) # send the file
+   file.close() # close file and FTP
    session.quit()
+   
    #sign_s3()
    print(".......................")
    print(".....................up")
