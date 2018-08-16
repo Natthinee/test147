@@ -432,15 +432,13 @@ def godaun(event):
           )
         line_bot_api.reply_message(event.reply_token,  carousel_template_message) 
         
-   
-      
-        
     elif question == richmanu['rich']['rich01']:
         answer = ansrich01
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
         #################################ส่วนนี้เด่วทำทีหลังสุด####################################################
     elif question == richmanu['rich']['rich02']:
         #answer = ansrich02
+        find = str(findxx(userid,question))
         if Qy=="0":
              answer = random.choice(evaluation_form['eval']['answer']) + ' เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
              sticker_message = StickerSendMessage(
@@ -448,6 +446,13 @@ def godaun(event):
              sticker_id='22')
              line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
              line_bot_api.push_message(userid, sticker_message)
+        elif find == "10":
+             answer = random.choice(evaluation_form['eval']['answer']) + 'เอ๊ะๆ วันนี้รู้สึกยังไงบ้างเอ่ย?'
+             sticker_message = StickerSendMessage(
+             package_id='2',
+             sticker_id='22')
+             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
+             line_bot_api.push_message(userid, sticker_message)            
         else:
              answer = random.choice(evaluation_form['eval']['answer']) + Querich 
              sticker_message = StickerSendMessage(
@@ -1690,7 +1695,8 @@ def handle_content_message(event):
 #    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
-   answer = "ช่วงนี้มีความรู้สึกยังไงบ้างเอ่ย ??"
+   answer = random.choice('ปกติ','ไม่ปกติ') + "ช่วงนี้มีความรู้สึกยังไงบ้างเอ่ย ??"
+  
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
