@@ -15,6 +15,7 @@ import os
 import sys
 import tempfile
 import binascii
+import ftplib
 from argparse import ArgumentParser
 from boto.s3.key import Key
 import requests
@@ -1621,19 +1622,21 @@ def godaun(event):
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
    userid = event.source.user_id
+   session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com ','Q6YLnl5CL')
+   
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
-   ACCESS_KEY_ID = 'AKIAJICSVDHHMLN6LC4A'
-   SECRET_ACCESS_KEY ='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'
-   REGION_NAME = 'us-east-1'
+   #ACCESS_KEY_ID = 'AKIAJICSVDHHMLN6LC4A'
+   #SECRET_ACCESS_KEY ='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'
+#    REGION_NAME = 'us-east-1'
    
-   session = Session(
-       aws_access_key_id=ACCESS_KEY_ID,
-       aws_secret_access_key=SECRET_ACCESS_KEY
-   )
-   s3 = session.resource("s3")
-   BUCKET_NAME = 'khim'
-   s3 = session.client("s3")
+#    session = Session(
+#        aws_access_key_id=ACCESS_KEY_ID,
+#        aws_secret_access_key=SECRET_ACCESS_KEY
+#    )
+#    s3 = session.resource("s3")
+#    BUCKET_NAME = 'khim'
+#    s3 = session.client("s3")
    #filename = 'NameHospital.txt'
    #s3.upload_file(filename, BUCKET_NAME, "เหงา.wav")
 
@@ -1663,10 +1666,11 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
+   session.storbinary(dist_name, file) 
    #sign_s3()
    print(".......................")
    print(".....................up")
-   client = boto3.client('s3')
+#    client = boto3.client('s3')
    print(".....................upload")
    print(file_path)
    #tt = speechword(event.message)
@@ -1677,7 +1681,7 @@ def handle_content_message(event):
    print(userid)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
-   s3.upload_file(file_path, BUCKET_NAME,dist_name )
+#    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
    answer = "ช่วงนี้มีความรู้สึกยังไงบ้างเอ่ย ??"
