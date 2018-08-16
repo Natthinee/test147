@@ -1666,8 +1666,9 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
+   os.chmod(file, 0o0777)
    #file = open(dist_name,'rb') # file to send
-   session.storbinary(file, file) # send the file
+   session.storbinary(dist_name, file) # send the file
    #file.close() # close file and FTP
    session.quit()
    
