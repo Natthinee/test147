@@ -1623,7 +1623,7 @@ def godaun(event):
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
    userid = event.source.user_id
-   session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
+   #session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
    
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
    #os.listdir(path)
@@ -1669,9 +1669,9 @@ def handle_content_message(event):
    os.rename(file, file_path)
    os.chmod(file, 0o0777)
    #file = open(dist_name,'rb') # file to send
-   session.storbinary(dist_name, file) # send the file
+   #session.storbinary(dist_name, file) # send the file
    #file.close() # close file and FTP
-   session.quit()
+   #session.quit()
    
    #sign_s3()
    print(".......................")
