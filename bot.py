@@ -1628,6 +1628,7 @@ def godaun(event):
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
    userid = event.source.user_id
+   session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
    #session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
    
    #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
@@ -1663,6 +1664,15 @@ def handle_content_message(event):
    print(event.message.id)
    print("-------------------------")
    print(ext)
+#    with tempfile.NamedTemporaryFile(prefix=userid, delete=False) as tt:
+#        for chunk in message_content.iter_content():
+#            #print(chunk)
+#            tt.write(chunk)
+#            file = tt.name
+#        file_path = file  + '.' + 'wav'
+#    dist_name = os.path.basename(file_path)
+#    os.stat(file)
+#    os.rename(file, file_path)
    with tempfile.NamedTemporaryFile(prefix=userid, delete=False) as tt:
        for chunk in message_content.iter_content():
            #print(chunk)
@@ -1672,6 +1682,11 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
+   f = open('file_path', 'rb')
+   session.storbinary('STOR dist_name', f)
+   f.close()
+   session.quit()
+   
    #os.chmod(file, 0o0777)
    #file = open(dist_name,'rb') # file to send
    #session.storbinary(dist_name, file) # send the file
@@ -1695,12 +1710,12 @@ def handle_content_message(event):
 #    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
-   test = ['ปกติ','ไม่ปกติ']
-   test2 = random.choice(test)
-   if test2 == 'ปกติ':
-     answer = "วันนี้อากาศสดใส อ๊ะ!! มาลองทำอะไรเพื่อผ่อนคลายกันเถอะ พิมพ์คำว่า 'อ่านนิยาย' หรือ 'ฟังเพลง' เพื่อผ่อนคลายกันเถอะ'"
-   else:
-     answer = "วันนี้มาลองทำเเบบประเมินกันไหม พิมพ์คำว่า 'เริ่มทำ' เมื่อต้องการทำเเบบประเมินนะ หรือลองใช้ ฟังก์ชันอื่น พิมพ์คำว่า 'ฟังก์ชันเพิ่มเติม'"
+#    test = ['ปกติ','ไม่ปกติ']
+#    test2 = random.choice(test)
+#    if test2 == 'ปกติ':
+#      answer = "วันนี้อากาศสดใส อ๊ะ!! มาลองทำอะไรเพื่อผ่อนคลายกันเถอะ พิมพ์คำว่า 'อ่านนิยาย' หรือ 'ฟังเพลง' เพื่อผ่อนคลายกันเถอะ'"
+#    else:
+#      answer = "วันนี้มาลองทำเเบบประเมินกันไหม พิมพ์คำว่า 'เริ่มทำ' เมื่อต้องการทำเเบบประเมินนะ หรือลองใช้ ฟังก์ชันอื่น พิมพ์คำว่า 'ฟังก์ชันเพิ่มเติม'"
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
