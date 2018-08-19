@@ -1673,7 +1673,7 @@ def handle_content_message(event):
 #    dist_name = os.path.basename(file_path)
 #    os.stat(file)
 #    os.rename(file, file_path)
-   with tempfile.NamedTemporaryFile(prefix=userid, delete=False) as tt:
+   with f = open('abcd.wav', 'rb') as tt:
        for chunk in message_content.iter_content():
            #print(chunk)
            tt.write(chunk)
@@ -1682,7 +1682,6 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
-   f = open(dist_name, 'rb')
    session.storbinary('STOR'+ dist_name, f)
    f.close()
    session.quit()
