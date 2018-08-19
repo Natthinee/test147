@@ -1682,8 +1682,8 @@ def handle_content_message(event):
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path)
-   f = open('file_path', 'rb')
-   session.storbinary('STOR dist_name', f)
+   f = open(dist_name, 'rb')
+   session.storbinary('STOR'+ dist_name, f)
    f.close()
    session.quit()
    
