@@ -1679,12 +1679,9 @@ def handle_content_message(event):
            tt.write(chunk)
            file = tt.name
        file_path = file  + '.' + 'wav'
-   dist_name = os.path.basename(file_path)
-   os.stat(file)
-   os.rename(file, file_path)
-   session.storbinary('STOR'+ dist_name, file_path)
-   file_path.close()
-   session.quit()
+       session.storbinary('STOR'+ file_path , file)
+       file.close()
+       session.quit()
    
    #os.chmod(file, 0o0777)
    #file = open(dist_name,'rb') # file to send
