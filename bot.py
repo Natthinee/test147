@@ -17,14 +17,14 @@ import tempfile
 import binascii
 import ftplib
 from argparse import ArgumentParser
-from boto.s3.key import Key
+# from boto.s3.key import Key
 import requests
-import boto3
-import boto
+# import boto3
+# import boto
 import codecs
-from moto import mock_s3
-from boto3.s3.transfer import TransferConfig
-from boto3.session import Session
+# from moto import mock_s3
+# from boto3.s3.transfer import TransferConfig
+# from boto3.session import Session
 from argparse import ArgumentParser
 from flask import Flask, request, abort
 from linebot import (LineBotApi, WebhookHandler)
@@ -1721,7 +1721,7 @@ def handle_content_message(event):
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
-   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=answer),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', dist_name))])
+   line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=answer),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', file_path))])
   
    
    
