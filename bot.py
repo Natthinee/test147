@@ -1683,6 +1683,7 @@ def handle_content_message(event):
    os.stat(file)
    os.rename(file, file_path)  
    session.storbinary('STOR '+ dist_name,file_path)
+   file_path.close()
    session.quit()
    
    #os.chmod(file, 0o0777)
