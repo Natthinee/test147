@@ -49,7 +49,6 @@ from countSco import scoreC,scoreQ2,scorephoto,scoreme2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
 from regularCheck import regular1,regular2,regular3,regular4,regular5,regular6,regular7,regular8
 from provincenotmap import provincenot4,provincenot3,provincenot2,provincenot1
-from speech_to_re import speechcheck,speechword
 question1 = ''
 evaluation_form = {}
 number = ['0', '1', '2', '3']
