@@ -118,15 +118,15 @@ def result(file,userid):
     img_cols = 28
     input_shape = (img_rows, img_cols, 1)
 
-    file_folder = os.path.join( os.getcwd() , "WAV_files" )
-    file_path = os.path.join( file_folder, "ปกติ01.wav" )
-    path = file_path
+    #file_folder = os.path.join( os.getcwd() , "WAV_files" )
+    #file_path = os.path.join( file_folder, "ปกติ01.wav" )
+    #path = file_path
 
-    print( "FILE: %s => " % path, end="" )
+    #print( "FILE: %s => " % path, end="" )
 # ------------------------------------
-    ans = evalualte_Multilayer(path, sec)
+    #ans = evalualte_Multilayer(path, sec)
 # ans = evalualte_CNN_1D(path, sec)
 # ans = evalualte_CNN_2D(path, sec)
 # ------------------------------------
-    print(ans)
-    return ans
+    #print(ans)
+    return "test"
