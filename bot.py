@@ -1678,7 +1678,7 @@ def handle_content_message(event):
            #print(chunk)
            tt.write(chunk)
            file = tt.name
-       file_path = file  + '.' + 'wav'
+       file_path = file  + '.' + ext
    dist_name = os.path.basename(file_path)
    os.stat(file)
    os.rename(file, file_path) 
