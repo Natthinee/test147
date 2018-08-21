@@ -16,7 +16,7 @@ import sys
 import tempfile
 import binascii
 import ftplib
-from returnk import test
+from returnK import test
 from argparse import ArgumentParser
 # from boto.s3.key import Key
 import requests
