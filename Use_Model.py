@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 20 17:13:56 2018
 
-@author: Natthinee
-"""
+# coding: utf-8
+
+# In[2]:
+
 
 import os
 import numpy as np
@@ -11,12 +10,22 @@ import keras
 import cntk
 from scipy.io import wavfile
 # keras.models.load_model(filepath)
+
+
+# In[3]:
+
+
 cntk.try_set_default_device( cntk.all_devices()[0] )
+
+
+# In[4]:
+
+
 def evalualte_Multilayer(file_path, sec=1):
     
     rate, audio = wavfile.read( file_path )
     rate*=sec
-    audio = np.mean(audio, axis=1)
+    #audio = np.mean(audio, axis=1)
     audio = np.trim_zeros(audio)
     audio = audio[:len(audio)-(len(audio)%rate)]
     rates = [ audio[i:i+rate] for i in range( 0, len(audio), rate ) ]
@@ -42,11 +51,15 @@ def evalualte_Multilayer(file_path, sec=1):
         return "ปกติ"
     return "เศร้า"
 
+
+# In[5]:
+
+
 def evalualte_CNN_1D(file_path, sec=1):
     print( "FILE: %s => " % file_path , end="" )
     rate, audio = wavfile.read( file_path )
     rate*=sec
-    audio = np.mean(audio, axis=1)
+    #audio = np.mean(audio, axis=1)
     audio = np.trim_zeros(audio)
     audio = audio[:len(audio)-(len(audio)%rate)]
     rates = [ audio[i:i+rate] for i in range( 0, len(audio), rate ) ]
@@ -71,11 +84,15 @@ def evalualte_CNN_1D(file_path, sec=1):
         return "ปกติ"
     return "เศร้า"
 
+
+# In[6]:
+
+
 def evalualte_CNN_2D(file_path, sec=1):
     print( "FILE: %s => " % file_path , end="" )
     rate, audio = wavfile.read( file_path )
     rate*=sec
-    audio = np.mean(audio, axis=1)
+    #audio = np.mean(audio, axis=1)
     audio = np.trim_zeros(audio)
     audio = audio[:len(audio)-(len(audio)%rate)]
     rates = [ audio[i:i+rate] for i in range( 0, len(audio), rate ) ]
@@ -104,6 +121,10 @@ def evalualte_CNN_2D(file_path, sec=1):
         return "ปกติ"
     return "เศร้า"
 
+
+# In[7]:
+
+
 model_folder = os.path.join( os.getcwd(), "Model" )
 model_name = "Model_0001.h5"
 
@@ -112,21 +133,84 @@ model = keras.models.load_model( os.path.join( model_folder, model_name ) )
 print( model.input_shape )
 model.summary()
 
-def result(file,userid):
+
+# In[10]:
+
+
+
+# sec = 3
+# img_rows = 28
+# img_cols = 28
+# input_shape = (img_rows, img_cols, 1)
+
+# file_folder = os.path.join( os.getcwd() , "WAV_files" )
+# file_path = os.path.join( file_folder, "ปกติ01.wav" )
+# path = file_path
+
+# print( "FILE: %s => " % path, end="" )
+# # ------------------------------------
+# ans = evalualte_Multilayer(path, sec)
+# # ans = evalualte_CNN_1D(path, sec)
+# # ans = evalualte_CNN_2D(path, sec)
+# # ------------------------------------
+# print(ans)
+
+
+# In[ ]:
+
+
+# def result(file,userid):
+#     sec = 3
+#     img_rows = 28
+#     img_cols = 28
+#     input_shape = (img_rows, img_cols, 1)
+
+#     file_folder = os.path.join( os.getcwd() , "WAV_files" )
+#     file_path = os.path.join( file_folder, "ปกติ01.wav" )
+#     path = file_path
+
+#     print( "FILE: %s => " % path, end="" )
+# # ------------------------------------
+#     ans = evalualte_Multilayer(path, sec)
+# # ans = evalualte_CNN_1D(path, sec)
+# # ans = evalualte_CNN_2D(path, sec)
+# # ------------------------------------
+#     print(ans)
+#     return ans
+
+
+# In[ ]:
+
+
+import requests
+from ftplib import FTP
+
+#domain name or server ip:
+ftp = FTP('nonggodaun.plearnjai.com')
+ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
+
+def  result(userid,file)
+    url = 'https://nonggodaun.plearnjai.com/'+file
+    #print (url)
+    r = requests.get(url)
+    with open('kim.m4a', 'wb') as f:  
+        k = f.write(r.content)
+
+    if os.path.exists('tmp.wav'):
+        os.remove( 'tmp.wav' )
+   
+    os.system( "ffmpeg -i kim.m4a -ar 44100 tmp.wav" )
     sec = 3
     img_rows = 28
     img_cols = 28
     input_shape = (img_rows, img_cols, 1)
-
-    #file_folder = os.path.join( os.getcwd() , "WAV_files" )
-    #file_path = os.path.join( file_folder, "ปกติ01.wav" )
-    #path = file_path
-
-    #print( "FILE: %s => " % path, end="" )
+    path = 'tmp.wav'
+    print( "FILE: %s => " % path, end="" )
 # ------------------------------------
-    #ans = evalualte_Multilayer(path, sec)
+    ans = evalualte_Multilayer(path, sec)
 # ans = evalualte_CNN_1D(path, sec)
 # ans = evalualte_CNN_2D(path, sec)
 # ------------------------------------
-    #print(ans)
-    return "test"
+    ftp.delete(file)
+    return ans
+
