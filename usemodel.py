@@ -206,11 +206,10 @@ def result(userid,file):
     r = requests.get(url)
     with open('./kim.m4a', 'wb') as f:  
         k = f.write(r.content)
-
-    if os.path.exists('./tmp.wav'):
-        os.remove( 'tmp.wav' )
-   
-    os.system( "ffmpeg -i ./kim.m4a -ar 44100 ./tmp.wav" )
+    from pydub import AudioSegment
+    m4a_audio = AudioSegment.from_file("./kim.m4a", format="m4a")
+    print(m4a_audio.frame_rate)
+    m4a_audio.export("./tmp.wav", format="wav")
     sec = 3
     img_rows = 28
     img_cols = 28
