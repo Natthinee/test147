@@ -10,9 +10,9 @@ import keras
 import cntk
 from scipy.io import wavfile
 import requests
-from ftplib import FTP
-ftp = FTP('nonggodaun.plearnjai.com')
-ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
+# from ftplib import FTP
+# ftp = FTP('nonggodaun.plearnjai.com')
+# ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
 
 # keras.models.load_model(filepath)
 
@@ -222,6 +222,6 @@ def result(userid,file):
 # ans = evalualte_CNN_1D(path, sec)
 # ans = evalualte_CNN_2D(path, sec)
 # ------------------------------------
-    ftp.delete(file)
+    #ftp.delete(file)
     return ans
 
