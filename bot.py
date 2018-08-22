@@ -1693,8 +1693,8 @@ def handle_content_message(event):
    #session.storbinary(dist_name, file) # send the file
    #file.close() # close file and FTP
    #session.quit()
-   tt = str(result(userid,file_path))
-   print(tt)
+   tt = result(userid,file_path)
+   #print(tt)
    #sign_s3()
    print(".......................")
    print(".....................up")
