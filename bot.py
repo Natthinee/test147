@@ -24,6 +24,7 @@ import requests
 # import boto3
 # import boto
 import codecs
+from Use_Model import result
 # from moto import mock_s3
 # from boto3.s3.transfer import TransferConfig
 # from boto3.session import Session
@@ -1721,7 +1722,7 @@ def handle_content_message(event):
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
-   tt = test()
+   tt = result(userid,dist_name)
    print(tt)
    answer = 'เก็บเสียงลงได้เเล้วเย้'
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
