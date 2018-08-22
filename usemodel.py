@@ -201,7 +201,7 @@ def result(userid,file):
     #print( model.input_shape )
     #model.summary()
     
-    url = 'https://nonggodaun.plearnjai.com/'+file
+    url = 'http://nonggodaun.plearnjai.com/'+file
     #print (url)
     r = requests.get(url)
     with open('kim.m4a', 'wb') as f:  
