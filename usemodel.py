@@ -20,7 +20,7 @@ ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
 # In[3]:
 
 
-cntk.try_set_default_device( cntk.all_devices()[0] )
+#cntk.try_set_default_device( cntk.all_devices()[0] )
 
 
 # In[4]:
@@ -191,7 +191,7 @@ model = keras.models.load_model(model_name))
 
 # In[ ]:
 
-def  result(userid,file)
+def  result(userid,file):
     url ='https://nonggodaun.plearnjai.com/Model_0001.h5'
     r = requests.get(url)
     with open('Model_0001.h5', 'wb') as f:  
