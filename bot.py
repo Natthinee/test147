@@ -19,7 +19,6 @@ import ftplib
 from argparse import ArgumentParser
 # from boto.s3.key import Key
 import requests
-from usemodel import result
 # import boto3
 # import boto
 import codecs
@@ -40,6 +39,7 @@ from linebot.models import (MessageEvent, TextMessage, TextSendMessage, ImageSen
                             UnfollowEvent, FollowEvent, JoinEvent, LeaveEvent, BeaconEvent)
 from pymongo import MongoClient
 from flask_pymongo import PyMongo
+from usemodel 
 import pymongo
 import json
 import random
