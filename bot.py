@@ -19,7 +19,7 @@ import ftplib
 from argparse import ArgumentParser
 # from boto.s3.key import Key
 import requests
-from Use_Model import result
+from usemodel import result
 # import boto3
 # import boto
 import codecs
