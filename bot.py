@@ -23,7 +23,6 @@ import requests
 # import boto3
 # import boto
 import codecs
-from Use_Model import result
 # from moto import mock_s3
 # from boto3.s3.transfer import TransferConfig
 # from boto3.session import Session
