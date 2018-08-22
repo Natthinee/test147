@@ -196,8 +196,8 @@ def result(userid,file):
 #     print(r)
 #     with open('Model_0001.h5', 'wb') as f:  
 #         k = f.write(r.content)
-    model_name = 'Model_0001.h5'
-    model = keras.models.load_model(os.path.join( os.getcwd(),  model_name))
+    model_name = './Model_0001.h5'
+    model = keras.models.load_model(model_name)
     #print( model.input_shape )
     #model.summary()
     
