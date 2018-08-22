@@ -124,14 +124,19 @@ def evalualte_CNN_2D(file_path, sec=1):
 
 # In[7]:
 
-
+from keras.utils.data_utils import get_file
+model_path = get_file(
+            'Model_0001.h5',
+            'https://nonggodaun.plearnjai.com/ffmpeg-4.0.2/Model_0001.h5')
+# import pandas as pd
+# url = 'http://192.168.1.81:50070/stocks/test/pred/20140103/000001.h5'
+# df = pd.read_hdf(url)
 #model_folder = os.path.join( os.getcwd(), "Model" )
 model_name = "Model_0001.h5"
 
 model = keras.models.load_model(model_name))
-
-print( model.input_shape )
-model.summary()
+#print( model.input_shape )
+#model.summary()
 
 
 # In[10]:
