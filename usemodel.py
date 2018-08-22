@@ -191,6 +191,7 @@ def evalualte_CNN_2D(file_path, sec=1):
 def result(userid,file):
     print("test")
     url ='http://nonggodaun.plearnjai.com/Model_0001.h5'
+    print(url)
     r = requests.get(url)
     with open('Model_0001.h5', 'wb') as f:  
         k = f.write(r.content)
