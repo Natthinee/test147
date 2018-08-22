@@ -44,7 +44,7 @@ import pymongo
 import json
 import random
 import re
-from usemodel from 
+from usemodel import result
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto,scoreme2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
@@ -1693,7 +1693,8 @@ def handle_content_message(event):
    #session.storbinary(dist_name, file) # send the file
    #file.close() # close file and FTP
    #session.quit()
-   
+   tt = str(result(userid,file_path))
+   print(tt)
    #sign_s3()
    print(".......................")
    print(".....................up")
