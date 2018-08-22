@@ -7,9 +7,13 @@
 import os
 import numpy as np
 import keras
-import ffmpeg
 import cntk
 from scipy.io import wavfile
+import requests
+from ftplib import FTP
+ftp = FTP('nonggodaun.plearnjai.com')
+ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
+
 # keras.models.load_model(filepath)
 
 
@@ -125,16 +129,16 @@ def evalualte_CNN_2D(file_path, sec=1):
 
 # In[7]:
 
-from keras.utils.data_utils import get_file
-model_path = get_file(
-            'Model_0001.h5',
-            'https://nonggodaun.plearnjai.com/ffmpeg-4.0.2/Model_0001.h5')
+# from keras.utils.data_utils import get_file
+# model_path = get_file(
+#             'Model_0001.h5',
+#             'https://nonggodaun.plearnjai.com/ffmpeg-4.0.2/Model_0001.h5')
 # import pandas as pd
 # url = 'http://192.168.1.81:50070/stocks/test/pred/20140103/000001.h5'
 # df = pd.read_hdf(url)
 #model_folder = os.path.join( os.getcwd(), "Model" )
-model_name = "Model_0001.h5"
 
+model_name = "Model_0001.h5"
 model = keras.models.load_model(model_name))
 #print( model.input_shape )
 #model.summary()
@@ -187,15 +191,16 @@ model = keras.models.load_model(model_name))
 
 # In[ ]:
 
-
-import requests
-from ftplib import FTP
-
-#domain name or server ip:
-ftp = FTP('nonggodaun.plearnjai.com')
-ftp.login(user='nonggodaun@plearnjai.com', passwd = 'Q6YLnl5CL')
-
 def  result(userid,file)
+    url ='https://nonggodaun.plearnjai.com/Model_0001.h5'
+    r = requests.get(url)
+    with open('Model_0001.h5', 'wb') as f:  
+        k = f.write(r.content)
+    model_name = "Model_0001.h5"
+    model = keras.models.load_model(model_name))
+    #print( model.input_shape )
+    #model.summary()
+    
     url = 'https://nonggodaun.plearnjai.com/'+file
     #print (url)
     r = requests.get(url)
