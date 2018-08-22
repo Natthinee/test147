@@ -6,7 +6,7 @@
 import os
 import numpy as np
 import keras
-import cntk
+#import cntk
 from scipy.io import wavfile
 import requests
 # from ftplib import FTP
