@@ -44,6 +44,7 @@ import pymongo
 import json
 import random
 import re
+from usemodel from 
 from province1 import Latitudee,longtitutee,hospitalName,provincee,addressPro,namehosLati,namehosLong,provinceehos,addressProhos,hospiName,hospro1,hospro2,tud2prov,tud21,tud22
 from countSco import scoreC,scoreQ2,scorephoto,scoreme2
 from Querry import find1,find2,find3,findx,findy,findxy,findxx,findyy,deleteQu,continues
