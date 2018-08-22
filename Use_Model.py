@@ -125,10 +125,10 @@ def evalualte_CNN_2D(file_path, sec=1):
 # In[7]:
 
 
-model_folder = os.path.join( os.getcwd(), "Model" )
+#model_folder = os.path.join( os.getcwd(), "Model" )
 model_name = "Model_0001.h5"
 
-model = keras.models.load_model( os.path.join( model_folder, model_name ) )
+model = keras.models.load_model(model_name))
 
 print( model.input_shape )
 model.summary()
