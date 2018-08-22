@@ -192,11 +192,11 @@ def evalualte_CNN_2D(file_path, sec=1):
 # In[ ]:
 
 def result(userid,file):
-    url ='https://nonggodaun.plearnjai.com/Model_0001.h5'
+    url ='http://nonggodaun.plearnjai.com/Model_0001.h5'
     r = requests.get(url)
     with open('Model_0001.h5', 'wb') as f:  
         k = f.write(r.content)
-    model_name = "Model_0001.h5"
+    model_name = 'Model_0001.h5'
     model = keras.models.load_model(model_name)
     #print( model.input_shape )
     #model.summary()
