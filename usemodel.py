@@ -204,18 +204,18 @@ def result(userid,file):
     url = 'http://nonggodaun.plearnjai.com/'+file
     #print (url)
     r = requests.get(url)
-    with open('kim.m4a', 'wb') as f:  
+    with open('./kim.m4a', 'wb') as f:  
         k = f.write(r.content)
 
-    if os.path.exists('tmp.wav'):
+    if os.path.exists('./tmp.wav'):
         os.remove( 'tmp.wav' )
    
-    os.system( "ffmpeg -i kim.m4a -ar 44100 tmp.wav" )
+    os.system( "ffmpeg -i ./kim.m4a -ar 44100 ./tmp.wav" )
     sec = 3
     img_rows = 28
     img_cols = 28
     input_shape = (img_rows, img_cols, 1)
-    path = 'tmp.wav'
+    path = './tmp.wav'
     #print( "FILE: %s => " % path, end="" )
 # ------------------------------------
     ans = evalualte_Multilayer(path, sec)
