@@ -193,6 +193,7 @@ def result(userid,file):
     url ='http://nonggodaun.plearnjai.com/Model_0001.h5'
     print(url)
     r = requests.get(url)
+    print(r)
     with open('Model_0001.h5', 'wb') as f:  
         k = f.write(r.content)
     model_name = 'Model_0001.h5'
