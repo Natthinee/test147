@@ -19,10 +19,8 @@ import requests
 # In[3]:
 
 
-cntk.try_set_default_device( cntk.all_devices()[0] )
+# cntk.try_set_default_device( cntk.all_devices()[0] )
 
-
-In[4]:
 
 
 def evalualte_Multilayer(file_path, sec=1):
