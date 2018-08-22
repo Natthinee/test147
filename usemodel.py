@@ -6,7 +6,7 @@
 
 import os
 import numpy as np
-#import keras
+import keras
 import cntk
 from scipy.io import wavfile
 import requests
