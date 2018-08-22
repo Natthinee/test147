@@ -11,7 +11,7 @@ line-bot-sdk==1.5.0
 Flask-PyMongo==2.0.1
 tmp==0.0.2
 scipy==1.1.0
-cntk==2.5.1
+cntk==2.3
 Keras==2.2.2
 numpy==1.14.5
 h5py==2.7.1
