@@ -17,7 +17,7 @@ Keras-Applications==1.0.4
 Keras-Preprocessing==1.0.2
 numpy==1.14.5
 ipython==6.4.0
-FFmpeg==3.3.2
+ffmpeg-python==0.1.16
 
 
 
