@@ -1693,7 +1693,7 @@ def handle_content_message(event):
    session.quit()
    
    import requests
-   req = requests.get('https://2c1c40c1.ngrok.io/'+dist_name)
+   req = requests.get('https://607dd19f.ngrok.io'+dist_name)
    print(str(req))
    ### https://2c1c40c1.ngrok.io เรียก url
    
