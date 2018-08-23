@@ -1727,6 +1727,7 @@ def handle_content_message(event):
    #tt = result(userid,dist_name)
    #print(tt)
    answer = 'เก็บเสียงลงได้เเล้วเย้'
+   ftp.delete(dist_name)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    #line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=answer),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', file_path))])
   
