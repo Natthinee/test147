@@ -90,7 +90,7 @@ richmanu['rich'] = {'rich01': 'เล่าหน่อยนะ',
                    'rich04': 'จิตเวชใกล้บ้าน',
                    'rich05': 'เศร้าเเล้วเปลี่ยน',
                    'rich06': 'ข่าวสารซึมเศร้า'}
-ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะพิมพ์เพื่อระบายก็มาเริ่มกันเลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆได้เลยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ｡◕‿◕｡' ######
+ansrich01 = ' เอ๊ะๆ อยากจะพิมพ์หรืออยากพูดน้าาา\nถ้าอยากจะพิมพ์เพื่อระบายก็มาเริ่มกันเลย\nเเต่ถ้าอยากจะพูดเพื่อระบายกดที่ปุ่มไมโครโฟนข้างๆ\nแล้วระบายให้กอดอุ่นฟังอย่างน้อยซัก 4 วิหน่อยน้าา\nระบายมาได้เลยน้าา กอดอุ่นอยากฟัง ｡◕‿◕｡' ######
 ansrich02 = 'ถ้าพร้อมเเล้ว มาลุยกันเล้ยยย!!\nミ●﹏☉'
 ansrich03 = 'นี่ๆ อยากรู้อะไรบ้างเอ่ยเกี่ยวกับโรคซึมเศร้า ถามมาได้เลยน้าา ถ้ากอดอุ่นรู้ได้คำตอบเเน่นอน （´◔౪◔）'
 ansrich04 = 'อยู่จังหวัดไหนเอ่ย ????? ۩۩۩۩'
@@ -1695,8 +1695,9 @@ def handle_content_message(event):
    import requests
    req = requests.get('https://cdf92bf6.ngrok.io/'+dist_name)
    
-   print(str(req.content))
+   #print(str(req.content))
    print(str(req.text))
+   sadandnot = str(req.text)
    ### https://2c1c40c1.ngrok.io เรียก url
    
    
@@ -1711,31 +1712,30 @@ def handle_content_message(event):
    print(".....................up")
 #    client = boto3.client('s3')
    print(".....................upload")
-   print(file_path)
-   #tt = speechword(event.message)
-   print(event.message)
-   #print(tt)
-   print(file_path)
-   print(file)
-   print(userid)
+#    print(file_path)
+#    #tt = speechword(event.message)
+#    print(event.message)
+#    #print(tt)
+#    print(file_path)
+#    print(file)
+#    print(userid)
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path)
    #client.upload_file(file_path, '/'.join([BUCKET_NAME,'k.wav']), Key= file_path)
 #    s3.upload_file(file_path, BUCKET_NAME,dist_name )
    #url = 'https://s3-ap-southeast-1.amazonaws.com/khim/U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav'
    #s3.Bucket('khim').download_file(U2cd26d49ace18bd6cfce4e53160808cb23m2o3hk.wav, "t.wav")
-#    test = ['ปกติ','ไม่ปกติ']
-#    test2 = random.choice(test)
-#    if test2 == 'ปกติ':
-#      answer = Normal
-#    else:
-#      answer = sad
+  
+   if sadandnot == 'ปกติ':
+     answer = Normal
+   else:
+     answer = sad
    #file
    #client = boto3.client("s3")
    #client.upload_file(Bucket=BUCKET_NAME, Key='test.wav', Filename=file_path, Config=TransferConfig(use_threads=False))
    #s3.Bucket(BUCKET_NAME).put_object(Key='test.wav', Body=data)
    #tt = result(userid,dist_name)
    #print(tt)
-   answer = 'เก็บเสียงลงได้เเล้วเย้'
+   #answer = 'เก็บเสียงลงได้เเล้วเย้'
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    #line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=answer),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', file_path))])
   
