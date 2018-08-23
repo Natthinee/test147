@@ -132,9 +132,9 @@ re7 = "reg7"
 re8 = "reg8"
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 
-@app.route("/hello")
-def hello():
-    return "Hello World!"
+# @app.route("/hello")
+# def hello():
+#     return "Hello World!"
 
 @app.route("/")
 def hello():
