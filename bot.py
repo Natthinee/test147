@@ -1694,6 +1694,7 @@ def handle_content_message(event):
    
    import requests
    req = requests.get('https://2c1c40c1.ngrok.io/'+dist_name)
+   print(str(req))
    ### https://2c1c40c1.ngrok.io เรียก url
    
    
