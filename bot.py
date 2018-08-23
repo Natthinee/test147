@@ -133,6 +133,9 @@ re7 = "reg7"
 re8 = "reg8"
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 
+@app.route("/hello")
+def hello():
+    return "Hello World!"
 
 @app.route("/")
 def hello():
@@ -1690,6 +1693,11 @@ def handle_content_message(event):
    f.close()
    session.quit()
    
+   import requests
+   req = requests.get('https://2c1c40c1.ngrok.io/'+dist_name)
+   ### https://2c1c40c1.ngrok.io เรียก url
+   
+   
    #os.chmod(file, 0o0777)
    #file = open(dist_name,'rb') # file to send
    #session.storbinary(dist_name, file) # send the file
@@ -1727,7 +1735,6 @@ def handle_content_message(event):
    #tt = result(userid,dist_name)
    #print(tt)
    answer = 'เก็บเสียงลงได้เเล้วเย้'
-   ftp.delete(dist_name)
    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=answer))
    #line_bot_api.reply_message(event.reply_token, [TextSendMessage(text=answer),TextSendMessage(text=request.host_url + os.path.join('static', 'tmp', file_path))])
   
