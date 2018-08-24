@@ -1693,7 +1693,7 @@ def handle_content_message(event):
    session.quit()
    
    import requests
-   req = requests.get('https://cdf92bf6.ngrok.io/'+dist_name)
+   req = requests.get('https://b3e725b6.ngrok.io/'+dist_name)
    
    #print(str(req.content))
    print(str(req.text))
