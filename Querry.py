@@ -90,7 +90,7 @@ game = "พักสมองสักเเปบดีกว่าน้าา
     #idsub.append(i['UserID'])
    
 def find1(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.user
    numb = ['0','1','2','3']
    count1 = 0 
@@ -130,7 +130,7 @@ def find1(userid,question):
         return answer
 
 def findxx(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.user
    count1 = 0 
    No = 0
@@ -141,7 +141,7 @@ def findxx(userid,question):
    return No  
   
 def findyy(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.Q2
    count1 = 0 
    No = 0
@@ -152,7 +152,7 @@ def findyy(userid,question):
    return No  
         
 def find2(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.Q2
    count1 = 0 
    count2 = 0
@@ -182,7 +182,7 @@ def find2(userid,question):
         return answer  
       
 def find3(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.Q8
    count1 = 0 
    count2 = 0
@@ -212,7 +212,7 @@ def find3(userid,question):
         return answer 
       
 def findx(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.QQ8
    count1 = 0 
    count2 = 0
@@ -242,7 +242,7 @@ def findx(userid,question):
         return answer 
 
 def findy(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.QQQ8
    count1 = 0 
    count2 = 0
@@ -273,7 +273,7 @@ def findy(userid,question):
 
       
 def findxy(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.QQQQ8
    count1 = 0 
    count2 = 0
@@ -303,7 +303,7 @@ def findxy(userid,question):
         return answer 
       
 def deleteQu(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.user
    dd  = client.khim.Q2
    db.delete_many({'UserID':userid})
@@ -311,7 +311,7 @@ def deleteQu(userid,question):
    return 'มาทำเเบบประเมินกันเถอะ'
 
 def continues(userid,question):
-   client = MongoClient('mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim')
+   client = MongoClient('เก็บไว้อีกที่')
    db  = client.khim.user
    cou = 0
    cou = findxx(userid,question)-1
