@@ -124,69 +124,10 @@ def evalualte_CNN_2D(file_path, sec=1):
     return "เศร้า"
 
 
-# # In[7]:
-
-# # from keras.utils.data_utils import get_file
-# # model_path = get_file(
-# #             'Model_0001.h5',
-# #             'https://nonggodaun.plearnjai.com/ffmpeg-4.0.2/Model_0001.h5')
-# # import pandas as pd
-# # url = 'http://192.168.1.81:50070/stocks/test/pred/20140103/000001.h5'
-# # df = pd.read_hdf(url)
-# #model_folder = os.path.join( os.getcwd(), "Model" )
-
-# # model_name = "Model_0001.h5"
-# # model = keras.models.load_model(model_name)
-# # #print( model.input_shape )
-# # #model.summary()
-
-
-# # In[10]:
 
 
 
-# # sec = 3
-# # img_rows = 28
-# # img_cols = 28
-# # input_shape = (img_rows, img_cols, 1)
 
-# # file_folder = os.path.join( os.getcwd() , "WAV_files" )
-# # file_path = os.path.join( file_folder, "ปกติ01.wav" )
-# # path = file_path
-
-# # print( "FILE: %s => " % path, end="" )
-# # # ------------------------------------
-# # ans = evalualte_Multilayer(path, sec)
-# # # ans = evalualte_CNN_1D(path, sec)
-# # # ans = evalualte_CNN_2D(path, sec)
-# # # ------------------------------------
-# # print(ans)
-
-
-# # In[ ]:
-
-
-# # def result(file,userid):
-# #     sec = 3
-# #     img_rows = 28
-# #     img_cols = 28
-# #     input_shape = (img_rows, img_cols, 1)
-
-# #     file_folder = os.path.join( os.getcwd() , "WAV_files" )
-# #     file_path = os.path.join( file_folder, "ปกติ01.wav" )
-# #     path = file_path
-
-# #     print( "FILE: %s => " % path, end="" )
-# # # ------------------------------------
-# #     ans = evalualte_Multilayer(path, sec)
-# # # ans = evalualte_CNN_1D(path, sec)
-# # # ans = evalualte_CNN_2D(path, sec)
-# # # ------------------------------------
-# #     print(ans)
-# #     return ans
-
-
-# # In[ ]:
 
 def result(userid,file):
     print("test")
