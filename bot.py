@@ -111,8 +111,8 @@ handler = WebhookHandler('0dc428295a377a2e3ee1bda97af613e2')
 # function for create tmp dir for download content###
 
             
-app.config['MONGO_DBNAME'] = 'khim'
-app.config['MONGO_URI'] = 'mongodb://khimmy:Kk2047849@ds147030.mlab.com:47030/khim'
+app.config['MONGO_DBNAME'] = เก็บไว้ทำไมไม่รัก
+app.config['MONGO_URI'] = เก็บไว้
 mongo = PyMongo(app)
 slope ='สรุปแบบประเมิน 9 คำถาม'
 slope2 ='สรุปแบบประเมิน 2 คำถาม'
@@ -1632,27 +1632,9 @@ def godaun(event):
         
 @handler.add(MessageEvent, message=(ImageMessage, VideoMessage, AudioMessage))
 def handle_content_message(event):
-   userid = event.source.user_id
-   session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
-   #session = ftplib.FTP('nonggodaun.plearnjai.com','nonggodaun@plearnjai.com','Q6YLnl5CL')
-   
-   #path = "https://s3-ap-southeast-1.amazonaws.com/khim/"
-   #os.listdir(path)
-   #ACCESS_KEY_ID = 'AKIAJICSVDHHMLN6LC4A'
-   #SECRET_ACCESS_KEY ='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'
-#    REGION_NAME = 'us-east-1'
-   
-#    session = Session(
-#        aws_access_key_id=ACCESS_KEY_ID,
-#        aws_secret_access_key=SECRET_ACCESS_KEY
-#    )
-#    s3 = session.resource("s3")
-#    BUCKET_NAME = 'khim'
-#    s3 = session.client("s3")
-   #filename = 'NameHospital.txt'
-   #s3.upload_file(filename, BUCKET_NAME, "เหงา.wav")
-
-
+   userid = เก็บไว้อีกที่
+   session = เก็บไว้อีกที่
+ 
    if isinstance(event.message, ImageMessage):
        ext = 'jpg'
    elif isinstance(event.message, VideoMessage):
